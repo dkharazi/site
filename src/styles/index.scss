@@ -1,0 +1,752 @@
+/*
+ * Contents
+ *
+ * Color Schemes
+ * Global Structure
+ * Wrapper
+ * Container
+ * Masthead
+ * Navigation
+ * Main Content
+ * Footer
+ * Blog Excerpts
+ * Code Highlighting
+ */
+
+
+/*
+ * Color schemes
+ *
+ * The following color schemes are used across the site
+ * for coloring html elements and applying style changes
+ * to elements for hovering.
+ */
+
+ /* Resume colors */
+.t0 { color: #195b8a; }
+.t1 { color: #e11444; }
+.t2 { color: #06b284; }
+.t3 { color: #ffce5c; }
+.b0 { border-color: #195b8a; }
+.b1 { border-color: #e11444; }
+.b2 { border-color: #06b284; }
+.b3 { border-color: #ffce5c; }
+.c0 { background-color: #195b8a; }
+.c1 { background-color: #e11444; }
+.c2 { background-color: #06b284; }
+.c3 { background-color: #ffce5c; }
+
+/* Notes colors */
+.n0 { background-color: #e11444; }
+.n1 { background-color: #ffce5c; }
+.n2 { background-color: #06b284; }
+.n3 { background-color: #195b8a; }
+.h:hover { opacity: 0.8; }
+
+/* Notes masthead icon colors */
+.i0 { background-color: #fafafa; }
+.i1 { background-color: #268bd2; }
+
+/* Rotating bars in icon */
+.rMid { opacity: 0; }
+.rTop {
+  top: 18px !important;
+  transform: rotate(45deg);
+}
+.rBot {
+  top: 18px !important;
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 48rem) {
+  .rTop {
+      top: 20px !important;
+  }
+  .rBot {
+      top: 20px !important;
+  }
+}
+
+.rMenu {
+  visibility: visible;
+  opacity: 1;
+}
+.rMenuClose {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*
+ * Global structure
+ *
+ * Any elements that contribute to the global structure
+ * of the site, which includes general font families, font sizes, 
+ * background colors, etc. 
+ */
+
+/* Prevent scroll on narrow devices */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+@media (min-width: 48em) {
+    html {
+        font-size: 21px
+    }
+}
+
+body {
+  line-height: 1.5rem;
+  color: #515151;
+  background-color: #fafafa;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #333;
+  letter-spacing: -.025rem;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4, h5, h6 {
+  font-size: 1rem;
+}
+
+p+h1,
+p+h2,
+p+h3,
+ul+h1,
+ul+h2,
+ul+h3,
+ol+h1,
+ol+h2,
+ol+h3,
+blockquote+h1,
+blockquote+h2,
+blockquote+h3,
+.highlight+h1,
+.highlight+h2,
+.highlight+h3 {
+    margin-top: 2.5rem
+}
+
+strong {
+  font-weight: bold;
+  color: #333;
+}
+
+a {
+  font-weight: inherit;
+  line-height: inherit;
+  color: #195b8a;  /* #7b4e83; */
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  text-decoration-color: rgba(0,0,0,.25);
+  -webkit-text-decoration-color: rgba(0,0,0,.25);
+  text-decoration-skip-ink: auto;
+}
+
+a strong {
+  color: inherit;
+}
+
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+ul ul {
+  margin-top: .25rem;
+  margin-bottom: .5rem;
+}
+
+ul ol {
+  margin-top: .25rem;
+  margin-bottom: .5rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  width: 100px;
+  height: 1px;
+  position: relative;
+  margin: 2rem auto;
+  background-color: rgba(0,0,0,.1);
+  border: 0
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+}
+
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #e5e5e5;
+}
+
+code, pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code {
+  padding: .25em .5em;
+  font-size: 85%;
+  color: #bf616a;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+
+@media (max-width: 30em) {
+  code {
+    word-break: break-word;
+  }
+}
+
+pre {
+  display: block;
+  margin: 0 0 1rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+
+.highlight {
+  margin-bottom: 1rem;
+}
+
+.highlight pre {
+  margin-bottom: 0;
+  border-radius: 15px;
+}
+
+/* Gist via GitHub Pages */
+.gist .gist-file {
+  font-family: Menlo, Monaco, "Courier New", monospace !important;
+}
+
+.gist .markdown-body {
+  padding: 15px;
+}
+
+.gist pre {
+  padding: 0;
+  background-color: transparent;
+}
+
+.gist .gist-file .gist-data {
+  font-size: .8rem !important;
+  line-height: 1.4;
+}
+
+.gist code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* Quotes */
+blockquote {
+  padding: 0 0 0 1.5rem;
+  margin: 0 2rem 1rem -2rem;
+  color: #7a7a7a;
+  border-left: .5rem solid #e5e5e5;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+img {
+  display: block;
+  margin: 0.7rem auto;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Tables */
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: .25rem .5rem;
+  border: 1px solid #e5e5e5;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+
+/*
+ * Wrapper
+ *
+ * The wrapper is used to position site content when the sidebar is toggled. We
+ * use an outter wrap to position the sidebar without interferring with the
+ * regular page content.
+ */
+
+ .wrap {
+  position: relative;
+  width: 100%;
+}
+
+
+/*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+  max-width: 32rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+
+.notesContainer {
+  display: flex;
+  max-width: 32rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 76.5em) {
+  .container {
+      max-width: 36rem;
+  }
+}
+
+
+/*
+ * Masthead
+ *
+ * Super small header above the content for site name and short description.
+ */
+
+ header {
+  padding-top: 0.8rem;
+  font-size: 1rem;
+  background-color: #268bd2;
+  color: #fafafa;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+header .container {
+  display: flex;
+}
+
+header a:hover {
+  background-color: #237dbe;
+}
+
+header::after {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 1px;
+  margin: 0.8rem auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  header {
+      background-color: #fafafa;
+      box-shadow: none;
+  }
+}
+
+
+/*
+ * Navigation
+ *
+ * Display navigation properties.
+ *
+ */
+
+nav {
+  margin-left: auto;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  font-weight: 600 !important;
+  font-size: 0.8rem;
+}
+
+nav a {
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+nav a+a {
+  margin-left: 0.5rem;
+}
+
+
+/*
+ * Main
+ *
+ * The main content displayed on the page.
+ *
+ */
+
+main {
+  position: relative;
+  margin-top: 3rem !important;
+  margin-bottom: 4rem !important;
+  min-height: calc(100vh - 17rem);
+}
+
+section {
+  position: relative;
+  top: 0;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
+  top: -5px;
+}
+
+
+/*
+ * Footer
+ *
+ * Super small footer below the main content.
+ */
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 0.6rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1;
+  background-color: #268bd2;
+  color: #fafafa;
+}
+
+footer p {
+  text-align: center;
+  margin-block-start: 1em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+footer a {
+  display: inline-block;
+  text-align: center;
+  color: #fafafa;
+  text-decoration: underline;
+}
+
+
+/*
+ * Blog Excerpts
+ *
+ * Each blog post is archived and displayed on the home page
+ * as a list and organized by date.
+ */
+
+.post-date {
+  display: inline-block;
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.post-tags {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  &.python { color: #ffce5c !important; }  /* { color: #ffd166 !important; } */
+  &.databases { color: #e11444 !important; }  /* { color: #ef476f !important; } */
+  &.machine-learning { color: #06b284 !important; }  /* { color: #06d6a0 !important; } */
+}
+
+.post-title {
+  font-size: 1.5rem !important;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
+  text-decoration: underline solid transparent;
+  -webkit-transition: text-decoration 0.2s ease;
+  transition: text-decoration 0.2s ease;
+}
+
+.post-excerpt {
+  font-size: 1rem !important;
+  font-weight: 400;
+}
+
+/*
+ * Code Highlighting
+ *
+ * The syntax highlighting is performed using prism.js is React. We can add
+ * and make changes to the code by specifying certain values in the following
+ * classes. These elements are used for styling inline code blocks and code
+ * chunks. Inline code is prefixed and suffixed with a single apostraphe.
+ * Code chunks are prefixed and suffixed with triple apostraphes.
+ */
+
+.gatsby-highlight {
+  background-color: #f4f3f7;
+  border-radius: 20px;
+  margin: 2rem 0;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  overflow: auto;
+}
+
+.gatsby-highlight:before {
+  content: '';
+  color: #655a87;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 20px 20px 0px 0px;
+  position: absolute;
+  background-color: #e9e7ef;
+  height: 1.8rem;
+  width: calc(100% - 1rem);
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  margin-top: -2rem;
+  margin-left: -1rem;
+}
+
+.notesContainer .gatsby-highlight:before {
+  width: calc(100% - 3.25rem);
+}
+
+.notesContainer .gatsby-highlight {
+  padding-top: 1.5rem;
+}
+
+p .language-text,
+li .language-text {
+  color: #bf616a; /* color: #bf616a; */
+}
+
+div[data-language*="python"]:before {
+  content: 'Python' !important;
+}
+
+div[data-language*="js"]:before {
+  content: 'JavaScript' !important;
+}
+
+div[data-language*="ini"]:before {
+  content: 'Ini' !important;
+}
+
+div[data-language*="docker"]:before {
+  content: 'Docker' !important;
+}
+
+div[data-language*="yml"]:before {
+  content: 'Yml' !important;
+}
+
+div[data-language*="yml"]:before {
+  content: 'Yml' !important;
+}
+
+div[data-language*="bash"]:before {
+  content: 'Bash' !important;
+}
+
+div[data-language*="apacheconf"]:before {
+  content: 'Conf' !important;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+     color: #655a87;
+     background: none;
+     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+     font-size: 0.8rem;
+     text-align: left;
+     white-space: pre;
+     word-spacing: normal;
+     word-break: normal;
+     word-wrap: normal;
+     line-height: 1.5;
+ 
+     -moz-tab-size: 4;
+     -o-tab-size: 4;
+     tab-size: 4;
+ 
+     -webkit-hyphens: none;
+     -ms-hyphens: none;
+     hyphens: none;
+ 
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+     padding: 1em;
+     margin: .5em 0;
+     overflow: auto;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+     background: #f4f3f7;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+     padding: .1em;
+     border-radius: .3em;
+     white-space: normal;
+ }
+
+ /* Line numbers */
+.line-numbers-rows {
+  margin-top: 1rem;
+  overflow: initial;
+}
+ 
+ .token.comment,
+ .token.block-comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+     color: #999;
+ }
+ 
+ .token.punctuation {
+     color: #ccc;
+ }
+ 
+ .token.tag,
+ .token.attr-name,
+ .token.namespace,
+ .token.deleted {
+     color: #e2777a;
+ }
+ 
+ .token.function-name {
+     color: #6196cc;
+ }
+ 
+ .token.boolean,
+ .token.number,
+ .token.function {
+     color: #f08d49;
+ }
+ 
+ .token.property,
+ .token.class-name,
+ .token.constant,
+ .token.symbol {
+     color: #f8c555;
+ }
+ 
+ .token.selector,
+ .token.important,
+ .token.atrule,
+ .token.keyword,
+ .token.builtin {
+     color: #cc99cd;
+ }
+ 
+ .token.string,
+ .token.char,
+ .token.attr-value,
+ .token.regex,
+ .token.variable {
+     color: #7ec699;
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url {
+     color: #67cdcc;
+ }
+ 
+ .token.important,
+ .token.bold {
+     font-weight: bold;
+ }
+ .token.italic {
+     font-style: italic;
+ }
+ 
+ .token.entity {
+     cursor: help;
+ }
+ 
+ .token.inserted {
+     color: green;
+ }

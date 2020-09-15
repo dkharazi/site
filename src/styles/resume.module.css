@@ -1,0 +1,47 @@
+.item {
+    border-left: 5px solid;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.company {
+    font-size: 1.5rem;
+    padding: 0.25rem 0;
+}
+
+.role {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.date {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.25rem;
+}
+
+.tech {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.25rem;
+}
+
+.targetborder {
+    position: absolute;
+    left: -38px;
+    top: -15px;
+    width: 40px;
+    height: 40px;
+    border: 15px solid #fafafa;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.targetdot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    margin: 5px auto;
+    border: 10px solid #fafafa;
+}

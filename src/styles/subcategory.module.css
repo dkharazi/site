@@ -1,0 +1,29 @@
+.subcategory a {
+    font-size: 0.8rem;
+    display: block;
+}
+
+.subcategory {
+    box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 20px 20px;
+}
+
+.title {
+    border-radius: 20px 20px 0px 0px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 0.3rem;
+    transition: all 0.3s ease;
+}
+
+.title h3 {
+    color: #fafafa;
+}
+
+.items {
+    height: 85%;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}

@@ -1,0 +1,31 @@
+@media (min-width: 34em) {
+    .title {
+        float: left;
+        color: #fafafa;
+        font-size: 1.5rem;
+    }
+}
+
+.item {
+    color: #fafafa;
+}
+
+.item:hover {
+    text-decoration: none;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #fafafa;
+}
+
+.title a {
+    border-radius: 5px;
+    padding: 0.25rem;
+}
+
+.active {
+    background-color: #237DBE;
+    pointer-events: none;
+}

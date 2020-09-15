@@ -1,0 +1,57 @@
+.gallery {
+    display: flex;
+    padding: 0 4px;
+}
+
+.loaded {
+    visibility: visible;
+}
+
+.waiting {
+    visibility: hidden;
+}
+
+.column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.column .item {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.item {
+    border-radius: 5px;
+    position: relative;
+    background-color: #ef476f;
+}
+
+img {
+    margin: 0;
+    transition: opacity 0.4s;
+}
+
+.item:hover img {
+    opacity: 0.5;
+}
+
+.description {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    font-weight: 600;
+    color: #fafafa;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    transform: translateY(10px);
+}
+
+.item:hover .description {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}

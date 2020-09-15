@@ -1,0 +1,25 @@
+.subCatSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+
+.title {
+    border-radius: 20px 20px 20px 20px;
+    margin-bottom: 2rem;
+}
+
+.title img {
+    border-radius: 20px;
+    margin: auto;
+}
+
+.title h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}

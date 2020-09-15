@@ -1,0 +1,10 @@
+.profiles {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profiles a {
+    margin: 0 0.2rem;
+}
