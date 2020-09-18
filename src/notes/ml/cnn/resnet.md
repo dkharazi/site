@@ -11,20 +11,37 @@ katex: true
 - This connection attempts to skip one or more layers
 - We can define a residual block as the following:
 
-$$ a^{[l+2]} = relu(W^{[l+2]}relu(W^{[l+1]}a^{[l]} + b^{[l+1]}) + b^{[l+2]} + a^{[l]}) $$
+$$
+a^{[l+2]} = relu(W^{[l+2]}relu(W^{[l+1]}a^{[l]} + b^{[l+1]}) + b^{[l+2]} + a^{[l]})
+$$
 
 - We can simplify the above to look like the following:
 
-$$ a^{[l+2]} = relu(W^{[l+2]}a^{[l+1]} + b^{[l+2]} + a^{[l]}) $$
+$$
+a^{[l+2]} = relu(W^{[l+2]}a^{[l+1]} + b^{[l+2]} + a^{[l]})
+$$
 
-$$ \text{where } z^{[l+1]} = W^{[l+1]}a^{[l]} + b^{[l+1]} $$
-$$ \text{where } a^{[l+1]} = relu(z^{[l+1]}) $$
-$$ \text{where } z^{[l+2]} = W^{[l+2]}a^{[l+1]} + b^{[l+2]} $$
-$$ \text{where } a^{[l+2]} = relu(z^{[l+2]} + a^{[l]}) $$
+$$
+\text{where } z^{[l+1]} = W^{[l+1]}a^{[l]} + b^{[l+1]}
+$$
+
+$$
+\text{where } a^{[l+1]} = relu(z^{[l+1]})
+$$
+
+$$
+\text{where } z^{[l+2]} = W^{[l+2]}a^{[l+1]} + b^{[l+2]}
+$$
+
+$$
+\text{where } a^{[l+2]} = relu(z^{[l+2]} + a^{[l]})
+$$
 
 - We can visualize the chain of operations as the following:
 
-$$ a^{[l]} \to \overbrace{z^{[l+1]}}^{W^{[l+1]}a^{[l]} + b^{[l+1]}} \to \overbrace{a^{[l+1]}}^{relu(z^{[l+1]})} \to \overbrace{z^{[l+2]}}^{W^{[l+2]}a^{[l+1]} + b^{[l+2]}} \to \overbrace{a^{[l+2]}}^{relu(z^{[l+2]}+a^{[l]})} $$
+$$
+a^{[l]} \to \overbrace{z^{[l+1]}}^{W^{[l+1]}a^{[l]} + b^{[l+1]}} \to \overbrace{a^{[l+1]}}^{relu(z^{[l+1]})} \to \overbrace{z^{[l+2]}}^{W^{[l+2]}a^{[l+1]} + b^{[l+2]}} \to \overbrace{a^{[l+2]}}^{relu(z^{[l+2]}+a^{[l]})}
+$$
 
 ![residualblock](../../../img/resblock.svg)
 
@@ -42,7 +59,9 @@ $$ a^{[l]} \to \overbrace{z^{[l+1]}}^{W^{[l+1]}a^{[l]} + b^{[l+1]}} \to \overbra
 - In this case, $z^{[l]} \to 0$ since the parameters $W$ and $b \to 0$
 - Therefore, the resnet will observe the following:
 
-$$ a^{[l+2]} = relu(\xcancel{W^{[l+2]}a^{[l+1]} + b^{[l+2]}} + a^{[l]}) $$
+$$
+a^{[l+2]} = relu(\xcancel{W^{[l+2]}a^{[l+1]} + b^{[l+2]}} + a^{[l]})
+$$
 
 - Each $a^{[l+2]}$ solution will still learn something from $a^{[l]}$ even in worst case scenario
 - In other words, $\hat{y}$ will generally improve even if $z^{[l+2]}=0$

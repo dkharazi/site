@@ -22,11 +22,15 @@ katex: true
 	- Margin of error: represents standard error with some additional room for error
 - We typically define a confidence interval of a parameter as the following:
 
-$$ \text{parameter estimate} ± \text{ margin of error} $$
+$$
+\text{parameter estimate} ± \text{ margin of error}
+$$
 
 - For example, we could define a 95% confidence interval for a population mean as the following:
 
-$$ \bar{x} ± 1.96 \times \frac{s}{\sqrt{n}} $$
+$$
+\bar{x} ± 1.96 \times \frac{s}{\sqrt{n}}
+$$
 
 - Where our margin of error equals some critical value multiplied by our standard error
 

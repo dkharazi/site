@@ -18,7 +18,9 @@ katex: true
 	- What are the surrounding pixel values of that given pixel from the old image?
 - We will denote a $3 \times 3$ matrix filter as the following:
 
-$$ \def \arraystretch{1.5} \begin{array}{c|c|c} \textcolor{red}{1} & \textcolor{blue}{2} & \textcolor{green}{3} \cr \hline \textcolor{red}{4} & \textcolor{blue}{5} & \textcolor{green}{6} \cr \hline \textcolor{red}{7} & \textcolor{blue}{8} & \textcolor{green}{9} \end{array} $$
+$$
+\def \arraystretch{1.5} \begin{array}{c|c|c} \textcolor{red}{1} & \textcolor{blue}{2} & \textcolor{green}{3} \cr \hline \textcolor{red}{4} & \textcolor{blue}{5} & \textcolor{green}{6} \cr \hline \textcolor{red}{7} & \textcolor{blue}{8} & \textcolor{green}{9} \end{array}
+$$
 
 ### Introducing the Convolution Operation
 - In order to perform the transformation represented by our matrix filter, we need to perform a special mathematical operation on the new image
@@ -28,9 +30,13 @@ $$ \def \arraystretch{1.5} \begin{array}{c|c|c} \textcolor{red}{1} & \textcolor{
 - Specifically, it measures the similarity of groups of pixels
 - The following is an example of convolution:
 
-$$ \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c|c|c|c} \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \cr \hline \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \cr \hline \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \cr \hline \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \cr \hline \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \cr \hline \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \end{array}}^{\text{old image}} \space \underbrace{\otimes}_{\text{convolution}} \space \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} \color{#cccccc}{1} & \color{#666666}{0} & \color{#000000}{-1} \cr \hline \color{#cccccc}{1} & \color{#666666}{0} & \color{#000000}{-1} \cr \hline \color{#cccccc}{1} & \color{#666666}{0} & \color{#000000}{-1} \end{array}}^{\text{filter}} $$
+$$
+\overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c|c|c|c} \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \cr \hline \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \cr \hline \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \cr \hline \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \cr \hline \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \cr \hline \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#cccccc}{20} & \color{#000000}{10} & \color{#000000}{10} & \color{#000000}{10} \end{array}}^{\text{old image}} \space \underbrace{\otimes}_{\text{convolution}} \space \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} \color{#cccccc}{1} & \color{#666666}{0} & \color{#000000}{-1} \cr \hline \color{#cccccc}{1} & \color{#666666}{0} & \color{#000000}{-1} \cr \hline \color{#cccccc}{1} & \color{#666666}{0} & \color{#000000}{-1} \end{array}}^{\text{filter}}
+$$
 
-$$ = \space \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c|c} \color{#666666}{0} & \color{#cccccc}{30} & \color{#cccccc}{30} & \color{#666666}{0} \cr \hline \color{#666666}{0} & \color{#cccccc}{30} & \color{#cccccc}{30} & \color{#666666}{0} \cr \hline \color{#666666}{0} & \color{#cccccc}{30} & \color{#cccccc}{30} & \color{#666666}{0} \cr \hline \color{#666666}{0} & \color{#cccccc}{30} & \color{#cccccc}{30} & \color{#666666}{0} \end{array}}^{\text{new image}}$$
+$$
+= \space \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c|c} \color{#666666}{0} & \color{#cccccc}{30} & \color{#cccccc}{30} & \color{#666666}{0} \cr \hline \color{#666666}{0} & \color{#cccccc}{30} & \color{#cccccc}{30} & \color{#666666}{0} \cr \hline \color{#666666}{0} & \color{#cccccc}{30} & \color{#cccccc}{30} & \color{#666666}{0} \cr \hline \color{#666666}{0} & \color{#cccccc}{30} & \color{#cccccc}{30} & \color{#666666}{0} \end{array}}^{\text{new image}}
+$$
 
 ### Using Convolution in Edge Detection
 - We can use the convolution operator and matrix filters for many different purposes
@@ -38,15 +44,21 @@ $$ = \space \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c|c} \color{#66
 - Different filters will lead to different ways to detect edges
 - Specifically, we can detect vertical edges in an image using the following filter:
 
-$$ \def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 1 & 0 & -1 \cr \hline 1 & 0 & -1 \end{array} $$
+$$
+\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 1 & 0 & -1 \cr \hline 1 & 0 & -1 \end{array}
+$$
 
 - We can detect horizontal edges in an image using the filter:
 
-$$ \def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 1 & 1 \cr \hline 0 & 0 & 0 \cr \hline -1 & -1 & -1 \end{array} $$
+$$
+\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 1 & 1 \cr \hline 0 & 0 & 0 \cr \hline -1 & -1 & -1 \end{array}
+$$
 
 - There are a few other filters that allow us to better detect vertical edges in more complicated images:
 
-$$ \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 2 & 0 & -2 \cr \hline 1 & 0 & -1 \end{array}}^{\text{Sobel filter}} \qquad \qquad \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 3 & 0 & -3 \cr \hline 10 & 0 & -10 \cr \hline 3 & 0 & -3 \end{array}}^{\text{Scharr filter}} $$
+$$
+\overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 2 & 0 & -2 \cr \hline 1 & 0 & -1 \end{array}}^{\text{Sobel filter}} \qquad \qquad \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 3 & 0 & -3 \cr \hline 10 & 0 & -10 \cr \hline 3 & 0 & -3 \end{array}}^{\text{Scharr filter}}
+$$
 
 ### Convolution in Deep Learning
 - With the rise of deep learning, we don't need to have computer vision researchers handpick the $9$ numbers within our matrix filter
@@ -60,7 +72,9 @@ $$ \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline
 - Let's return to the previous example involving convolution
 - We essentially convolved the following matrices:
 
-$$ image_{6 \times 6} \space \otimes \space filter_{3 \times 3} = image_{4 \times 4} $$
+$$
+image_{6 \times 6} \space \otimes \space filter_{3 \times 3} = image_{4 \times 4}
+$$
 
 - From this, we can gather two issues:
 	1. Our resulting image shrinks
@@ -77,7 +91,9 @@ $$ image_{6 \times 6} \space \otimes \space filter_{3 \times 3} = image_{4 \time
 - Typically, the values of the padded border are assigned to $0$
 - Using the previous example from above, padding the input image and convolving the padded image with our filter would look like:
 
-$$ image_{8 \times 8} \space \otimes \space filter_{3 \times 3} = image_{6 \times 6} $$
+$$
+image_{8 \times 8} \space \otimes \space filter_{3 \times 3} = image_{6 \times 6}
+$$
 
 - We can see the dimensions of this output image is $6 \times 6$
 - Notice, these are the same dimension as our original input image
@@ -85,7 +101,9 @@ $$ image_{8 \times 8} \space \otimes \space filter_{3 \times 3} = image_{6 \time
 - However, the amount of padding will need to change depending on the dimensions of our $f \times f$ filter matrix
 - To return an image with the same dimensions as our input image, we should set $p$ to be the following:
 
-$$ p = \frac{f-1}{2} $$
+$$
+p = \frac{f-1}{2}
+$$
 
 - Note, the dimensions of our filter matrix are typically odd
 - There are two reasons that $f$ is usually odd:
@@ -105,7 +123,9 @@ $$ p = \frac{f-1}{2} $$
 	- $p$: the amount of padding applied to the input matrix
 	- $s$: the stride taken during our convolution
 
-$$ d = \lfloor \frac{n+2p-f}{s} + 1 \rfloor $$
+$$
+d = \lfloor \frac{n+2p-f}{s} + 1 \rfloor
+$$
 
 - In other words, our output image has dimensions $d \times d$
 - The symbols $\lfloor$ and $\rfloor$ refer to the *floor* operation
@@ -128,11 +148,15 @@ $$ d = \lfloor \frac{n+2p-f}{s} + 1 \rfloor $$
 - In other words, we can have a filter that only looks at the red channel, blue channel, or green channel
 - For example, a filter only looking for vertical edges in the red channel could look like the following:
 
-$$ \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 1 & 0 & -1 \cr \hline 1 & 0 & -1 \end{array}}^{\text{Red filter}} \qquad \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 0 & 0 & 0 \cr \hline 0 & 0 & 0 \cr \hline 0 & 0 & 0 \end{array}}^{\text{Green filter}} \qquad \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 0 & 0 & 0 \cr \hline 0 & 0 & 0 \cr \hline 0 & 0 & 0 \end{array}}^{\text{Blue filter}} $$
+$$
+\overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 1 & 0 & -1 \cr \hline 1 & 0 & -1 \end{array}}^{\text{Red filter}} \qquad \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 0 & 0 & 0 \cr \hline 0 & 0 & 0 \cr \hline 0 & 0 & 0 \end{array}}^{\text{Green filter}} \qquad \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 0 & 0 & 0 \cr \hline 0 & 0 & 0 \cr \hline 0 & 0 & 0 \end{array}}^{\text{Blue filter}}
+$$
 
 - On the other hand, a filter that looks at vertical edges in each channel could look like the following:
 
-$$ \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 1 & 0 & -1 \cr \hline 1 & 0 & -1 \end{array}}^{\text{Red filter}} \qquad \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 1 & 0 & -1 \cr \hline 1 & 0 & -1 \end{array}}^{\text{Green filter}} \qquad \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 1 & 0 & -1 \cr \hline 1 & 0 & -1 \end{array}}^{\text{Blue filter}} $$
+$$
+\overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 1 & 0 & -1 \cr \hline 1 & 0 & -1 \end{array}}^{\text{Red filter}} \qquad \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 1 & 0 & -1 \cr \hline 1 & 0 & -1 \end{array}}^{\text{Green filter}} \qquad \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline 1 & 0 & -1 \cr \hline 1 & 0 & -1 \end{array}}^{\text{Blue filter}}
+$$
 
 ### Example of Convolution over Volumes
 

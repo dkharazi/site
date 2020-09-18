@@ -12,21 +12,27 @@ katex: true
 - The sample mean is the unbiased estimator of the population mean
 - The sample mean is just what you'd expect:
 
-$$\bar{X} = \frac{1}{n}\sum_{i=1}^{n}x_i$$
+$$
+\bar{X} = \frac{1}{n}\sum_{i=1}^{n}x_i
+$$
 
 ### Sample Variance
 - An estimator of the population variance $\sigma^2$ is represented as $\hat{\sigma^2}$
 - In most cases, we'd expect our best estimate $\hat{\sigma^2}$ to be our sample variance $s^2$
 - The sample variance $s^2$ is defined as the following:
 
-$$ s^2 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})}{n} $$
+$$
+s^2 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})}{n}
+$$
 
 - However, the sample variance is not a perfect estimate of the population variance $\sigma^2$
 - Specifically, it's a biased estimator of the population variance $\sigma^2$
 - Therefore, it’s usally too small
 - The population variance $\sigma^2$ is best estimated as the following:
 
-$$ \sigma^2 = \frac{n}{n−1}s^2 $$
+$$
+\sigma^2 = \frac{n}{n−1}s^2
+$$
 
 - This is the reason why we use the notation $s^2$, instead of $\hat{\sigma^2}$
 - The story here, heuristically, is that we tend to lose variation under sampling

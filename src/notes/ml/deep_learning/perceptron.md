@@ -11,15 +11,21 @@ katex: true
 	- These input could be binary values or real-valued inputs
 - A perceptron returns a single binary output $y$:
 
-$$ y \in \lbrace 0,1 \rbrace $$
+$$
+y \in \lbrace 0,1 \rbrace
+$$
 
 - A perceptron is a function that returns the weighted sum function of inputs and weights
 
-$$ \sum_{j=1}^{n}w_{j}x_{j} $$
+$$
+\sum_{j=1}^{n}w_{j}x_{j}
+$$
 
 - The perceptron's output is determined by whether the weighted sum is less than or greater than some *threshold value*
 
-$$ y = \begin{cases} 0 &\text{if } \sum_{j}w_{j}x_{j} \leq \text{ threshold} \cr 1 &\text{if } \sum_{j}w_{j}x_{j} > \text{ threshold} \end{cases} $$
+$$
+y = \begin{cases} 0 &\text{if } \sum_{j}w_{j}x_{j} \leq \text{ threshold} \cr 1 &\text{if } \sum_{j}w_{j}x_{j} > \text{ threshold} \end{cases}
+$$
 
 ### Illustrating Perceptrons
 - We can think of our previously defined perceptron as the following:
@@ -93,11 +99,15 @@ $$ y = \begin{cases} 0 &\text{if } \sum_{j}w_{j}x_{j} \leq \text{ threshold} \cr
 - We can simplify our notion of perceptrons even further
 - The condition $\sum_{j}w_{j}x_{j}$ is cumbersome, and we can make two notational changes to simplify it
 1. We can describe the weighted sum of squares using dot products instead
-	$$ w \cdot x \equiv \sum_{j=1}^{n}w_{j}x_{j} $$
+	$$
+	w \cdot x \equiv \sum_{j=1}^{n}w_{j}x_{j}
+	$$
 	- Where $w$ is the vector of weights
 	- Where $x$ is the vector of inputs
 2. Move the threshold to the other side of the inequality and replace it with what's known as the perceptron's *bias*
-	$$ \text{output} = \begin{cases} 0 &\text{if } w \cdot x + b \leq 0 \cr 1 &\text{if } w \cdot x + b > 0 \end{cases} $$
+	$$
+	\text{output} = \begin{cases} 0 &\text{if } w \cdot x + b \leq 0 \cr 1 &\text{if } w \cdot x + b > 0 \end{cases}
+	$$
 	- Where $b \equiv -\text{threshold}$
 - We can think of the bias as a shift or adjustment to our decision boundary
 - We can also think of the bias as a measure of how easy it is to get the perceptron to output a $1$

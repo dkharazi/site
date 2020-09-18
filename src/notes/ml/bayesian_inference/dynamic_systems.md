@@ -27,7 +27,9 @@ katex: true
 	- A sample space represents a set of distinct observations of some random variable
 	- There is typically a probability distribution associated with each state
 	- For example, the sample space of a single die roll is the following
-	$$ \Omega = {1, 2, 3, 4, 5, 6} $$
+	$$
+	\Omega = {1, 2, 3, 4, 5, 6}
+	$$
 - In summary, we expect to be thinking about probabilities when we hear *sample spaces*, unlike *state spaces*, which do not carry the same connotation
 - *State spaces* are typically indexed by time, unlike *sample spaces*, which do not carry the same connotation
 

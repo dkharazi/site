@@ -22,22 +22,39 @@ katex: true
 - For example, the sample mean would be a good estimate of the population mean for a normally-distributed random variable $Y$
 - In this case, the difference between each observation in our sample and the unobservable population mean is a statistical error:
 
-$$ error_i = y_i - \mu $$
+$$
+error_i = y_i - \mu
+$$
 
 - The difference between each observation in our sample and the observable sample mean is a residual:
 
-$$ residual_i = y_i - \hat{\mu} $$
-$$ residual_i = y_i - \bar{y} $$
+$$
+residual_i = y_i - \hat{\mu}
+$$
+
+$$
+residual_i = y_i - \bar{y}
+$$
 
 - In linear regression, we define an error as the following:
 
-$$ error_i = y_i − \mu $$
-$$ error_i = y_i - (\beta_{0} + \beta_{1}x_{i}) $$
+$$
+error_i = y_i − \mu
+$$
+
+$$
+error_i = y_i - (\beta_{0} + \beta_{1}x_{i})
+$$
 
 - Then, we would define a residual as the following:
 
-$$ residual_i = y_i - \hat{\mu} $$
-$$ residual_i = y_i - (\hat{\beta_{0}} + \hat{\beta_{1}}x_{i}) $$
+$$
+residual_i = y_i - \hat{\mu}
+$$
+
+$$
+residual_i = y_i - (\hat{\beta_{0}} + \hat{\beta_{1}}x_{i})
+$$
 
 - Essentially, we are able to estimate an error associated with a population parameter by estimating the population parameter itself
 - Then, our parameter estimate will allow us to work with residuals, meaning we'll be able to work with our data
@@ -56,7 +73,9 @@ $$ residual_i = y_i - (\hat{\beta_{0}} + \hat{\beta_{1}}x_{i}) $$
 - Therefore, the standard error is a property of an estimator
 - The standard error is defined as the following:
 
-$$ SE = \frac{\sigma}{\sqrt{n}} $$
+$$
+SE = \frac{\sigma}{\sqrt{n}}
+$$
 
 - In other words, the accuracy of our estimates depends on our sample standard deviation and our sample size
 - With that being said, our sample standard deviation is typically considered fixed while our sample size can change easily

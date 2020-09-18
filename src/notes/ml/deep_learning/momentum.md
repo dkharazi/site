@@ -32,13 +32,23 @@ katex: true
 	- Where $db = \frac{\partial J(w,b)}{\partial b}$
 2. Update each $W$ parameter as the following:
 
-$$ v_{t} = \beta v_{t-1} + (1-\beta)dW $$
-$$ W_{t} = W_{t-1} - \alpha v_{t} $$
+$$
+v_{t} = \beta v_{t-1} + (1-\beta)dW
+$$
+
+$$
+W_{t} = W_{t-1} - \alpha v_{t}
+$$
 
 3. Update each $b$ parameter as the following:
 
-$$ v_{t} = \beta v_{t-1} + (1-\beta)db $$
-$$ b_{t} = b_{t-1} - \alpha v_{t} $$
+$$
+v_{t} = \beta v_{t-1} + (1-\beta)db
+$$
+
+$$
+b_{t} = b_{t-1} - \alpha v_{t}
+$$
 
 4. Repeat the above steps for each $t^{th}$ iteration of mini-batch
 	- Note that our hyperparameters are $\alpha$ and $\beta$ here

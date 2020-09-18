@@ -26,11 +26,15 @@ katex: true
 	- A *Sun* variable that refers to whether the shrub is located in partial sun or full sun
 - We could define our model as the following:
 
-$$ \text{Height} = \beta_0 + \beta_1\text{Bacteria} + \beta_2\text{Sun} $$
+$$
+\text{Height} = \beta_0 + \beta_1\text{Bacteria} + \beta_2\text{Sun}
+$$
 
 - If we determine that $\beta_0 = 42$, $\beta_1 = 2.3$, and $\beta_2 = 11$, then our model would would look like the following:
 
-$$ \text{Height} = 42 + 2.3 \times \text{Bacteria} + 11 \times \text{Sun} $$
+$$
+\text{Height} = 42 + 2.3 \times \text{Bacteria} + 11 \times \text{Sun}
+$$
 
 - We may believe the relationship between the amount of bacteria in the soil and the height of the shrub is different in the full compared to partial sun
 - Specifically, we may believe that:
@@ -41,21 +45,29 @@ $$ \text{Height} = 42 + 2.3 \times \text{Bacteria} + 11 \times \text{Sun} $$
 - In this situation, the slopes would have the same sign, but very different magnitude
 - Therefore, it would be useful to add the following interaction term to our model:
 
-$$ \text{Height} = \beta_0 + \beta_1(\text{Bacteria}) + \beta_2(\text{Sun}) + \beta_3(\text{Bacteria}\times\text{Sun}) $$
+$$
+\text{Height} = \beta_0 + \beta_1(\text{Bacteria}) + \beta_2(\text{Sun}) + \beta_3(\text{Bacteria}\times\text{Sun})
+$$
 
 - Adding the interaction term changes the values of our coefficients to the following:
 
-$$ \text{Height} = 35 + 4.2(\text{Bacteria}) + 9(\text{Sun}) + 3.2(\text{Bacteria}\times\text{Sun}) $$
+$$
+\text{Height} = 35 + 4.2(\text{Bacteria}) + 9(\text{Sun}) + 3.2(\text{Bacteria}\times\text{Sun})
+$$
 
 ### Coefficient Interpretations
 - The effect of Bacteria on Height is now $4.2 + 3.2(Sun)$
 - For plants with partial exposure to the sun (i.e. $Sun = 0$) and 1000mL of bacteria in the soil (i.e. $Bacteria = 1$), the effect of Bacteria is the following:
 
-$$ \text{Height} = (4.2 \times 1) + (3.2 \times 0) = 4.2 $$
+$$
+\text{Height} = (4.2 \times 1) + (3.2 \times 0) = 4.2
+$$
 
 - For plants with full exposure to the sun and 1000mL of bacteria in the soil, the effect of Bacteria is the following:
 
-$$ \text{Height} = (4.2 \times 1) + (3.2 \times 1) = 7.4 $$
+$$
+\text{Height} = (4.2 \times 1) + (3.2 \times 1) = 7.4
+$$
 
 - The interaction term $\beta_0$ states that the effect of having more bacteria in the soil is different if a plant has full or partial levels of sun exposure
 - Essentially, the slopes of the regression lines between height and bacteria count are different for the different categories of sun exposure
@@ -68,7 +80,9 @@ $$ \text{Height} = (4.2 \times 1) + (3.2 \times 1) = 7.4 $$
 	- A *DeathRate* variable that refers to the rate of death
 - We could define our model as the following:
 
-$$ NumDeaths = \beta_0 + \beta_1 Rate_{i} + \beta_2 Rate_{d} $$
+$$
+NumDeaths = \beta_0 + \beta_1 Rate_{i} + \beta_2 Rate_{d}
+$$
 
 - We may believe the relationship between the infection rate and the number of deaths is different when the death rate is high compared to low
 - Specifically, we may believe that:
@@ -80,7 +94,9 @@ $$ NumDeaths = \beta_0 + \beta_1 Rate_{i} + \beta_2 Rate_{d} $$
 - In this situation, the slopes would have the same signs
 - Therefore, it would be useful to add the following interaction term to our model:
 
-$$ Deaths = \beta_0 + \beta_1(Rate_{i}) + \beta_2(Rate_{d}) + \beta_3(Rate_{i} \times Rate_{d}) $$
+$$
+Deaths = \beta_0 + \beta_1(Rate_{i}) + \beta_2(Rate_{d}) + \beta_3(Rate_{i} \times Rate_{d})
+$$
 
 ### References
 - [Truth about Linear Regression](http://www.stat.cmu.edu/~cshalizi/TALR/TALR.pdf)

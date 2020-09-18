@@ -13,12 +13,19 @@ katex: true
 ### Illustrating the Need for Normalization
 - Let's say we define our cost function as the following:
 
-$$ J(w,b) = \frac{1}{2m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}_{i}, y_{i}) $$
+$$
+J(w,b) = \frac{1}{2m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}_{i}, y_{i})
+$$
 
 - And our input data looks like the following:
 
-$$ x_{1} : 0, ..., 1 $$
-$$ x_{2} : 1, ..., 1000 $$
+$$
+x_{1} : 0, ..., 1
+$$
+
+$$
+x_{2} : 1, ..., 1000
+$$
 
 - The contour could look like the following after gradient descent:
 
@@ -29,8 +36,13 @@ $$ x_{2} : 1, ..., 1000 $$
 ### Illustrating the Goal of Normalization
 - Using out input data from before, our normalized data could look like the following:
 
-$$ x_{1} : 0, ..., 3 $$
-$$ x_{2} : 0, ..., 3.5 $$
+$$
+x_{1} : 0, ..., 3
+$$
+
+$$
+x_{2} : 0, ..., 3.5
+$$
 
 - The contour could look like the following after gradient descent:
 
@@ -43,11 +55,19 @@ $$ x_{2} : 0, ..., 3.5 $$
 ### Normalization Algorithm
 - Normalizing input data includes the following steps:
 	1. Center data around the mean
-	$$ \mu = \frac{1}{m} \sum_{i=1}^{m} x_{i} $$
-	$$ \tilde{x}_{i} = x_{i} - \mu $$
+	$$
+	\mu = \frac{1}{m} \sum_{i=1}^{m} x_{i}
+	$$
+	$$
+	\tilde{x}_{i} = x_{i} - \mu
+	$$
 	2. Normalize the variance
-	$$ \sigma = \sqrt{\frac{1}{m-1} \sum_{i=1}^{m} \tilde{x}_{i}^{2}} $$
-	$$ x^{norm}_{i} = \frac{\tilde{x}_{i}}{\sigma} $$
+	$$
+	\sigma = \sqrt{\frac{1}{m-1} \sum_{i=1}^{m} \tilde{x}_{i}^{2}}
+	$$
+	$$
+	x^{norm}_{i} = \frac{\tilde{x}_{i}}{\sigma}
+	$$
 - Centering $x$ around $\mu$ will make it so the new mean of $x$ is $0$
 - Normalizing the variance of $x$ will make the new variance of $x$ equal to $1$
 - Input data should be normalized for both the training and test sets

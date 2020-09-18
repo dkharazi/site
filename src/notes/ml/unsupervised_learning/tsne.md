@@ -49,7 +49,9 @@ katex: true
 		- If we don't scale the distances, then the problem mentioned above will impact the densities of the curve
 		- So we want to make sure each point is on the same scale as the others
 		- Specifically, we scale the distances using the following formula:
-		$$ \frac{score_{i}}{\sum score_{i}} $$
+		$$
+		\frac{score_{i}}{\sum score_{i}}
+		$$
 		- Therefore, the scaled similarities should add up to 1
 2. Calculate the scaled similarities from a t-distribution for the lower-dimensional data
 	1. Randomly project the data on a lower-dimensional space
@@ -69,7 +71,9 @@ katex: true
 		- If we don't scale the distances, then the problem mentioned above will impact the densities of the curve
 		- So we want to make sure each point is on the same scale as the others
 		- Specifically, we scale the distances using the following formula:
-		$$ \frac{score_{i}}{\sum score_{i}} $$
+		$$
+		\frac{score_{i}}{\sum score_{i}}
+		$$
 		- Therefore, the scaled similarities should add up to 1
 	5. Adjust the t-sne distribution of scaled similarities to match the normal distribution of scaled similarities for each point
 		- We do this iteratively using gradient descent

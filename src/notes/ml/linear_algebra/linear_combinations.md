@@ -15,7 +15,9 @@ katex: true
 - Therefore, a linear combination just represents some new vector in the same vector space $V$ (as the vector space $V$ of the input vectors)
 - Specifically, the sum of scaled vectors function refers to the following:
 
-$$ f(v) = \sum \alpha_{i}v_{i} $$
+$$
+f(v) = \sum \alpha_{i}v_{i}
+$$
 
 - Where $v_{i}$ are the vectors
 - Where $\alpha_{i}$ are the scalars
@@ -26,7 +28,9 @@ $$ f(v) = \sum \alpha_{i}v_{i} $$
 - And, our linear combination can be thought of as a different, yet related, English word that is essentially the outcome of combining all of those words together
 - In our example, our English words could be *quick*, *spotted*, and *cat* and our new related English word (or our linear combination) could be *cheetah*:
 
-$$ quick + spotted + cat = cheetah $$
+$$
+quick + spotted + cat = cheetah
+$$
 
 - In this example, the initial English words and resultant English word mean very different things on their own, but are at least represented in the same language so we can still understand it
 - In other words, our new *cheetah* word is still *in the same vector space* as our initial words *quick*, *spotted*, and *cat*
@@ -47,27 +51,39 @@ $$ quick + spotted + cat = cheetah $$
 ### Example of Linear Combinations
 - Let's say we have the following vectors:
 
-$$ v_{1} = \begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix}, v_{2} = \begin{bmatrix} 3 \cr 5 \cr 1 \end{bmatrix}, v_{3} = \begin{bmatrix} 0 \cr 0 \cr 8 \end{bmatrix} $$
+$$
+v_{1} = \begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix}, v_{2} = \begin{bmatrix} 3 \cr 5 \cr 1 \end{bmatrix}, v_{3} = \begin{bmatrix} 0 \cr 0 \cr 8 \end{bmatrix}
+$$
 
 - Then the following vectors are linear combinations of $v_{1}, v_{2},$ and $v_{3}$:
 
-$$ b_{1} = \begin{bmatrix} 3 \cr 6 \cr 9 \end{bmatrix}, b_{2} = \begin{bmatrix} 3 \cr 6 \cr 17 \end{bmatrix}, b_{3} = \begin{bmatrix} 9 \cr 16 \cr 11 \end{bmatrix}, b_{4} = \begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} $$
+$$
+b_{1} = \begin{bmatrix} 3 \cr 6 \cr 9 \end{bmatrix}, b_{2} = \begin{bmatrix} 3 \cr 6 \cr 17 \end{bmatrix}, b_{3} = \begin{bmatrix} 9 \cr 16 \cr 11 \end{bmatrix}, b_{4} = \begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix}
+$$
 
 - Vector $b_{1}$ is a linear combination of $v_{1}, v_{2},$ and $v_{3}$ because:
 
-$$ \begin{bmatrix} 3 \cr 6 \cr 9 \end{bmatrix} = 3\begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} + 0\begin{bmatrix} 3 \cr 5 \cr 1 \end{bmatrix} + 0\begin{bmatrix} 0 \cr 0 \cr 8 \end{bmatrix} $$
+$$
+\begin{bmatrix} 3 \cr 6 \cr 9 \end{bmatrix} = 3\begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} + 0\begin{bmatrix} 3 \cr 5 \cr 1 \end{bmatrix} + 0\begin{bmatrix} 0 \cr 0 \cr 8 \end{bmatrix}
+$$
 
 - Vector $b_{2}$ is a linear combination of $v_{1}, v_{2},$ and $v_{3}$ because:
 
-$$ \begin{bmatrix} 3 \cr 6 \cr 17 \end{bmatrix} = 3\begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} + 0\begin{bmatrix} 3 \cr 5 \cr 1 \end{bmatrix} + 1\begin{bmatrix} 0 \cr 0 \cr 8 \end{bmatrix} $$
+$$
+\begin{bmatrix} 3 \cr 6 \cr 17 \end{bmatrix} = 3\begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} + 0\begin{bmatrix} 3 \cr 5 \cr 1 \end{bmatrix} + 1\begin{bmatrix} 0 \cr 0 \cr 8 \end{bmatrix}
+$$
 
 - Vector $b_{3}$ is a linear combination of $v_{1}, v_{2},$ and $v_{3}$ because:
 
-$$ \begin{bmatrix} 9 \cr 16 \cr 11 \end{bmatrix} = 3\begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} + 2\begin{bmatrix} 3 \cr 5 \cr 1 \end{bmatrix} + 0\begin{bmatrix} 0 \cr 0 \cr 8 \end{bmatrix} $$
+$$
+\begin{bmatrix} 9 \cr 16 \cr 11 \end{bmatrix} = 3\begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} + 2\begin{bmatrix} 3 \cr 5 \cr 1 \end{bmatrix} + 0\begin{bmatrix} 0 \cr 0 \cr 8 \end{bmatrix}
+$$
 
 - Vector $b_{4}$ is a linear combination of $v_{1}, v_{2},$ and $v_{3}$ because:
 
-$$ \begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} = 1\begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} + 0\begin{bmatrix} 3 \cr 5 \cr 1 \end{bmatrix} + 0\begin{bmatrix} 0 \cr 0 \cr 8 \end{bmatrix} $$
+$$
+\begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} = 1\begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} + 0\begin{bmatrix} 3 \cr 5 \cr 1 \end{bmatrix} + 0\begin{bmatrix} 0 \cr 0 \cr 8 \end{bmatrix}
+$$
 
 ### Describing a Span
 - The span of two vectors $v$ and $w$ (or spanning set) is the set of all of their linear combinations
@@ -89,20 +105,32 @@ $$ \begin{bmatrix} 1 \cr 2 \cr 3 \end{bmatrix} = 1\begin{bmatrix} 1 \cr 2 \cr 3 
 - A standard basis is one of many possible bases for some vector space $V$
 - The following are examples of bases of $\R^{3}$:
 
-$$ b_{1} = \begin{bmatrix} 1 & 0 & 1 \cr 1 & 2 & 0 \cr 0 & -1 & 3 \end{bmatrix}, b_{2} = \begin{bmatrix} 2 & 0 & 0 \cr 0 & 5 & 0 \cr 0 & 0 & 4 \end{bmatrix}, b_{3} = \begin{bmatrix} 1 & 2 & -2 \cr 0 & 1 & 1 \cr -1 & -1 & 4 \end{bmatrix}, b_{4} = \begin{bmatrix} 1 & 0 & 0 \cr 0 & 1 & 0 \cr 0 & 0 & 1 \end{bmatrix} $$
+$$
+b_{1} = \begin{bmatrix} 1 & 0 & 1 \cr 1 & 2 & 0 \cr 0 & -1 & 3 \end{bmatrix}, b_{2} = \begin{bmatrix} 2 & 0 & 0 \cr 0 & 5 & 0 \cr 0 & 0 & 4 \end{bmatrix},
+$$
+
+$$
+b_{3} = \begin{bmatrix} 1 & 2 & -2 \cr 0 & 1 & 1 \cr -1 & -1 & 4 \end{bmatrix}, b_{4} = \begin{bmatrix} 1 & 0 & 0 \cr 0 & 1 & 0 \cr 0 & 0 & 1 \end{bmatrix}
+$$
 
 - These are all a basis of $\R^{3}$ because each set of vectors of $b$ is a linear combination of the following:
 
-$$ I_{4} = \begin{bmatrix} 1 & 0 & 0 \cr 0 & 1 & 0 \cr 0 & 0 & 1 \end{bmatrix} $$
+$$
+I_{4} = \begin{bmatrix} 1 & 0 & 0 \cr 0 & 1 & 0 \cr 0 & 0 & 1 \end{bmatrix}
+$$
 
 ### Examples of Standard Bases
 - The following is the standard basis of $\R^{3}$:
 
-$$ b = \begin{bmatrix} 1 & 0 & 0 \cr 0 & 1 & 0 \cr 0 & 0 & 1 \end{bmatrix} $$
+$$
+b = \begin{bmatrix} 1 & 0 & 0 \cr 0 & 1 & 0 \cr 0 & 0 & 1 \end{bmatrix}
+$$
 
 - The following is the standard basis of $\R^{2}$:
 
-$$ b = \begin{bmatrix} 1 & 0 \cr 0 & 1 \end{bmatrix} $$
+$$
+b = \begin{bmatrix} 1 & 0 \cr 0 & 1 \end{bmatrix}
+$$
 
 ### References
 - [Essence of Linear Algebra Video](https://www.youtube.com/watch?v=k7RM-ot2NWY&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=2)

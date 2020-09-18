@@ -23,13 +23,21 @@ katex: true
 ### Gaussian Distribution
 A gaussian distribution is a discrete probability distribution of a random variable that takes the value 1 with a probability $p$ and the value 0 with probability $1-p$
 
-$$ X \sim Gaussian(\mu;\sigma) $$
+$$
+X \sim Gaussian(\mu;\sigma)
+$$
 
-$$ f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^{2}} $$
+$$
+f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^{2}}
+$$
 
-$$ E(x) = \mu \text{ where } \lim_{n \rarr \infty} \hat{\mu} = \mu \text{ where } \hat{\mu} = \frac{1}{n}\sum_{i=1}^{n}X_i $$
+$$
+E(x) = \mu \text{ where } \lim_{n \rarr \infty} \hat{\mu} = \mu \text{ where } \hat{\mu} = \frac{1}{n}\sum_{i=1}^{n}X_i
+$$
 
-$$ Var(x) = \sigma^{2} \text{ where } \lim_{n \rarr \infty} \hat{\sigma}^2 = \sigma^2 \text{ where } \hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^{n}(X_i - \hat{\mu})^2 $$
+$$
+Var(x) = \sigma^{2} \text{ where } \lim_{n \rarr \infty} \hat{\sigma}^2 = \sigma^2 \text{ where } \hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^{n}(X_i - \hat{\mu})^2
+$$
 
 - The guassian distribution is also known as the normal distribution
 - This is the single most important distribution in probability theory, owing to the Central Limit Theorem

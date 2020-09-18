@@ -17,7 +17,9 @@ katex: true
 - However, we can actually combine our scalars into a matrix, then our scalar multiplication becomes matrix multiplication
 - In linear algebra, we mostly work with the system of equations defined as the following:
 
-$$ Ax = b $$
+$$
+Ax = b
+$$
 
 - If we're given a constant vector $x$ and we want to find a vector $b$ that is a linear combination of a set of vectors $A$, then we're solving for $b$ in the system of equations $Ax = b$
 	- We're given $A$ and $x$

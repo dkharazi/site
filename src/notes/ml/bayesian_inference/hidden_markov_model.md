@@ -37,17 +37,36 @@ katex: true
 3. Calculate the prior probabilities of observing the hidden states
 4. Calculate the posterior probability of observing a sequence of hidden states given a sequence of observed states using Bayes theorem (i.e. Bayesian statistics)
 
-$$ P(H|D) \propto P(H)P(D|H) $$
-$$ P(H|D) = P(Hot,Hot | Jeans,Shorts) $$
-$$ P(H) = P(Hot) $$
-$$ P(D|H) = P(Jeans|Hot) \times P(Shorts|Hot) \times P(Hot|Hot) $$
+$$
+P(H|D) \propto P(H)P(D|H)
+$$
+
+$$
+P(H|D) = P(Hot,Hot | Jeans,Shorts)
+$$
+
+$$
+P(H) = P(Hot)
+$$
+
+$$
+P(D|H) = P(Jeans|Hot) \times P(Shorts|Hot) \times P(Hot|Hot)
+$$
 
 4. Or, we can instead calculate each posterior probability of observing a sequence of hidden states given a sequence of observed states, then use MLE to find the most probable hidden state given the specified observed states
 	- For example, we can calculate the following posterior probabilities:
-	$$ P_{1}(H|D) = P(Hot,Hot | Jeans,Shorts) = 0.4 $$
-	$$ P_{2}(H|D) = P(Hot,Cold | Jeans,Shorts) = 0.5 $$
-	$$ P_{3}(H|D) = P(Cold,Hot | Jeans,Shorts) = 0.4 $$
-	$$ P_{4}(H|D) = P(Cold,Cold | Jeans,Shorts) = 0.3 $$
+	$$
+	P_{1}(H|D) = P(Hot,Hot | Jeans,Shorts) = 0.4
+	$$
+	$$
+	P_{2}(H|D) = P(Hot,Cold | Jeans,Shorts) = 0.5
+	$$
+	$$
+	P_{3}(H|D) = P(Cold,Hot | Jeans,Shorts) = 0.4
+	$$
+	$$
+	P_{4}(H|D) = P(Cold,Cold | Jeans,Shorts) = 0.3
+	$$
 	- Then, we can guess the hidden states are $\lbrace Hot,Cold \rbrace$ when the observed states are $ \lbrace Jeans,Shorts \rbrace$, since $P_{2}(H|D)$ has the highest probability out of the four posterior probabilities
 
 ### Markov Models versus HMMs

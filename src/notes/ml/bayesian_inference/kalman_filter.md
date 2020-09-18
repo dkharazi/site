@@ -28,19 +28,28 @@ katex: true
 ### Defining the Kalman Filter Algorithm
 - The Kalman filter can be defined as the following:
 
-$$ y_{i} = Hx_{i} + \epsilon_{i} $$
-$$ \text{where } x_{i} = Ax_{i-1} + \phi_{i} $$
+$$
+y_{i} = Hx_{i} + \epsilon_{i}
+$$
+
+$$
+\text{where } x_{i} = Ax_{i-1} + \phi_{i}
+$$
 
 - We can see that there are two parts of the algorithm:
 	1. The update portion of the algorithm, which is the following component:
-	$$ x_{i} = Ax_{i-1} + \phi_{i} $$
+	$$
+	x_{i} = Ax_{i-1} + \phi_{i}
+	$$
 	- Where $x_{i}$ is our hidden variable and represents our estimated predictor variable (i.e. current predicted value of $x$)
 	- Where $x_{i-1}$ represents the previous predicted value of $x$
 	- Where $A$ represents the state transition matrix
 		- These could be made up of the beta coefficients for a linear regression model, or the autoregressive coefficients in an AR (or ARIMA) model, etc.
 	- Where $\phi_{i}$ represents the error term for $x_{i}$
 	2. The prediction portion of the algorithm, which is the following component:
-	$$ y_{i} = Hx_{i} + \epsilon_{i} $$
+	$$
+	y_{i} = Hx_{i} + \epsilon_{i}
+	$$
 	- Where $y_{i}$ represents our estimated response variable (i.e. current predicted value of $y$)
 	- Where $x_{i}$ refers to our hidden variable and represents our estimated precitor variable
 	- Where $H$ represents the state transition matrix

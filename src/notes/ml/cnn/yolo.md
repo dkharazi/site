@@ -23,7 +23,9 @@ katex: true
 - We marked their bounding boxes in red
 - For each grid cell, we have the following labels for training:
 
-$$ y = \begin{bmatrix} p_{c} \cr b_{x} \cr b_{y} \cr b_{h} \cr b_{w} \cr c_{1} \cr c_{2} \cr c_{3} \end{bmatrix} $$
+$$
+y = \begin{bmatrix} p_{c} \cr b_{x} \cr b_{y} \cr b_{h} \cr b_{w} \cr c_{1} \cr c_{2} \cr c_{3} \end{bmatrix}
+$$
 
 - This is similar to our $1 \times 1$ activations from our convolutional implementation of the sliding window
 - Now, we need to associate objects to individual cells
@@ -45,11 +47,25 @@ $$ y = \begin{bmatrix} p_{c} \cr b_{x} \cr b_{y} \cr b_{h} \cr b_{w} \cr c_{1} \
 	- $p_{c}:$ The probability of whether there is an object or not
 - The yolo loss function is defined as the following:
 
-$$ \lambda_{coord} \sum_{i=0}^{S^{3}} \sum_{j=0}^{B} 1^{obj}_{ij}[(x_{i}-\hat{x}_{i})^{2} + (y_{i}-\hat{y}_{i})^{2}] $$
-$$ + \lambda_{coord} \sum_{i=0}^{S^{2}} \sum_{j=0}^{B} 1^{obj}_{ij}[(\sqrt{w_{i}}-\sqrt{\hat{x}_{i}})^{2} + (\sqrt{h_{i}}-\sqrt{\hat{h}_{i}})^{2}] $$
-$$ + \sum_{i=0}^{S^{2}} \sum_{j=0}^{B} 1^{obj}_{ij}(C_{i}-\hat{C}_{i})^{2} $$
-$$ + \lambda_{noobj} \sum_{i=0}^{S^{2}} \sum_{j=0}^{B} 1^{obj}_{ij}(C_{i}-\hat{C}_{i})^{2} $$
-$$ + \sum_{i=0}^{S^{2}} 1^{obj}_{ij} \sum_{c \in classes} (p_{i}(c)-\hat{p}_{i}(c)) $$
+$$
+\lambda_{coord} \sum_{i=0}^{S^{3}} \sum_{j=0}^{B} 1^{obj}_{ij}[(x_{i}-\hat{x}_{i})^{2} + (y_{i}-\hat{y}_{i})^{2}]
+$$
+
+$$
++ \lambda_{coord} \sum_{i=0}^{S^{2}} \sum_{j=0}^{B} 1^{obj}_{ij}[(\sqrt{w_{i}}-\sqrt{\hat{x}_{i}})^{2} + (\sqrt{h_{i}}-\sqrt{\hat{h}_{i}})^{2}]
+$$
+
+$$
++ \sum_{i=0}^{S^{2}} \sum_{j=0}^{B} 1^{obj}_{ij}(C_{i}-\hat{C}_{i})^{2}
+$$
+
+$$
++ \lambda_{noobj} \sum_{i=0}^{S^{2}} \sum_{j=0}^{B} 1^{obj}_{ij}(C_{i}-\hat{C}_{i})^{2}
+$$
+
+$$
++ \sum_{i=0}^{S^{2}} 1^{obj}_{ij} \sum_{c \in classes} (p_{i}(c)-\hat{p}_{i}(c))
+$$
 
 ### Intuition behind YOLO Loss Function
 - The first term penalizes bad localizations of the center of cells
@@ -80,8 +96,13 @@ $$ + \sum_{i=0}^{S^{2}} 1^{obj}_{ij} \sum_{c \in classes} (p_{i}(c)-\hat{p}_{i}(
 		- An iou threshold of $0.5$ is considered *correct*
 		- In other words, a bounding box with a $\ge 0.5$ iou value is considered similar enough to the true bounding box
 
-$$ iou = \frac{\text{intersection area}}{\text{our bounding box area}} $$
-$$ iou \ge 0.5 \text{ is correct} $$
+$$
+iou = \frac{\text{intersection area}}{\text{our bounding box area}}
+$$
+
+$$
+iou \ge 0.5 \text{ is correct}
+$$
 
 - The iou function doesn't define a bounding box by its center point, width, and height
 - Instead, it defines a bounding box based on its upper left corners $(x_{1},y_{1})$ and lower right corners $(x_{2}, y_{2})$
@@ -124,7 +145,7 @@ def iou(box1, box2):
 - Therefore, other grids will think there is a car as well
 - Our goal is to do the following:
 	- Keep the bounding boxes that have the highest $p_{c}$
-	- Remove the bounding boxes that are very similar to the bounding boxes with the highest $$p_{c}$
+	- Remove the bounding boxes that are very similar to the bounding boxes with the highest $p_{c}$
 - Therefore, we perform nonmax suppression:
 	1. Discard all bounding boxes with $p_{c} \le 0.6$
 	2. Choose the bounding box with the largest $p_{c}$ value
@@ -178,7 +199,9 @@ t the bounding box with the largest $p_{c}$
 - Specifically, our label $y_{i}$ can be represented as a $16 \times 1$ vector
 - Our label $y_{i}$ looks like the following for a single cell:
 
-$$ y = \begin{bmatrix} p_{c,1} \cr b_{x,1} \cr b_{y,1} \cr b_{h,1} \cr b_{w,1} \cr c_{1,1} \cr c_{2,1} \cr c_{3,1} \cr p_{c,2} \cr b_{x,2} \cr b_{y,2} \cr b_{h,2} \cr b_{w,2} \cr c_{1,2} \cr c_{2,2} \cr c_{3,2} \end{bmatrix} $$
+$$
+y = \begin{bmatrix} p_{c,1} \cr b_{x,1} \cr b_{y,1} \cr b_{h,1} \cr b_{w,1} \cr c_{1,1} \cr c_{2,1} \cr c_{3,1} \cr p_{c,2} \cr b_{x,2} \cr b_{y,2} \cr b_{h,2} \cr b_{w,2} \cr c_{1,2} \cr c_{2,2} \cr c_{3,2} \end{bmatrix}
+$$
 
 - Here $p_{c,1}$ refers to $p_{c}$ of anchor box $1$
 - And $p_{c,2}$ refers to $p_{c}$ of anchor box $2$

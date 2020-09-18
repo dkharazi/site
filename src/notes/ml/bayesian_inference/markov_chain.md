@@ -60,15 +60,25 @@ katex: true
 - A Markov Chain is a discrete-valued, discrete-time stochastic processes
 - Mathematically, a discrete-valued, discrete-time stochastic process has the Markov property when:
 
-$$ P(S_{n+1} = s_{n+1}|S_{n} = s_{n}) $$
-$$ = P(S_{n+1} = s_{n+1}|S_{n} = s_{n}, S_{n−1} = s_{n−1}, ..., S_{1} = s_{1}) $$
+$$
+P(S_{n+1} = s_{n+1}|S_{n} = s_{n})
+$$
+
+$$
+= P(S_{n+1} = s_{n+1}|S_{n} = s_{n}, S_{n−1} = s_{n−1}, ..., S_{1} = s_{1})
+$$
 
 - In other words, the probability distribution for the next state depends solely on the current state
 - If the above property is true for a stochastic process, then we can say that $S_{n}$ is a Markov process
 - The analogous condition for continuous time is the following:
 
-$$ P(S(t_{n+1}) = s_{n+1}|S(t_{n}) = s_{n}) $$
-$$ = P(S(t_{n+1}) = s_{n+1}|S(t_{n}) = s_{n}, S(t_{n−1}) = s_{n−1}, ..., S(t_{1}) = s_{1}) $$
+$$
+P(S(t_{n+1}) = s_{n+1}|S(t_{n}) = s_{n})
+$$
+
+$$
+= P(S(t_{n+1}) = s_{n+1}|S(t_{n}) = s_{n}, S(t_{n−1}) = s_{n−1}, ..., S(t_{1}) = s_{1})
+$$
 
 ### Why use a Markov Chain?
 - If we use a Markov Chain, we don't need to keep track of a bunch of dependent variables with respect to some independent variable

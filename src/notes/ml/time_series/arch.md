@@ -16,13 +16,17 @@ katex: true
 ### Representing the ARCH Model
 - We can model any trending volatility by adjusting how we model the errors
 - Specifically, the ARCH(1) model represents errors terms as the following:
-$$ \epsilon_{t} = \omega_{t} + \sqrt{\alpha_{0} + \alpha_{1}\epsilon_{t-1}^{2}} $$
+	$$
+	\epsilon_{t} = \omega_{t} + \sqrt{\alpha_{0} + \alpha_{1}\epsilon_{t-1}^{2}}
+	$$
 	- Where $\omega_{t}$ is a white noise term representing some random, unpredictable component
 	- Where $\epsilon_{t}$ represents the volatility in the current time period
 	- Where $\alpha_{0}$ and $\alpha_{1}$ represent some coefficients for their respective time periods
 	- Where $\epsilon_{t-1}^{2}$ represents the volatility in the previous time period
 - Specifically, the ARCH(2) model represents error terms as the following:
-$$ \epsilon_{t} = \omega_{t} + \sqrt{\alpha_{0} + \alpha_{1}\epsilon_{t-1}^{2} + \alpha_{2}\epsilon_{t-2}^{2}} $$
+	$$
+	\epsilon_{t} = \omega_{t} + \sqrt{\alpha_{0} + \alpha_{1}\epsilon_{t-1}^{2} + \alpha_{2}\epsilon_{t-2}^{2}}
+	$$
 	- Where $\omega_{t}$ is a white noise term representing some random, unpredictable component
 	- Where $\epsilon_{t}$ represents the volatility in the current time period
 	- Where $\alpha_{0}, \alpha_{1},$ and $\alpha_{2}$ represent some coefficients for their respective time periods

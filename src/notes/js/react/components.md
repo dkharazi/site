@@ -54,7 +54,9 @@ katex: true
 - They are generally preferred over class components (if applicable)
 - Functional components must return a single HTML element
 
-$$ \overbrace{\text{Properties}}^{\text{Optional Input}} \to \overbrace{\boxed{\text{JavaScript Function}}}^{\text{Functional Component}} \to \overbrace{\text{HTML}}^{\text{Output}} $$
+$$
+\overbrace{\text{Properties}}^{\text{Optional Input}} \to \overbrace{\boxed{\text{JavaScript Function}}}^{\text{Functional Component}} \to \overbrace{\text{HTML}}^{\text{Output}}
+$$
 
 ```js
 function Greet(props) {
@@ -70,7 +72,9 @@ function Greet(props) {
 - They provide lifecycle hooks
 - Class components must return a single HTML element
 
-$$ \overbrace{\text{Properties}}^{\text{Optional Input}} \to \overbrace{\boxed{\text{ES6 Class}}}^{\text{Class Component}} \to \overbrace{\text{HTML}}^{\text{Output}} $$
+$$
+\overbrace{\text{Properties}}^{\text{Optional Input}} \to \overbrace{\boxed{\text{ES6 Class}}}^{\text{Class Component}} \to \overbrace{\text{HTML}}^{\text{Output}}
+$$
 
 ```js
 class Greet extends React.Component {

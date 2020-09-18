@@ -23,29 +23,52 @@ katex: true
 - Sometimes, we want to know how $J$ changes before we change $a$
 - If we plug $5.001$ in for $a$ instead of $5$, then we'll notice:
 
-$$ a = 5 \to 5.001 $$
-$$ v = 11 \to 11.001 $$
-$$ J = 33 \to 33.003 $$
+$$
+a = 5 \to 5.001
+$$
+
+$$
+v = 11 \to 11.001
+$$
+
+$$
+J = 33 \to 33.003
+$$
 
 - So, increasing $a$ by $0.001$ leads to a change in $J$ of $0.003$
 - If we change $a$ by a large number, then we'll notice:
 
-$$ a = 5 \to 15 $$
-$$ v = 11 \to 21 $$
-$$ J = 33 \to 63 $$
+$$
+a = 5 \to 15
+$$
+
+$$
+v = 11 \to 21
+$$
+
+$$
+J = 33 \to 63
+$$
 
 - So, increasing $a$ by $10$ leads to a change in $J$ of $30$
 - If we keep changing $a$ by some value, then we'll notice that $J$ will always increase by $3$ times that value
 - In other words, a one-unit increase in $a$ will lead to a three-unit increase in $J$
 - We call this a *partial derivative*:
 
-$$ \frac{\partial J}{\partial a} = 3 $$
+$$
+\frac{\partial J}{\partial a} = 3
+$$
 
 - Usually, we don't want to manually adjust $a$ and observe changes in $J$ to find the partial derivative
 - Luckily, we can use calculus to determine the partial derivative of some function $J$ with respect to parameter $a$:
 
-$$ J = 3v = 3a + 3bc $$
-$$ \frac{\partial J}{\partial a} = 3 $$
+$$
+J = 3v = 3a + 3bc
+$$
+
+$$
+\frac{\partial J}{\partial a} = 3
+$$
 
 ### An Assumption about Derivatives
 - As we saw previously, changing $a$ by some amount will lead to a change in $J$ by $3$ times that amount
@@ -53,18 +76,27 @@ $$ \frac{\partial J}{\partial a} = 3 $$
 - We can also determine partial derivatives of other values with respect to $a$
 - For example, if we change $a$ by $0.001$ again, then we'll notice:
 
-$$ a = 5 \to 5.001 $$
-$$ v = 11 \to 11.001 $$
+$$
+a = 5 \to 5.001
+$$
+
+$$
+v = 11 \to 11.001
+$$
 
 - So, increasing $a$ by $0.001$ leads to a change in $v$ of $0.001$
 - In other words, they change by the same amount
 - Therefore, our partial derivative looks like the following:
 
-$$ \frac{\partial v}{\partial a} = 1 $$
+$$
+\frac{\partial v}{\partial a} = 1
+$$
 
 - Notice, $v$ can also change if we change $b$ or $c$:
 
-$$ v = a + bc $$
+$$
+v = a + bc
+$$
 
 - Therefore, we're making an assumption when we notice a $0.001$ change in $v$ with a $0.001$ change in $a$
 - Specifically, we're assuming that both $b$ and $c$ remain fixed
@@ -74,19 +106,34 @@ $$ v = a + bc $$
 ### Observing the Chain Rule
 - We've already noticed the relationship between $a$, $v$, and $J$ when we made a change to $a$ and observed the change in $J$:
 
-$$ a = 5 \to 5.001 $$
-$$ v = 11 \to 11.001 $$
-$$ J = 33 \to 33.003 $$
+$$
+a = 5 \to 5.001
+$$
+
+$$
+v = 11 \to 11.001
+$$
+
+$$
+J = 33 \to 33.003
+$$
 
 - From this, we've seen that $\frac{\partial J}{\partial a} = 3$ because $a$ influences $v$, and $v$ influences $J$
 
-$$ a \to v \to J $$
+$$
+a \to v \to J
+$$
 
 - In other words, partial derivatives are dependent on both the direct and indirect effects of parameters
 - This concept is captured by the *chain rule*:
 
-$$ \frac{\partial J}{\partial a} = \frac{\partial J}{\partial v} \frac{\partial v}{\partial a} $$
-$$ \frac{\partial J}{\partial a} = 3 \times 1 = 3 $$
+$$
+\frac{\partial J}{\partial a} = \frac{\partial J}{\partial v} \frac{\partial v}{\partial a}
+$$
+
+$$
+\frac{\partial J}{\partial a} = 3 \times 1 = 3
+$$
 
 - The chain rule is the calculus we used for computing our partial derivatives previously
 - This is a major step in the backpropagation algorithm

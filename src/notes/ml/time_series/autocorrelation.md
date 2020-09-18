@@ -46,7 +46,9 @@ katex: true
 - The partial autocorrelation function tries to account for the direct effects only
 - The partial autocorrelation function does this by excluding the indirect effects from our function
 - From our previous example, we can represent our system of equation as the following:
-	$$ s_{t} = \beta_{0} + \beta_{1}s_{t-1} + \beta_{2}s_{t-2} + \epsilon_{i} $$
+	$$
+	s_{t} = \beta_{0} + \beta_{1}s_{t-1} + \beta_{2}s_{t-2} + \epsilon_{i}
+	$$
 	- Where $s_{t}$ is the price of salmon in March (i.e. the current month)
 	- Where $s_{t-1}$ is the price of salmon in February (i.e. the previous month)
 	- Where $s_{t-2}$ is the price of salmon in March (i.e. two months ago)
@@ -55,7 +57,9 @@ katex: true
 		- The direct effect that the price of salmon in February has on the price of salmon in March
 	- Where $\beta_{2}$ represents the direct effect that the price of salmon in January has on the price of salmon in March
 		- Therefore, $\beta_{2}$ is partial autocorrelation function coefficient, which represents the coefficient returned by the partial autocorrelation function:
-		$$ pacf(s_{t-2}, s_{t}) $$
+		$$
+		pacf(s_{t-2}, s_{t})
+		$$
 		- In other words, $\beta_{2}$ represents the correlation between the price of salmon in January (i.e. $s_{t-2}$) and the price of salmon in March (i.e. $s_{t}$), only including the direct effects between the two time periods
 - In the example given above, we would say our lag is $2$, since the number of time periods we're looking at from our current time period (i.e. March) is $2$
 - Mathematically, the partial autocorrelation function does this by solving its system of equations (similar to solving for the beta coefficients) using Durbin-Levinson recursion (i.e. linear algebra methods)

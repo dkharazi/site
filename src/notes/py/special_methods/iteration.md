@@ -10,7 +10,9 @@ katex: true
 - An iterator is an object with a `__next__` method
 - An iterator is created by calling the `iter()` on an iterable:
 
-$$ \text{iter(some iterable)} \to \text{iterator} $$
+$$
+\text{iter(some iterable)} \to \text{iterator}
+$$
 
 - The following are examples of iterables:
 	- String

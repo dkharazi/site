@@ -16,15 +16,21 @@ katex: true
 ### Defining L2 Regularization
 - Up until now, we've defined our cost function as:
 
-$$ J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y) $$
+$$
+J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y)
+$$
 
 - If we add regularization to our cost function, our cost function would look like the following:
 
-$$ J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y) + \frac{\lambda}{2m} \Vert w \Vert_{2}^{2} $$
+$$
+J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y) + \frac{\lambda}{2m} \Vert w \Vert_{2}^{2}
+$$
 
 - The additional regularization component can be simplified to:
 
-$$ \Vert w \Vert_{2}^{2} = \sum_{j=1}^{n} w_{j}^{2} = w^{T}w $$
+$$
+\Vert w \Vert_{2}^{2} = \sum_{j=1}^{n} w_{j}^{2} = w^{T}w
+$$
 
 - This new component can be thought of as a term that shrinks all of the weights so only the largest weights remain
 - Consequently, this reduces the amount of overfitting as well
@@ -37,7 +43,9 @@ $$ \Vert w \Vert_{2}^{2} = \sum_{j=1}^{n} w_{j}^{2} = w^{T}w $$
 ### Possibly Adding More Regularized Terms
 - Sometimes, we can add a bias term such as the following:
 
-$$ J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y) + \frac{\lambda}{2m} \Vert w \Vert_{2}^{2} + \frac{\lambda}{2m} \Vert b \Vert_{2}^{2} $$
+$$
+J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y) + \frac{\lambda}{2m} \Vert w \Vert_{2}^{2} + \frac{\lambda}{2m} \Vert b \Vert_{2}^{2}
+$$
 
 - However, this usually doesn't affect our results very much
 - This is because $b$ contains a much smaller percentage of parameter values compared to $w$
@@ -47,11 +55,15 @@ $$ J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y) + \frac{\lambda}{
 - L1 regularization is another form of regularization
 - Specifically, L1 regularization is defined as:
 
-$$ J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y) + \frac{\lambda}{2m} \Vert w \Vert_{1} $$
+$$
+J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y) + \frac{\lambda}{2m} \Vert w \Vert_{1}
+$$
 
 - The additional regularization component can be simplified to:
 
-$$ \Vert w \Vert_{1} = \sum_{j=1}^{n} |w_{j}| $$
+$$
+\Vert w \Vert_{1} = \sum_{j=1}^{n} |w_{j}|
+$$
 
 - L1 regularization causes $w$ to be sparse
 - Meaning, the $w$ vector will include lots of zeroes
@@ -66,17 +78,30 @@ $$ \Vert w \Vert_{1} = \sum_{j=1}^{n} |w_{j}| $$
 - We're probably wondering how to implement gradient descent using the new cost function
 - When we update the weight parameter $w$ during gradient descent, the update with our regularization term will look like:
 
-$$ w = w - \alpha \frac{\partial J}{\partial w} $$
-$$ \frac{\partial J}{\partial w} = (\text{from backprop}) + \frac{\lambda}{m} w $$
+$$
+w = w - \alpha \frac{\partial J}{\partial w}
+$$
+
+$$
+\frac{\partial J}{\partial w} = (\text{from backprop}) + \frac{\lambda}{m} w
+$$
 
 - For each layer, $\frac{\lambda}{m}w$ comes from the derivative of the L2 regularization term $\frac{\lambda}{2m} \Vert w \Vert_{2}^{2}$
 - The $(\text{from backprop})$ term represents the $\frac{\partial J}{\partial w}$ term we normally get from performing backpropagation
 - In other words, we've calculated the derivative of our cost function $J$ with respect to $w$, then added some regularized term on the end
 - We can simplify the above formulas into the following:
 
-$$ w = w - \alpha [(\text{from backprop}) + \frac{\lambda}{m}w] $$
-$$ = w - \frac{\alpha \lambda}{m}w - \alpha(\text{from backprop}) $$
-$$ = w(1-\frac{\alpha \lambda}{m}) - \alpha(\text{from backprop}) $$
+$$
+w = w - \alpha [(\text{from backprop}) + \frac{\lambda}{m}w]
+$$
+
+$$
+= w - \frac{\alpha \lambda}{m}w - \alpha(\text{from backprop})
+$$
+
+$$
+= w(1-\frac{\alpha \lambda}{m}) - \alpha(\text{from backprop})
+$$
 
 - We can see $(1-\frac{\alpha \lambda}{m})$ is some constant that is less than $1$
 - Essentially, we are updating the weight parameter $w$ using gradient descent as usual

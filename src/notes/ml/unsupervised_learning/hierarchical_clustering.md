@@ -30,7 +30,9 @@ katex: true
 - Ward's method merges clusters that produce the smallest merging cost
 - The merging cost is the increase in sum-of-squares when merging two clusters
 - Specifically, the merging cost is defined as the following:
-	$$ \delta(a,o) = \frac{n_{a}n_{o}}{n_{a}+n_{o}}(\Vert m_{a}-m_{o} \Vert)^{2} $$
+	$$
+	\delta(a,o) = \frac{n_{a}n_{o}}{n_{a}+n_{o}}(\Vert m_{a}-m_{o} \Vert)^{2}
+	$$
 	- Where $a$ and $o$ are two clusters considered to be merged together
 	- Where $n_{a}$ is the number of points in cluster $a$
 	- Where $n_{o}$ is the number of points in cluster $o$

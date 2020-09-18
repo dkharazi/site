@@ -9,7 +9,9 @@ katex: true
 - A moving average model is linear regression model, where the response variable represents some value indexed by the current time period and the predictor variables represent our mean of the value and some white noise error term
 - The moving-average model should not be confused with the simple moving average, which takes the arithmetic mean of a given set of prices over the past number of days
 - Specifically, we can define a moving average model of order $r$ as the following:
-	$$ s_{t} =  \mu + \epsilon_{t} + \theta_{1}\epsilon_{t-1} + \theta_{r}\epsilon_{t-r} $$
+	$$
+	s_{t} =  \mu + \epsilon_{t} + \theta_{1}\epsilon_{t-1} + \theta_{r}\epsilon_{t-r}
+	$$
 	- Where $s_{t}$ is the unknown true value in our current time period
 	- Where $\mu$ is the mean of our values (this is constant for any $t$)
 	- Where $\epsilon_{t}$ is the unknown error of the current predicted value and what we will observe
@@ -18,14 +20,20 @@ katex: true
 	- Where $\epsilon_{t-r}$ is the error of the $r^{th}$ previous predicted value and what we observed
 	- Where $\theta_{r}$ represents the percentage of the error $\epsilon_{t-r}$ we should include in our model
 - We can estimate $s_{t}$ by using the following equation:
-	$$ \hat{s_{t}} = \mu + \theta_{1}\epsilon_{t-1} + \theta_{r}\epsilon_{t-r} $$
+	$$
+	\hat{s_{t}} = \mu + \theta_{1}\epsilon_{t-1} + \theta_{r}\epsilon_{t-r}
+	$$
 	- Where $\hat{s_{t}}$ is the predicted value in our current time period
 
 ### An Example of a Moving Average Model of Order 1
 - Let's say we're predicting the price of salmon each month using a moving average model of only the the previous month's data
 - We can define our model as the following:
-	$$ \hat{s_{t}} = \mu + \theta_{1}\epsilon_{t-1} $$
-	$$ \text{where } \epsilon_{t-1} = \hat{s}_{t-1} - s_{t-1} $$
+	$$
+	\hat{s_{t}} = \mu + \theta_{1}\epsilon_{t-1}
+	$$
+	$$
+	\text{where } \epsilon_{t-1} = \hat{s}_{t-1} - s_{t-1}
+	$$
 	- Where $\hat{s}_{t}$ is our current prediction
 	- Where $\hat{s}_{t-1}$ is our previous prediction
 	- Where $\mu$ is the mean of our values
@@ -52,7 +60,9 @@ katex: true
 - Now, let's say we want to use the two previous month's data to predict the price of salmon using a moving average model
 - We can define our model as the following:
 
-$$ \hat{s_{t}} = \mu + \theta_{1}\epsilon_{t-1} + \theta_{2}\epsilon_{t-2} $$
+$$
+\hat{s_{t}} = \mu + \theta_{1}\epsilon_{t-1} + \theta_{2}\epsilon_{t-2}
+$$
 
 - The table below shows our observed data and predictions of a few iterations
 

@@ -29,7 +29,9 @@ katex: true
 - Feedforward networks are typically represented by composing together many different functions
 - For example, the output values of our feedforward network may be defined as a chain of three functions:
 
-$$ f(x) = f^{3}(f^{2}(f^{1}(x))) $$
+$$
+f(x) = f^{3}(f^{2}(f^{1}(x)))
+$$
 
 - Where $f^{1}$ is called the first hidden layer
 - Where $f^{2}$ is called the second hidden layer
@@ -69,7 +71,9 @@ $$ f(x) = f^{3}(f^{2}(f^{1}(x))) $$
 		- It requires decades of human effort for each separate task
 	3. Activation function used in deep learning
 		- The strategy of deep learning is to learn $\phi$:
-		$$ y = f(x;\theta,w) = \phi(x;\theta) $$
+		$$
+		y = f(x;\theta,w) = \phi(x;\theta)
+		$$
 		- In this approach, we now have the following:
 			- Parameters $\theta$ that we use to learn $\phi$
 			- Parameters $w$ that map from $\phi(x)$ to the desired output

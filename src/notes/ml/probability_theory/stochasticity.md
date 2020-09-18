@@ -14,7 +14,9 @@ katex: true
 - We can define a stochastic process as $S$
 - Here, $S$ is a sequence of successive random variables:
 
-$$ S_0, S_1, ..., S_t, ..., S_n $$
+$$
+S_0, S_1, ..., S_t, ..., S_n
+$$
 
 - To be clear, each $S_i$ is a function
 - Each $S_i$ is an instance of the same function $S$

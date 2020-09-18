@@ -16,50 +16,93 @@ katex: true
 ### Model Components
 - In linear regression, our true data generating process could look like the following:
 
-$$ Y = \beta_{0} + \beta X + \epsilon $$
-$$ Y \sim N(\beta_{0}+\beta X, \sigma^{2}) $$
-$$ E[Y] = \beta_{0} + \beta X $$
-$$ Var[Y] = \sigma^{2} $$
+$$
+Y = \beta_{0} + \beta X + \epsilon
+$$
+
+$$
+Y \sim N(\beta_{0}+\beta X, \sigma^{2})
+$$
+
+$$
+E[Y] = \beta_{0} + \beta X
+$$
+
+$$
+Var[Y] = \sigma^{2}
+$$
 
 - In this case, the response variable $Y$, the predictor variable $X$, and the error term $\epsilon$ are all random variables
 - On the other hand, the $\beta_{0}$ and $\beta_{1}$ coefficients are our fixed population parameters
 - Usually, we're interested in the mean of the response variable conditional on our predictor variables, which looks like this:
 
-$$ E[Y|X] = \mu_{Y|X} = \beta_{0} + \beta X $$
+$$
+E[Y|X] = \mu_{Y|X} = \beta_{0} + \beta X
+$$
 
 - We'll typically estimate these conditional means using MLE or OLS parameter estimates:
 
-$$ \hat{\mu_{Y|X}} = \hat{\beta_{0}} + \hat{\beta} X $$
+$$
+\hat{\mu_{Y|X}} = \hat{\beta_{0}} + \hat{\beta} X
+$$
 
 - The response variable conditional on the predictor variables is denoted as the following:
 
-$$ Y|X = \beta_{0} + \beta X + \epsilon $$
-$$ Y|X \sim N(\beta_{0}+\beta X, \sigma^{2}) $$
-$$ E[Y|X] = \beta_{0} + \beta X $$
-$$ Var[Y|X] = \sigma^{2} $$
+$$
+Y|X = \beta_{0} + \beta X + \epsilon
+$$
+
+$$
+Y|X \sim N(\beta_{0}+\beta X, \sigma^{2})
+$$
+
+$$
+E[Y|X] = \beta_{0} + \beta X
+$$
+
+$$
+Var[Y|X] = \sigma^{2}
+$$
 
 - The error term conditional on the predictor variables is denoted as the following:
 
-$$ \epsilon|X \sim N(0, \sigma^{2}) $$
-$$ E[\epsilon|X] = 0 $$
-$$ Var[\epsilon|X] = \sigma^{2} $$
+$$
+\epsilon|X \sim N(0, \sigma^{2})
+$$
+
+$$
+E[\epsilon|X] = 0
+$$
+
+$$
+Var[\epsilon|X] = \sigma^{2}
+$$
 
 ### Assumptions of the Gaussian-Noise Simple Linear Regression Model
 1. The distribution of any predictor variable is unspecified (possibly even deterministic)
 2. The relationship between the response variable and each value of the predictors variables is linear:
 
-$$ Y|X = \beta_{0} + \beta X + \epsilon $$
+$$
+Y|X = \beta_{0} + \beta X + \epsilon
+$$
 
 3. The error term is normally distributed with a mean of 0 and constant variance for all values of $X$
 
-$$ \epsilon|X \sim N(0,\sigma^{2}) $$
+$$
+\epsilon|X \sim N(0,\sigma^{2})
+$$
 
 - Which implies the error term is uncorrelated across observations and is uncorrelated with predictors
 - In other words, this implies $\epsilon$ is independent of observations, and $\epsilon$ is independent of the predictor variables
 - Said another way, homoscedasticity is maintained (i.e. constant variance):
 
-$$ E[\epsilon|X=x] = 0 $$
-$$ Var[\epsilon|X=x] = \sigma^{2} $$
+$$
+E[\epsilon|X=x] = 0
+$$
+
+$$
+Var[\epsilon|X=x] = \sigma^{2}
+$$
 
 ### Benefits of Assuming the the Gaussian-Noise Model
 - We can use the Central Limit Theorem
@@ -82,11 +125,15 @@ $$ Var[\epsilon|X=x] = \sigma^{2} $$
 ### Clarifying Properties of Residuals
 - The residuals should have an expected value of zero:
 
-$$ E[\epsilon|X=x] = 0 $$
+$$
+E[\epsilon|X=x] = 0
+$$
 
 - The residuals should show a nearly constant variance:
 
-$$ Var[\epsilon|X=x] = \sigma^{2} $$
+$$
+Var[\epsilon|X=x] = \sigma^{2}
+$$
 
 - We don't expect the residuals to ever be completely uncorrelated with each other, but the correlation should be extremely weak and grow negligable as $n \rarr \infty$
 - The residuals should be Gaussian, since the errors should be Gaussian

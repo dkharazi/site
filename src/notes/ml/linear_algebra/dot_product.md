@@ -36,9 +36,17 @@ katex: true
 	- Zero, then the two vectors are perpendicular
 
 ### Examples of the Dot Product
-$$ dotprod(\begin{bmatrix} 1 \cr 2 \end{bmatrix}, \begin{bmatrix} 3 \cr 4 \end{bmatrix}) = (1 \times 3) + (2 \times 4) = 11 $$
-$$ dotprod(\begin{bmatrix} 6 \cr 2 \cr 8 \cr 3 \end{bmatrix}, \begin{bmatrix} 1 \cr 8 \cr 5 \cr 3 \end{bmatrix}) = (6 \times 1) + (2 \times 8) + (8 \times 5) + (3 \times 3) = 71 $$
-$$ dotprod(\begin{bmatrix} 3 \cr 0 \end{bmatrix}, \begin{bmatrix} 0 \cr 5 \end{bmatrix}) = (3 \times 0) + (0 \times 5) = 0 $$
+$$
+dotprod(\begin{bmatrix} 1 \cr 2 \end{bmatrix}, \begin{bmatrix} 3 \cr 4 \end{bmatrix}) = (1 \times 3) + (2 \times 4) = 11
+$$
+
+$$
+dotprod(\begin{bmatrix} 6 \cr 2 \cr 8 \cr 3 \end{bmatrix}, \begin{bmatrix} 1 \cr 8 \cr 5 \cr 3 \end{bmatrix}) = (6 \times 1) + (2 \times 8) + (8 \times 5) + (3 \times 3) = 71
+$$
+
+$$
+dotprod(\begin{bmatrix} 3 \cr 0 \end{bmatrix}, \begin{bmatrix} 0 \cr 5 \end{bmatrix}) = (3 \times 0) + (0 \times 5) = 0
+$$
 
 ### Defining Dot Products using Growth
 - We can define directional growth as the amount of growth in each dimension, which will create a new vector oriented in a new direction
@@ -76,7 +84,9 @@ $$ dotprod(\begin{bmatrix} 3 \cr 0 \end{bmatrix}, \begin{bmatrix} 0 \cr 5 \end{b
 - For all other cases, our x-speed will get an x-boost and our y-speed gets a y-boost if we have some overlap
 - Therefore, our total speed would be defined as the following:
 
-$$ Total Speed = (speedx \cdot boostx) + (speedy \cdot boosty) $$
+$$
+Total Speed = (speedx \cdot boostx) + (speedy \cdot boosty)
+$$
 
 ### References
 - [Essence of Linear Algebra Video](https://www.youtube.com/watch?v=LyGKycYT2v0&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=9)

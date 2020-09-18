@@ -27,13 +27,23 @@ katex: true
 - In most cases, the true target function $f^{*}$ is unknown
 - However, we know the target function is the XOR function in this case:
 
-$$ f^{*} : \lbrace 0,1 \rbrace^{2} \to \lbrace 0,1 \rbrace $$
-$$ (x,y) \mapsto f^{\ast}(x,y) $$
-$$ f^{\ast}(x,y) = \begin{cases} 1 &\text{if } x \And y = 1 \cr 0 &\text{if } x \And y \not = 1 \end{cases} $$
+$$
+f^{*} : \lbrace 0,1 \rbrace^{2} \to \lbrace 0,1 \rbrace
+$$
+
+$$
+(x,y) \mapsto f^{\ast}(x,y)
+$$
+
+$$
+f^{\ast}(x,y) = \begin{cases} 1 &\text{if } x \And y = 1 \cr 0 &\text{if } x \And y \not = 1 \end{cases}
+$$
 
 - In this example, there are only four possible inputs:
 
-$$ \chi = {(0,0), (0,1), (1,0), (1,1)} $$
+$$
+\chi = {(0,0), (0,1), (1,0), (1,1)}
+$$
 
 - Therefore, we will train the network on all four of these points
 - To introduce the concept of loss functions, we'll treat this problem as a regression problem
@@ -41,11 +51,15 @@ $$ \chi = {(0,0), (0,1), (1,0), (1,1)} $$
 - However, in practical applications, MSE is usually not an appropriate loss function for modeling binary data
 - The MSE loss function in our case is the following:
 
-$$ J(\theta) = \frac{1}{4}\sum_{x \in \chi}(f^{*}(x)-f(x;\theta))^{2} $$
+$$
+J(\theta) = \frac{1}{4}\sum_{x \in \chi}(f^{*}(x)-f(x;\theta))^{2}
+$$
 
 - If we assume our model is a linear model, then we could define the form of our model $f(x;\theta)$ as the following:
 
-$$ f(x;\theta) = f(x;w,b) = x^{T}w + b $$
+$$
+f(x;\theta) = f(x;w,b) = x^{T}w + b
+$$
 
 - With respect to $w$ and $b$, we can minimize $J(\theta)$ iteratively using gradient descent or in closed form using the normal equations
 
@@ -55,11 +69,15 @@ $$ f(x;\theta) = f(x;w,b) = x^{T}w + b $$
 - In this case, we can describe an affine transformation from a vector $x$ to a vector $h$ to a vector $y$
 - We need a vector of weights $w_{1}$ for our inputs $x$ and another vector of weights $w_{2}$ for our hidden layer outputs $h$
 
-$$ w_{1} = \begin{bmatrix} 1 \cr 1 \cr 1 \cr 1 \end{bmatrix}; w_{2} = \begin{bmatrix} 3 \cr -2 \end{bmatrix} $$
+$$
+w_{1} = \begin{bmatrix} 1 \cr 1 \cr 1 \cr 1 \end{bmatrix}; w_{2} = \begin{bmatrix} 3 \cr -2 \end{bmatrix}
+$$
 
 - We need a vector of biases $b_{1}$ for our hidden layer and another vector of biases $b_{2}$ for our output layer:
 
-$$ b_{1} = \begin{bmatrix} 0 \cr -1 \end{bmatrix}; b_{2} = [-2] $$
+$$
+b_{1} = \begin{bmatrix} 0 \cr -1 \end{bmatrix}; b_{2} = [-2]
+$$
 
 - Since we only have four data points, our network, inputs, and output looks like the following:
 

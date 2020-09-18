@@ -10,26 +10,31 @@ katex: true
 - A sample space is typically written as $\Omega$
 - The following is an example of a sample space of a coin toss:
 
-$$ \Omega = \text{\textbraceleft}{H,T}\text{\textbraceright} $$
+$$
+\Omega = \text{\textbraceleft}{H,T}\text{\textbraceright}
+$$
 
 - The following is an example of a sample space of a two coin tosses:
 
-$$ \Omega = \text{\textbraceleft}{(H,T),(H,H),(T,H),(T,T)}\text{\textbraceright} $$
+$$
+\Omega = \text{\textbraceleft}{(H,T),(H,H),(T,H),(T,T)}\text{\textbraceright}
+$$
 
 ### Algebra
 - An algebra is typically written as $ℑ$
 - Essentially, an algebra is a collection of subsets from $\Omega$ that satisfies all of the following:
 	- The null set (i.e. empty set) is contained within our algebra
-
-	$$ \emptyset \in ℑ $$
-
+	$$
+	\emptyset \in ℑ
+	$$
 	- If $\text{A} \in ℑ$, then $\text{A}^{c}$ is also $\in ℑ$
-
-	$$ \text{A} \in ℑ \text{ and } \text{A}^{c} \in ℑ \text{ if } \text{A} \subset \Omega $$
-
+	$$
+	\text{A} \in ℑ \text{ and } \text{A}^{c} \in ℑ \text{ if } \text{A} \subset \Omega
+	$$
 	- If $\text{A} \in ℑ$ and $\text{B} \in ℑ$, then $\text{A} \cup \text{B} \in ℑ$
-
-	$$ \text{A} \cup \text{B} \in ℑ \text{ if } \text{A} \in ℑ \text{ and } \text{B} \in ℑ $$
+	$$
+	\text{A} \cup \text{B} \in ℑ \text{ if } \text{A} \in ℑ \text{ and } \text{B} \in ℑ
+	$$
 
 - In other words, an algebra $ℑ$ on a set $X$ is a collection of subsets of $X$ that satisfy the following:
 	1. $ℑ$ contains the empty subset $\emptyset$ and the set $X$
@@ -61,14 +66,26 @@ $$ \Omega = \text{\textbraceleft}{(H,T),(H,H),(T,H),(T,T)}\text{\textbraceright}
 - In this scenario, $A$ would be an algebra of sets, which is not a $\sigma$-algebra
 - The following are examples of $\sigma$-algebras:
 
-$$ ℑ = \text{\textbraceleft}{\emptyset, \Omega}\text{\textbraceright} $$
-$$ ℑ = \text{\textbraceleft}{\emptyset, A, A^{c}, \Omega}\text{\textbraceright} $$
-$$ ℑ = 2^{\Omega} $$
+$$
+ℑ = \text{\textbraceleft}{\emptyset, \Omega}\text{\textbraceright}
+$$
+
+$$
+ℑ = \text{\textbraceleft}{\emptyset, A, A^{c}, \Omega}\text{\textbraceright}
+$$
+
+$$
+ℑ = 2^{\Omega}
+$$
+
 - In this situation, $2^{\Omega}$ is a collection of all of the subsets of $\Omega$
 
 - The following is an example of a collection of sets that is neither an algebra or a $\sigma$-algebra:
 
-$$ \text{\textbraceleft}{\emptyset, A, \Omega}\text{\textbraceright} $$
+$$
+\text{\textbraceleft}{\emptyset, A, \Omega}\text{\textbraceright}
+$$
+
 - In this situation, this collection of sets would need to contain $A^{C}$ for it to be an algebra
 
 ### The Probability Measure Function

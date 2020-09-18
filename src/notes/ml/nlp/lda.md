@@ -39,24 +39,47 @@ katex: true
 ### The LDA Algorithm
 1. Create a list of lists, where each list represents some document (or individual text entry) and each entry within that list represents an individual word from that document
 
-$$ [[“Eat”, “turkey”, “on”, “holidays”, “always”], $$
-$$ [“I”, “eat”, “cake”, “on”, “holidays”], $$
-$$ [“Turkey”, “eat”, “chickens”]] $$
+$$
+[[“Eat”, “turkey”, “on”, “holidays”, “always”],
+$$
+
+$$
+[“I”, “eat”, “cake”, “on”, “holidays”],
+$$
+
+$$
+[“Turkey”, “eat”, “chickens”]]
+$$
 
 2. Preprocess by removing stop words, removing punctuation, and lemmatizing words
 
-$$ [[“eat”, “turkey”, “holiday”, “always”], $$
-$$ [“eat”, “cake”, “holiday”], $$
-$$ [“turkey”, “eat”, “chicken”]] $$
+$$
+[[“eat”, “turkey”, “holiday”, “always”],
+$$
+
+$$
+[“eat”, “cake”, “holiday”],
+$$
+
+$$
+[“turkey”, “eat”, “chicken”]]
+$$
 
 3. One hot encoding
 
-$$ [[1,2,3,4], [1,5,3], [2,1,6]] $$
+$$
+[[1,2,3,4], [1,5,3], [2,1,6]]
+$$
 
 4. Randomly assign a topic to each word to initialize a word-topic matrix
 
-$$ [[1,1,2,2], [1,2,1], [2,2,1]] $$
-$$ \text{where the number of topics is 2} $$
+$$
+[[1,1,2,2], [1,2,1], [2,2,1]]
+$$
+
+$$
+\text{where the number of topics is 2}
+$$
 
 5. Generate a word-topic count matrix
 	- Word-topic matrices represent an n by m dimensional matrix, where n is the number of distinct topics, m is the number of distinct words, and each entry contains a count of the words assigned to each topic
@@ -64,10 +87,21 @@ $$ \text{where the number of topics is 2} $$
 	- If we sum up some column, we should receive the frequency of a word across all documents
 	- If we sum up some row, we should receive the frequency of a topic
 
-$$ [2,1,1,0,0,1] $$
-$$ [1,1,1,1,1,0] $$
-$$ \text{where the number of topics is 2 (2 rows)} $$
-$$ \text{and the number of distinct words is 6 (6 columns)} $$
+$$
+[2,1,1,0,0,1]
+$$
+
+$$
+[1,1,1,1,1,0]
+$$
+
+$$
+\text{where the number of topics is 2 (2 rows)}
+$$
+
+$$
+\text{and the number of distinct words is 6 (6 columns)}
+$$
 
 6. Generate a document-topic count matrix
 	- Document-topic matrices represent an $n \times m$ dimensional matrix
@@ -78,38 +112,80 @@ $$ \text{and the number of distinct words is 6 (6 columns)} $$
 	- If we sum up some column, we should receive the frequency of a topic
 	- If we sum of some row, we should receive the frequency of words in a specific document
 
-$$ [2,2] $$
-$$ [2,1] $$
-$$ [1,2] $$
-$$ \text{where the number of documents is 3 (3 rows)} $$
-$$ \text{and the number of topics is 2 (2 columns)} $$
+$$
+[2,2]
+$$
+
+$$
+[2,1]
+$$
+
+$$
+[1,2]
+$$
+
+$$
+\text{where the number of documents is 3 (3 rows)}
+$$
+
+$$
+\text{and the number of topics is 2 (2 columns)}
+$$
 
 7. Assign better topics to words (instead of our initial, randomly-assigned topics)
 	- We do this by simulating the probability that a word belongs to a topic using Gibbs sampling and by determining if tokens belong to a topic at the start of an iteration and comparing if those tokens belong to the same topic in other documents
 
-$$ [[2,1,1,2], [2,1,1], [1,2,2]] $$
+$$
+[[2,1,1,2], [2,1,1], [1,2,2]]
+$$
 
 8. Recompute the word-topic matrix
 
-$$ [0,2,2,0,1,0] $$
-$$ [2,0,0,1,0,1] $$
+$$
+[0,2,2,0,1,0]
+$$
+
+$$
+[2,0,0,1,0,1]
+$$
 
 9. Recompute the document-topic matrix
 
-$$ [2,2] $$
-$$ [2,1] $$
-$$ [1,2] $$
+$$
+[2,2]
+$$
+
+$$
+[2,1]
+$$
+
+$$
+[1,2]
+$$
 
 10a. We can now calculate the probability that a document belongs to each topic by summing the number of words in a certain topic and dividing that quantity by the total number of words within the document
 
-$$ [0.5,0.5] $$
-$$ [0.66,0.33] $$
-$$ [0.33,0.66] $$
+$$
+[0.5,0.5]
+$$
+
+$$
+[0.66,0.33]
+$$
+
+$$
+[0.33,0.66]
+$$
 
 10b. We can also calculate the probability of a word belonging to each topic by summing the number of words in a certain topic and dividing that quantity by the total number number of words in that topic
 
-$$ [0,0.4,0.4,0,0.2,0] $$
-$$ [0.5,0,0,0.25,0,0.25] $$
+$$
+[0,0.4,0.4,0,0.2,0]
+$$
+
+$$
+[0.5,0,0,0.25,0,0.25]
+$$
 
 ### References
 - [Latent Dirichlet Allocation Wiki](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation)

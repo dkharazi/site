@@ -73,7 +73,9 @@ katex: true
 - A subspace is a subset of a vector space:
 - For example, if $W$ and $V$ are both vector spaces, then $W$ is a subspace of the vector space $V$ if:
 
-$$ W \subset V$$
+$$
+W \subset V
+$$
 
 - Therefore, a subspace needs to also satisfy the conditions for vector addition and scalar multiplication
 - In other words, a set of vectors is a subset of $V^{n}$ if they are elements of the $n^{th}$ dimension of $V$
@@ -83,7 +85,9 @@ $$ W \subset V$$
 	- If $c \in \R$ and $x \in W$, then $cx \in V$
 - For example, if we let our subspace $W$ be the real coordinate space $\R^{3}$ and our vector space be $V$:
 	- Then $x \in \R^{3}$, $y \in \R^{3}$, and $c \in \R$ can be expressed as the following:
-	$$ x = \begin{bmatrix} 0 \cr x_{1} \cr x_{2} \cr ... \cr x_{n} \end{bmatrix}, y = \begin{bmatrix} 0 \cr y_{1} \cr y_{2} \cr ... \cr y_{n} \end{bmatrix}, x+y = \begin{bmatrix} 0 \cr x_{1}+y_{1} \cr x_{2}+y_{2} \cr ... \cr x_{n}+y_{n} \end{bmatrix}, cx = \begin{bmatrix} 0 \cr cx_{1} \cr cx_{2} \cr ... \cr cx_{n} \end{bmatrix} $$
+	$$
+	x = \begin{bmatrix} 0 \cr x_{1} \cr x_{2} \cr ... \cr x_{n} \end{bmatrix}, y = \begin{bmatrix} 0 \cr y_{1} \cr y_{2} \cr ... \cr y_{n} \end{bmatrix}, x+y = \begin{bmatrix} 0 \cr x_{1}+y_{1} \cr x_{2}+y_{2} \cr ... \cr x_{n}+y_{n} \end{bmatrix}, cx = \begin{bmatrix} 0 \cr cx_{1} \cr cx_{2} \cr ... \cr cx_{n} \end{bmatrix}
+	$$
 	- Therefore, $x+y$ should be an element of the initial vector space $V$
 	- Therefore, $xc$ should be an element of the initial vector space $V$
 

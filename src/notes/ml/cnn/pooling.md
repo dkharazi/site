@@ -36,11 +36,15 @@ katex: true
 	- $f=3$ and $s=2$ (and $p=0$)
 - An input image will have the following dimensions:
 
-$$ n_{h}^{[l]} \times n_{w}^{[l]} \times n_{c}^{[l]} $$
+$$
+n_{h}^{[l]} \times n_{w}^{[l]} \times n_{c}^{[l]}
+$$
 
 - An output image will have the following dimensions:
 
-$$ \lfloor \frac{n_{h}^{[l]}-f}{s} + 1 \rfloor \times \lfloor \frac{n_{w}^{[l]}-f}{s} + 1 \rfloor \times n_{c}^{[l]} $$
+$$
+\lfloor \frac{n_{h}^{[l]}-f}{s} + 1 \rfloor \times \lfloor \frac{n_{w}^{[l]}-f}{s} + 1 \rfloor \times n_{c}^{[l]}
+$$
 - The follow is an example of max pooling:
 
 ![maxpool](../../../img/maxpool.svg)

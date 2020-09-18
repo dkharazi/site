@@ -30,8 +30,13 @@ katex: true
 - These methods are automatically triggered by the interpreter during program execution
 - The following examples are operations that map to internal methods:
 
-$$ x+y \quad \to \quad x.\text{\textunderscore \textunderscore add}(y)\text{\textunderscore \textunderscore} $$
-$$ x[k] \quad \to \quad x.\text{\textunderscore \textunderscore getitem}(k)\text{\textunderscore \textunderscore} $$
+$$
+x+y \quad \to \quad x.\text{\textunderscore \textunderscore add}(y)\text{\textunderscore \textunderscore}
+$$
+
+$$
+x[k] \quad \to \quad x.\text{\textunderscore \textunderscore getitem}(k)\text{\textunderscore \textunderscore}
+$$
 
 - Evidently, the behavior of each data type depends entirely on the set of special methods that it implements
 

@@ -12,7 +12,9 @@ katex: true
 - Said a different way, a random variable represents a function that maps a single value from the sample space to a realization that is any single real number
 - Mathematically, a random variable can be defined as the following:
 
-$$ X: \Omega \to \R \text{ such that } \omega \mapsto X(\omega) $$
+$$
+X: \Omega \to \R \text{ such that } \omega \mapsto X(\omega)
+$$
 
 - We can define the above components as the following:
 	- $\omega \in \Omega$
@@ -26,27 +28,39 @@ $$ X: \Omega \to \R \text{ such that } \omega \mapsto X(\omega) $$
 ### More Notation
 - It’s conventional to write random variables with upper-case italic letters:
 
-$$ A, B, C, X, Y, Z $$
+$$
+A, B, C, X, Y, Z
+$$
 
 - Random variables should not be confused with events, which are also written using upper-case letters:
 
-$$ \text{A, B, C, X, Y, Z} $$
+$$
+\text{A, B, C, X, Y, Z}
+$$
 
 - Any realizations of a random variable are denoted as lower-case italics:
 
-$$ a, b, c, x, y, z $$
+$$
+a, b, c, x, y, z
+$$
 
 - It’s also common to write the successive random variables that all belong to the same functions as the following:
 
-$$ S_0, S_1, ..., S_t, ..., S_n $$
+$$
+S_0, S_1, ..., S_t, ..., S_n
+$$
 
 - Therefore, the space of each of these random variables is the same, and that sample space is referred to as the following:
 
-$$ S \text{ or } \Omega $$
+$$
+S \text{ or } \Omega
+$$
 
 - Its realizations would be referred to as the following:
 
-$$ s_0, s_1, ..., s_t, ..., s_n $$
+$$
+s_0, s_1, ..., s_t, ..., s_n
+$$
 
 ### Example Notations
 - Let $Y$ be a normally-distributed random variable

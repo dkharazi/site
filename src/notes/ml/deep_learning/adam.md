@@ -21,13 +21,23 @@ katex: true
 	- Where $db = \frac{\partial J(w,b)}{\partial b}$
 2. Update each $w$ parameter as the following:
 
-$$ \begin{aligned} v_{t} = \beta_{v} v_{t-1} + (1-\beta_{v})dW \qquad \rbrace &= \text{momentum} \cr s_{t} = \beta_{s} s_{t-1} + (1-\beta_{s})dW^{2} \qquad \rbrace &= \text{rmsprop} \cr v_{t}^{corrected} = \frac{v_{t}}{1-\beta_{v}^{t}} \qquad \rbrace &= \text{bias correction} \cr s_{t}^{corrected} = \frac{s_{t}}{1-\beta_{s}^{t}} \qquad \rbrace &= \text{bias correction} \end{aligned} $$
-$$ W_{t} = W_{t-1} - \alpha \frac{v_{t}^{corrected}}{\sqrt{s_{t}^{corrected}} + \epsilon} $$
+$$
+\begin{aligned} v_{t} = \beta_{v} v_{t-1} + (1-\beta_{v})dW \qquad \rbrace &= \text{momentum} \cr s_{t} = \beta_{s} s_{t-1} + (1-\beta_{s})dW^{2} \qquad \rbrace &= \text{rmsprop} \cr v_{t}^{corrected} = \frac{v_{t}}{1-\beta_{v}^{t}} \qquad \rbrace &= \text{bias correction} \cr s_{t}^{corrected} = \frac{s_{t}}{1-\beta_{s}^{t}} \qquad \rbrace &= \text{bias correction} \end{aligned}
+$$
+
+$$
+W_{t} = W_{t-1} - \alpha \frac{v_{t}^{corrected}}{\sqrt{s_{t}^{corrected}} + \epsilon}
+$$
 
 3. Update each $b$ parameter as the following:
 
-$$ \begin{aligned} v_{t} = \beta_{v} v_{t-1} + (1-\beta_{v})db \qquad \rbrace &= \text{momentum} \cr s_{t} = \beta_{s} s_{t-1} + (1-\beta_{s})db^{2} \qquad \rbrace &= \text{rmsprop} \cr v_{t}^{corrected} = \frac{v_{t}}{1-\beta_{v}^{t}} \qquad \rbrace &= \text{bias correction} \cr s_{t}^{corrected} = \frac{s_{t}}{1-\beta_{s}^{t}} \qquad \rbrace &= \text{bias correction} \end{aligned} $$
-$$ W_{t} = W_{t-1} - \alpha \frac{v_{t}^{corrected}}{\sqrt{s_{t}^{corrected}} + \epsilon} $$
+$$
+\begin{aligned} v_{t} = \beta_{v} v_{t-1} + (1-\beta_{v})db \qquad \rbrace &= \text{momentum} \cr s_{t} = \beta_{s} s_{t-1} + (1-\beta_{s})db^{2} \qquad \rbrace &= \text{rmsprop} \cr v_{t}^{corrected} = \frac{v_{t}}{1-\beta_{v}^{t}} \qquad \rbrace &= \text{bias correction} \cr s_{t}^{corrected} = \frac{s_{t}}{1-\beta_{s}^{t}} \qquad \rbrace &= \text{bias correction} \end{aligned}
+$$
+
+$$
+W_{t} = W_{t-1} - \alpha \frac{v_{t}^{corrected}}{\sqrt{s_{t}^{corrected}} + \epsilon}
+$$
 
 4. Repeat the above steps for each $t^{th}$ iteration of mini-batch
 	- Note that our hyperparameters are $\beta_{v}$, $\beta_{s}$, $\alpha$, and $\epsilon$ here

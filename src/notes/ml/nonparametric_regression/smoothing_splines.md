@@ -21,7 +21,9 @@ katex: true
 ### Finding a Function $g$
 - We find a function $g$ by minimizing the following:
 
-$$ \sum_{i=1}^{n}(y_{i} - g(x_{i}))^{2} + \lambda \int g\rq\rq(t)^{2}dt $$
+$$
+\sum_{i=1}^{n}(y_{i} - g(x_{i}))^{2} + \lambda \int g\rq\rq(t)^{2}dt
+$$
 
 - The $\sum_{i=1}^{n}(y_{i} - g(x_{i}))^{2}$ term refers to our loss function
 - The $\lambda \int g\rq\rq(t)^{2}dt$ term refers to our penalty term

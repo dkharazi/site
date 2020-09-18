@@ -54,27 +54,40 @@ katex: true
 ### Defining Gradient Descent for Linear Regression
 1. Determine our parameters:
 
-$$ \theta_{0}, \theta_{1} $$
+$$
+\theta_{0}, \theta_{1}
+$$
 
 2. Create a hypothesis:
 
-$$ h_{\theta}(x) = \theta_{0} + \theta_{1}x $$
+$$
+h_{\theta}(x) = \theta_{0} + \theta_{1}x
+$$
 
 3. Determine our cost function:
 
-$$ J(\theta_{0}, \theta_{1}) = \frac{1}{2m} \sum_{i=1}^{m}(h_{\theta}(x)-y)^{2} $$
+$$
+J(\theta_{0}, \theta_{1}) = \frac{1}{2m} \sum_{i=1}^{m}(h_{\theta}(x)-y)^{2}
+$$
 
 4. Determine our goal:
 
-$$ \argmin_{\theta_{0}, \theta_{1}} J(\theta_{0}, \theta_{1}) $$
+$$
+\argmin_{\theta_{0}, \theta_{1}} J(\theta_{0}, \theta_{1})
+$$
 
 5. Initialize parameters:
 
-$$ \theta_{0}, \theta_{1} = 0 $$
+$$
+\theta_{0}, \theta_{1} = 0
+$$
 
 6. Update parameters until our $J(\theta_{0}, \theta_{1})$ converges to a minumum:
 
-$$ \theta = \theta - (\alpha \times \frac{\partial J(\theta_{0}, \theta_{1})}{\partial \theta}) $$
+$$
+\theta = \theta - (\alpha \times \frac{\partial J(\theta_{0}, \theta_{1})}{\partial \theta})
+$$
+
 - Where $J(\theta_{0}, \theta_{1})$ is the quadratic cost function
 - Where $\alpha$ is our learning rate
 - Where $\theta$ is either $\theta_{0}$ or $\theta_{1}$

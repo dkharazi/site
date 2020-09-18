@@ -40,26 +40,36 @@ katex: true
 - Assume all the activation functions are linear
 - Then the output activation is the following:
 
-$$ \hat{y} = a^{[10]} = W^{[10]}W^{[9]}W^{[8]}W^{[7]}W^{[6]}W^{[5]}W^{[4]}W^{[3]}W^{[2]}W^{[1]}x $$
+$$
+\hat{y} = a^{[10]} = W^{[10]}W^{[9]}W^{[8]}W^{[7]}W^{[6]}W^{[5]}W^{[4]}W^{[3]}W^{[2]}W^{[1]}x
+$$
 
 - If we assume the weights are the same:
 
-$$ W^{[1]} = W^{[2]} = ... = W^{[9]} = W^{[10]} $$
+$$
+W^{[1]} = W^{[2]} = ... = W^{[9]} = W^{[10]}
+$$
 
 - Then the output prediction is the following:
 
-$$ \hat{y} = W^{[10]}W^{9}x $$
+$$
+\hat{y} = W^{[10]}W^{9}x
+$$
 
 - Here, $W^{9}$ take the matrix $W$ to the power of $9$, while $W^{[10]}$ just denotes the $10^{\text{th}}$ matrix
 
 ### Example: Huge Initialization Causes Exploding Gradients
 - If every weight is initialized slightly larger than the identity matrix:
 
-$$ W^{[1]} = W^{[2]} = ... = W^{[9]} = \begin{bmatrix} 1.5 & 0 \cr 0 & 1.5 \end{bmatrix} $$
+$$
+W^{[1]} = W^{[2]} = ... = W^{[9]} = \begin{bmatrix} 1.5 & 0 \cr 0 & 1.5 \end{bmatrix}
+$$
 
 - This simplifies to the following:
 
-$$ \hat{y} = W^{[10]}1.5^{[9]}x $$
+$$
+\hat{y} = W^{[10]}1.5^{[9]}x
+$$
 
 - The values of the activation $a^{[l]}$ increase exponentially with $l$
 - When these activations are used in backward propagation, this leads to the exploding gradient problem
@@ -69,11 +79,15 @@ $$ \hat{y} = W^{[10]}1.5^{[9]}x $$
 ### Example: Tiny Initialization Causes Vanishing Gradients
 - If every weight is initialized slightly larger than the identity matrix:
 
-$$ W^{[1]} = W^{[2]} = ... = W^{[9]} = \begin{bmatrix} 0.5 & 0 \cr 0 & 0.5 \end{bmatrix} $$
+$$
+W^{[1]} = W^{[2]} = ... = W^{[9]} = \begin{bmatrix} 0.5 & 0 \cr 0 & 0.5 \end{bmatrix}
+$$
 
 - This simplifies to the following:
 
-$$ \hat{y} = W^{[10]}0.5^{[9]}x $$
+$$
+\hat{y} = W^{[10]}0.5^{[9]}x
+$$
 
 - The values of the activation $a^{[l]}$ decrease exponentially with $l$
 - When these activations are used in backward propagation, this leads to the vanishing gradient problem
@@ -91,14 +105,27 @@ $$ \hat{y} = W^{[10]}0.5^{[9]}x $$
 ### Motivating Xavier Initialization
 - Consider a layer $l$, where its forward propagation is the following:
 
-$$ a^{[l-1]} = g^{[l-1]}(z^{[l-1]}) $$
-$$ z^{[l]} = W^{[l]}a^{[l-1]} + b^{[l]} $$
-$$ a^{[l]} = g^{[l]}(z^{[l]}) $$
+$$
+a^{[l-1]} = g^{[l-1]}(z^{[l-1]})
+$$
+
+$$
+z^{[l]} = W^{[l]}a^{[l-1]} + b^{[l]}
+$$
+
+$$
+a^{[l]} = g^{[l]}(z^{[l]})
+$$
 
 - We want the two assumptions to hold:
 
-$$ E[a^{[l-1]}] = E[a^{[l]}] $$
-$$ Var(a^{[l-1]}) = Var(a^{[l]}) $$
+$$
+E[a^{[l-1]}] = E[a^{[l]}]
+$$
+
+$$
+Var(a^{[l-1]}) = Var(a^{[l]})
+$$
 
 - These assumptions are enforced for both forward and backward propagation
 - Specifically, these assumptions hold true for both the activations and gradients of the cost function with respect to the activations
@@ -107,8 +134,13 @@ $$ Var(a^{[l-1]}) = Var(a^{[l]}) $$
 ### Defining Xavier Initialization
 - Xaviar initialization is defined as the following:
 
-$$ W^{[l]} \sim N(\mu = 0, \sigma^{2} = \frac{1}{n^{[l-1]}}) $$
-$$ b^{[l]} = 0 $$
+$$
+W^{[l]} \sim N(\mu = 0, \sigma^{2} = \frac{1}{n^{[l-1]}})
+$$
+
+$$
+b^{[l]} = 0
+$$
 
 - In other words, all the weights of layer $l$ are picked randomly from a normal distribution with a mean of $0$ and variance of $\frac{1}{n^{[l-1]}}$
 - Here, $n^{[l-1]}$ is the number of neurons in layer $l-1$
@@ -119,8 +151,13 @@ $$ b^{[l]} = 0 $$
 - Let's assume we're using a tanh activation function
 - Our forward propagation would look like:
 
-$$ z^{[l]} = W^{[l]}a^{[l-1]} + b^{[l]} $$
-$$ a^{[l]} = tanh(z^{[l]}) $$
+$$
+z^{[l]} = W^{[l]}a^{[l-1]} + b^{[l]}
+$$
+
+$$
+a^{[l]} = tanh(z^{[l]})
+$$
 
 - Assume we initialized our network with appropriate values and the input is normalized
 - Early on in training, we are in the *linear regime* of the tanh function
@@ -128,11 +165,15 @@ $$ a^{[l]} = tanh(z^{[l]}) $$
 - In other words, values are small enough where $tanh(z^{[l]}) \approx z^{[l]}$
 - As a result, the following holds true:
 
-$$ Var(a^{[l]}) = Var(z^{[l]}) $$
+$$
+Var(a^{[l]}) = Var(z^{[l]})
+$$
 
 - Causing the following to hold true:
 
-$$ n^{[l-1]}Var(W^{[l]}) \begin{cases} < 1 & \implies \text{Vanishing Signal} \cr = 1 & \implies Var(a^{[L]}) = Var(x) \cr > 1 & \implies \text{Exploding Signal} \end{cases} $$
+$$
+n^{[l-1]}Var(W^{[l]}) \begin{cases} < 1 & \implies \text{Vanishing Signal} \cr = 1 & \implies Var(a^{[L]}) = Var(x) \cr > 1 & \implies \text{Exploding Signal} \end{cases}
+$$
 
 - Therefore, we must set $n^{[l]}Var(W^{[l]}) = 1$ by initializing $Var(W^{[l]}) = \frac{1}{n^{[l]}}$
 - By doing this, we can avoid the vanishing or exploding gradient problem

@@ -53,9 +53,13 @@ katex: true
 ### Defining Activation Functions
 - In a feedforward network, each neuron is computed the same:
 	1. First calculate $z$:
-	$$ z \equiv w \cdot x + b $$
+	$$
+	z \equiv w \cdot x + b
+	$$
 	2. Then calculate $a$:
-	$$ a \equiv g(z) $$
+	$$
+	a \equiv g(z)
+	$$
 - We can see that $z$ will always behave the same for any type of activation function $g$
 - We'll observe different behavior for $a$ when we change our activation function $g$
 - Input $x$ is replaced by $a$ as we iterate through a network's layers
@@ -66,13 +70,17 @@ katex: true
 ### Introducing the Sigmoid Activation Function
 - The sigmoid formula is defined as the following:
 
-$$ g(x) = \frac{1}{1+e^{-x}} $$
+$$
+g(x) = \frac{1}{1+e^{-x}}
+$$
 
 ![sigmoidfunction](../../../img/sigmoid_function.svg)
 
 - The range of the output is the following:
 
-$$ (0,1) $$
+$$
+(0,1)
+$$
 
 - If $z$ is a large positive number, then $e^{−z} \approx 0$ and so $\sigma(z) \approx 1$
 - In other words, when $w \cdot x + b$ is large and positive, the output of the sigmoid neuron is approximately $1$
@@ -83,13 +91,17 @@ $$ (0,1) $$
 ### Introducing the Tanh Activation Function
 - The tanh formula is defined as the following:
 
-$$ g(x) = \frac{e^{x}-e^{-x}}{e^{x}+e^{-x}} $$
+$$
+g(x) = \frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}
+$$
 
 ![tanh](../../../img/tanh.svg)
 
 - The range of the output is the following:
 
-$$ (-1,1) $$
+$$
+(-1,1)
+$$
 
 - Mathematically, the tanh function is just a shifted version of the sigmoid function
 - We prefer the shifted version over the sigmoid function because it makes the learning for the next layer a bit easier
@@ -112,13 +124,17 @@ $$ (-1,1) $$
 ### Introducing the ReLU Activation Function
 - The relu formula is defined as the following:
 
-$$ g(x) = \begin{cases} 0 &\text{if } x \le 0 \cr x &\text{if } x > 0 \end{cases} $$
+$$
+g(x) = \begin{cases} 0 &\text{if } x \le 0 \cr x &\text{if } x > 0 \end{cases}
+$$
 
 ![relu](../../../img/relu.svg)
 
 - The range of the output is the following:
 
-$$ [0, \infty] $$
+$$
+[0, \infty]
+$$
 
 - The relu function is one of the most popular activation functions
 - The relu function is preferred over the sigmoid and tanh functions

@@ -10,7 +10,9 @@ katex: true
 - These tuples contain arguments useful for creating a socket to that service
 - The functions returns a list of tuples with the following structure:
 
-$$(family, type, proto, canonname, sockaddr)$$
+$$
+(family, type, proto, canonname, sockaddr)
+$$
 
 - The `family`, `type`, and `proto` elements have values that would be passed to a socket object
 - The `canonname` element is a string representing the canonical name of the host

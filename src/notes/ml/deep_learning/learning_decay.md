@@ -22,7 +22,9 @@ katex: true
 ### Defining Standard Learning Rate Decay
 1. Compute $\alpha_{i}$ for the current epoch $i$
 
-$$ \alpha_{i} = \alpha_{0} \frac{1}{1 + \gamma \times i} $$
+$$
+\alpha_{i} = \alpha_{0} \frac{1}{1 + \gamma \times i}
+$$
 
 2. Repeat step $1$ for each $i^{th}$ epoch
 
@@ -47,7 +49,9 @@ $$ \alpha_{i} = \alpha_{0} \frac{1}{1 + \gamma \times i} $$
 ### Defining Exponential Learning Rate Decay
 1. Compute $\alpha_{i}$ for the current epoch $i$
 
-$$ \alpha_{i} = \alpha_{0} \times \gamma^{i} $$
+$$
+\alpha_{i} = \alpha_{0} \times \gamma^{i}
+$$
 
 2. Repeat step $1$ for each $i^{th}$ epoch
 	- Where the hyperparameter $\gamma$ is the exponential rate of decay
@@ -58,13 +62,17 @@ $$ \alpha_{i} = \alpha_{0} \times \gamma^{i} $$
 - Another example is the discrete staircase decay function
 - We could also use the following:
 
-$$ \alpha_{i} = \alpha_{0} \frac{k}{\sqrt{i}} $$
+$$
+\alpha_{i} = \alpha_{0} \frac{k}{\sqrt{i}}
+$$
 
 - Here, the hyperparameter $i$ refers to the $i^{th}$ epoch
 - And, the hyperparameter $k$ refers to some constant
 - We can also use a similar method using mini-batches:
 
-$$ \alpha_{t} = \alpha_{0} \frac{k}{\sqrt{t}} $$
+$$
+\alpha_{t} = \alpha_{0} \frac{k}{\sqrt{t}}
+$$
 
 - Here, the hyperparameter $t$ refers to the $t^{th}$ mini-batch
 
@@ -76,7 +84,9 @@ $$ \alpha_{t} = \alpha_{0} \frac{k}{\sqrt{t}} $$
 - Then, we want to end with a small learning rate as we approach the minimum, so that our steps aren't big enough to overshoot the minimum
 - The standard formula for learning rate decay is:
 
-$$ \alpha_{i} = \alpha_{0} \frac{1}{1 + \gamma \times i} $$
+$$
+\alpha_{i} = \alpha_{0} \frac{1}{1 + \gamma \times i}
+$$
 
 - The hyperparameter $\alpha_{i}$ represents the learning rate for the $i^{th}$ epoch
 - The hyperparameter $\alpha_{0}$ represents an initial learning rate

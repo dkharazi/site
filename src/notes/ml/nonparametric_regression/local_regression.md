@@ -23,12 +23,15 @@ katex: true
 	- We only assign weights to points within our fraction of training observations we're considering
 	- Any training point will be assigned a weight of zero if it is either outside of our fraction of observations or extremely far away from the point we are fitting on
 3. Fit a weighted least squares regression of the $y_{i}$ on the $x_{i}$ using the aforementioned weights, by finding the beta-coefficients that minimize the following equation:
-
-	$$ \sum_{i=1}^{n}K_{i0}(y_{i} - \beta_{0} - \beta x_{i})^{2} $$
+	$$
+	\sum_{i=1}^{n}K_{i0}(y_{i} - \beta_{0} - \beta x_{i})^{2}
+	$$
 	- In other words, estimate the beta-coefficients by minimizing the weighted least squares cost function
 4. The fitted value at $x_{0}$ is given by the following:
 
-$$ \hat{f}(x_{0}) = \hat{\beta_{0}} + \hat{\beta}x_{0} $$
+$$
+\hat{f}(x_{0}) = \hat{\beta_{0}} + \hat{\beta}x_{0}
+$$
 
 ### Additional Notes about the Algorithm
 - In order to perform local regression, the following choices need to be made:

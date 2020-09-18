@@ -19,21 +19,45 @@ katex: true
 - Each neuron's activation is multiplied by a probability $p$ during the testing phase
 - For example, a feedforward operation of a standard neural network looks like the following:
 
-$$ z^{l} = w^{l}a^{l-1} + b^{l} $$
-$$ a^{l} = g(z^{l}) $$
+$$
+z^{l} = w^{l}a^{l-1} + b^{l}
+$$
+
+$$
+a^{l} = g(z^{l})
+$$
 
 - With dropout, a feedforward operation becomes the following during the training step:
 
-$$ r^{l-1} \sim \text{Bernoulli}(p) $$
-$$ \tilde{a}^{l-1} = r^{l-1}a^{l-1} $$
-$$ z^{l} = w^{l} \tilde{a}^{l-1} + b^{l} $$
-$$ a^{l} = g(z^{l}) $$
+$$
+r^{l-1} \sim \text{Bernoulli}(p)
+$$
+
+$$
+\tilde{a}^{l-1} = r^{l-1}a^{l-1}
+$$
+
+$$
+z^{l} = w^{l} \tilde{a}^{l-1} + b^{l}
+$$
+
+$$
+a^{l} = g(z^{l})
+$$
 
 - With dropout, a feedforward operation becomes the following during the testing step:
 
-$$ \tilde{a}^{l-1} = a^{l-1}p $$
-$$ z^{l} = w^{l} \tilde{a}^{l-1} + b^{l} $$
-$$ a^{l} = g(z^{l}) $$
+$$
+\tilde{a}^{l-1} = a^{l-1}p
+$$
+
+$$
+z^{l} = w^{l} \tilde{a}^{l-1} + b^{l}
+$$
+
+$$
+a^{l} = g(z^{l})
+$$
 
 ### Reasoning behind the Original Dropout Method
 - During the training phase, removing neurons adds a degree of noise to the architecture
@@ -46,33 +70,45 @@ $$ a^{l} = g(z^{l}) $$
 ### Example of the Original Dropout Implementation
 - Let's say we have $p=0.5$ and the following activations for a certain layer:
 
-$$ a^{l-1} = \begin{bmatrix} 1 \cr 2 \cr 3 \cr 4 \cr 5 \cr 6 \cr 7 \cr 8 \end{bmatrix} $$
+$$
+a^{l-1} = \begin{bmatrix} 1 \cr 2 \cr 3 \cr 4 \cr 5 \cr 6 \cr 7 \cr 8 \end{bmatrix}
+$$
 
 - During the training phase, half of our neurons (i.e. $p=0.5$) would be removed:
 - Therefore, our training activations could look like the following:
 
-$$ \tilde{a}^{l-1} = \begin{bmatrix} 1 \cr 0 \cr 0 \cr 4 \cr 5 \cr 0 \cr 7 \cr 0 \end{bmatrix} $$
+$$
+\tilde{a}^{l-1} = \begin{bmatrix} 1 \cr 0 \cr 0 \cr 4 \cr 5 \cr 0 \cr 7 \cr 0 \end{bmatrix}
+$$
 
 - During the testing phase, our activations are multiplied by $p$
 - Therefore, our testing activations would look like the following:
 
-$$ \tilde{a}^{l-1} = \begin{bmatrix} 0.5 \cr 1 \cr 1.5 \cr 2 \cr 2.5 \cr 3 \cr 3.5 \cr 4 \end{bmatrix} $$
+$$
+\tilde{a}^{l-1} = \begin{bmatrix} 0.5 \cr 1 \cr 1.5 \cr 2 \cr 2.5 \cr 3 \cr 3.5 \cr 4 \end{bmatrix}
+$$
 
 ### Example of the Original Dropout for Input Layer
 - If we are dealing with an input layer, our activation $a^{l-1}$ is represented by our input data $x$
 - Let's say we have $p=0.5$ and the following input data for a certain layer:
 
-$$ x = \begin{bmatrix} 1 \cr 2 \cr 3 \cr 4 \cr 5 \cr 6 \cr 7 \cr 8 \end{bmatrix} $$
+$$
+x = \begin{bmatrix} 1 \cr 2 \cr 3 \cr 4 \cr 5 \cr 6 \cr 7 \cr 8 \end{bmatrix}
+$$
 
 - During the training phase, half of our neurons (i.e. $p=0.5$) would be removed:
 - Therefore, our training activations could look like the following:
 
-$$ \tilde{x} = \begin{bmatrix} 1 \cr 0 \cr 0 \cr 4 \cr 5 \cr 0 \cr 7 \cr 0 \end{bmatrix} $$
+$$
+\tilde{x} = \begin{bmatrix} 1 \cr 0 \cr 0 \cr 4 \cr 5 \cr 0 \cr 7 \cr 0 \end{bmatrix}
+$$
 
 - During the testing phase, our activations are multiplied by $p$
 - Therefore, our testing activations would look like the following:
 
-$$ \tilde{x} = \begin{bmatrix} 0.5 \cr 1 \cr 1.5 \cr 2 \cr 2.5 \cr 3 \cr 3.5 \cr 4 \end{bmatrix} $$
+$$
+\tilde{x} = \begin{bmatrix} 0.5 \cr 1 \cr 1.5 \cr 2 \cr 2.5 \cr 3 \cr 3.5 \cr 4 \end{bmatrix}
+$$
 
 ### Describing the TensorFlow Dropout Implementation
 - TensorFlow has a different implementation of the original dropout implementation
@@ -86,8 +122,13 @@ $$ \tilde{x} = \begin{bmatrix} 0.5 \cr 1 \cr 1.5 \cr 2 \cr 2.5 \cr 3 \cr 3.5 \cr
 - The reason for this upscale of values is to preserve the distribution of values so that the total sum is preserved as well
 - For example, upscaling the values here will lead to a close approximation of sums:
 
-$$ sum(a^{l-1}) = sum(\begin{bmatrix} 1 \cr 2 \cr 3 \cr 4 \cr 5 \cr 6 \cr 7 \cr 8 \end{bmatrix}) = 36 $$
-$$ sum(\tilde{a}^{l-1}) = sum(a^{l-1} \times \frac{1}{1-p}) = sum(\begin{bmatrix} 2 \cr 0 \cr 0 \cr 8 \cr 5 \cr 0 \cr 14 \cr 0 \end{bmatrix}) = 29 $$
+$$
+sum(a^{l-1}) = sum(\begin{bmatrix} 1 \cr 2 \cr 3 \cr 4 \cr 5 \cr 6 \cr 7 \cr 8 \end{bmatrix}) = 36
+$$
+
+$$
+sum(\tilde{a}^{l-1}) = sum(a^{l-1} \times \frac{1}{1-p}) = sum(\begin{bmatrix} 2 \cr 0 \cr 0 \cr 8 \cr 5 \cr 0 \cr 14 \cr 0 \end{bmatrix}) = 29
+$$
 
 - This makes sense because we'd hope for $sum(\tilde{a}^{l-1})$ and $sum(a^{l-1})$ to be approximately similar
 - This is because we'd like any transformation $\tilde{a}^{l-1}$ of $a^{l-1}$ to reflect a similar summation output, since we're neural networks use summations of $a^{l-1}$ so often
@@ -95,17 +136,23 @@ $$ sum(\tilde{a}^{l-1}) = sum(a^{l-1} \times \frac{1}{1-p}) = sum(\begin{bmatrix
 ### Example of the TensorFlow Dropout Implementation
 - Let's say we have $p=0.5$ and the following activations for a certain layer:
 
-$$ a^{l-1} = \begin{bmatrix} 1 \cr 2 \cr 3 \cr 4 \cr 5 \cr 6 \cr 7 \cr 8 \end{bmatrix} $$
+$$
+a^{l-1} = \begin{bmatrix} 1 \cr 2 \cr 3 \cr 4 \cr 5 \cr 6 \cr 7 \cr 8 \end{bmatrix}
+$$
 
 - During the training phase, half of our neurons (i.e. $p=0.5$) would be removed:
 - Therefore, our training activations could look like the following:
 
-$$ \tilde{a}^{l-1} = \begin{bmatrix} 2 \cr 0 \cr 0 \cr 8 \cr 10 \cr 0 \cr 14 \cr 0 \end{bmatrix} $$
+$$
+\tilde{a}^{l-1} = \begin{bmatrix} 2 \cr 0 \cr 0 \cr 8 \cr 10 \cr 0 \cr 14 \cr 0 \end{bmatrix}
+$$
 
 - During the testing phase, our activations are unchanged
 - Therefore, our testing activations would look like the following:
 
-$$ \tilde{a}^{l-1} = \begin{bmatrix} 1 \cr 2 \cr 3 \cr 4 \cr 5 \cr 6 \cr 7 \cr 8 \end{bmatrix} $$
+$$
+\tilde{a}^{l-1} = \begin{bmatrix} 1 \cr 2 \cr 3 \cr 4 \cr 5 \cr 6 \cr 7 \cr 8 \end{bmatrix}
+$$
 
 ### Equivalence of Implementations
 - Mathematically, these two implmentations do not look the same

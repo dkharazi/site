@@ -17,7 +17,9 @@ katex: true
 - Our goal is to find a split that maximizes the information gain, which will happen if we minimize the entropy for the groups created by the split
 - Specifically, information gain can be defined as the following equation:
 
-$$ Gain = entropy_{p} - mean(entropy_{c}) $$
+$$
+Gain = entropy_{p} - mean(entropy_{c})
+$$
 
 - Where $Gain$ is the information gain
 - Where $entropy_{p}$ is the total entropy of a parent node
@@ -31,7 +33,9 @@ $$ Gain = entropy_{p} - mean(entropy_{c}) $$
 - In other words, the best split will be the one that makes sure each group contains data with the same value (i.e. the least impure)
 - Entropy is defined by the following equation:
 
-$$ Entropy = - \sum_{i=1}^{c} p_{i}log(p_{i}) $$
+$$
+Entropy = - \sum_{i=1}^{c} p_{i}log(p_{i})
+$$
 
 - Where $p_{i}$ is the probability of class (or group) $i$
 
@@ -42,7 +46,9 @@ $$ Entropy = - \sum_{i=1}^{c} p_{i}log(p_{i}) $$
 - This is because it doesn't require logarithmic functions to be computed
 - The gini impurity can be defined as the following:
 
-$$ Gini = 1 - \sum_{i=1}^{c}p_{i}^{2} $$
+$$
+Gini = 1 - \sum_{i=1}^{c}p_{i}^{2}
+$$
 
 - Where $p_{i}$ is the probability of class (or group) $i$
 
@@ -50,7 +56,9 @@ $$ Gini = 1 - \sum_{i=1}^{c}p_{i}^{2} $$
 - Let's say we are trying to evaluate the purity of a group, where we have 16 males and 14 females in our sample
 - Then, we could define our entropy as the following:
 
-$$ Entropy = (-\frac{16}{30})(-0.9) - (\frac{14}{30})(-1.1) = 0.99 $$
+$$
+Entropy = (-\frac{16}{30})(-0.9) - (\frac{14}{30})(-1.1) = 0.99
+$$
 
 - In this case, we should think about splitting, since the group is extremely pure
 
@@ -58,29 +66,41 @@ $$ Entropy = (-\frac{16}{30})(-0.9) - (\frac{14}{30})(-1.1) = 0.99 $$
 - Let's say we are trying to evalute the purity of a group, where we have only 16 males in our sample
 - Then, we could define our entropy as the following:
 
-$$ Entropy = (-\frac{16}{16})(0) = 0 $$
+$$
+Entropy = (-\frac{16}{16})(0) = 0
+$$
 
 - In this case, we shouldn't think about splitting, since the group is extremely pure
 
 ### Example of Information Gain Calculation
 - Let's say we are trying to evaluate a split of a group, where we initially have 16 males and 14 females in our sample
 1. Calculate the parent entropy
-	$$ -(\frac{14}{30})(log(\frac{14}{30})) - (\frac{16}{30})(log(\frac{16}{30})) = 0.996 $$
+	$$
+	-(\frac{14}{30})(log(\frac{14}{30})) - (\frac{16}{30})(log(\frac{16}{30})) = 0.996
+	$$
 	- In this case, the impurty is large, so we should split
 2. Calculate one child's entropy
-	$$ -(\frac{13}{17})(log(\frac{13}{17})) - (\frac{4}{17})(log(\frac{4}{17})) = 0.787 $$
+	$$
+	-(\frac{13}{17})(log(\frac{13}{17})) - (\frac{4}{17})(log(\frac{4}{17})) = 0.787
+	$$
 	- Here, there are $17$ data points in this group after the split
 	- Also, $13$ of those data points are female, and $4$ of those data points are male
 	- In this case, the impurity is fairly high for this group after the split
 3. Calculate the other child's entropy
-	$$ -(\frac{1}{13})(log(\frac{1}{13})) - (\frac{12}{13})(log(\frac{12}{13})) = 0.391 $$
+	$$
+	-(\frac{1}{13})(log(\frac{1}{13})) - (\frac{12}{13})(log(\frac{12}{13})) = 0.391
+	$$
 	- Here, there are $13$ data points in this group after the split
 	- Also, $1$ of those data points are female, and $12$ of those data points are male
 	- In this case, the impurty is fairly small for this group after the split
 4. Calculate the weighted average entropy of the children
-	$$ (\frac{17}{30})0.787 + (\frac{13}{30})0.391 = 0.615 $$
+	$$
+	(\frac{17}{30})0.787 + (\frac{13}{30})0.391 = 0.615
+	$$
 5. Calculate the information gain
-	$$ 0.996 - 0.615 = 0.38 $$
+	$$
+	0.996 - 0.615 = 0.38
+	$$
 	- Therefore, this split gives us $0.38$ amount of additional information
 	- We should evalute other splits, and choose this one if there aren't any other splits with an information gain greater than $0.38$
 

@@ -38,18 +38,27 @@ katex: true
 - These features aren't only the embeddings
 - Instead, the activations $a^{[l-1]}$ become the following:
 
-$$ \vert f_{k}(x^{(i)}) - f_{k}(x^{(j)}) \vert $$
+$$
+\vert f_{k}(x^{(i)}) - f_{k}(x^{(j)}) \vert
+$$
 
 - Here, $k$ represents the $k^{th}$ component of the $128$-digit vector
 - Then, the output of our network becomes the following:
 
-$$ \hat{y} = \sigma(\sum_{k=1}^{128} w_{i}^{[l]} a^{[l-1]} + b^{[l]}) $$
-$$ \hat{y} = \sigma(\sum_{k=1}^{128} w_{i} \vert f_{k}(x^{(i)}) - f_{k}(x^{(j)}) \vert + b) $$
+$$
+\hat{y} = \sigma(\sum_{k=1}^{128} w_{i}^{[l]} a^{[l-1]} + b^{[l]})
+$$
+
+$$
+\hat{y} = \sigma(\sum_{k=1}^{128} w_{i} \vert f_{k}(x^{(i)}) - f_{k}(x^{(j)}) \vert + b)
+$$
 
 - We can use other variations of the $a^{[l-1]}$ term
 - For example, we could use the $\chi^{2}$ similarity:
 
-$$ \chi^{2} = \frac{(f_{k}(x^{(i)}) - f_{k}(x^{(j)}))^{2}}{f_{k}(x^{(i)}) - f_{k}(x^{(j)})} $$
+$$
+\chi^{2} = \frac{(f_{k}(x^{(i)}) - f_{k}(x^{(j)}))^{2}}{f_{k}(x^{(i)}) - f_{k}(x^{(j)})}
+$$
 
 - There are many other variations of possible similarity functions
 - Instead of training triplets, we are only training pairs of images
@@ -65,7 +74,9 @@ $$ \chi^{2} = \frac{(f_{k}(x^{(i)}) - f_{k}(x^{(j)}))^{2}}{f_{k}(x^{(i)}) - f_{k
 - These features aren't only the embeddings
 - Instead, the activations $a^{[l-1]}$ become the following:
 
-$$ \vert f_{k}(x^{(i)}) - f_{k}(x^{(j)}) \vert $$
+$$
+\vert f_{k}(x^{(i)}) - f_{k}(x^{(j)}) \vert
+$$
 
 - Instead of training triplets, we are only training pairs of images
 

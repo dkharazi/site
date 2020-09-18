@@ -72,8 +72,13 @@ katex: true
 ### Defining the Number of Workers
 - The number of workers should equal:
 
-$$ \text{numbers of threads} \times \text{number of workers} + 1 $$
-$$ = (2 \times numcores) + 1 $$
+$$
+\text{numbers of threads} \times \text{number of workers} + 1
+$$
+
+$$
+= (2 \times numcores) + 1
+$$
 
 - The intuition behind this formula is the following:
 	- `+1:` One worker should be reserved for scheduling

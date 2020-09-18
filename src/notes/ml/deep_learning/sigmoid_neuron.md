@@ -24,19 +24,27 @@ katex: true
 - A sigmoid neuron takes in several inputs $x_{1}, x_{2}, ..., x_{n}$ 
 - A sigmoid neuron returns a single output *between* 0 and 1:
 
-$$ f(z) \in (0,1) $$
+$$
+f(z) \in (0,1)
+$$
 
 - For example, our output could be $0.685$
 - A sigmoid neuron uses a different activation function:
 
-$$ f(z) \equiv \frac{1}{1+e^{-z}} $$
+$$
+f(z) \equiv \frac{1}{1+e^{-z}}
+$$
 
 - Sometimes, we specifically refer to the activation function of a sigmoid neuron as the *sigmoid function*, which can be represented as $\sigma$:
 
-$$ \sigma(z) \equiv \frac{1}{1+e^{-z}} $$
+$$
+\sigma(z) \equiv \frac{1}{1+e^{-z}}
+$$
 
 - Specifically, the output of a sigmoid neuron is the following:
-	$$ \sigma(w \cdot x - b) \equiv \frac{1}{1+e^{-(w \cdot x - b)}} $$
+	$$
+	\sigma(w \cdot x - b) \equiv \frac{1}{1+e^{-(w \cdot x - b)}}
+	$$
 	- Where $w$ are our weights
 	- Where $b$ is our bias
 	- Where $x$ is our input

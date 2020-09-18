@@ -16,7 +16,9 @@ katex: true
 - Probabilities of success are defined as the number of successes divided by the total number of observations (i.e. successes and failures)
 - We typically define probabilities as the following:
 
-$$ p = \frac{successes}{total} $$
+$$
+p = \frac{successes}{total}
+$$
 
 - Probabilities are not linearly related to the covariates
 
@@ -29,27 +31,37 @@ $$ p = \frac{successes}{total} $$
 - In other words, the log-odds are linearly related to our covariates
 - We can define the odds function as the following:
 
-$$ odds = \frac{p}{1-p} $$
+$$
+odds = \frac{p}{1-p}
+$$
 
 - We can define the log odds function as the following:
 
-$$ logodds = \log(\frac{p}{1-p}) $$
+$$
+logodds = \log(\frac{p}{1-p})
+$$
 
 ## Example of Calculating Odds
 - Let's say an average of $9$ out of every $10$ people will default on their loans
 - Then, the probability of a person defaulting on their loans is the following:
 
-$$ p = \frac{9}{10} = 0.9 $$
+$$
+p = \frac{9}{10} = 0.9
+$$
 
 - And, the odds of a person defaulting is the following:
 
-$$ odds = \frac{0.9}{1-0.9} = 9 $$
+$$
+odds = \frac{0.9}{1-0.9} = 9
+$$
 
 ### Example of Calculating Log-Odds
 - Let's say an average of $9$ out of every $10$ people will default on their loans
 - Then, the log-odds of a person defaulting on their loans is the following:
 
-$$ logodds = \log(\frac{0.9}{1-0.9}) = 0.95 $$
+$$
+logodds = \log(\frac{0.9}{1-0.9}) = 0.95
+$$
 
 ### Logistic Function
 - In terms of logistic regression, the logistic function is typically synonymous with the sigmoid function
@@ -58,7 +70,9 @@ $$ logodds = \log(\frac{0.9}{1-0.9}) = 0.95 $$
 - Meaning, the amount that $p(X)$ changes due to a one-unit change in $X$ will depend on the current value of $X$
 - The logistic function is defined as the following:
 
-$$ p = \frac{e^{\beta_{0}+\beta X}}{1+e^{\beta_{0}+\beta X}} $$
+$$
+p = \frac{e^{\beta_{0}+\beta X}}{1+e^{\beta_{0}+\beta X}}
+$$
 
 - Here, the $\beta$ coefficients are just our logistic regression coefficients given by the logit function
 
@@ -68,7 +82,9 @@ $$ p = \frac{e^{\beta_{0}+\beta X}}{1+e^{\beta_{0}+\beta X}} $$
 - Meaning, the logit link function will always produce a linear regression line
 - The beta coefficients, given by the glm output in R, relates to the change in log-odds:
 
-$$ \log(\frac{p}{1-p}) = logit(p) = \beta_{0}+\beta X $$
+$$
+\log(\frac{p}{1-p}) = logit(p) = \beta_{0}+\beta X
+$$
 
 - We can interpret the beta coefficients as the following: increasing $X$ by one unit will change the log odds of success by $\beta_{1}$
 - We can also interpret the beta coefficients as the following: increasing $X$ by one unit will multiply the odds of success by $e^{\beta_{1}}$

@@ -23,11 +23,15 @@ katex: true
 - Covariance is an unstandardized version of the correlation coefficient
 - Covariance is defined as the following:
 
-$$ Cov(X,Y) = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y}) $$
+$$
+Cov(X,Y) = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})
+$$
 
 - Specifically, two variables $X$ and $Y$ are independent if:
 
-$$ Cov(X,Y) = 0 $$
+$$
+Cov(X,Y) = 0
+$$
 
 - Covariance will make it difficult to interpret the magnitude of variability between two variables
 - For example, we know how to interpret a positive covariance, a negative covariance, and a covariance of 0, and we know that in theory two variables that move together more should have a high covariance -- but what even is high?
@@ -38,7 +42,9 @@ $$ Cov(X,Y) = 0 $$
 - The (Pearson's) correlation coefficient is just a normalized covariance
 - A correlation coefficient is defined as the following:
 
-$$ Cor(X,Y) = \frac{Cov(X,Y)}{\sigma_{x}\sigma_{y}} $$
+$$
+Cor(X,Y) = \frac{Cov(X,Y)}{\sigma_{x}\sigma_{y}}
+$$
 
 - The correlation coefficient is thus constrained to lie between -1 and +1, where 0 implies the two random variables are independent
 - The extreme values indicate perfect linear dependence

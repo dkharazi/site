@@ -17,7 +17,9 @@ katex: true
 	2. A cost function can be written as a function of the outputs
 - For example, the quadratic cost function satisfies both assumptions:
 
-$$ J(w,b) = \frac{1}{2m} \sum_{i=1}^{m} (h(x) - y)^{2} $$
+$$
+J(w,b) = \frac{1}{2m} \sum_{i=1}^{m} (h(x) - y)^{2}
+$$
 
 - In other words, our cost function is an average due to the $\frac{1}{2m}$ term
 - We need this assumption because backpropagation involves computin
@@ -31,7 +33,9 @@ g the partial derivatives $\frac{\partial J(w,b)}{\partial w}$ and $\frac{\parti
 - However, we can use a different cost function for classification problems, and other cost functions for other applications
 - For classification problems, we can use the cross-entropy cost function:
 
-$$ Cost(h_{\theta}(x),y) = \begin{cases} - \log (h_{\theta}(x)) &\text{if } y=1 \cr - \log (1 - h_{\theta}(x)) &\text{if } y=0 \end{cases} $$
+$$
+Cost(h_{\theta}(x),y) = \begin{cases} - \log (h_{\theta}(x)) &\text{if } y=1 \cr - \log (1 - h_{\theta}(x)) &\text{if } y=0 \end{cases}
+$$
 
 - This is also known as the *Bernoulli negative log-likelihood* and *Binary Cross-Entropy*
 - This cost function has its own gradient with respect to the output of a neural network
@@ -42,16 +46,22 @@ $$ Cost(h_{\theta}(x),y) = \begin{cases} - \log (h_{\theta}(x)) &\text{if } y=1 
 - However, there is actually a slight distinction between the two
 - Specifically, we can define a cost function as the following:
 
-$$ J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y) $$
+$$
+J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}, y)
+$$
 
 - There are many types of loss functions that we can plug into a cost function
 - We could use a cross-entropy loss function for logistic regression:
 
-$$ \mathcal{L}(\hat{y}, y) = y \log(\hat{y}) + (1-y)\log(1-\hat{y}) $$
+$$
+\mathcal{L}(\hat{y}, y) = y \log(\hat{y}) + (1-y)\log(1-\hat{y})
+$$
 
 - Or we could use a quadratic loss function for linear regression:
 
-$$ \mathcal{L}(\hat{y}, y) = (\hat{y} - y)^{2} $$
+$$
+\mathcal{L}(\hat{y}, y) = (\hat{y} - y)^{2}
+$$
 
 ---
 

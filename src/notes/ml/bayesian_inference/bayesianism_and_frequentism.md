@@ -17,10 +17,14 @@ katex: true
 - Frequentists, on the other hand, don't represent uncertainty within their estimates, and instead represent uncertainty after the parameters have already been estimated
 	- Specifically, Frequentists use tools like confidence intervals to represent uncertainty
 - Bayesian inference uses bayes theorem at a very broad level when calculating posterior probabiltiies as the following:
-$$ P(H|D) \propto P(H)P(D|H) $$
-	- Where $P(H|D)$ is the posterior distribution, which is a combination of the data for some parameter and our prior beliefs
-	- Where $P(H)$ is the prior distribution, which represents our belief about the parameter
-	- Where $P(D|H)$ is the likelihood distribution, which represents the data
+
+$$
+P(H|D) \propto P(H)P(D|H)
+$$
+
+- Where $P(H|D)$ is the posterior distribution, which is a combination of the data for some parameter and our prior beliefs
+- Where $P(H)$ is the prior distribution, which represents our belief about the parameter
+- Where $P(D|H)$ is the likelihood distribution, which represents the data
 
 ### Semi-Bayesian Inference
 - MAP estimation is a semi-bayesian technique used for parameter estimation

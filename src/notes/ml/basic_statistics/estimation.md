@@ -20,12 +20,16 @@ katex: true
 ### Bias and Variance
 - The bias of an estimator is the expected error in its estimate:
 
-$$ Bias = \hat{\theta} - \theta $$
+$$
+Bias = \hat{\theta} - \theta
+$$
 
 - An estimator is unbiased if its bias is zero
 - An estimator is consistent if it converges to the true parameter value as the sample size goes off to infinity:
 
-$$ \lim_{n \rarr \infty} \hat{\theta} = \theta $$
+$$
+\lim_{n \rarr \infty} \hat{\theta} = \theta
+$$
 
 - A consistent estimator is not necessarily unbiased
 	- For example, the sample variance is a consistent estimator of the population variance, but it has a negative bais (and therefore is biased)

@@ -31,7 +31,9 @@ katex: true
 - This similarity function measures the difference between two images
 - Specifically, the similarity function is defined as the following:
 
-$$ d(x_{1}, x_{2}) = \Vert f(x_{1}) - f(x_{2}) \Vert_{2}^{2} $$
+$$
+d(x_{1}, x_{2}) = \Vert f(x_{1}) - f(x_{2}) \Vert_{2}^{2}
+$$
 
 - Where $x_{1}$ and $x_{2}$ are two different images
 - Where $f(x_{1})$ and $f(x_{2})$ are the activations of a fully-connected output layer from a siamese network
@@ -41,8 +43,13 @@ $$ d(x_{1}, x_{2}) = \Vert f(x_{1}) - f(x_{2}) \Vert_{2}^{2} $$
 	- A large number if the two images are different
 - This is defined as the following:
 
-$$ d(img_{1}, img_{2}) \le \tau \implies \text{similar} $$
-$$ d(img_{1}, img_{2}) > \tau \implies \text{different} $$
+$$
+d(img_{1}, img_{2}) \le \tau \implies \text{similar}
+$$
+
+$$
+d(img_{1}, img_{2}) > \tau \implies \text{different}
+$$
 
 - Here, $\tau$ represents some threshold hyperparameter
 - This is the root of all face verification problems
@@ -65,8 +72,13 @@ $$ d(img_{1}, img_{2}) > \tau \implies \text{different} $$
 - A siamese network uses a triplet loss function
 - The triplet loss function is defined as the following:
 
-$$ tp = \Vert f(x^{a}) - f(x^{p}) \Vert_{2}^{2} - \Vert f(x^{a}) - f(x^{n}) \Vert_{2}^{2} + \alpha $$
-$$ \mathcal{L}(x^{a}, x^{p}, x^{n}) = \max(tp, 0) $$
+$$
+tp = \Vert f(x^{a}) - f(x^{p}) \Vert_{2}^{2} - \Vert f(x^{a}) - f(x^{n}) \Vert_{2}^{2} + \alpha
+$$
+
+$$
+\mathcal{L}(x^{a}, x^{p}, x^{n}) = \max(tp, 0)
+$$
 
 - Here, $f(x^{a})$ refers to the encoded activations of an anchor image
 - Here, $f(x^{p})$ refers to the encoded activations of a positive image
@@ -82,42 +94,62 @@ $$ \mathcal{L}(x^{a}, x^{p}, x^{n}) = \max(tp, 0) $$
 - We want the encodings of the anchor image to be very similar to the positive image and very different from the negative image
 - Formally, we want the following:
 
-$$ \Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} \quad \le \quad \Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2} $$
+$$
+\Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} \quad \le \quad \Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2}
+$$
 
 - This can also be written as the following:
 
-$$ \Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} - \Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2} \quad \le \quad 0 $$
+$$
+\Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} - \Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2} \quad \le \quad 0
+$$
 
 - We can satisfy this equation by setting each term to $0$:
 
-$$ \Vert \underbrace{f(x_{i}^{a}) - f(x_{i}^{p})}_{0} \Vert_{2}^{2} - \Vert \underbrace{f(x_{i}^{a}) - f(x_{i}^{n})}_{0} \Vert_{2}^{2} \quad \le \quad 0 $$
+$$
+\Vert \underbrace{f(x_{i}^{a}) - f(x_{i}^{p})}_{0} \Vert_{2}^{2} - \Vert \underbrace{f(x_{i}^{a}) - f(x_{i}^{n})}_{0} \Vert_{2}^{2} \quad \le \quad 0
+$$
 
 - Obviously, we don't want our network to train our images such that our encodings become equal to $0$
 - Meaning, the encoding would be equal to the encoding of every other image
 - Therefore, we need to modify the objective such that our terms are smaller than $0$:
 
-$$ \Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} - \Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2} \quad \le \quad 0 - \alpha $$
+$$
+\Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} - \Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2} \quad \le \quad 0 - \alpha
+$$
 
 - We need to tune the hyperparameter $\alpha$ to find the right threshold
 - The hyperparameter $\alpha$ is referred to as a *margin*
 - Including $\alpha$ will prevent our network from learning those trivial solutions
 - We can reformulate the formula to be the following:
 
-$$ \Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} - \Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2} + \alpha \quad \le \quad 0 $$
+$$
+\Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} - \Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2} + \alpha \quad \le \quad 0
+$$
 
 ### Example of the Triplet Loss Function
 - Let's say we set $\alpha=0.2$
 - Then, our output could be the following:
 
-$$ \Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} + \underbrace{\alpha}_{0.2} = 0.5 $$
-$$ \Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2} = 0.51 $$
-$$ \underbrace{\Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} + \alpha}_{0.5} \quad \le \quad \underbrace{\Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2}}_{0.51} $$
+$$
+\Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} + \underbrace{\alpha}_{0.2} = 0.5
+$$
+
+$$
+\Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2} = 0.51
+$$
+
+$$
+\underbrace{\Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} + \alpha}_{0.5} \quad \le \quad \underbrace{\Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2}}_{0.51}
+$$
 
 - We can see that these terms satisfy our triplet loss condition
 - Obviously, we would prefer for the gap to be larger between our positive and negative images
 - For example, we'd prefer the following at the very least:
 
-$$ \underbrace{\Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} + \alpha}_{0.5} \quad \le \quad \underbrace{\Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2}}_{0.7} $$
+$$
+\underbrace{\Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} + \alpha}_{0.5} \quad \le \quad \underbrace{\Vert f(x_{i}^{a}) - f(x_{i}^{n}) \Vert_{2}^{2}}_{0.7}
+$$
 
 - Alternatively, we could push the $d(a,n)$ up or $d(a,p)$ down
 - However, we'd obviously prefer to satisfy both conditions
@@ -128,7 +160,9 @@ $$ \underbrace{\Vert f(x_{i}^{a}) - f(x_{i}^{p}) \Vert_{2}^{2} + \alpha}_{0.5} \
 - Therefore, we'll want to choose triplets that are *hard* to train on when construction our training set
 - Meaning, we want to choose $x^{a}$, $x^{p}$, and $x^{n}$ so that this is initially true early on in training:
 
-$$ d(x^{a}, x^{p}) \approx d(x^{a}, x^{n}) $$
+$$
+d(x^{a}, x^{p}) \approx d(x^{a}, x^{n})
+$$
 
 ---
 
@@ -137,7 +171,9 @@ $$ d(x^{a}, x^{p}) \approx d(x^{a}, x^{n}) $$
 - Specifically, one-shot learning involves training on two images such that the similarity between the two images is minimized
 - This similarity function is defined as the following:
 
-$$ d(x_{1}, x_{2}) = \Vert f(x_{1}) - f(x_{2}) \Vert_{2}^{2} $$
+$$
+d(x_{1}, x_{2}) = \Vert f(x_{1}) - f(x_{2}) \Vert_{2}^{2}
+$$
 
 - A siamese network is a convolutional network found in face recognition problems
 - Roughly, a siamese network encodes an input image into a $128$-digit vector
@@ -147,8 +183,13 @@ $$ d(x_{1}, x_{2}) = \Vert f(x_{1}) - f(x_{2}) \Vert_{2}^{2} $$
 - A siamese network uses a triplet loss function
 - The triplet loss function is defined as the following:
 
-$$ tp = \Vert f(x^{a}) - f(x^{p}) \Vert_{2}^{2} - \Vert f(x^{a}) - f(x^{n}) \Vert_{2}^{2} + \alpha $$
-$$ \mathcal{L}(x^{a}, x^{p}, x^{n}) = \max(tp, 0) $$
+$$
+tp = \Vert f(x^{a}) - f(x^{p}) \Vert_{2}^{2} - \Vert f(x^{a}) - f(x^{n}) \Vert_{2}^{2} + \alpha
+$$
+
+$$
+\mathcal{L}(x^{a}, x^{p}, x^{n}) = \max(tp, 0)
+$$
 
 - The term *triplet* loss comes from always needing to train on three images at a time
 - Therefore, we will need multiple pictures of the same person

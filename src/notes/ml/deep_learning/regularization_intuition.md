@@ -40,8 +40,13 @@ katex: true
 - We can notice this issue by taking a closer look at the tanh activation function in our network
 - Let's say we're faced with the following:
 
-$$ z^{l} = w^{l}a^{l-1} + b^{l} $$
-$$ a^{l} = tanh(z^{l}) $$
+$$
+z^{l} = w^{l}a^{l-1} + b^{l}
+$$
+
+$$
+a^{l} = tanh(z^{l})
+$$
 
 - We know that if $\lambda$ increases by too much, then $w^{l}$ will become very small
 - Ignoring the effects of $b^{l}$, we can see that $z^{l}$ will become very small and will take on a small range of values

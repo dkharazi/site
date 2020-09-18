@@ -16,22 +16,30 @@ katex: true
 - We typically refer to our population parameter as our true value
 - An error is typically represented as a combination of a bias component, variance component, and irreducible errors:
 
-$$ Error = Bias^{2} + Variance + Irreducible Error $$
+$$
+Error = Bias^{2} + Variance + Irreducible Error
+$$
 
 - Bias refers to the difference between a true value and a prediction:
 
-$$ Bias = \text{E}[\hat{\theta}] - \theta $$
+$$
+Bias = \text{E}[\hat{\theta}] - \theta
+$$
 
 - Again, our true value is typically some population parameter, and our predicted value is some estimate
 - Variance can be thought of as the difference between our predicted value and the average predicted value:
 
-$$ Variance = \text{E}[\hat{\theta} - \text{E}[\hat{\theta}]] $$
+$$
+Variance = \text{E}[\hat{\theta} - \text{E}[\hat{\theta}]]
+$$
 
 - Typically, our predicted value is some estimate, and our average predicted value represents the predicted value across many different samples
 - Irreducible error can be thought of as the remaining error that comes from our inability to account for every variable in the world, which has some marginal effect on our response variable
 - Irreducible error is defined as the variance of the error:
 
-$$ Irreducible Error = \sigma_{e}^{2} $$
+$$
+Irreducible Error = \sigma_{e}^{2}
+$$
 
 ### Properties of Estimators
 - Unbiasedness
@@ -80,14 +88,24 @@ $$ Irreducible Error = \sigma_{e}^{2} $$
 - This natural variability is a result of not knowing every variable and its true relationship with every other random variables in the world
 - A certain level of irreducible error will always exist, and is even incorporated in population parameters:
 
-$$ \mu_{Y|X} = \beta_{0} + \beta_{i}X_{i} + \epsilon_{i} $$
+$$
+\mu_{Y|X} = \beta_{0} + \beta_{i}X_{i} + \epsilon_{i}
+$$
 
 - A random error (or noise) is thought of as a random variable itself with a mean of 0
 - The error term is mathematically defined as the following:
 
-$$ \epsilon_{i} = Y_{i} − (\beta_{0} + \beta{1}*X_{i}) $$
-$$ \text{E}[\epsilon_{i}] = 0 $$
-$$ \text{Var}[\epsilon_{i}] = \sigma^{2} $$
+$$
+\epsilon_{i} = Y_{i} − (\beta_{0} + \beta{1}*X_{i})
+$$
+
+$$
+\text{E}[\epsilon_{i}] = 0
+$$
+
+$$
+\text{Var}[\epsilon_{i}] = \sigma^{2}
+$$
 
 - Irreducible error represents the standard deviation $\sigma$ of the random error term $\epsilon$
 - This is because it wouldn't make any sense for the irreducible error to be the actual error term, since the irreducible error is a fixed number representing uncertainty, rather than a random variable, which is a function
@@ -121,11 +139,15 @@ $$ \text{Var}[\epsilon_{i}] = \sigma^{2} $$
 - The random variable in our model has an expected value and variance
 - The bias of an estimator refers to how much predicted values differ from true values:
 
-$$ \text{bias} = \text{predicted} - \text{true} $$
+$$
+\text{bias} = \text{predicted} - \text{true}
+$$
 
 - The variance of an estimator refers to how predictions made on the same value vary on different realizations of the model:
 
-$$ \text{variance} = \text{predicted} - \text{average predicted value} $$
+$$
+\text{variance} = \text{predicted} - \text{average predicted value}
+$$
 
 - The bias of an estimator can be adjusted if we adjust the predicted values
 - The variance of an estimator can be adjusted if we adjust the predicted values

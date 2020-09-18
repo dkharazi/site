@@ -29,11 +29,15 @@ katex: true
 - Then, we can work with our transformed, stationary time-series model to satisfy the time-series models' assumption of stationarity
 - For example, a linear time-series model is a non-stationary model represented as the following:
 
-$$ y_{t} = \beta_{0} + \beta_{1}t + \epsilon_{t} $$
+$$
+y_{t} = \beta_{0} + \beta_{1}t + \epsilon_{t}
+$$
 
 - However, we can transform the linear time-series model to a stationary model:
 
-$$ z_{t} = y_{t} - y_{t-1} $$
+$$
+z_{t} = y_{t} - y_{t-1}
+$$
 
 ### References
 - [Stationarity Video](https://www.youtube.com/watch?v=oY-j2Wof51c)

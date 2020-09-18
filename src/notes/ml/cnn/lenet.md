@@ -37,7 +37,9 @@ katex: true
 - There will be a negative impact on performance if the size of activations decreases too quickly or too slowly as we travel deeper in our network
 - Typically, a convolutional network will follow this pattern:
 
-$$ CONV \to POOL \to \dots_{cp} \to FC \to \dots_{fc} \to SOFTMAX $$
+$$
+CONV \to POOL \to \dots_{cp} \to FC \to \dots_{fc} \to SOFTMAX
+$$
 
 - Here, the $..._{cp}$ denotes repeating $CONV$ and $POOL$ layers
 - And, the $..._{fc}$ denotes repeating $FC$ layers

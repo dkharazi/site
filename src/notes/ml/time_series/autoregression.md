@@ -9,7 +9,9 @@ katex: true
 - An autoregressive model is a linear regression model, where the response variable is some variable indexed by the current time period and the predictor variables are the same variable indexed by previous time periods
 - For example, we could create an autoregressive model to predict the average price of salmon in March depending on the average price of salmon in February and the average price of salmon in January
 - In this case, we could define the autoregressive model as the following:
-	$$ s_{t} =  \beta_{0} + \beta_{1}s_{t-1} + \beta_{2}s_{t-2} + \epsilon_{t} $$
+	$$
+	s_{t} =  \beta_{0} + \beta_{1}s_{t-1} + \beta_{2}s_{t-2} + \epsilon_{t}
+	$$
 	- Where $s_{t}$ represents the average price of salmon in the current time period (i.e. March)
 	- Where $s_{t-1}$ represents the average price of salmon in the previous time period (i.e. February)
 	- Where $s_{t-2}$ represents the average price of salmon in the time period before the previous time period (i.e. March)

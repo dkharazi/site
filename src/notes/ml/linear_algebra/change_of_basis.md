@@ -26,19 +26,27 @@ katex: true
 - Therefore, Jennifer uses a different set of basis vectors compared to our basis vectors
 - Specifically, Jennifer refers to her basis vectors in her coordinate system as the following:
 
-$$ b_{1}^{J} = \begin{bmatrix} 1 \cr 0 \end{bmatrix}, b_{2}^{J} = \begin{bmatrix} 0 \cr 1 \end{bmatrix} $$ 
+$$
+b_{1}^{J} = \begin{bmatrix} 1 \cr 0 \end{bmatrix}, b_{2}^{J} = \begin{bmatrix} 0 \cr 1 \end{bmatrix}
+$$
+
 - Jennifer refers to our basis vectors in her coordinate system as the following:
 
-$$ b_{1}^{U} = \begin{bmatrix} \frac{1}{3} \cr['0.75em'] -\frac{1}{3} \end{bmatrix}, b_{2}^{U} = \begin{bmatrix}\frac{1}{3} \cr['0.75em'] \frac{2}{3} \end{bmatrix} $$
+$$
+b_{1}^{U} = \begin{bmatrix} \frac{1}{3} \cr['0.75em'] -\frac{1}{3} \end{bmatrix}, b_{2}^{U} = \begin{bmatrix}\frac{1}{3} \cr['0.75em'] \frac{2}{3} \end{bmatrix}
+$$
 
 - We refer to Jennifer's basis vectors in our coordinate system as the following:
 
-$$ b_{1}^{J} = \begin{bmatrix} 2 \cr 1 \end{bmatrix}, b_{2}^{J} = \begin{bmatrix} -1 \cr 1 \end{bmatrix} $$
+$$
+b_{1}^{J} = \begin{bmatrix} 2 \cr 1 \end{bmatrix}, b_{2}^{J} = \begin{bmatrix} -1 \cr 1 \end{bmatrix}
+$$
 
 - We refer to our basis vectors in our coordinate system as the following:
 
-$$ b_{1}^{U} = \begin{bmatrix} 1 \cr 0 \end{bmatrix}, b_{2}^{U} = \begin{bmatrix} 0 \cr 1 \end{bmatrix} $$
-
+$$
+b_{1}^{U} = \begin{bmatrix} 1 \cr 0 \end{bmatrix}, b_{2}^{U} = \begin{bmatrix} 0 \cr 1 \end{bmatrix}
+$$
 
 - Therefore, we may observe a vector $[3, 2]$ in our coordinate system, which Jennifer would see as $[\frac{5}{3}, \frac{1}{3}]$ in her coordinate system
 
@@ -53,7 +61,9 @@ $$ b_{1}^{U} = \begin{bmatrix} 1 \cr 0 \end{bmatrix}, b_{2}^{U} = \begin{bmatrix
 - By doing this, we'll see a matrix whose columns represent some set of basis vectors, which represents a linear transformation
 - As a result, we get the following:
 
-$$ \begin{bmatrix} 2 & -1 \cr 1 & 1 \end{bmatrix} \times \begin{bmatrix} -1 \cr 2 \end{bmatrix} = \begin{bmatrix} -4 \cr 1 \end{bmatrix} $$
+$$
+\begin{bmatrix} 2 & -1 \cr 1 & 1 \end{bmatrix} \times \begin{bmatrix} -1 \cr 2 \end{bmatrix} = \begin{bmatrix} -4 \cr 1 \end{bmatrix}
+$$
 
 - Where $[[2,1],[-1,1]]$ is our transformation matrix $A$
 - Where $[-1, 2]$ is our vector from her coordinate system $x$
@@ -70,7 +80,9 @@ $$ \begin{bmatrix} 2 & -1 \cr 1 & 1 \end{bmatrix} \times \begin{bmatrix} -1 \cr 
 - By doing this, we'll see that the inverse of a matrix also represents a linear transformation, since it is also a matrix whose columns represent some set of basis vectors
 - As a result, we get the following:
 
-$$ \begin{bmatrix} \frac{1}{3} & \frac{1}{3} \cr['0.75em'] -\frac{1}{3} & \frac{2}{3} \end{bmatrix} \times \begin{bmatrix} 3 \cr 2 \end{bmatrix} = \begin{bmatrix} \frac{5}{3} \cr['0.75em'] \frac{1}{3} \end{bmatrix} $$
+$$
+\begin{bmatrix} \frac{1}{3} & \frac{1}{3} \cr['0.75em'] -\frac{1}{3} & \frac{2}{3} \end{bmatrix} \times \begin{bmatrix} 3 \cr 2 \end{bmatrix} = \begin{bmatrix} \frac{5}{3} \cr['0.75em'] \frac{1}{3} \end{bmatrix}
+$$
 
 - Where $[[\frac{1}{3}, -\frac{1}{3}], [\frac{1}{3}, \frac{2}{3}]]$ is the inverse of our transformation matrix $A^{-1}$
 - Where $[3, 2]$ is a vector from our coordinate system $b$
@@ -84,7 +96,10 @@ $$ \begin{bmatrix} \frac{1}{3} & \frac{1}{3} \cr['0.75em'] -\frac{1}{3} & \frac{
 - In other words, the columns of the transformation matrix represent where our basis vectors go, but the matrix that Jennifer wants should represent where her basis vectors land (described in her coordinate system)
 - We can solve this problem using the following equation:
 
-$$ A^{-1}MA $$
+$$
+A^{-1}MA
+$$
+
 - Where $M$ represents the transformation matrix in our coordinate system (i.e. $[[0, 1], [-1, 0]]$)
 - Where $A$ represents Jennifer's basis vectors in our coordinate system (i.e. $[[2, 1], [-1, 1]]$)
 - Where $A^{-1}$ represents our basis vectors in Jennifer's coordinate system (i.e. $[[\frac{1}{3}, -\frac{1}{3}], [\frac{1}{3}, \frac{2}{3}]]$)

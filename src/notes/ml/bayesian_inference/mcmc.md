@@ -36,23 +36,45 @@ katex: true
 	- More specifically, the likelihood equals the joint likelihood of observing the parameter of interest given the data
 	- And the prior equals the joint likelihood of observing the parameters together
 	- For example, let's say we want to estimate the conditional mean $\mu_{Y|X}$, which is represented by the following posterior distribution:
-	$$ \mu_{Y|X} \sim P(\beta_{0},\beta_{1},\sigma|Y) $$
-	$$ P(\beta_{0},\beta_{1},\sigma|Y) \propto P(\beta_{0},\beta_{1},\sigma)P(Y|\beta_{0},\beta_{1},\sigma) $$
+	$$
+	\mu_{Y|X} \sim P(\beta_{0},\beta_{1},\sigma|Y)
+	$$
+	$$
+	P(\beta_{0},\beta_{1},\sigma|Y) \propto P(\beta_{0},\beta_{1},\sigma)P(Y|\beta_{0},\beta_{1},\sigma)
+	$$
 	- Here, $Y$ represents our response data, $X$ represents our predictor variable, and $\mu_{Y|X} = \beta_{0} + \beta_{1}X + \epsilon$
 	- We know that our likelihood equals the joint likelihood (or density) of observing the data (or response variable) given the parameters $\beta_{0}$, $\beta_{1}$, and $\sigma$
 	- Therefore, our likelihood function can be defined in R as the following:
-	$$ P(Y|\beta_{0},\beta_{1},\sigma) = $$
-	$$ \text{dnorm}(\text{data}=y_{1},\text{mean}=\beta_{0}+\beta_{1}x_{1},\text{sd}=\sigma) $$
-	$$ \times \text{dnorm}(\text{data}=y_{2},\text{mean}=\beta_{0}+\beta_{1}x_{2},\text{sd}=\sigma) $$
-	$$ \times ... $$
-	$$ \times \text{dnorm}(\text{data}=y_{n},\text{mean}=\beta_{0}+\beta_{1}x_{n},\text{sd}=\sigma) $$
+	$$
+	P(Y|\beta_{0},\beta_{1},\sigma) =
+	$$
+	$$
+	\text{dnorm}(\text{data}=y_{1},\text{mean}=\beta_{0}+\beta_{1}x_{1},\text{sd}=\sigma)
+	$$
+	$$
+	\times \text{dnorm}(\text{data}=y_{2},\text{mean}=\beta_{0}+\beta_{1}x_{2},\text{sd}=\sigma)
+	$$
+	$$
+	\times ...
+	$$
+	$$
+	\times \text{dnorm}(\text{data}=y_{n},\text{mean}=\beta_{0}+\beta_{1}x_{n},\text{sd}=\sigma)
+	$$
 	- Here, we're estimating the probability of observing our data (or response variable in this case) given our parameters
 	- We know that our prior equals the joint likelihood (or density) of observing the parameters $\beta_{0}$, $\beta_{1}$, and $\sigma$
 	- Therefore, our prior function can be defined in R as the following:
-	$$ P(\beta_{0},\beta_{1},\sigma) = $$
-	$$ \text{dnorm}(\text{data}=\beta_{0},\text{mean}=\chi_{1}, \text{sd}=\gamma_{1}) $$
-	$$ \times \text{dnorm}(\text{data}=\beta_{1},\text{mean}=\chi_{2}, \text{sd}=\gamma_{2}) $$
-	$$ \times \text{dnorm}(\text{data}=\sigma,\text{mean}=\chi_{3}, \text{sd}=\gamma_{3}) $$
+	$$
+	P(\beta_{0},\beta_{1},\sigma) =
+	$$
+	$$
+	\text{dnorm}(\text{data}=\beta_{0},\text{mean}=\chi_{1}, \text{sd}=\gamma_{1})
+	$$
+	$$
+	\times \text{dnorm}(\text{data}=\beta_{1},\text{mean}=\chi_{2}, \text{sd}=\gamma_{2})
+	$$
+	$$
+	\times \text{dnorm}(\text{data}=\sigma,\text{mean}=\chi_{3}, \text{sd}=\gamma_{3})
+	$$
 	- Where $\beta_{0}, \beta_{1}$, and $\sigma$ are some fixed parameter estimates we're adjusting across many iterations
 	- Where $\chi_{i}$ is some mean we decide for the $i^{th}$ parameter (whatever mean we believe parameter $i^{th}$ parameter to be centered around)
 	- Where $\gamma_{i}$ is some standard deviation we decide for the $i^{th}$ parameter (whatever sd we believe the $i^{th}$ parameter to be centered around)

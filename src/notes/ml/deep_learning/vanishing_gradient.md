@@ -93,7 +93,9 @@ katex: true
 - Recall that the derivative of the sigmoid function outputs values between $0$ and $0.25$
 - For a shallow network, we calculate the derivative of our first hidden layer:
 
-$$ \frac{\partial J(w,b)}{\partial w^{1}} = \overbrace{\frac{\partial J(w,b)}{\partial a^{i}}}^{<\frac{1}{4}} \overbrace{\frac{\partial a^{i}}{\partial z^{3}}}^{<\frac{1}{4}} \overbrace{\frac{\partial z^{3}}{\partial a^{2}}}^{<\frac{1}{4}} \overbrace{\frac{\partial a^{2}}{\partial z^{2}}}^{<\frac{1}{4}} \overbrace{\frac{\partial z^{2}}{\partial a^{1}}}^{<\frac{1}{4}} \overbrace{\frac{\partial a^{1}}{\partial z^{1}}}^{<\frac{1}{4}} \overbrace{\frac{\partial z^{1}}{\partial w^{1}}}^{<\frac{1}{4}} \to 0 $$
+$$
+\frac{\partial J(w,b)}{\partial w^{1}} = \overbrace{\frac{\partial J(w,b)}{\partial a^{i}}}^{<\frac{1}{4}} \overbrace{\frac{\partial a^{i}}{\partial z^{3}}}^{<\frac{1}{4}} \overbrace{\frac{\partial z^{3}}{\partial a^{2}}}^{<\frac{1}{4}} \overbrace{\frac{\partial a^{2}}{\partial z^{2}}}^{<\frac{1}{4}} \overbrace{\frac{\partial z^{2}}{\partial a^{1}}}^{<\frac{1}{4}} \overbrace{\frac{\partial a^{1}}{\partial z^{1}}}^{<\frac{1}{4}} \overbrace{\frac{\partial z^{1}}{\partial w^{1}}}^{<\frac{1}{4}} \to 0
+$$
 
 - Here, we are multiplying four values between $0$ and $1$
 - This will become very small very fast
@@ -110,13 +112,17 @@ $$ \frac{\partial J(w,b)}{\partial w^{1}} = \overbrace{\frac{\partial J(w,b)}{\p
 - The relu activation function doesn't suffer as much from the vanishing gradient problem
 - The relu function is defined as the piecewise function:
 
-$$ relu(x) = \begin{cases} 0 &\text{if } x \le 0 \cr x &\text{if } x > 0 \end{cases} $$
+$$
+relu(x) = \begin{cases} 0 &\text{if } x \le 0 \cr x &\text{if } x > 0 \end{cases}
+$$
 
 - The function will output $0$ if the input is smaller than $0$
 - Otherwise, the function will mimic the identity function
 - The derivative of the function is the following:
 
-$$ \frac{\partial relu(x)}{\partial x} = \begin{cases} 0 &\text{if } x \le 0 \cr 1 &\text{if } x > 0 \end{cases} $$
+$$
+\frac{\partial relu(x)}{\partial x} = \begin{cases} 0 &\text{if } x \le 0 \cr 1 &\text{if } x > 0 \end{cases}
+$$
 
 - We can see the relu function won't suffer from the vanishing gradient problem as much as other activation functions
 - This is because the output is either a $0$ or a $1$, instead of a small decimal for a majority of the time

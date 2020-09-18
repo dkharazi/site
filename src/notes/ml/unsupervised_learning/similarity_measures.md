@@ -17,7 +17,9 @@ katex: true
 - The SMC calculates the percentage of mutual presences and mutual absences between the variable values
 - The simple matching coefficient is defined as the following:
 
-$$ SMC = \frac{M_{00}+M_{11}}{M_{00}+M_{01}+M_{10}+M_{11}} $$
+$$
+SMC = \frac{M_{00}+M_{11}}{M_{00}+M_{01}+M_{10}+M_{11}}
+$$
 
 - Where $M_{00}$ is the number of matching False values between two data entries
 - Where $M_{11}$ is the number of matching True values between two data entries
@@ -30,7 +32,9 @@ $$ SMC = \frac{M_{00}+M_{11}}{M_{00}+M_{01}+M_{10}+M_{11}} $$
 - The Jaccard coefficient can be thought of as a generalized case of the SMC
 - The Jaccard coefficient is defined as the following:
 
-$$ Jaccard = \frac{M_{11}}{M_{01}+M_{10}+M_{11}} $$
+$$
+Jaccard = \frac{M_{11}}{M_{01}+M_{10}+M_{11}}
+$$
 
 - Where $M_{11}$ is the number of matching True values between two data entries
 - Where $M_{10}$ is the number of differing values where the first entry's value is True and the second entry's value is False
@@ -44,7 +48,9 @@ $$ Jaccard = \frac{M_{11}}{M_{01}+M_{10}+M_{11}} $$
 - Therefore, the Dice coefficient is very similar to the Jaccard coefficient, but doesn't account for true negatives
 - The Dice coefficient is defined as the following:
 
-$$ Dice = \frac{2J}{1+J} $$
+$$
+Dice = \frac{2J}{1+J}
+$$
 
 - Where $J$ is the Jaccard coefficient
 
@@ -67,7 +73,9 @@ $$ Dice = \frac{2J}{1+J} $$
 - For this example, we will exclude the id variable from our SMC calculation
 - The SMC is calculated as the following:
 
-$$ SMC = \frac{M_{00}+M_{11}}{M_{00}+M_{01}+M_{10}+M_{11}} = \frac{1+2}{1+1+2+3} = \frac{3}{7} = 0.43 $$
+$$
+SMC = \frac{M_{00}+M_{11}}{M_{00}+M_{01}+M_{10}+M_{11}} = \frac{1+2}{1+1+2+3} = \frac{3}{7} = 0.43
+$$
 
 - Where $M_{00} = 1$ (from Fever)
 - Where $M_{01} = 1$ (from Headache)
@@ -84,7 +92,9 @@ $$ SMC = \frac{M_{00}+M_{11}}{M_{00}+M_{01}+M_{10}+M_{11}} = \frac{1+2}{1+1+2+3}
 - For this example, we will exclude the id variable from our Jaccard coefficient calculation
 - The jaccard coefficient is calculated as the following:
 
-$$ Jaccard = \frac{M_{11}}{M_{01}+M_{10}+M_{11}} = \frac{3}{1+2+3} = \frac{3}{6} = 0.5 $$
+$$
+Jaccard = \frac{M_{11}}{M_{01}+M_{10}+M_{11}} = \frac{3}{1+2+3} = \frac{3}{6} = 0.5
+$$
 
 - Where $M_{01} = 1$ (from Headache)
 - Where $M_{10} = 2$ (from Sex and Sore Throat)
@@ -100,7 +110,9 @@ $$ Jaccard = \frac{M_{11}}{M_{01}+M_{10}+M_{11}} = \frac{3}{1+2+3} = \frac{3}{6}
 - For this example, we will exclude the id variable from our Dice coefficient calculation
 - The dice coefficient is calculated as the following:
 
-$$ Dice = \frac{2M_{11}}{2M_{11}+M_{01}+M_{10}} = \frac{2 \times 3}{(2 \times 3) + 1 + 2} = \frac{6}{9} = 0.66 $$
+$$
+Dice = \frac{2M_{11}}{2M_{11}+M_{01}+M_{10}} = \frac{2 \times 3}{(2 \times 3) + 1 + 2} = \frac{6}{9} = 0.66
+$$
 
 - Where $M_{01} = 1$ (from Headache)
 - Where $M_{10} = 2$ (from Sex and Sore Throat)
@@ -113,7 +125,9 @@ $$ Dice = \frac{2M_{11}}{2M_{11}+M_{01}+M_{10}} = \frac{2 \times 3}{(2 \times 3)
 - A generalized term for the Euclidean norm is the L2 norm
 - The Euclidean distance is defined as the following:
 
-$$ EUC = \sqrt{\sum_{i=1}^{n}(x_{i}-y_{i})^{2}} $$
+$$
+EUC = \sqrt{\sum_{i=1}^{n}(x_{i}-y_{i})^{2}}
+$$
 
 ### Great-Circle Distance
 - The great-circle distance (or orthodromic distance) is a measure of dissimilarity between continuous variables
@@ -121,7 +135,9 @@ $$ EUC = \sqrt{\sum_{i=1}^{n}(x_{i}-y_{i})^{2}} $$
 - The Earth is nearly spherical, so the great-circle distance provides an accurate distance between two points on the surface of the Earth  within about 0.5%
 - The great-circle distance is defined as the following:
 
-$$ GC = r\delta\sigma $$
+$$
+GC = r\delta\sigma
+$$
 
 - Where $r$ is the radius of the sphere
 - Where $\delta\sigma = \arccos(\sin(\omega_{1})\sin(\omega_{2}) + \cos(\omega_{1})\cos(\omega_{2})\cos(\lambda_{2}-\lambda_{1}))$
@@ -135,7 +151,9 @@ $$ GC = r\delta\sigma $$
 - Obviously, the haversine distance ignores any hills and assumes smooths land
 - The haversine distance is defined as the following:
 
-$$ HS = \frac{d}{r} $$
+$$
+HS = \frac{d}{r}
+$$
 
 - Where $r$ is the radius of the Earth
 - Where $d = 2r \arcsin(\sqrt{\sin^{2}(\frac{\lambda_{2}-\lambda_{1}}{2}) + \cos(\lambda_{1})\cos(\lambda_{2})\sin^{2}(\frac{\omega_{2}-\omega_{1}}{2})})$
@@ -149,7 +167,9 @@ $$ HS = \frac{d}{r} $$
 - If the data is high dimensional, the Manhattan distance is usually preferred over the Euclidean distance
 - The manhattan distance is defined as the following:
 
-$$ MH = \sum_{i=1}^{n}|x_{i}-y_{i}| $$
+$$
+MH = \sum_{i=1}^{n}|x_{i}-y_{i}|
+$$
 
 ### Cosine Distance
 - The cosine distance is a measure of dissimilarity between binary, nominal, or continuous variables
@@ -160,7 +180,9 @@ $$ MH = \sum_{i=1}^{n}|x_{i}-y_{i}| $$
 - Also, note that the cosine similarity is essentially the same as the euclidean distance on normalized data
 - The cosine distance is defined as the following:
 
-$$ \theta = \arccos(\frac{\sum_{i=1}^{n}a_{i}b_{i}}{\Vert a \Vert \Vert b \Vert}) $$
+$$
+\theta = \arccos(\frac{\sum_{i=1}^{n}a_{i}b_{i}}{\Vert a \Vert \Vert b \Vert})
+$$
 
 - Where $a$ represents vector $a$
 - Where $b$ represents vector $b$
@@ -172,7 +194,9 @@ $$ \theta = \arccos(\frac{\sum_{i=1}^{n}a_{i}b_{i}}{\Vert a \Vert \Vert b \Vert}
 - The hellinger distance is a probabilistic analog of the euclidean distance
 - Given two probability distributions $P$ and $Q$, the hellinger distance is defined as:
 
-$$ h(P,Q) = \frac{1}{\sqrt{2}} \Vert \sqrt{P} - \sqrt{Q} \Vert_{2} $$
+$$
+h(P,Q) = \frac{1}{\sqrt{2}} \Vert \sqrt{P} - \sqrt{Q} \Vert_{2}
+$$
 
 - The hellinger distance is useful when quantifying the difference between two probability distributions
 - For example, let's say we're estimating a distribution for users and a distribution for non-users of a service
@@ -200,9 +224,17 @@ $$ h(P,Q) = \frac{1}{\sqrt{2}} \Vert \sqrt{P} - \sqrt{Q} \Vert_{2} $$
 - For this example, we will exclude the document variable from our euclidean calculations
 - The euclidean distance is calculated as the following:
 
-$$ EUC = \sqrt{\sum_{i=1}^{n}(x_{i}-y_{i})^{2}} $$
-$$ = (5-3)^{2} + (0-0)^{2} + (3-5)^{2} + (1-0)^{2} + (0-1)^{2} + (2-6)^{2} + (0-0)^{2} $$
-$$ = 4 + 0 + 4 + 1 + 1 + 16 + 0 = 26 $$
+$$
+EUC = \sqrt{\sum_{i=1}^{n}(x_{i}-y_{i})^{2}}
+$$
+
+$$
+= (5-3)^{2} + (0-0)^{2} + (3-5)^{2} + (1-0)^{2} + (0-1)^{2} + (2-6)^{2} + (0-0)^{2}
+$$
+
+$$
+= 4 + 0 + 4 + 1 + 1 + 16 + 0 = 26
+$$
 
 ### Example of Cosine Similarity
 
@@ -214,9 +246,17 @@ $$ = 4 + 0 + 4 + 1 + 1 + 16 + 0 = 26 $$
 - For this example, we will exclude the document variable from our cosine calculations
 - The cosine similarity is calculated as the following:
 
-$$ \theta = \arccos(\frac{\sum_{i=1}^{n}a_{i}b_{i}}{\Vert a \Vert \Vert b \Vert}) $$
-$$ = \arccos(\frac{15+15+1+1+12}{\sqrt{25+9+1+4}\sqrt{9+25+1+36}}) $$
-$$ = \arccos(\frac{44}{6.2 \times 8.4}) = \arccos(0.84) = 0.57 $$
+$$
+\theta = \arccos(\frac{\sum_{i=1}^{n}a_{i}b_{i}}{\Vert a \Vert \Vert b \Vert})
+$$
+
+$$
+= \arccos(\frac{15+15+1+1+12}{\sqrt{25+9+1+4}\sqrt{9+25+1+36}})
+$$
+
+$$
+= \arccos(\frac{44}{6.2 \times 8.4}) = \arccos(0.84) = 0.57
+$$
 
 ### References
 - [Basic Cluster Analysis Lecture Slides](http://staffwww.itn.liu.se/~aidvi/courses/06/dm/lectures/lec9.pdf)

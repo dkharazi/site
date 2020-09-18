@@ -32,12 +32,16 @@ katex: true
 	- And, $b^{[l]}$ is a $4 \times 1$ vector
 	- Then, $z^{[l]}$ is a $4 \times 1$ vector
 
-$$ z^{[l]} = W^{[l]} a^{[l-1]} + b^{[l]} $$
+$$
+z^{[l]} = W^{[l]} a^{[l-1]} + b^{[l]}
+$$
 
 3. Compute the softmax activations $a^{[l]}$:
 	- Here, $a^{[l]}$ is a $4 \times 1$ vector
 
-$$ a^{[l]} = \frac{e^{z_{i}^{[l]}}}{\sum_{i=1}^{n}e^{z_{i}^{[l]}}} = \frac{e^{z_{i}^{[l]}}}{\sum_{i=1}^{4}e^{z_{i}^{[l]}}} $$
+$$
+a^{[l]} = \frac{e^{z_{i}^{[l]}}}{\sum_{i=1}^{n}e^{z_{i}^{[l]}}} = \frac{e^{z_{i}^{[l]}}}{\sum_{i=1}^{4}e^{z_{i}^{[l]}}}
+$$
 
 ![softmaxnetwork](../../../img/softmax_network.svg)
 
@@ -45,19 +49,27 @@ $$ a^{[l]} = \frac{e^{z_{i}^{[l]}}}{\sum_{i=1}^{n}e^{z_{i}^{[l]}}} = \frac{e^{z_
 - Let's keep using our example network listed above
 - Let's define $z^{[l]}$ as the following:
 
-$$ z^{[l]} = \begin{bmatrix} 5 \cr 2 \cr -1 \cr 3 \end{bmatrix} $$
+$$
+z^{[l]} = \begin{bmatrix} 5 \cr 2 \cr -1 \cr 3 \end{bmatrix}
+$$
 
 - Before computing the softmatrix activations, we should define each individual $e^{z_{i}^{[l]}}$:
 
-$$ e^{z^{[l]}} = \begin{bmatrix} e^{z_{1}^{[l]}} \cr e^{z_{2}^{[l]}} \cr e^{z_{3}^{[l]}} \cr e^{z_{3}^{[l]}} \end{bmatrix} = \begin{bmatrix} e^{5} \cr e^{2} \cr e^{-1} \cr e^{3} \end{bmatrix} = \begin{bmatrix} 148.4 \cr 7.4 \cr 0.4 \cr 20.1 \end{bmatrix} $$
+$$
+e^{z^{[l]}} = \begin{bmatrix} e^{z_{1}^{[l]}} \cr e^{z_{2}^{[l]}} \cr e^{z_{3}^{[l]}} \cr e^{z_{3}^{[l]}} \end{bmatrix} = \begin{bmatrix} e^{5} \cr e^{2} \cr e^{-1} \cr e^{3} \end{bmatrix} = \begin{bmatrix} 148.4 \cr 7.4 \cr 0.4 \cr 20.1 \end{bmatrix}
+$$
 
 - We still need to sum those values together:
 
-$$ \sum_{i=1}^{4}e^{z_{i}^{[l]}} = 148.4 + 7.4 + 0.4 + 20.1 = 176.3 $$
+$$
+\sum_{i=1}^{4}e^{z_{i}^{[l]}} = 148.4 + 7.4 + 0.4 + 20.1 = 176.3
+$$
 
 - Now, let's compute each individual softmatrix activation $a_{i}^{[l]}$:
 
-$$ a^{[l]} = \begin{bmatrix} \frac{e^{5}}{176.3} \cr \cr \frac{e^{2}}{176.3} \cr \cr \frac{e^{-1}}{176.3} \cr \cr \frac{e^{3}}{176.3} \end{bmatrix} = \begin{bmatrix} 0.842 \cr 0.042 \cr 0.002 \cr 0.114 \end{bmatrix} $$
+$$
+a^{[l]} = \begin{bmatrix} \frac{e^{5}}{176.3} \cr \cr \frac{e^{2}}{176.3} \cr \cr \frac{e^{-1}}{176.3} \cr \cr \frac{e^{3}}{176.3} \end{bmatrix} = \begin{bmatrix} 0.842 \cr 0.042 \cr 0.002 \cr 0.114 \end{bmatrix}
+$$
 
 
 ### Intuition behind Softmax Learning

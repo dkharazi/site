@@ -19,7 +19,9 @@ katex: true
 - The cost function is minimized using gradient descent
 - The cost function is defined as the following:
 
-$$ J(G) = \alpha J_{c}(C,G) + \beta J_{s}(S,G) $$
+$$
+J(G) = \alpha J_{c}(C,G) + \beta J_{s}(S,G)
+$$
 
 - The cost function is made up of two cost sub-functions:
 	- The cost function $J_{c}(C,G)$ is the cost of the content image
@@ -33,9 +35,13 @@ $$ J(G) = \alpha J_{c}(C,G) + \beta J_{s}(S,G) $$
 ### Using the Cost Function to Generate Image $G$
 - The general algorithm looks like the following:
 	1. Initiate some random $G$ with the following dimensions:
-	$$ G: 100 \times 100 \times 3 $$
+	$$
+	G: 100 \times 100 \times 3
+	$$
 	2. Use gradient descent to minimize $J(G)$:
-	$$ G = G - \frac{\partial J(G)}{\partial G} $$
+	$$
+	G = G - \frac{\partial J(G)}{\partial G}
+	$$
 - Therefore, gradient descent updates the pixels of our image $G$
 - An example looks like the following:
 

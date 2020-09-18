@@ -53,7 +53,9 @@ katex: true
 - A point estimate is some constant
 - For example, we can say that $\bar{X}$ is a point estimator and 5 is the point estimate for the following sample:
 
-$$ \begin{bmatrix} x_{1} \cr x_{2} \cr x_{3} \cr x_{4} \cr x_{5} \end{bmatrix} = \begin{bmatrix} 2 \cr 3 \cr 1 \cr 1 \cr 3 \end{bmatrix} $$
+$$
+\begin{bmatrix} x_{1} \cr x_{2} \cr x_{3} \cr x_{4} \cr x_{5} \end{bmatrix} = \begin{bmatrix} 2 \cr 3 \cr 1 \cr 1 \cr 3 \end{bmatrix}
+$$
 
 ### References
 - [What is the Expected Value of an Estimator](https://math.stackexchange.com/questions/1950866/what-is-the-meaning-of-expected-value-of-an-estimator)

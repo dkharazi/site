@@ -14,13 +14,21 @@ katex: true
 - A bernoulli distribution is a discrete probability distribution of a random variable that takes the value 1 with a probability $p$ and the value 0 with probability $1-p$
 - We can define a bernoulli random variable as the following:
 
-$$ X \sim Bernoulli(p) $$
+$$
+X \sim Bernoulli(p)
+$$
 
-$$ P(x) = p^{x}(1-p)^{1-x} $$
+$$
+P(x) = p^{x}(1-p)^{1-x}
+$$
 
-$$ E(x) = p $$
+$$
+E(x) = p
+$$
 
-$$ Var(x) = p(1-p) $$
+$$
+Var(x) = p(1-p)
+$$
 
 - The range of a bernoulli distribution is $\{0,1\}$
 - A bernoulli distribution represents the probability of observing a success
@@ -38,13 +46,21 @@ $$ Var(x) = p(1-p) $$
 - A binomial distribution is a discrete probability distribution of a random variable that represents the number of successes $p$ in a sample of size $n$
 - We can define a binomial random variable as the following:
 
-$$ X \sim Binomial(p;n) $$
+$$
+X \sim Binomial(p;n)
+$$
 
-$$ P(x) = \binom{n}{k}p^{x}(1-p)^{n-x} $$
+$$
+P(x) = \binom{n}{k}p^{x}(1-p)^{n-x}
+$$
 
-$$ E(x) = np $$
+$$
+E(x) = np
+$$
 
-$$ Var(x) = np(1-p) $$
+$$
+Var(x) = np(1-p)
+$$
 
 - A binomial distribution represents a sequence of bernoulli trials (or a bernoulli process)
 - The range of a binomial distribution is $[0,1]$
@@ -57,14 +73,22 @@ $$ Var(x) = np(1-p) $$
 - A poisson distribution is a discrete probability distribution of a random variable that represents the number of successes occurring in a fixed interval of time
 - We can define a poisson random variable as the following:
 
-$$ X \sim Poisson(\lambda) $$
+$$
+X \sim Poisson(\lambda)
+$$
 
-$$ P(x) = \frac{\lambda^{k}e^{-\lambda}}{k!} $$
+$$
+P(x) = \frac{\lambda^{k}e^{-\lambda}}{k!}
+$$
 
-$$ E(x) = \lambda \text{ where } \lim_{n \rarr \infty} \hat{\lambda} = \lambda \text{ where } \hat{\lambda} = \frac{1}{n}\sum_{i=1}^{n}X_i $$
+$$
+E(x) = \lambda \text{ where } \lim_{n \rarr \infty} \hat{\lambda} = \lambda \text{ where } \hat{\lambda} = \frac{1}{n}\sum_{i=1}^{n}X_i
+$$
 
 
-$$ Var(x) = \lambda \text{ where } \lim_{n \rarr \infty} \hat{\lambda} = \lambda \text{ where } \hat{\lambda} = \frac{1}{n}\sum_{i=1}^{n}X_i $$
+$$
+Var(x) = \lambda \text{ where } \lim_{n \rarr \infty} \hat{\lambda} = \lambda \text{ where } \hat{\lambda} = \frac{1}{n}\sum_{i=1}^{n}X_i
+$$
 
 - A poisson distribution expresses the probability of a given number of events occurring in a fixed interval of time or space if these events occur with a known constant rate $k$ (and independently of the time since the last event)
 - There is only one parameter that makes up a poisson distribution

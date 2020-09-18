@@ -29,7 +29,9 @@ katex: true
 3. Compute the eigenvectors (and therefore eigenvalues) which diagonalize the covariance matrix
 	- This computation is a non-linear transformation
 	- Computing the diagonal matrix of eigenvalues represents a change of basis
-	$$ V^{-1}CV = D $$
+	$$
+	V^{-1}CV = D
+	$$
 	- Where $C$ is the covariance matrix
 	- Where $V$ is a matrix made up by the eigenvectors that diagonalize the covariance matrix
 	- Where $V^{-1}$ is the inverse of the matrix of eigenvectors

@@ -24,7 +24,9 @@ katex: true
 - Meaning, convolutional networks are less prone to overfitting
 - For example, if we have $10$ filters that are $3 \times 3 \times 3$ in one layer, then we'll have the following number of parameters:
 
-$$ 270 \text{ weights } + 10 \text{ biases } = 280 \text{ total parameters} $$
+$$
+270 \text{ weights } + 10 \text{ biases } = 280 \text{ total parameters}
+$$
 
 - In this case, we could have a $1000 \times 1000$ or $5000 \times 5000$ image, but the number of parameters remains fixed at $280$
 - We just need to learn the weights and biases of these $10$ filters to detect vertical edges, horizontal edges, and other features
@@ -34,9 +36,13 @@ $$ 270 \text{ weights } + 10 \text{ biases } = 280 \text{ total parameters} $$
 - General notation:
 	- $l$: The $l^{th}$ convolution layer in a network
 	- $n_{h}^{[l]}$: The height of the input image in the $l^{th}$ layer
-	$$ n_{h}^{[l]} = \lfloor \frac{n_{h}^{[l-1]}+2p^{[l]}-f^{[l]}}{s^{[l]}} + 1 \rfloor $$
+	$$
+	n_{h}^{[l]} = \lfloor \frac{n_{h}^{[l-1]}+2p^{[l]}-f^{[l]}}{s^{[l]}} + 1 \rfloor
+	$$
 	- $n_{w}^{[l]}$: The width of the input image in the $l^{th}$ layer
-	$$ n_{w}^{[l]} = \lfloor \frac{n_{w}^{[l-1]}+2p^{[l]}-f^{[l]}}{s^{[l]}} + 1 \rfloor $$
+	$$
+	n_{w}^{[l]} = \lfloor \frac{n_{w}^{[l-1]}+2p^{[l]}-f^{[l]}}{s^{[l]}} + 1 \rfloor
+	$$
 - Hyperparameters:
 	- $f^{[l]}$: The size of the filter in the $l^{th}$ layer
 	- $p^{[l]}$: The amount of padding in the $l^{th}$ layer

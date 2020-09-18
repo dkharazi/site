@@ -11,7 +11,9 @@ katex: true
 - A stochastic process is typically index by time
 - We can define a stochastic process as $S$, which can also be thought of as a sequence of successive random variables:
 
-$$ S = S_{0}, S_{1}, S_{2}, ..., S_{t}, ..., S_{n} $$
+$$
+S = S_{0}, S_{1}, S_{2}, ..., S_{t}, ..., S_{n}
+$$
 
 - These successive random variables all belong to the same function $S$
 - In other words, the space each of these random variables lives over is the same, and when we need to talk about that space, then we’ll talk about $S$, and any realizations of $S$ will be written as $s$
@@ -25,11 +27,15 @@ $$ S = S_{0}, S_{1}, S_{2}, ..., S_{t}, ..., S_{n} $$
 ### Examples of Deterministic Processes
 - We only need to know an object's mass and acceleration in order to determine the force of an object
 
-$$ F = ma $$
+$$
+F = ma
+$$
 
 - We only need to know the degrees in Celsius in order to determine the degrees in Kelvin
 
-$$ K = C + 273.15 $$
+$$
+K = C + 273.15
+$$
 
 ### Examples of Stochastic Processes
 - Rolling a die

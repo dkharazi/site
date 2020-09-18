@@ -33,7 +33,9 @@ katex: true
 - This represents an attempt to allow neurons to recover
 - We can define the leaky relu function as the following:
 
-$$ \text{leakyrelu}(x) = \begin{cases} 0.01x &\text{if } x \le 0 \cr x &\text{if } x > 0 \end{cases} $$
+$$
+\text{leakyrelu}(x) = \begin{cases} 0.01x &\text{if } x \le 0 \cr x &\text{if } x > 0 \end{cases}
+$$
 
 ![leakyrelu](../../../img/leakyrelu.svg)
 

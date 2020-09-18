@@ -55,9 +55,13 @@ katex: true
 - As a reminder, a linear neuron uses a quadratic loss function
 - Softmax and logistic neurons uses a cross-entropy loss function
 
-$$ c_{i} = \begin{cases} 1 &\text{if pedestrian} \cr 2 &\text{if car} \cr 3 &\text{if motorcycle} \cr 4 &\text{if background} \end{cases} $$
+$$
+c_{i} = \begin{cases} 1 &\text{if pedestrian} \cr 2 &\text{if car} \cr 3 &\text{if motorcycle} \cr 4 &\text{if background} \end{cases}
+$$
 
-$$ \hat{y} = \begin{bmatrix} p_{c} \cr b_{x} \cr b_{y} \cr b_{h} \cr b_{w} \cr c_{1} \cr c_{2} \cr c_{3} \end{bmatrix} = \begin{bmatrix} 1 \cr 0.5 \cr 0.6 \cr 0.2 \cr 0.1 \cr 0 \cr 1 \cr 0 \end{bmatrix} $$
+$$
+\hat{y} = \begin{bmatrix} p_{c} \cr b_{x} \cr b_{y} \cr b_{h} \cr b_{w} \cr c_{1} \cr c_{2} \cr c_{3} \end{bmatrix} = \begin{bmatrix} 1 \cr 0.5 \cr 0.6 \cr 0.2 \cr 0.1 \cr 0 \cr 1 \cr 0 \end{bmatrix}
+$$
 
 ![classificationlocalization](../../../img/localization.svg)
 
@@ -70,7 +74,9 @@ $$ \hat{y} = \begin{bmatrix} p_{c} \cr b_{x} \cr b_{y} \cr b_{h} \cr b_{w} \cr c
 - We may want to output the $x$ and $y$ coordinates of the corner of someone's eye
 - Specifically, the following landmarks could represent the four corners of someone's eyes:
 
-$$ l_{1x}, l_{1y}, l_{2x}, l_{2y}, l_{3x}, l_{3y}, l_{4x}, l_{4y} $$
+$$
+l_{1x}, l_{1y}, l_{2x}, l_{2y}, l_{3x}, l_{3y}, l_{4x}, l_{4y}
+$$
 
 - Being able to detect these landmarks is crucial for creating computer graphics effects
 - For example, snapchat uses landmark detection for its filters

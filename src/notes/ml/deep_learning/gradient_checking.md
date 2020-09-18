@@ -24,7 +24,9 @@ katex: true
 	1. Nudge them by a tiny amount $\epsilon$ in each direction
 	2. Calculate the following change:
 
-$$ g(\theta) \approx \frac{f(\theta + \epsilon)-f(\theta - \epsilon)}{2\epsilon} $$
+$$
+g(\theta) \approx \frac{f(\theta + \epsilon)-f(\theta - \epsilon)}{2\epsilon}
+$$
 
 ### Defining Gradient Checking
 1. Reformat $W^{[1]}, b^{[1]}, ..., W^{[L]}, b^{[L]}$ into vectors
@@ -47,7 +49,9 @@ $$ g(\theta) \approx \frac{f(\theta + \epsilon)-f(\theta - \epsilon)}{2\epsilon}
 	- We use the euclidean distance to compute the similarity of these two vectors $d\theta$ and $d\theta_{approx}$
 	- Then, we normalize the similarity score
 	- Specifically, we calculate the following:
-	$$ \frac{\Vert d\theta_{approx} - d\theta \Vert_{2}}{\Vert d\theta_{approx} \Vert_{2} + \Vert d\theta \Vert_{2}} $$
+	$$
+	\frac{\Vert d\theta_{approx} - d\theta \Vert_{2}}{\Vert d\theta_{approx} \Vert_{2} + \Vert d\theta \Vert_{2}}
+	$$
 7. Evaluate the similarity score
 	- Typically, we'll use an $\epsilon=10^{-7}$ for gradient checking
 	- An output $\approx 10^{-7}$ is great, meaning they're the same

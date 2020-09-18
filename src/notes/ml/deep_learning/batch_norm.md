@@ -33,19 +33,27 @@ katex: true
 1. Receive some intermediate values $z^{[l]}$
 2. Calculate the mean of the vector $z^{[l]}$:
 
-$$ \mu = \frac{1}{m} \sum_{i=1}^{m} z_{i} $$
+$$
+\mu = \frac{1}{m} \sum_{i=1}^{m} z_{i}
+$$
 
 3. Calculate the variance of the vector $z^{[l]}$:
 
-$$ \sigma^{2} = \frac{1}{m} \sum_{i=1}^{m} (z_{i} - \mu)^{2} $$
+$$
+\sigma^{2} = \frac{1}{m} \sum_{i=1}^{m} (z_{i} - \mu)^{2}
+$$
 
 4. Normalize the vector $z^{[l]}$:
 
-$$ z_{i}^{norm} = \frac{z_{i} - \mu}{\sqrt{\sigma^{2} - \epsilon}} $$
+$$
+z_{i}^{norm} = \frac{z_{i} - \mu}{\sqrt{\sigma^{2} - \epsilon}}
+$$
 
 5. Ensure $z^{[l]}$ doesn't always have $\mu=0$ and $\sigma^{2}=1$:
 
-$$ \tilde{z_{i}} = \beta + \gamma z_{i}^{norm} $$
+$$
+\tilde{z_{i}} = \beta + \gamma z_{i}^{norm}
+$$
 
 ### Understanding Batch Normalization
 - In a previous chapter, we've seen a similar type of normalization process applied to our input layer already
@@ -71,22 +79,33 @@ $$ \tilde{z_{i}} = \beta + \gamma z_{i}^{norm} $$
 ### Replacing Bias $b$ with Beta $\beta$
 - Recall that $z^{[l]}$ is defined as the following:
 
-$$ z^{[l]} = w^{[l]}a^{[l-1]} + b^{[l]} $$
+$$
+z^{[l]} = w^{[l]}a^{[l-1]} + b^{[l]}
+$$
 
 - Recall that $\tilde{z}^{[l]}$ is defined as the following:
 
-$$ \tilde{z_{i}}^{[l]} = \beta^{[l]} + \gamma z_{i}^{norm[l]} $$
+$$
+\tilde{z_{i}}^{[l]} = \beta^{[l]} + \gamma z_{i}^{norm[l]}
+$$
 
 - Therefore, the bias term $b^{[l]}$ can be considered a constant when using batch normalization
 - Then, the notion of the bias term $b^{[l]}$ can be indluded in $\beta$
 - Meaning, our formulas essentially become:
 
-$$ z^{[l]} = w^{[l]}a^{[l-1]} $$
-$$ \tilde{z_{i}}^{[l]} = \beta^{[l]} + \gamma z_{i}^{norm[l]} $$
+$$
+z^{[l]} = w^{[l]}a^{[l-1]}
+$$
+
+$$
+\tilde{z_{i}}^{[l]} = \beta^{[l]} + \gamma z_{i}^{norm[l]}
+$$
 
 - And, we only need to train our model for the following parameters:
 
-$$ w^{[l]}, \beta^{[l]}, \gamma $$
+$$
+w^{[l]}, \beta^{[l]}, \gamma
+$$
 
 - In other words, we train a model while updating only two parameters $w^{[l]}$ and $b^{[l]}$ without using batch normalization
 - Using batch normalization, we would train a model while updating only one additional parameter $\gamma^{[l]}$
@@ -94,28 +113,42 @@ $$ w^{[l]}, \beta^{[l]}, \gamma $$
 ### Applying Batch Normalization
 - The following is a general iteration of a single layer using batch normalization:
 
-$$ a^{[l]} \space \overbrace{\to}^{w^{[l]}, b^{[l]}} \space z^{[l]} \space \underbrace{\to}_{\beta^{[l]}, \gamma^{[l]}} \space \tilde{z}^{[l]} \space \to \space a^{[l+1]} $$
+$$
+a^{[l]} \space \overbrace{\to}^{w^{[l]}, b^{[l]}} \space z^{[l]} \space \underbrace{\to}_{\beta^{[l]}, \gamma^{[l]}} \space \tilde{z}^{[l]} \space \to \space a^{[l+1]}
+$$
 
 - The following is an example of a network with one hidden layer using batch normalization:
 
-$$ x \space \overbrace{\to}^{w^{[1]}, b^{[1]}} \space z^{[1]} \space \overbrace{\to}^{\beta^{[1]}, \gamma^{[1]}} \space \tilde{z}^{[1]} \space \to \space a^{[2]} \space \overbrace{\to}^{w^{[2]}, b^{[2]}} \space z^{[2]} \space \overbrace{\to}^{\beta^{[2]}, \gamma^{[2]}} \space \tilde{z}^{[2]} \space \to \space \hat{y} $$
+$$
+x \space \overbrace{\to}^{w^{[1]}, b^{[1]}} \space z^{[1]} \space \overbrace{\to}^{\beta^{[1]}, \gamma^{[1]}} \space \tilde{z}^{[1]} \space \to \space a^{[2]} \space \overbrace{\to}^{w^{[2]}, b^{[2]}} \space z^{[2]} \space \overbrace{\to}^{\beta^{[2]}, \gamma^{[2]}} \space \tilde{z}^{[2]} \space \to \space \hat{y}
+$$
 
 - In this example, we need to train the following parameters using an optimization algorithm:
 
-$$ w^{[1]}, b^{[1]}, \beta^{[1]}, \gamma^{[1]}, w^{[2]}, b^{[2]}, \beta^{[2]}, \gamma^{[2]} $$
+$$
+w^{[1]}, b^{[1]}, \beta^{[1]}, \gamma^{[1]}, w^{[2]}, b^{[2]}, \beta^{[2]}, \gamma^{[2]}
+$$
 
 ### Applying Batch Normalization with Mini-Batches
 - When applying batch normalization to mini-batches, we apply a very similar approach as the one described above:
 
-$$ a^{[l] \lbrace t \rbrace } \space \overbrace{\to}^{w^{[l] \lbrace t \rbrace}, b^{[l] \lbrace t \rbrace}} \space z^{[l] \lbrace t \rbrace} \space \overbrace{\to}^{\beta^{[l] \lbrace t \rbrace}, \gamma^{[l] \lbrace t \rbrace}} \space \tilde{z}^{[l] \lbrace t \rbrace} \space \to \space a^{[l+1] \lbrace t \rbrace} $$
+$$
+a^{[l] \lbrace t \rbrace } \space \overbrace{\to}^{w^{[l] \lbrace t \rbrace}, b^{[l] \lbrace t \rbrace}} \space z^{[l] \lbrace t \rbrace} \space \overbrace{\to}^{\beta^{[l] \lbrace t \rbrace}, \gamma^{[l] \lbrace t \rbrace}} \space \tilde{z}^{[l] \lbrace t \rbrace} \space \to \space a^{[l+1] \lbrace t \rbrace}
+$$
 
-$$ a^{[l] \lbrace t+1 \rbrace } \space \overbrace{\to}^{w^{[l] \lbrace t+1 \rbrace}, b^{[l] \lbrace t+1 \rbrace}} \space z^{[l] \lbrace t+1 \rbrace} \space \overbrace{\to}^{\beta^{[l] \lbrace t+1 \rbrace}, \gamma^{[l] \lbrace t+1 \rbrace}} \space \tilde{z}^{[l] \lbrace t+1 \rbrace} \space \to \space a^{[l+1] \lbrace t+1 \rbrace} $$
+$$
+a^{[l] \lbrace t+1 \rbrace } \space \overbrace{\to}^{w^{[l] \lbrace t+1 \rbrace}, b^{[l] \lbrace t+1 \rbrace}} \space z^{[l] \lbrace t+1 \rbrace} \space \overbrace{\to}^{\beta^{[l] \lbrace t+1 \rbrace}, \gamma^{[l] \lbrace t+1 \rbrace}} \space \tilde{z}^{[l] \lbrace t+1 \rbrace} \space \to \space a^{[l+1] \lbrace t+1 \rbrace}
+$$
 
 - The following is an example of a network with one hidden layer and two mini-batches using batch normalization:
 
-$$ x^{\lbrace 1 \rbrace} \space \overbrace{\to}^{w^{[1]}, b^{[1]}} \space z^{[1]} \space \overbrace{\to}^{\beta^{[1]}, \gamma^{[1]}} \space \tilde{z}^{[1]} \space \to \space a^{[2]} \space \overbrace{\to}^{w^{[2]}, b^{[2]}} \space z^{[2]} \space \overbrace{\to}^{\beta^{[2]}, \gamma^{[2]}} \space \tilde{z}^{[2]} \space \to \space \hat{y} $$
+$$
+x^{\lbrace 1 \rbrace} \space \overbrace{\to}^{w^{[1]}, b^{[1]}} \space z^{[1]} \space \overbrace{\to}^{\beta^{[1]}, \gamma^{[1]}} \space \tilde{z}^{[1]} \space \to \space a^{[2]} \space \overbrace{\to}^{w^{[2]}, b^{[2]}} \space z^{[2]} \space \overbrace{\to}^{\beta^{[2]}, \gamma^{[2]}} \space \tilde{z}^{[2]} \space \to \space \hat{y}
+$$
 
-$$ x^{\lbrace 2 \rbrace} \space \overbrace{\to}^{w^{[1]}, b^{[1]}} \space z^{[1]} \space \overbrace{\to}^{\beta^{[1]}, \gamma^{[1]}} \space \tilde{z}^{[1]} \space \to \space a^{[2]} \space \overbrace{\to}^{w^{[2]}, b^{[2]}} \space z^{[2]} \space \overbrace{\to}^{\beta^{[2]}, \gamma^{[2]}} \space \tilde{z}^{[2]} \space \to \space \hat{y} $$
+$$
+x^{\lbrace 2 \rbrace} \space \overbrace{\to}^{w^{[1]}, b^{[1]}} \space z^{[1]} \space \overbrace{\to}^{\beta^{[1]}, \gamma^{[1]}} \space \tilde{z}^{[1]} \space \to \space a^{[2]} \space \overbrace{\to}^{w^{[2]}, b^{[2]}} \space z^{[2]} \space \overbrace{\to}^{\beta^{[2]}, \gamma^{[2]}} \space \tilde{z}^{[2]} \space \to \space \hat{y}
+$$
 
 ### Training a Model with Batch Normalization
 1. Select a $t^{th}$ mini-batch
@@ -126,9 +159,17 @@ $$ x^{\lbrace 2 \rbrace} \space \overbrace{\to}^{w^{[1]}, b^{[1]}} \space z^{[1]
 6. Use backward propagation to compute $dw^{[l]}$, $d\beta^{[l]}$, and $d\gamma^{[l]}$
 7. Use an optimization algorithm (e.g. gradient descent, adam, rmsprop, etc.) to update the following parameters:
 
-$$ w^{[l]} = w^{[l]} - \alpha dw^{[l]} $$
-$$ \beta^{[l]} = \beta^{[l]} - \alpha d\beta^{[l]} $$
-$$ \gamma^{[l]} = \gamma^{[l]} - \alpha d\gamma^{[l]} $$
+$$
+w^{[l]} = w^{[l]} - \alpha dw^{[l]}
+$$
+
+$$
+\beta^{[l]} = \beta^{[l]} - \alpha d\beta^{[l]}
+$$
+
+$$
+\gamma^{[l]} = \gamma^{[l]} - \alpha d\gamma^{[l]}
+$$
 
 ### Why Batch Norm Increases Training Performance
 1. Roughly, batch normalization scales each of our activations
@@ -161,15 +202,31 @@ $$ \gamma^{[l]} = \gamma^{[l]} - \alpha d\gamma^{[l]} $$
 ### Defining Batch Normalization at Test Time
 1. Track each layer's $\mu^{[l]}$ and $\sigma^{2[l]}$ during training:
 
-$$ minibatch_{train}^{\lbrace 1 \rbrace} \to \mu_{train}^{\lbrace 1 \rbrace [l]} \text{ and } \sigma_{train}^{2 \lbrace 1 \rbrace [l]} \text{ for each l} $$
-$$ minibatch_{train}^{\lbrace 2 \rbrace} \to \mu_{train}^{\lbrace 2 \rbrace [l]} \text{ and } \sigma_{train}^{2 \lbrace 2 \rbrace [l]} \text{ for each l} $$
-$$ minibatch_{train}^{\lbrace 3 \rbrace} \to \mu_{train}^{\lbrace 3 \rbrace [l]} \text{ and } \sigma_{train}^{2 \lbrace 3 \rbrace [l]} \text{ for each l} $$
-$$ ... $$
+$$
+minibatch_{train}^{\lbrace 1 \rbrace} \to \mu_{train}^{\lbrace 1 \rbrace [l]} \text{ and } \sigma_{train}^{2 \lbrace 1 \rbrace [l]} \text{ for each l}
+$$
+
+$$
+minibatch_{train}^{\lbrace 2 \rbrace} \to \mu_{train}^{\lbrace 2 \rbrace [l]} \text{ and } \sigma_{train}^{2 \lbrace 2 \rbrace [l]} \text{ for each l}
+$$
+
+$$
+minibatch_{train}^{\lbrace 3 \rbrace} \to \mu_{train}^{\lbrace 3 \rbrace [l]} \text{ and } \sigma_{train}^{2 \lbrace 3 \rbrace [l]} \text{ for each l}
+$$
+
+$$
+...
+$$
 
 2. Estimate $\mu^{[l]}$ and $\sigma^{2[l]}$ using exponentially weighted averages:
 
-$$ expavg(\mu_{train}^{\lbrace 1 \rbrace [l]}, \mu_{train}^{\lbrace 2 \rbrace [l]}, \mu_{train}^{\lbrace 3 \rbrace [l]}, ...) \to \mu_{test}^{[l]} $$
-$$  expavg(\sigma_{train}^{2 \lbrace 1 \rbrace [l]}, \sigma_{train}^{2 \lbrace 2 \rbrace [l]}, \sigma_{train}^{2 \lbrace 3 \rbrace [l]}, ...) \to \sigma_{test}^{2[l]}$$
+$$
+expavg(\mu_{train}^{\lbrace 1 \rbrace [l]}, \mu_{train}^{\lbrace 2 \rbrace [l]}, \mu_{train}^{\lbrace 3 \rbrace [l]}, ...) \to \mu_{test}^{[l]}
+$$
+
+$$
+expavg(\sigma_{train}^{2 \lbrace 1 \rbrace [l]}, \sigma_{train}^{2 \lbrace 2 \rbrace [l]}, \sigma_{train}^{2 \lbrace 3 \rbrace [l]}, ...) \to \sigma_{test}^{2[l]}
+$$
 
 ---
 

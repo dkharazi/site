@@ -18,27 +18,39 @@ A number is considered a probability if it satisfies all of the following proper
 
 1. Events range from never happening to always happening
 
-$$ 0 \le P(A) \le 1 $$
+$$
+0 \le P(A) \le 1
+$$
 
 2. Something must happen
 
-$$ P(\Omega) = 1 $$
+$$
+P(\Omega) = 1
+$$
 
 3. Nothing never happpens
 
-$$ P(\emptyset) = 0 $$
+$$
+P(\emptyset) = 0
+$$
 
 4. An event either happens or doesn't happen
 
-$$ P(A) + P(\bar{A}) = 1 $$
+$$
+P(A) + P(\bar{A}) = 1
+$$
 
 5. A less interpretable property involving addition
 
-$$ P(A+B) = P(A) + P(B) - P(AB) $$
+$$
+P(A+B) = P(A) + P(B) - P(AB)
+$$
 
 6. A less interpretable property involving multiplication
 
-$$ P(AB) = P(A|B) \times P(B) $$
+$$
+P(AB) = P(A|B) \times P(B)
+$$
 
 ![Venn Diagram](../../../img/venn.svg)
 
@@ -57,7 +69,9 @@ Essentially, there are three types of probabilities:
 - We can also express the conditional probability of observing event $A$ given event $B$ by taking the probability of observing the joint probability of observing the two events together (out of observing all possible events) and dividing that by the probability of only observing event $A$
 - In other words, we can express the conditional probability as the joint probability divided by the marginal probability
 
-$$ P(A|B) = \frac{P(AB)}{P(B)} $$
+$$
+P(A|B) = \frac{P(AB)}{P(B)}
+$$
 
 ### Conditional Probabilities and Independence
 
@@ -65,7 +79,9 @@ $$ P(A|B) = \frac{P(AB)}{P(B)} $$
 - In other words, if $P(B|A)=P(B)$, then whether or not $A$ happens makes no difference to whether $B$ happens
 - In other words, events $A$ and $B$ are said to be independent if:
 
-$$ P(B|A) = P(B) $$
+$$
+P(B|A) = P(B)
+$$
 
 ### Bayes Rule
 - As previously stated, the conditional probability equals the joint probability divided by the marginal probability
@@ -73,7 +89,9 @@ $$ P(B|A) = P(B) $$
 - Since the joint probability equals the conditional probability multiplied by the marginal probability, then we can also express the conditional probability as a conditional probability as well
 - This derived formula is known as Bayes Rule (or Bayes Theorem)
 
-$$ P(A|B) = \frac{P(AB)}{P(B)} = \frac{P(B|A)P(A)}{P(B)} $$
+$$
+P(A|B) = \frac{P(AB)}{P(B)} = \frac{P(B|A)P(A)}{P(B)}
+$$
 
 ### References
 - [Probability, Statistics and Stochastic Processes](http://bactra.org/prob-notes/srl.pdf)

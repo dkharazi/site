@@ -18,12 +18,16 @@ katex: true
 - The output of some activation function of the $j^{th}$ neuron in the $l^{th}$ layer is directly related to the output of the activation function in the $(l-1)^{th}$ layer
 - We'll refer to the output of an activation function $f$ as:
 
-$$ a^{l} = f(w^{l}a^{l-1} + b^{l}) $$
+$$
+a^{l} = f(w^{l}a^{l-1} + b^{l})
+$$
 
 - In other words, the output of an activation function is based on the output of an activation function of its previous layer, the weights of the current layer, and the bias of the current layer
 - We can also refer to the *weighted input* of a neuron in the $l^{th}$ layer as the following:
 
-$$ z^{l} \equiv w^{l}a^{l-1} + b^{l} $$
+$$
+z^{l} \equiv w^{l}a^{l-1} + b^{l}
+$$
 
 - In other words, a $z^{l}$ term refers to the input going into our activation function of the $j^{th}$ neuron in the $l^{th}$ layer
 
@@ -65,57 +69,93 @@ $$ z^{l} \equiv w^{l}a^{l-1} + b^{l} $$
 - Where $da^{i}$ represents the initialized partial derivative $\frac{\partial J(w,b)}{\partial a^{i}}$
 - Since we're using logistic regression:
 
-$$ da^{l} = \frac{\partial J(w,b)}{\partial a^{l}} = - \frac{y}{a} + \frac{1-y}{1-a} $$
+$$
+da^{l} = \frac{\partial J(w,b)}{\partial a^{l}} = - \frac{y}{a} + \frac{1-y}{1-a}
+$$
 
 - Where $da^{i}$ represents the following:
 
-$$ da^{i} = \frac{\partial J(w,b)}{\partial a^{i}} = - \frac{y}{\hat{y}} + \frac{1 - y}{1 - \hat{y}} $$
+$$
+da^{i} = \frac{\partial J(w,b)}{\partial a^{i}} = - \frac{y}{\hat{y}} + \frac{1 - y}{1 - \hat{y}}
+$$
 
 - Where $da^{1}$ represents the following:
 
-$$ da^{1} = \frac{\partial J(w,b)}{\partial a^{1}} = \frac{\partial J(w,b)}{\partial a^{i}} \frac{\partial a^{i}}{\partial z^{3}} \frac{\partial z^{3}}{\partial a^{2}} \frac{\partial a^{2}}{\partial z^{2}} \frac{\partial z^{2}}{\partial a^{1}} $$
+$$
+da^{1} = \frac{\partial J(w,b)}{\partial a^{1}} = \frac{\partial J(w,b)}{\partial a^{i}} \frac{\partial a^{i}}{\partial z^{3}} \frac{\partial z^{3}}{\partial a^{2}} \frac{\partial a^{2}}{\partial z^{2}} \frac{\partial z^{2}}{\partial a^{1}}
+$$
 
 - Although $da^{0}$ is not really used, $da^{0}$ represents the following:
 
-$$ da^{0} = \frac{\partial J(w,b)}{\partial a^{0}} = \frac{\partial J(w,b)}{\partial a^{i}} \frac{\partial a^{i}}{\partial z^{3}} \frac{\partial z^{3}}{\partial a^{2}} \frac{\partial a^{2}}{\partial z^{2}} \frac{\partial z^{2}}{\partial a^{1}} \frac{\partial a^{1}}{\partial z^{1}} \frac{\partial z^{1}}{\partial a^{0}} $$
+$$
+da^{0} = \frac{\partial J(w,b)}{\partial a^{0}} = \frac{\partial J(w,b)}{\partial a^{i}} \frac{\partial a^{i}}{\partial z^{3}} \frac{\partial z^{3}}{\partial a^{2}} \frac{\partial a^{2}}{\partial z^{2}} \frac{\partial z^{2}}{\partial a^{1}} \frac{\partial a^{1}}{\partial z^{1}} \frac{\partial z^{1}}{\partial a^{0}}
+$$
 
 - Where $dw^{1}$ represents the following:
 
-$$ dw^{1} = \frac{\partial J(w,b)}{\partial w^{1}} = \frac{\partial J(w,b)}{\partial a^{i}} \frac{\partial a^{i}}{\partial z^{3}} \frac{\partial z^{3}}{\partial a^{2}} \frac{\partial a^{2}}{\partial z^{2}} \frac{\partial z^{2}}{\partial a^{1}} \frac{\partial a^{1}}{\partial z^{1}} \frac{\partial z^{1}}{\partial w^{1}} $$
+$$
+dw^{1} = \frac{\partial J(w,b)}{\partial w^{1}} = \frac{\partial J(w,b)}{\partial a^{i}} \frac{\partial a^{i}}{\partial z^{3}} \frac{\partial z^{3}}{\partial a^{2}} \frac{\partial a^{2}}{\partial z^{2}} \frac{\partial z^{2}}{\partial a^{1}} \frac{\partial a^{1}}{\partial z^{1}} \frac{\partial z^{1}}{\partial w^{1}}
+$$
 
 - Where $db^{1}$ represents the following:
 
-$$ db^{1} = \frac{\partial J(w,b)}{\partial b^{1}} = \frac{\partial J(w,b)}{\partial a^{i}} \frac{\partial a^{i}}{\partial z^{3}} \frac{\partial z^{3}}{\partial a^{2}} \frac{\partial a^{2}}{\partial z^{2}} \frac{\partial z^{2}}{\partial a^{1}} \frac{\partial a^{1}}{\partial z^{1}} \frac{\partial z^{1}}{\partial b^{1}} $$
+$$
+db^{1} = \frac{\partial J(w,b)}{\partial b^{1}} = \frac{\partial J(w,b)}{\partial a^{i}} \frac{\partial a^{i}}{\partial z^{3}} \frac{\partial z^{3}}{\partial a^{2}} \frac{\partial a^{2}}{\partial z^{2}} \frac{\partial z^{2}}{\partial a^{1}} \frac{\partial a^{1}}{\partial z^{1}} \frac{\partial z^{1}}{\partial b^{1}}
+$$
 
 ### Computing Components of Forward Propagation
 - In forward propagation, our output is:
 
-$$ a^{l} $$
+$$
+a^{l}
+$$
 
 - We cache $z^{l}$ and output the following:
 
-$$ a^{l} $$
+$$
+a^{l}
+$$
 
 - These components look like the following:
 
-$$ z^{l} = W^{l}a^{l-1} + b^{l} $$
-$$ a^{l} = f(z^{l}) $$
+$$
+z^{l} = W^{l}a^{l-1} + b^{l}
+$$
+
+$$
+a^{l} = f(z^{l})
+$$
 
 ### Computing Components of Backward Propagation
 - In backward propagating, our input is:
 
-$$ \frac{\partial J(w,b)}{\partial a^{l}} $$
+$$
+\frac{\partial J(w,b)}{\partial a^{l}}
+$$
 
 - Our output is:
 
-$$ \frac{\partial J(w,b)}{\partial a^{l-1}}, \frac{\partial J(w,b)}{\partial W^{l}}, \frac{\partial J(w,b)}{\partial b^{l}} $$
+$$
+\frac{\partial J(w,b)}{\partial a^{l-1}}, \frac{\partial J(w,b)}{\partial W^{l}}, \frac{\partial J(w,b)}{\partial b^{l}}
+$$
 
 - These components look like the following:
 
-$$ \frac{\partial J(w,b)}{\partial z^{l}} = \frac{\partial J(w,b)}{\partial a^{l}} \times \frac{\partial a^{l}}{\partial z^{l}} $$
-$$ \frac{\partial J(w,b)}{\partial W^{l}} = \frac{\partial J(w,b)}{\partial z^{l}} \times a^{l-1} $$
-$$ \frac{\partial J(w,b)}{\partial b^{l}} = \frac{\partial J(w,b)}{\partial z^{l}} $$
-$$ \frac{\partial J(w,b)}{\partial a^{l-1}} = W^{l} \times \frac{\partial J(w,b)}{\partial z^{l}} $$
+$$
+\frac{\partial J(w,b)}{\partial z^{l}} = \frac{\partial J(w,b)}{\partial a^{l}} \times \frac{\partial a^{l}}{\partial z^{l}}
+$$
+
+$$
+\frac{\partial J(w,b)}{\partial W^{l}} = \frac{\partial J(w,b)}{\partial z^{l}} \times a^{l-1}
+$$
+
+$$
+\frac{\partial J(w,b)}{\partial b^{l}} = \frac{\partial J(w,b)}{\partial z^{l}}
+$$
+
+$$
+\frac{\partial J(w,b)}{\partial a^{l-1}} = W^{l} \times \frac{\partial J(w,b)}{\partial z^{l}}
+$$
 
 ### Coding Backward Propagation
 

@@ -23,20 +23,26 @@ katex: true
 ### The K-Means Objective Function
 - As hinted at already, the objective function for the k-means is the sum-of-squares for the clusters
 - The sum-of-squares for the clusters is defined as the following:
-	$$ SS = \sum_{k=1}^{o}\sum_{i=1}^{n_{k}}(\Vert x_{i}-m_{k} \Vert)^{2} $$
+	$$
+	SS = \sum_{k=1}^{o}\sum_{i=1}^{n_{k}}(\Vert x_{i}-m_{k} \Vert)^{2}
+	$$
 	- Where $o$ is the number of clusters
 	- Where $m_{k}$ is the mean for cluster $k$
 	- Where $m_{k} = \frac{1}{n_{k}}\sum_{i=1}^{n_{k}}x_{i}$
 	- Where $n_{k}$ is the number of points in that cluster
 - The within-cluster variance for the clusters is defined as the following:
-	$$ V_{k} = \frac{1}{n_{k}}\sum_{k=1}^{o}\sum_{i=1}^{n_{k}}( \Vert x_{i}-m_{k} \Vert)^{2} $$
+	$$
+	V_{k} = \frac{1}{n_{k}}\sum_{k=1}^{o}\sum_{i=1}^{n_{k}}( \Vert x_{i}-m_{k} \Vert)^{2}
+	$$
 	- Where $o$ is the number of clusters
 	- Where $m_{k}$ is the mean for cluster $k$
 	- Where $m_{k} = \frac{1}{n_{k}}\sum_{i=1}^{n_{k}}x_{i}$
 	- Where $n_{k}$ is the number of points in that cluster
 - The sum-of-squares for the clusters can also be defined as the following:
 
-$$ SS = \sum_{k=1}^{o}n_{k}V_{k} $$
+$$
+SS = \sum_{k=1}^{o}n_{k}V_{k}
+$$
 
 - In words, the sum-of-squares is the within-cluster variance multiplied by the cluster size (summed over clusters)
 - The sum-of-squares favors compact clusters

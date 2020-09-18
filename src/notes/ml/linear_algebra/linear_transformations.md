@@ -24,7 +24,9 @@ katex: true
 - In other words, as long as we know which vectors from our original space translate to the standard basis vectors in the new space, then we are able to translate any vector from that new space back to a vector in our original space
 - We typically define a linear transformation as the following:
 
-$$ Ax = b $$
+$$
+Ax = b
+$$
 
 - Where $A$ is our transformation matrix
 - Where $x$ is our scaled vector from the vector space $V$ defined by our transformation matrix
@@ -42,14 +44,24 @@ $$ Ax = b $$
 ### Notation of a Linear Transformation
 - The following are ways we can write the same linear transformation:
 
-$$ T:[x_{1}, x_{2}] \mapsto [x_{1}+x_{2}, 3x_{1}] $$
-$$ T([x_{1}, x_{2}]) = [x_{1}+x_{2}, 3x_{1}] $$
-$$ T(x_{1}, x_{2}) = (x_{1}+x_{2}, 3x_{1}) $$
+$$
+T:[x_{1}, x_{2}] \mapsto [x_{1}+x_{2}, 3x_{1}]
+$$
+
+$$
+T([x_{1}, x_{2}]) = [x_{1}+x_{2}, 3x_{1}]
+$$
+
+$$
+T(x_{1}, x_{2}) = (x_{1}+x_{2}, 3x_{1})
+$$
 
 ### Example of a Linear Transformation
 - Let's say we have the following linear transformation:
 
-$$ T:[x_{1}, x_{2}] \mapsto [x_{1}+x_{2}, 3x_{1}] $$
+$$
+T:[x_{1}, x_{2}] \mapsto [x_{1}+x_{2}, 3x_{1}]
+$$
 
 - Then, the vector $[2, 4]$ would be linearly transformed to $[6, 6]$
 - Then, the vector $[1, 1]$ would be linearly transformed to $[2, 3]$

@@ -14,7 +14,9 @@ katex: true
 - This setting specifies the number of worker processes for handling requests
 - Generally, this parameter is in the range of:
 
-$$ (2 \times numcores) + 1 $$
+$$
+(2 \times numcores) + 1
+$$
 
 - Here, $n$ is some number between $2$ and $4$
 - We'll want to adjust $n$ to find the $n$ that best handles our application's work load

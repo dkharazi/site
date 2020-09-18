@@ -22,7 +22,9 @@ katex: true
 - An event is a set of outcomes that is written as a capital letter
 - For example, we could denote a set that represents the outcomes of rolling a single die as the following:
 
-$$ \text{A} = \text{\textbraceleft}{1,2,3,4,5,6}\text{\textbraceright} $$
+$$
+\text{A} = \text{\textbraceleft}{1,2,3,4,5,6}\text{\textbraceright}
+$$
 
 - Keep in mind that events are written as a normal, capital letter, whereas a random variable is written as an italicized, capital letter
 - A realization of a random variable is written as a italicized, lower-case letter
@@ -31,10 +33,21 @@ $$ \text{A} = \text{\textbraceleft}{1,2,3,4,5,6}\text{\textbraceright} $$
 - As a reminder, a random variable is a function that maps a single value from a sample space to any single, real-number realization
 - Typically, we denote a random variable as the following:
 
-$$ X: \Omega \to \R $$
-$$ \text{such } \text{that } \omega \mapsto X(\omega) $$
-$$ \text{such } \text{that } \omega \in \Omega $$
-$$ \text{such } \text{that } X(\omega) \in \R $$
+$$
+X: \Omega \to \R
+$$
+
+$$
+\text{such } \text{that } \omega \mapsto X(\omega)
+$$
+
+$$
+\text{such } \text{that } \omega \in \Omega
+$$
+
+$$
+\text{such } \text{that } X(\omega) \in \R
+$$
 
 - Here, $\Omega$ is a set that represents the domain of the random variable function
 - $\R$ is a set that represents the range of the random variable function
@@ -48,8 +61,13 @@ $$ \text{such } \text{that } X(\omega) \in \R $$
 - Therefore, the sample space will represent the range of the random variable
 - We denote a probability as the following:
 
-$$ P: \Omega \to [0,1] $$
-$$ \text{such } \text{that } \omega \mapsto P(\omega) $$
+$$
+P: \Omega \to [0,1]
+$$
+
+$$
+\text{such } \text{that } \omega \mapsto P(\omega)
+$$
 
 ### Denoting Events
 - Sometimes, we don't want our function to map a single value from $\Omega$, or we don't want our function to map to $\R$
@@ -60,11 +78,25 @@ $$ \text{such } \text{that } \omega \mapsto P(\omega) $$
 	- Let $X$ be our random variable
 - We could then define our random variable as the following:
 
-$$ X: \Omega \to \text{A} $$
-$$ \text{such } \text{that } \omega \mapsto X(\omega) $$
-$$ \text{such } \text{that } \text{A} \subset \R $$
-$$ \text{such } \text{that } \omega \in \Omega $$
-$$ \text{such } \text{that } X(\omega) \in \text{A} $$
+$$
+X: \Omega \to \text{A}
+$$
+
+$$
+\text{such } \text{that } \omega \mapsto X(\omega)
+$$
+
+$$
+\text{such } \text{that } \text{A} \subset \R
+$$
+
+$$
+\text{such } \text{that } \omega \in \Omega
+$$
+
+$$
+\text{such } \text{that } X(\omega) \in \text{A}
+$$
 
 - Here, $\Omega$ is a set that represents the domain of the random variable function
 - The set $\text{A}$ is a set that represents the range of the random variable function
@@ -79,11 +111,25 @@ $$ \text{such } \text{that } X(\omega) \in \text{A} $$
 	- $X$ is our random variable
 - We could define our random variable as the following:
 
-$$ X: \text{A} \to \R $$
-$$ \text{such } \text{that } \omega \mapsto X(\omega) $$
-$$ \text{such } \text{that } \text{A} \subset \Omega $$
-$$ \text{such } \text{that } \omega \in \text{A} $$
-$$ \text{such } \text{that } X(\omega) \in \R $$
+$$
+X: \text{A} \to \R
+$$
+
+$$
+\text{such } \text{that } \omega \mapsto X(\omega)
+$$
+
+$$
+\text{such } \text{that } \text{A} \subset \Omega
+$$
+
+$$
+\text{such } \text{that } \omega \in \text{A}
+$$
+
+$$
+\text{such } \text{that } X(\omega) \in \R
+$$
 
 - Here, the event $\text{A}$ is a set that represents the domain of the random variable function
 - $\R$ is a set that represents the range of the random variable function
@@ -99,12 +145,29 @@ $$ \text{such } \text{that } X(\omega) \in \R $$
 	- Let $\Omega$ be our sample space, which is the set of all colors
 - We could define our random variable as the following:
 
-$$ X: \text{A} \to \text{B} $$
-$$ \text{such } \text{that } \omega \mapsto X(\omega) $$
-$$ \text{such } \text{that } \text{A} = \text{\textbraceleft}{red, white, blue}\text{\textbraceright} $$
-$$ \text{such } \text{that } \text{B} = \text{\textbraceleft}{cat, dog}\text{\textbraceright} $$
-$$ \text{such } \text{that } \omega \in \text{A} $$
-$$ \text{such } \text{that } X(\omega) \in \text{B} $$
+$$
+X: \text{A} \to \text{B}
+$$
+
+$$
+\text{such } \text{that } \omega \mapsto X(\omega)
+$$
+
+$$
+\text{such } \text{that } \text{A} = \text{\textbraceleft}{red, white, blue}\text{\textbraceright}
+$$
+
+$$
+\text{such } \text{that } \text{B} = \text{\textbraceleft}{cat, dog}\text{\textbraceright}
+$$
+
+$$
+\text{such } \text{that } \omega \in \text{A}
+$$
+
+$$
+\text{such } \text{that } X(\omega) \in \text{B}
+$$
 
 - Here, the event $\text{A}$ is a set that represents the domain of the random variable function
 - Also, the event $\text{B}$ is a set that represents the range of the random variable function
@@ -116,36 +179,62 @@ $$ \text{such } \text{that } X(\omega) \in \text{B} $$
 ### Remarks on Mathematical Notation
 - As stated previously, a random variable $X$ is a function defined as the following:
 
-$$ X: \Omega \to \R $$
+$$
+X: \Omega \to \R
+$$
 
 - However, we often refer to $X$ using the following shorthand formula:
 
-$$ X(\omega) \text{ such} \text{ that } \omega \in \Omega $$ 
+$$
+X(\omega) \text{ such} \text{ that } \omega \in \Omega
+$$ 
 
 - Probability functions can be written in many ways:
 
-$$ p_{X}(x) \equiv P(X = x) \equiv P(\text{\textbraceleft}{s \in S : X(s) = x}\text{\textbraceright}) $$
+$$
+p_{X}(x) \equiv P(X = x) \equiv P(\text{\textbraceleft}{s \in S : X(s) = x}\text{\textbraceright})
+$$
 
 - We can generally denote sets as the following:
 
-$$ S \equiv \text{\textbraceleft}{\text{type of each element in list} : \text{range of each element}}\text{\textbraceright} $$
+$$
+S \equiv \text{\textbraceleft}{\text{type of each element in list} : \text{range of each element}}\text{\textbraceright}
+$$
 
 - Here are a few examples showing how we can denote different sets:
 
-$$ S \equiv \text{\textbraceleft}{i \in \R : 1 \le i \le 6, x \text{ is odd}}\text{\textbraceright} $$
-$$ S \equiv \text{\textbraceleft}{(i, j) : 1 \le i \le 6, 1 \le j \le 6}\text{\textbraceright} $$
+$$
+S \equiv \text{\textbraceleft}{i \in \R : 1 \le i \le 6, x \text{ is odd}}\text{\textbraceright}
+$$
+
+$$
+S \equiv \text{\textbraceleft}{(i, j) : 1 \le i \le 6, 1 \le j \le 6}\text{\textbraceright}
+$$
 
 - We can also denote realizations as the following:
 
-$$ X(s) \equiv X((i, j)) = i + j $$
+$$
+X(s) \equiv X((i, j)) = i + j
+$$
 
 ### Further Notation
 - We can define sets as long as they obey either of the following notations:
 
-$$ \text{\textbraceleft}{\text{an element}}\text{\textbraceright} \in \text{\textbraceleft}{\text{a set}}\text{\textbraceright} $$
-$$ \text{\textbraceleft}{\text{a set}}\text{\textbraceright} \in \text{\textbraceleft}{\text{a collection of sets}}\text{\textbraceright} $$
-$$ \text{\textbraceleft}{\text{a set}}\text{\textbraceright} \subset \text{\textbraceleft}{\text{a set}}\text{\textbraceright} $$
-$$ \text{\textbraceleft}{\text{a collection of sets}}\text{\textbraceright} \subset \text{\textbraceleft}{\text{a collection of sets}}\text{\textbraceright} $$
+$$
+\text{\textbraceleft}{\text{an element}}\text{\textbraceright} \in \text{\textbraceleft}{\text{a set}}\text{\textbraceright}
+$$
+
+$$
+\text{\textbraceleft}{\text{a set}}\text{\textbraceright} \in \text{\textbraceleft}{\text{a collection of sets}}\text{\textbraceright}
+$$
+
+$$
+\text{\textbraceleft}{\text{a set}}\text{\textbraceright} \subset \text{\textbraceleft}{\text{a set}}\text{\textbraceright}
+$$
+
+$$
+\text{\textbraceleft}{\text{a collection of sets}}\text{\textbraceright} \subset \text{\textbraceleft}{\text{a collection of sets}}\text{\textbraceright}
+$$
 
 - For example, we can write $a \in \text{A}$
 	- Where $\text{A}$ is an event (which is a set)

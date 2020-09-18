@@ -16,15 +16,21 @@ katex: true
 ### Some Examples of Cardinality
 - Let's say we have the set $\text{\textbraceleft}{}\text{\textbraceright}$, then the cardinality of the set is the following:
 
-$$ |\text{\textbraceleft}{}\text{\textbraceright}| = 0 $$
+$$
+|\text{\textbraceleft}{}\text{\textbraceright}| = 0
+$$
 
 - Let's say we have the set $\text{\textbraceleft}{\text{\textbraceleft}{1}\text{\textbraceright}, \text{\textbraceleft}{1,2,3,4}\text{\textbraceright}}\text{\textbraceright}$, then the cardinality of the set is the following:
 
-$$ |\text{\textbraceleft}{\text{\textbraceleft}{1}\text{\textbraceright}, \text{\textbraceleft}{1,2,3,4}\text{\textbraceright}}\text{\textbraceright}| = 2 $$
+$$
+|\text{\textbraceleft}{\text{\textbraceleft}{1}\text{\textbraceright}, \text{\textbraceleft}{1,2,3,4}\text{\textbraceright}}\text{\textbraceright}| = 2
+$$
 
 - Let's say we have the set $\text{\textbraceleft}{\text{\textbraceleft}{}\text{\textbraceright}, \text{\textbraceleft}{2, \text{\textbraceleft}{1, \text{\textbraceleft}{}\text{\textbraceright}}\text{\textbraceright}}\text{\textbraceright}}\text{\textbraceright}$, then the cardinality of the set is the following:
 
-$$ |\text{\textbraceleft}{\text{\textbraceleft}{}\text{\textbraceright}, \text{\textbraceleft}{2, \text{\textbraceleft}{1, \text{\textbraceleft}{}\text{\textbraceright}}\text{\textbraceright}}\text{\textbraceright}}\text{\textbraceright}| = 2 $$
+$$
+|\text{\textbraceleft}{\text{\textbraceleft}{}\text{\textbraceright}, \text{\textbraceleft}{2, \text{\textbraceleft}{1, \text{\textbraceleft}{}\text{\textbraceright}}\text{\textbraceright}}\text{\textbraceright}}\text{\textbraceright}| = 2
+$$
 
 ### An Example of Cartesian Products
 - A very familiar example of a cartesian product is the xy-plane
@@ -46,51 +52,83 @@ $$ |\text{\textbraceleft}{\text{\textbraceleft}{}\text{\textbraceright}, \text{\
 
 ### Examples of Countable Sets
 
-$$ \N $$
+$$
+\N
+$$
 - This is the set of all natural numbers
 - Specifically, $\N$ is the set $\text{\textbraceleft}{1,2,3,4,5,6,...}\text{\textbraceright}$
 
-$$ \mathbb{W} $$
+$$
+\mathbb{W}
+$$
 - This is the set of all whole numbers
 - Specifically, $\mathbb{W}$ is the set $\text{\textbraceleft}{0,1,2,3,4,5,6,...}\text{\textbraceright}$
 
-$$ \mathbb{Z} $$
+$$
+\mathbb{Z}
+$$
 - This is the set of all integers
 - Specifically, $\mathbb{Z}$ is the set $\text{\textbraceleft}{...,-2,-1,0,1,2,...}\text{\textbraceright}$
 
-$$ \mathbb{Q} $$
+$$
+\mathbb{Q}
+$$
 - This is the set of all rational numbers
 - Specifically, $\mathbb{Q}$ is the set $\text{\textbraceleft}{...,-\frac{1}{3},.12,\frac{7}{8},216.83\bar{6},...}\text{\textbraceright}$
 
 ### Examples of Uncountable Sets
 
-$$ \mathbb{C} $$
+$$
+\mathbb{C}
+$$
 - This is the set of all complex numbers
 - Specifically, $\mathbb{C}$ is the set $\text{\textbraceleft}{...,3i+5,4i-8,...}\text{\textbraceright}$
 
-$$ \R - \mathbb{Q} $$
+$$
+\R - \mathbb{Q}
+$$
 - This is the set of all irrational numbers
 - Specifically, $\R - \mathbb{Q}$ is any number that cannot be expressed using a fraction
 
-$$ \R $$
+$$
+\R
+$$
 - This is the set of all real numbers
 - Specifically, this is an uncountable set because it contains the set of all irrational numbers
 
-$$ \text{\textbraceleft}{\text{The set of all real numbers between 0 and 1}}\text{\textbraceright} $$
+$$
+\text{\textbraceleft}{\text{The set of all real numbers between 0 and 1}}\text{\textbraceright}
+$$
 
 ### Finite Sets
 - Roughly speaking, a finite set is a set in which one could in principle count and finish counting
 - The following are some examples of finite sets:
 
-$$ \text{\textbraceleft}{1,2,3,4,...,1000}\text{\textbraceright} $$
-$$ \text{\textbraceleft}{-100,-99,-98,...,1000000000000}\text{\textbraceright} $$
-$$ \text{\textbraceleft}{\text{A set with a cardinality of 2478}}\text{\textbraceright} $$
-$$ \text{\textbraceleft}{\text{A set with a cardinality of 1000000000000000000000000000}}\text{\textbraceright} $$
+$$
+\text{\textbraceleft}{1,2,3,4,...,1000}\text{\textbraceright}
+$$
+
+$$
+\text{\textbraceleft}{-100,-99,-98,...,1000000000000}\text{\textbraceright}
+$$
+
+$$
+\text{\textbraceleft}{\text{A set with a cardinality of 2478}}\text{\textbraceright}
+$$
+
+$$
+\text{\textbraceleft}{\text{A set with a cardinality of 1000000000000000000000000000}}\text{\textbraceright}
+$$
 
 - The following are some examples of infinite sets:
 
-$$ \text{\textbraceleft}{\text{The set of all even numbers}}\text{\textbraceright} $$
-$$ \text{\textbraceleft}{\text{The set of all odd numbers}}\text{\textbraceright} $$
+$$
+\text{\textbraceleft}{\text{The set of all even numbers}}\text{\textbraceright}
+$$
+
+$$
+\text{\textbraceleft}{\text{The set of all odd numbers}}\text{\textbraceright}
+$$
 
 ### More on Countability
 - A finite set is a subset of a countable set
@@ -105,12 +143,19 @@ $$ \text{\textbraceleft}{\text{The set of all odd numbers}}\text{\textbraceright
 - Again, we can denote cartesian products as $S \times S$ or $S^{2}$ if $S$ is some set
 - Let's say we have the following set:
 
-$$ S = \text{\textbraceleft}{1,2,3}\text{\textbraceright} $$
+$$
+S = \text{\textbraceleft}{1,2,3}\text{\textbraceright}
+$$
+
 - Then, we can define a catesian product and powerset of this set as the following:
 
-$$ S \times S = \text{\textbraceleft}{(1,1),(1,2),(1,3),(2,1),(2,2),(2,3),(3,1),(3,2),(3,3)}\text{\textbraceright} $$
+$$
+S \times S = \text{\textbraceleft}{(1,1),(1,2),(1,3),(2,1),(2,2),(2,3),(3,1),(3,2),(3,3)}\text{\textbraceright}
+$$
 
-$$ PowerSet(S) = \text{\textbraceleft}{\text{\textbraceleft}{∅}\text{\textbraceright},\text{\textbraceleft}{1}\text{\textbraceright},\text{\textbraceleft}{2}\text{\textbraceright},\text{\textbraceleft}{3}\text{\textbraceright},\text{\textbraceleft}{1,2}\text{\textbraceright},\text{\textbraceleft}{1,3}\text{\textbraceright},\text{\textbraceleft}{2,3}\text{\textbraceright},\text{\textbraceleft}{1,2,3}\text{\textbraceright}}\text{\textbraceright} $$
+$$
+PowerSet(S) = \text{\textbraceleft}{\text{\textbraceleft}{∅}\text{\textbraceright},\text{\textbraceleft}{1}\text{\textbraceright},\text{\textbraceleft}{2}\text{\textbraceright},\text{\textbraceleft}{3}\text{\textbraceright},\text{\textbraceleft}{1,2}\text{\textbraceright},\text{\textbraceleft}{1,3}\text{\textbraceright},\text{\textbraceleft}{2,3}\text{\textbraceright},\text{\textbraceleft}{1,2,3}\text{\textbraceright}}\text{\textbraceright}
+$$
 
 ### References
 - [Probability Set Theory](http://theanalysisofdata.com/probability/A_1.html)

@@ -7,10 +7,18 @@ katex: true
 
 ### Describing Exponential Smoothing
 - The simplest form of exponential smoothing is given by the formula:
-$$ s_{t} = \alpha x_{t} + (1 - \alpha)s_{t-1} $$
+
+$$
+s_{t} = \alpha x_{t} + (1 - \alpha)s_{t-1}
+$$
+
 - This simple form of exponential smoothing is also known as an exponentially weighted moving average (EWMA)
 - Technically it can also be classified as an ARIMA model with no constant term and parameterized as the following:
-$$ ARIMA(0,1,1) $$
+
+$$
+ARIMA(0,1,1)
+$$
+
 - Simple exponential smoothing functions are used for correcting autocorrelated errors (in a random walk model)
 
 ### Random Walk
@@ -18,7 +26,9 @@ $$ ARIMA(0,1,1) $$
 - If the series y is not stationary, then the simplest possible model for it is a random walk model
 - A random walk model can be considered as a limiting case of an $AR(1)$ model, where the autoregressive coefficient is equal to $1$ (i.e. a series with infinitely slow mean reversion)
 - The prediction equation for this model can be written as the following:
-$$ y_{t} = \mu + y_{t-1} $$
+	$$
+	y_{t} = \mu + y_{t-1}
+	$$
 	- Where $\mu$ is a constant term, that is the average period-to-period change in $y$
 
 ### Simple Exponential Smoothing
@@ -27,7 +37,10 @@ $$ y_{t} = \mu + y_{t-1} $$
 - In other words, rather than taking the most recent observation as the forecast of the next observation, it is better to use an average of the last few observations in order to filter out the noise and more accurately estimate the local mean
 - The simple exponential smoothing model uses an exponentially weighted moving average of past values to achieve this effect
 - The prediction equation for the simple exponential smoothing model can be written in a number of mathematically equivalent forms, one of which is the so-called *error correction* form, in which the previous forecast is adjusted in the direction of the error it made:
-$$ y_{t} = y_{t-1} - \phi\epsilon_{t-1} $$
+
+$$
+y_{t} = y_{t-1} - \phi\epsilon_{t-1}
+$$
 
 ### Simple Exponential Smoothing with Growth
 - $ARIMA(0,1,1)$ with an added constant equals the simple exponential smoothing function with growth
@@ -36,7 +49,10 @@ $$ y_{t} = y_{t-1} - \phi\epsilon_{t-1} $$
 - This is usually not allowed by the SES model-fitting procedure
 - Second, you have the option of including a constant term in the ARIMA model if you wish, in order to estimate an average non-zero trend
 - The $ARIMA(0,1,1)$ model with constant has the prediction equation:
-$$ y_{t} = \mu + y_{t-1} - \phi\epsilon_{t-1} $$
+
+$$
+y_{t} = \mu + y_{t-1} - \phi\epsilon_{t-1}
+$$
 
 ### References
 - [Exponential Smoothing Wiki](https://en.wikipedia.org/wiki/Exponential_smoothing)

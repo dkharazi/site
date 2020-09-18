@@ -11,11 +11,15 @@ katex: true
 - Similar to a linear regression model, a GAM is an additive model because each of its components are added together
 - For example, we define a linear regression model as the following:
 
-$$ y_{i} = \beta_{0} + \beta_{1}x_{i1} + \beta_{2}x_{i2} + ... + \beta_{p}x_{ip} + \epsilon_{i} $$
+$$
+y_{i} = \beta_{0} + \beta_{1}x_{i1} + \beta_{2}x_{i2} + ... + \beta_{p}x_{ip} + \epsilon_{i}
+$$
 
 - And, we define a generalized additive model as the following:
 
-$$ y_{i} = \beta_{0} + f_{1}(x_{i1}) + f_{2}(x_{i2}) + ... + f_{p}(x_{ip}) + \epsilon_{i} $$
+$$
+y_{i} = \beta_{0} + f_{1}(x_{i1}) + f_{2}(x_{i2}) + ... + f_{p}(x_{ip}) + \epsilon_{i}
+$$
 
 - Unlike a linear regression model, a GAM is a non-linear model because each of its components are non-linear functions
 	- Linear regression model: each component $\beta_{p}x_{ip}$ is a linear function
@@ -27,7 +31,9 @@ $$ y_{i} = \beta_{0} + f_{1}(x_{i1}) + f_{2}(x_{i2}) + ... + f_{p}(x_{ip}) + \ep
 - An additive model is a type of model that is made up of individual components added together
 - In other words, an additive model should follow the following model format:
 
-$$ y_{i} = \beta_{0} + f_{j}(x_{ij}) $$
+$$
+y_{i} = \beta_{0} + f_{j}(x_{ij})
+$$
 
 - The individual components can be either linear components or non-linear components, but they usually refer to non-linear components
 - Linear regression models, linear probability model, and GAMs are all examples of additive models
@@ -51,7 +57,9 @@ $$ y_{i} = \beta_{0} + f_{j}(x_{ij}) $$
 	- Typically, a GAM involving smoothing splines uses an approach known as backfitting
 	- Backfitting fits a model involving multiple predictors by repeatedly updating the fit for each predictor, holding the other predictors fixed
 	- The beauty of this approach is that each time we update a function, we simply apply the fitting method for that variable to a partial residual
-	$$ residual = y_{i} - f_{1}(x_{i1}) -f_{2}(x_{i2}) $$
+	$$
+	residual = y_{i} - f_{1}(x_{i1}) -f_{2}(x_{i2})
+	$$
 	- In most situations, the differences in the GAMs obtained using smoothing splines versus natural splines is small
 - We do not have to use splines as the building blocks for GAMs
 - We can just as well use local regression, polynomial regression, or any other combination of regression approaches

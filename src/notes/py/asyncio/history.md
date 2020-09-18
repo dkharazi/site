@@ -41,11 +41,15 @@ katex: true
 - We never play two games at the same time
 - Each game takes $30$ minutes:
 
-$$ (55+5) \times 30 = 1800 \text{ seconds} = 30 \text{ minutes} $$
+$$
+(55+5) \times 30 = 1800 \text{ seconds} = 30 \text{ minutes}
+$$
 
 - The entire exhibition takes $12$ hours:
 
-$$ 24 \times 30 = 720 \text{ minutes} = 12 \text{ hours} $$
+$$
+24 \times 30 = 720 \text{ minutes} = 12 \text{ hours}
+$$
 
 ### Asynchronously Playing Chess
 - We move from table to table
@@ -55,11 +59,15 @@ $$ 24 \times 30 = 720 \text{ minutes} = 12 \text{ hours} $$
 - In the mean time, we move to another opponent and return when they've made their move
 - One move across all $24$ games takes us $2$ minutes
 
-$$ 24 \times 5 = 120 \text{ seconds} = 2 \text{ minutes} $$
+$$
+24 \times 5 = 120 \text{ seconds} = 2 \text{ minutes}
+$$
 
 - The entire exhibition is now cut down to $1$ hour
 
-$$ 120 \times 30 = 3600 \text{ seconds} = 1 \text{ hour} $$
+$$
+120 \times 30 = 3600 \text{ seconds} = 1 \text{ hour}
+$$
 
 ### The History of `async` and `await`
 - **3.3:** The `yield from` allows for generator delegation

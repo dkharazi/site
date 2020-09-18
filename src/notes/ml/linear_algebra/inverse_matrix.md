@@ -9,7 +9,9 @@ katex: true
 - The inverse of a matrix $A$ is a matrix that results in the identity matrix when multiplied by $A$
 - Mathematically, the inverse matrix $A^{-1}$ is the matrix that satisfies the following equation:
 
-$$ AA^{-1} = I $$
+$$
+AA^{-1} = I
+$$
 
 - In other words, an inverse matrix can be thought of the matrix that plays the transformation matrix in reverse
 - An inverse matrix is a transformation matrix in itself
@@ -17,22 +19,30 @@ $$ AA^{-1} = I $$
 ### Example of an Inverse Matrix
 - Let's say our transformation matrix $A$ represents a $90\degree$ clockwise rotation of a vector space:
 
-$$ A = \begin{bmatrix} 0 & 1 \cr -1 & 0 \end{bmatrix} $$
+$$
+A = \begin{bmatrix} 0 & 1 \cr -1 & 0 \end{bmatrix}
+$$
 
 - Then, our inverse matrix would look like the following:
 
-$$ A^{-1} = \begin{bmatrix} 0 & -1 \cr 1 & 0 \end{bmatrix} $$
+$$
+A^{-1} = \begin{bmatrix} 0 & -1 \cr 1 & 0 \end{bmatrix}
+$$
 
 - Therefore, $A^{-1}$ represents a $90\degree$ counterclockwise rotation of a vector space
 
 ### Another Example of an Inverse Matrix
 - Let's say our transformation matrix $A$ represents a rightward shear of a vector space:
 
-$$ A = \begin{bmatrix} 1 & 1 \cr 0 & 1 \end{bmatrix} $$
+$$
+A = \begin{bmatrix} 1 & 1 \cr 0 & 1 \end{bmatrix}
+$$
 
 - Then, our inverse matrix would look like the following:
 
-$$ A^{-1} = \begin{bmatrix} 1 & -1 \cr 0 & 1 \end{bmatrix} $$
+$$
+A^{-1} = \begin{bmatrix} 1 & -1 \cr 0 & 1 \end{bmatrix}
+$$
 
 - Therefore, $A^{-1}$ represents a leftward shear of a vector space
 
@@ -57,11 +67,15 @@ $$ A^{-1} = \begin{bmatrix} 1 & -1 \cr 0 & 1 \end{bmatrix} $$
 ### Solving for the Inverse Matrix
 - Suppose we define a square matrix $A$ as the following:
 
-$$ A = \begin{bmatrix} a & b \cr c & d \end{bmatrix} $$
+$$
+A = \begin{bmatrix} a & b \cr c & d \end{bmatrix}
+$$
 
 - The inverse of a square matrix $A$ can be defined as the following:
 
-$$ A^{-1} = \frac{1}{det(A)}\begin{bmatrix} d & -b \cr -c & a \end{bmatrix} $$
+$$
+A^{-1} = \frac{1}{det(A)}\begin{bmatrix} d & -b \cr -c & a \end{bmatrix}
+$$
 
 - There won't be an inverse of a matrix if the determinant of that matrix is 0
 

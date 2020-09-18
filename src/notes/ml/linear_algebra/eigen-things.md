@@ -8,7 +8,9 @@ katex: true
 ### Motivating Eigenvectors
 - Let's consider the two-dimensional linear transformation:
 
-$$ A = \begin{bmatrix} 3 & 1 \cr 0 & 2 \end{bmatrix} $$
+$$
+A = \begin{bmatrix} 3 & 1 \cr 0 & 2 \end{bmatrix}
+$$
 
 - As a review, this transformation matrix says we're moving our current basis vectors $[1, 0]$ and $[0, 1]$ to $[3, 0]$ and $[1, 2]$
 - If we observe the span of a particular vector during the transformation (to the new vector space), then most vectors on this span will get knocked off their span after the transformation
@@ -54,7 +56,10 @@ $$ A = \begin{bmatrix} 3 & 1 \cr 0 & 2 \end{bmatrix} $$
 ### Notion of Eigenvectors and Eigenvalues
 - Symbolically, the following formula defines the general idea behind eigenvectors:
 
-$$ Ax = \lambda x $$
+$$
+Ax = \lambda x
+$$
+
 - Where $A$ is a transformation matrix from our original vector space to a transformed vector space
 - Where $x$ is an eigenvector
 - Where $\lambda$ is a eigenvalue
@@ -65,7 +70,10 @@ $$ Ax = \lambda x $$
 - Therefore, finding the eigenvectors and their eigenvalues of a transformation matrix $A$ comes down to finding the values of $x$ and $\lambda$ that satisfy this formula
 - We can also write $Ax = \lambda x$ as the following:
 
-$$ Ax = (\lambda I)x $$
+$$
+Ax = (\lambda I)x
+$$
+
 - Here, $I$ is the identity matrix
 - This has the same effect as the previous formula, since we're scaling the vector by the same factor
 - In this matrix notation, we think of the columns of matrix $\lambda I$ as representing what happens to each basis vector (i.e. scaling each basis vector by the eigenvalue $\lambda$)
@@ -74,21 +82,27 @@ $$ Ax = (\lambda I)x $$
 - Before, we rearranged our equation from $Ax = \lambda x$ to $Ax = (\lambda I)x$
 - We can rearrange our equation one more time from $Ax = (\lambda I)x$ to the following:
 
-$$ (A-\lambda I)x = 0 $$
+$$
+(A-\lambda I)x = 0
+$$
 
 - Since $(A-\lambda I)$ can be represented as a single matrix, $(A-\lambda I)$ is a transformation matrix in itself
 - Now, we're looking for a non-zero eigenvector $x$, such that the non-zero matrix $(A-\lambda I)$ multiplied by $x$ gives us the zero vector
 - Therefore, the determinant of $(A-\lambda I)$ needs to equal 0 to satisfy this equation, since $(A-\lambda I)$ and $x$ both need to be non-zero
 - In other words, we're looking for an eigenvalue that satisfies the following:
 
-$$ det(A-\lambda I) = 0 $$
+$$
+det(A-\lambda I) = 0
+$$
 
 - Meaning, the eigenvalue that satisfies this equation will squish space into a lower dimension, since that's what a determinant of zero implies
 
 ### Example of Computing Eigenvalues
 - Let's say we have a transformation matrix $A$ equal to the following:
 
-$$ A = \begin{bmatrix} 3 & 1 \cr 0 & 2 \end{bmatrix} $$
+$$
+A = \begin{bmatrix} 3 & 1 \cr 0 & 2 \end{bmatrix}
+$$
 
 - First, we can determine the eigenvalues $\lambda$ of the linear transformation by finding $\lambda$ that satisfies $det(A-\lambda I) = 0$
 	- We can reformulate $det(A-\lambda I)$ into the quadratic polynomial function $(3-\lambda)(2-\lambda)=0$

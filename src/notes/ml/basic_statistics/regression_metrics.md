@@ -25,7 +25,9 @@ katex: true
 - Specifically, we would like to find a prediction $m$ that makes our regression metrics small (i.e. minimizes our errors)
 - The variance term is irrelevant to making this small, since it’s the same no matter what m is
 
-$$ \text{Var}[Y-m] = \text{Var}[Y] $$
+$$
+\text{Var}[Y-m] = \text{Var}[Y]
+$$
 
 - This is because $\text{Var}[Y]$ is about the true distribution of $Y$, but $m$ is just our guess
 - Therefore, it shouldn't play any role in the minimization process
@@ -33,39 +35,69 @@ $$ \text{Var}[Y-m] = \text{Var}[Y] $$
 ### Basics of MSE
 - The mean squared error (or MSE) is defined as the following:
 
-$$ MSE(m) = \text{E}[(Y-m)^2] = \text{E}[Y-m]^2 + \text{Var}[Y-m] $$
-$$ \text{where Bias } = \text{E}[Y-m]^2 $$
-$$ \text{where Variance } = \text{Var}[Y-m] $$
+$$
+MSE(m) = \text{E}[(Y-m)^2] = \text{E}[Y-m]^2 + \text{Var}[Y-m]
+$$
+
+$$
+\text{where Bias } = \text{E}[Y-m]^2
+$$
+
+$$
+\text{where Variance } = \text{Var}[Y-m]
+$$
 
 - In other words, the mean squared error represents any bias or variance associated with a prediction
 - The mean squared error represents the simplest form of the bias-variance decomposition
 - Since we can consider the variance term as irrelevant, the MSE formula can be simplified to the following:
 
-$$ MSE = mean((y_{i} - \hat{y}_{i})^{2}) = mean(error_{i}^{2}) $$
+$$
+MSE = mean((y_{i} - \hat{y}_{i})^{2}) = mean(error_{i}^{2})
+$$
 
 ### Basics of RMSE
 - The root mean squared error (or RMSE) is defined as the following:
 
-$$ RMSE(m) = \sqrt{MSE(m)} = \sqrt{\text{E}[(Y-m)^2]} = \sqrt{\text{E}[Y-m]^2 + \text{Var}[Y-m]} $$
-$$ \text{where Bias } = \text{E}[Y-m]^2 $$
-$$ \text{where Variance } = \text{Var}[Y-m] $$
+$$
+RMSE(m) = \sqrt{MSE(m)} = \sqrt{\text{E}[(Y-m)^2]} = \sqrt{\text{E}[Y-m]^2 + \text{Var}[Y-m]}
+$$
+
+$$
+\text{where Bias } = \text{E}[Y-m]^2
+$$
+
+$$
+\text{where Variance } = \text{Var}[Y-m]
+$$
 
 - In other words, the root mean squared error represents the square root of any bias or variance aggregated together, associated with a prediction
 - Since we can consider the variance term as irrelevant, the RMSE formula can be simplified to the following:
 
-$$ RMSE = \sqrt{mean((y_{i} - \hat{y}_{i})^{2})} = \sqrt{mean(error_{i}^{2})} $$
+$$
+RMSE = \sqrt{mean((y_{i} - \hat{y}_{i})^{2})} = \sqrt{mean(error_{i}^{2})}
+$$
 
 ### Basics of MAE
 - The mean absolute error (or MAE) is defined as the following:
 
-$$ MAE(m) = \text{E}[|(Y-m)|] = |\text{E}[Y-m]| + \text{Var}[Y-m] $$
-$$ \text{where Bias } = |\text{E}[Y-m]| $$
-$$ \text{where Variance } = \text{Var}[Y-m] $$
+$$
+MAE(m) = \text{E}[|(Y-m)|] = |\text{E}[Y-m]| + \text{Var}[Y-m]
+$$
+
+$$
+\text{where Bias } = |\text{E}[Y-m]|
+$$
+
+$$
+\text{where Variance } = \text{Var}[Y-m]
+$$
 
 - In other words, the mean absolute error represents any bias or variance associated with any prediction
 - Since we can consider the variance term as irrelevant, the MAE formula can be simplified to the following:
 
-$$ MAE = mean(|y_{i} - \hat{y}_{i}|) = mean(|error_{i}|) $$
+$$
+MAE = mean(|y_{i} - \hat{y}_{i}|) = mean(|error_{i}|)
+$$
 
 ### Use-Cases for MAE, MSE, and RMSE
 - If we want to penalize our predictions as they are increasingly off from our actual observations, then we should use MSE and RMSE because the errors are squared
@@ -85,7 +117,9 @@ $$ MAE = mean(|y_{i} - \hat{y}_{i}|) = mean(|error_{i}|) $$
 ### Basics of MAPE
 - The mean absolute percentage error (or MAPE) is defined as the following:
 
-$$ MAPE = 100 * mean(\frac{|e_{t}|}{|y_{t}|}) $$
+$$
+MAPE = 100 * mean(\frac{|e_{t}|}{|y_{t}|})
+$$
 
 - The MAPE favors predictions that are smaller than its data value, which can be considered a drawback
 - On the other hand, we may want this property depending on our problem, in which case we would want to use MAPE
@@ -100,21 +134,33 @@ $$ MAPE = 100 * mean(\frac{|e_{t}|}{|y_{t}|}) $$
 - The one-step naive error $o_{t}$ refers to the error associated with guessing the previous data value as our current prediction:
 - The MASE is defined as the following:
 
-$$ MASE = mean(\frac{|e_{t}|}{\frac{1}{n-1}\sum_{i=1}^{n}|y_{t} − y_{t-1}|}) $$
+$$
+MASE = mean(\frac{|e_{t}|}{\frac{1}{n-1}\sum_{i=1}^{n}|y_{t} − y_{t-1}|})
+$$
 
 - Where the scaled error term refers to the following:
-$$ scalederror_{t} = \frac{|e_{t}|}{\frac{1}{n-1}\sum_{i=1}^{n}|y_{t} − y_{t-1}|} $$
+
+$$
+scalederror_{t} = \frac{|e_{t}|}{\frac{1}{n-1}\sum_{i=1}^{n}|y_{t} − y_{t-1}|}
+$$
 
 - Therefore, the MASE formula can be simplifed to the following:
-$$ MASE = mean(scalederror_{t}) $$
+
+$$
+MASE = mean(scalederror_{t})
+$$
 
 - We can go one step further, and simplify the MASE to the following, roughly:
 
-$$ MASE = mean(\frac{|e_{t}|}{mean(|o_{t}|)}) $$
+$$
+MASE = mean(\frac{|e_{t}|}{mean(|o_{t}|)})
+$$
 
 - Where the scaled error term roughly refers to the following:
 
-$$ scalederror_{t} = \frac{|e_{t}|}{mean(|o_{t}|)} $$
+$$
+scalederror_{t} = \frac{|e_{t}|}{mean(|o_{t}|)}
+$$
 
 - Essentially, the MASE is an average of our scaled errors
 - The MASE has the following benefits:

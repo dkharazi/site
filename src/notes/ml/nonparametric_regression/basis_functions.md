@@ -15,23 +15,33 @@ katex: true
 - Linear functions
 	- Linear functions are the product of any number of constants and a single predictor variable
 	- The following are some examples of linear functions:
-	$$ 1X, -1X, 56X $$
+	$$
+	1X, -1X, 56X
+	$$
 - Polynomial functions
 	- Polynomial functions are the product of any number of predictor variables
         - The following are some examples of polynomial functions:
-	$$ ZX, XX, X^{2}, ZX^{3}, ZXX $$
+	$$
+	ZX, XX, X^{2}, ZX^{3}, ZXX
+	$$
 - Exponential functions
 	- Exponential functions are the exponential of a predictor variable
 	- The following is an example of an exponential function:
-	$$ exp(X) $$
+	$$
+	exp(X)
+	$$
 - Logarithmic functions
 	- Logarithmic functions are the logarithm of a predictor variable
         - The following is an example of a logarithmic function:
-	$$ log(X) $$
+	$$
+	log(X)
+	$$
 - Cosine functions
 	- Cosine functions are the cosine of a predictor variable
 	- The following is an example of a cosine function:
-	$$ cos(X) $$
+	$$
+	cos(X)
+	$$
 
 ### References
 - [Basis Function Wiki](https://en.wikipedia.org/wiki/Basis_function)

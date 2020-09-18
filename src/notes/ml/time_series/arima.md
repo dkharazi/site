@@ -16,7 +16,9 @@ katex: true
 
 ### Defining an ARIMA Model
 - An ARIMA model is parameterized as the following: 
-$$ ARIMA(p, d, k) $$
+	$$
+	ARIMA(p, d, k)
+	$$
 	- Where $p$ is the same as the autoregression parameter found in the AR and ARMA model (i.e. number of lags to be included in the model)
 	- Where $k$ is the same as the moving average parameter found in the MA and ARMA model (i.e. order)
 	- Where $d$ is the number of sequential transformations (specifically differences) that will be performed on the ARMA model
@@ -27,21 +29,45 @@ $$ ARIMA(p, d, k) $$
 
 ### Steps of ARIMA Model
 1. Build an ARMA model, such as the following:
-$$ s_{t} = \beta_{0} + \beta_{1}s_{t-1} + \theta_{1}\epsilon_{t-1} $$
+
+$$
+s_{t} = \beta_{0} + \beta_{1}s_{t-1} + \theta_{1}\epsilon_{t-1}
+$$
+
 2. Transform the ARMA model to ensure stationarity, such as the following:
-$$ z_{t} = s_{t+1} - s_{t} $$
+
+$$
+z_{t} = s_{t+1} - s_{t}
+$$
+
 3. Work with $z_{t}$ for graphing the transformed residuals, plotting ACF/PRCF charts, or making predictions of $z_{t}$
 4. Transform $z_{t}$ back to $s_{t}$ if we want to return to our original format
 
 ### Example of ARIMA
 - Let's say we have the simplest form of ARIMA
-$$ ARIMA(1,1,1) $$
+
+$$
+ARIMA(1,1,1)
+$$
+
 - We could define our model as
-$$ z_{t} = \beta_{0} + \beta_{1}z_{t-1} + \theta_{1}\epsilon_{t-1} + \epsilon_{t} $$
-$$ \hat{z_{t}} = \beta_{0} + \beta_{1}z_{t-1} + \theta_{1}\epsilon_{t-1} $$
-$$ \text{where } z_{t} = s_{t+1} - s_{t} $$
+
+$$
+z_{t} = \beta_{0} + \beta_{1}z_{t-1} + \theta_{1}\epsilon_{t-1} + \epsilon_{t}
+$$
+
+$$
+\hat{z_{t}} = \beta_{0} + \beta_{1}z_{t-1} + \theta_{1}\epsilon_{t-1}
+$$
+
+$$
+\text{where } z_{t} = s_{t+1} - s_{t}
+$$
+
 - Therefore, we can recover any $s_{u}$ using the following formula:
-$$ sum(z_{u-1}) + s_{r} $$
+	$$
+	sum(z_{u-1}) + s_{r}
+	$$
 	- Where $u$ is the index of the data point we are interested in transforming back
 	- Where $i$ is the index of the data point of the index of our summation function
 	- Where $r$ is the findal index of the data point that was excluded from out transformation data

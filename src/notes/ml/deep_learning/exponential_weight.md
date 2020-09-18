@@ -8,26 +8,65 @@ katex: true
 ### Introducing Exponentially Weighted Averages
 - Let's say we have some temperature data $\theta$:
 
-$$ \theta_{1} = 40 \degree\text{F} $$
-$$ \theta_{2} = 49 \degree\text{F} $$
-$$ ... $$
-$$ \theta_{n} = 60 \degree\text{F} $$
+$$
+\theta_{1} = 40 \degree\text{F}
+$$
+
+$$
+\theta_{2} = 49 \degree\text{F}
+$$
+
+$$
+...
+$$
+
+$$
+\theta_{n} = 60 \degree\text{F}
+$$
 
 - Then our exponentially weighted averages would look like:
 
-$$ v_{0} = 0 $$
-$$ v_{1} = 0.9v_{0} + 0.1 \theta_{1} $$
-$$ v_{2} = 0.9v_{1} + 0.1 \theta_{2} $$
-$$ ... $$
-$$ v_{n} = 0.9v_{n-1} + 0.1 \theta_{n} $$
+$$
+v_{0} = 0
+$$
+
+$$
+v_{1} = 0.9v_{0} + 0.1 \theta_{1}
+$$
+
+$$
+v_{2} = 0.9v_{1} + 0.1 \theta_{2}
+$$
+
+$$
+...
+$$
+
+$$
+v_{n} = 0.9v_{n-1} + 0.1 \theta_{n}
+$$
 
 - Which can be simplified to:
 
-$$ v_{0} = 0 $$
-$$ v_{1} = 0.9v_{0} + 0.1 \times 40 = 4 $$
-$$ v_{2} = 0.9 \times 4 + 0.1 \times 49 = 8.5 $$
-$$ ... $$
-$$ v_{n} = 0.9v_{n-1} + 0.1 \times 60 $$
+$$
+v_{0} = 0
+$$
+
+$$
+v_{1} = 0.9v_{0} + 0.1 \times 40 = 4
+$$
+
+$$
+v_{2} = 0.9 \times 4 + 0.1 \times 49 = 8.5
+$$
+
+$$
+...
+$$
+
+$$
+v_{n} = 0.9v_{n-1} + 0.1 \times 60
+$$
 
 - Here, our hyperparameter $\beta = 0.9$
 - Here, $\theta_{t}$ represents the $t^{th}$ temperature value
@@ -37,7 +76,9 @@ $$ v_{n} = 0.9v_{n-1} + 0.1 \times 60 $$
 - Exponentially weighted averages are sometimes referred to as exponentially weighted moving averages in statistics
 - The general formula for an exponentially weighted average is:
 
-$$ v_{t} = \beta v_{t-1} + (1-\beta) \theta_{t} $$
+$$
+v_{t} = \beta v_{t-1} + (1-\beta) \theta_{t}
+$$
 
 ### Interpreting the Parameters
 - We can think of $v_{t}$ as an average of $\frac{1}{1-\beta}$ previous days
@@ -59,11 +100,25 @@ $$ v_{t} = \beta v_{t-1} + (1-\beta) \theta_{t} $$
 - This exponential decay is captured by the weights $\beta$
 - We can rewrite the equations for our example data in the following steps:
 
-$$ v_{n} = 0.1\theta_{n} + 0.9v_{n-1} $$
-$$ v_{n} = 0.1\theta_{n} + 0.9(0.1\theta_{n-1} + 0.9v_{n-2}) $$
-$$ v_{n} = 0.1\theta_{n} + 0.9(0.1\theta_{n-1} + 0.9(0.1\theta_{n-2} + 0.9v_{n-2})) $$
-$$ v_{n} = 0.1\theta_{n} + 0.9(0.1\theta_{n-1} + 0.9(0.1\theta_{n-2} + 0.9(0.1\theta_{n-3} + 0.9v_{n-3}))) $$
-$$ v_{n} = \underbrace{0.1\theta_{n}}_{g_{t=1}} + \underbrace{0.1 \times 0.9 \theta_{n-1}}_{g_{t=2}} + 0.1 \times 0.9^{2} \theta_{n-2} + 0.1 \times 0.9^{3}v_{n-3} $$
+$$
+v_{n} = 0.1\theta_{n} + 0.9v_{n-1}
+$$
+
+$$
+v_{n} = 0.1\theta_{n} + 0.9(0.1\theta_{n-1} + 0.9v_{n-2})
+$$
+
+$$
+v_{n} = 0.1\theta_{n} + 0.9(0.1\theta_{n-1} + 0.9(0.1\theta_{n-2} + 0.9v_{n-2}))
+$$
+
+$$
+v_{n} = 0.1\theta_{n} + 0.9(0.1\theta_{n-1} + 0.9(0.1\theta_{n-2} + 0.9(0.1\theta_{n-3} + 0.9v_{n-3})))
+$$
+
+$$
+v_{n} = \underbrace{0.1\theta_{n}}_{g_{t=1}} + \underbrace{0.1 \times 0.9 \theta_{n-1}}_{g_{t=2}} + 0.1 \times 0.9^{2} \theta_{n-2} + 0.1 \times 0.9^{3}v_{n-3}
+$$
 
 ![exponentialdecay](../../../img/exponential_decay.svg)
 
@@ -89,7 +144,9 @@ $$ v_{n} = \underbrace{0.1\theta_{n}}_{g_{t=1}} + \underbrace{0.1 \times 0.9 \th
 - However, we should still correct for this bias, since earlier values of $v$ will be underestimated
 - We can do this by transforming each $v_{t}$ term:
 
-$$ v_{t}^{*} = \frac{v_{t}}{1-\beta^{2}} $$
+$$
+v_{t}^{*} = \frac{v_{t}}{1-\beta^{2}}
+$$
 
 ---
 
@@ -97,7 +154,9 @@ $$ v_{t}^{*} = \frac{v_{t}}{1-\beta^{2}} $$
 - Exponentially weighted averages are sometimes referred to as exponentially weighted moving averages in statistics
 - The general formula for an exponentially weighted average is:
 
-$$ v_{t} = \beta v_{t-1} + (1-\beta) \theta_{t} $$
+$$
+v_{t} = \beta v_{t-1} + (1-\beta) \theta_{t}
+$$
 
 - We can think of $v_{t}$ as an average of $\frac{1}{1-\beta}$ previous days
 - Specifically, we can use whatever units of time (not just days)

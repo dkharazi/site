@@ -31,8 +31,12 @@ katex: true
 ### Defining Mini-Batch Gradient Descent
 1. Split our vector of predictor data $X$ into samples
 	- Where $X$ is a $p \times n$ matrix
-	$$ X_{p \times n} = [\space \vec{x}_{1} \space \vec{x}_{2} \space ... \space \vec{x}_{1000} \space | \space \vec{x}_{1001} \space \vec{x}_{1002} \space ... \space \vec{x}_{2000} \space | \space ... \space | \overbrace{\space ... \space \vec{x}_{n}}^{m^{th} \text{ minibatch}} ] $$
-	$$ \vec{x}_{i} = [x_{1} \space x_{2} \space x_{3} \space ... \space x_{p}] $$
+	$$
+	X_{p \times n} = [\space \vec{x}_{1} \space \vec{x}_{2} \space ... \space \vec{x}_{1000} \space | \space \vec{x}_{1001} \space \vec{x}_{1002} \space ... \space \vec{x}_{2000} \space | \space ... \space | \overbrace{\space ... \space \vec{x}_{n}}^{m^{th} \text{ minibatch}} ]
+	$$
+	$$
+	\vec{x}_{i} = [x_{1} \space x_{2} \space x_{3} \space ... \space x_{p}]
+	$$
 	- Where $p$ represents the number of predictors associated with an observation
 	- Where $n$ represents the number of observations
 	- Where $m$ represents the number of minibatches
@@ -41,7 +45,9 @@ katex: true
 	- The number of observations in each sample is represented using the hyperparameter $m$
 2. Split our vector of response data $Y$ into samples
 	- Where $Y$ is a $1 \times n$ matrix
-	$$ Y_{1 \times n} = [\space y_{1} \space y_{2} \space ... \space y_{1000} \space | \space y_{1001} \space y_{1002} \space ... \space y_{2000} \space | \space ... \space | \overbrace{\space ... \space y_{n}}^{m^{th} \text{ minibatch }} ] $$
+	$$
+	Y_{1 \times n} = [\space y_{1} \space y_{2} \space ... \space y_{1000} \space | \space y_{1001} \space y_{1002} \space ... \space y_{2000} \space | \space ... \space | \overbrace{\space ... \space y_{n}}^{m^{th} \text{ minibatch }} ]
+	$$
 	- Where $n$ represents the number of observations
 	- Where $m$ represents the number of minibatches
 	- Where $y_{i}$ represents a single obeservation in a training set
@@ -53,16 +59,32 @@ katex: true
 	- Let's also say each $t^{th}$ minibatch has $1000$ training observations
 4. Perform regular batch gradient descent on minibatch $t$
 	- Perform forward propagation on $X^{\lbrace t \rbrace}$
-	$$ Z^{[1]} = W^{[1]} X^{\lbrace t \rbrace} + b^{[1]} $$
-	$$ A^{[1]} = g^{[1]}(Z^{[1]}) $$
-	$$ ... $$
-	$$ Z^{[L]} = W^{[L]} A^{[L-1]} + b^{[L]} $$
-	$$ A^{[L]} = g^{[L]}(Z^{[L]}) $$
+	$$
+	Z^{[1]} = W^{[1]} X^{\lbrace t \rbrace} + b^{[1]}
+	$$
+	$$
+	A^{[1]} = g^{[1]}(Z^{[1]})
+	$$
+	$$
+	...
+	$$
+	$$
+	Z^{[L]} = W^{[L]} A^{[L-1]} + b^{[L]}
+	$$
+	$$
+	A^{[L]} = g^{[L]}(Z^{[L]})
+	$$
 	- Evaluate the cost function
-	$$ J^{\lbrace t \rbrace} = \frac{1}{1000} \sum_{i=1}^{l} \mathcal{L}(\hat{y}^{(i)}, y^{(i)}) + \frac{\lambda}{2 \times 1000} \sum_{i=1}^{l} \Vert w^{[l]} \Vert_{F}^{2} $$
+	$$
+	J^{\lbrace t \rbrace} = \frac{1}{1000} \sum_{i=1}^{l} \mathcal{L}(\hat{y}^{(i)}, y^{(i)}) + \frac{\lambda}{2 \times 1000} \sum_{i=1}^{l} \Vert w^{[l]} \Vert_{F}^{2}
+	$$
 	- Perform backward propagation
-	$$ W^{[l]} = W^{[l]} - \alpha \frac{\partial J}{\partial w^{[l]}} $$
-	$$ b^{[l]} = b^{[l]} - \alpha \frac{\partial J}{\partial b^{[l]}} $$
+	$$
+	W^{[l]} = W^{[l]} - \alpha \frac{\partial J}{\partial w^{[l]}}
+	$$
+	$$
+	b^{[l]} = b^{[l]} - \alpha \frac{\partial J}{\partial b^{[l]}}
+	$$
 5. Iterate through the remaining minibatches
 	- Perform steps $3-4$ on each of the $m$ minibatches
 
