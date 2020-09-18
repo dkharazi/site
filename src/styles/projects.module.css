@@ -31,11 +31,11 @@
 
 img {
     margin: 0;
-    transition: opacity 0.4s;
+    transition: opacity 0.4s !important;
 }
 
-.item:hover img {
-    opacity: 0.5;
+picture img:hover {
+    opacity: 0.5 !important;
 }
 
 .description {
