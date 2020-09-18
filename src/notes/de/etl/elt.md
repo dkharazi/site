@@ -21,7 +21,7 @@ katex: true
 	- Back into the data lake
 	- Or into a data warehouse
 
-![etl](/img/etl.png)
+![etl](../../../img/etl.png)
 
 ### Defining the ELT Process
 1. **Extract** data from an external source into a data lake
@@ -34,7 +34,7 @@ katex: true
 3. Then, **transform** the data in the data warehouse
 	- Afterwards, we can load it back into the data warehouse
 
-![elt](/img/elt.png)
+![elt](../../../img/elt.png)
 
 ### References
 - [Defining ETL Transformations](https://www.stitchdata.com/etldatabase/etl-transform/)

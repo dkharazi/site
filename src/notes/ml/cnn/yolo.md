@@ -17,7 +17,7 @@ katex: true
 - The concept of breaking down the images to grid cells is unique in YOLO
 - Let's say we have $3 \times 3$ grid
 
-![yologrid](/img/yologrid.jpg)
+![yologrid](../../../img/yologrid.jpg)
 
 - In the image above we have two cars
 - We marked their bounding boxes in red
@@ -31,7 +31,7 @@ $$ y = \begin{bmatrix} p_{c} \cr b_{x} \cr b_{y} \cr b_{h} \cr b_{w} \cr c_{1} \
 - The truck seems to be less obviously associated with the center cell
 - This is because the yolo algorithm associates an object to a cell based on the object's midpoint
 
-![yologridoutput](/img/gridoutput.jpg)
+![yologridoutput](../../../img/gridoutput.jpg)
 
 ### Defining the YOLO Algorithm
 - Notice $p_{c}=0$ for cells without objects detected
@@ -70,7 +70,7 @@ $$ + \sum_{i=0}^{S^{2}} 1^{obj}_{ij} \sum_{c \in classes} (p_{i}(c)-\hat{p}_{i}(
 - The iou function is used for evaluating our object detection algorithm
 - Specifically, the iou function computes the area of the intersection of two bounding boxes
 
-![iou](/img/iou.jpg)
+![iou](../../../img/iou.jpg)
 
 - The iou function is used for the following:
 	- Measuring the similarity of two bounding boxes
@@ -86,7 +86,7 @@ $$ iou \ge 0.5 \text{ is correct} $$
 - The iou function doesn't define a bounding box by its center point, width, and height
 - Instead, it defines a bounding box based on its upper left corners $(x_{1},y_{1})$ and lower right corners $(x_{2}, y_{2})$
 
-![iouintersection](/img/iouintersection.jpg)
+![iouintersection](../../../img/iouintersection.jpg)
 
 - Specifically, we use the iou function when assigning anchor boxes
 - We also use the iou function when assigning anchor boxes
@@ -118,7 +118,7 @@ def iou(box1, box2):
 - For example, a $19 \times 19$ grid could be used instead of a $3 \times 3$ grid
 - However, we're more likely to pick up multiple bounding boxes for the same object
 
-![nonmaxsuppression](/img/nonmax.jpg)
+![nonmaxsuppression](../../../img/nonmax.jpg)
 
 - This is because we're running a localization on each grid
 - Therefore, other grids will think there is a car as well
@@ -150,7 +150,7 @@ t the bounding box with the largest $p_{c}$
 ### Describing Anchor Boxes
 - Notice, a car and pedestrian are both centered in the middle cell
 
-![yoloanchor](/img/yoloanchor.jpg)
+![yoloanchor](../../../img/yoloanchor.jpg)
 
 - We should set the number of anchor boxes to be $2$
 - Now, each grid cell can detect a pedestrian and a car
@@ -162,7 +162,7 @@ t the bounding box with the largest $p_{c}$
 - And, another anchor box could learn a short, wide object associated with cars
 - Our new label will look like the following:
 
-![labelanchorbox](/img/labelanchorbox.jpg)
+![labelanchorbox](../../../img/labelanchorbox.jpg)
 
 ### Defining the YOLO Algorithm with Anchor Boxes
 - Suppose we are detecting $3$ objects:
@@ -186,7 +186,7 @@ $$ y = \begin{bmatrix} p_{c,1} \cr b_{x,1} \cr b_{y,1} \cr b_{h,1} \cr b_{w,1} \
 - Meaning, each of the grid cells will output two predictions
 - We can observe the dimensions of our labels during the training of a single cell in the image below:
 
-![trainingyolo](/img/yolotrain.jpg)
+![trainingyolo](../../../img/yolotrain.jpg)
 
 ### Implementing the YOLO Algorithm with Anchor Boxes
 - Let's say we want to train a on the image above
@@ -196,7 +196,7 @@ $$ y = \begin{bmatrix} p_{c,1} \cr b_{x,1} \cr b_{y,1} \cr b_{h,1} \cr b_{w,1} \
 	- A bounding box around the detected object
 - An example output of the middle grid cell is the following:
 
-![exampleofyolo](/img/yoloexample.svg)
+![exampleofyolo](../../../img/yoloexample.svg)
 
 - The output volume $y$ represents a collection of vectors $y_{i}$ associated with one of the $9$ grid cells
 - We also need to include nonmax suppresion
@@ -204,7 +204,7 @@ $$ y = \begin{bmatrix} p_{c,1} \cr b_{x,1} \cr b_{y,1} \cr b_{h,1} \cr b_{w,1} \
 - And, we'll also keep the most probable bounding box associated with an object
 - The following image illustrates the generalized steps for predicting objects and their bounding boxes:
 
-![yolopredict](/img/yolopredict.jpg)
+![yolopredict](../../../img/yolopredict.jpg)
 
 ---
 

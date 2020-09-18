@@ -10,7 +10,7 @@ katex: true
 - Roughly speaking, weights are usually relatively larger for a model with a large amount of variance (i.e. overfitting)
 - Regularization attempts to find a happy medium so the weights don't become too large or too small
 
-![regularization](/img/regularization_overfitting.svg)
+![regularization](../../../img/regularization_overfitting.svg)
 
 - We expect our weights to converge to $0$ when there is a lot of noise, and our weights to stray from $0$ when there is signal
 - By adding regularization to our model, we are adding some amount of noise that is proportional to our weight
@@ -28,7 +28,7 @@ katex: true
 - This zeroes out the impact of our hidden units
 - Meaning, our neural network becomes simplified and smaller
 
-![regularization](/img/regularization_zero_weights.svg)
+![regularization](../../../img/regularization_zero_weights.svg)
 
 - In practice, these hidden units aren't actually zeroed out
 - Instead, they are still used, but have a much smaller effect
@@ -49,7 +49,7 @@ $$ a^{l} = tanh(z^{l}) $$
 - Consequently, linear functions are typically too general and aren't able to fit those complicated, nonlinear decision boundaries we're most likely looking for
 - This intuition is true for many other activation functions other than the tanh activation function
 
-![tanhregularization](/img/regularization_tanh.svg)
+![tanhregularization](../../../img/regularization_tanh.svg)
 
 ---
 

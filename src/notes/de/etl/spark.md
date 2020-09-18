@@ -46,11 +46,11 @@ katex: true
 
 - Integrates with Hive
 
-![sparksql_hive](/img/sparksqlhive.png)
+![sparksql_hive](../../../img/sparksqlhive.png)
 
 - Connects through JDBC or ODBC
 
-![sparksql_connect](/img/sparksqlconnect.png)
+![sparksql_connect](../../../img/sparksqlconnect.png)
 
 ### Motivating the Comparison between Hive and Spark
 - Consider two types of tools used in Hadoop:

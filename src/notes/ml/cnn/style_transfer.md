@@ -39,7 +39,7 @@ $$ J(G) = \alpha J_{c}(C,G) + \beta J_{s}(S,G) $$
 - Therefore, gradient descent updates the pixels of our image $G$
 - An example looks like the following:
 
-![costnst](/img/costnst.svg)
+![costnst](../../../img/costnst.svg)
 
 ### More about the Content Cost Function
 

@@ -21,7 +21,7 @@ katex: true
 >>> displacy.serve(doc, style="dep")
 ```
 
-![DependencyTree](/img/token.svg)
+![DependencyTree](../../../img/token.svg)
 
 ### Relevant Functions and Attributes
 - `Token.head:` The syntactic parent of *governor* of this token

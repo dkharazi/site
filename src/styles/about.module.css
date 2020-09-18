@@ -8,6 +8,7 @@
     font-weight: 700;
     color: #333;
     margin-bottom: 2rem;
+    animation: fadeDown 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .title h3::after {
@@ -21,6 +22,7 @@
     left: 15px;
     z-index: -1;
     opacity: .4;
+    animation: fadeIn 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .subject {
@@ -34,4 +36,26 @@
     padding-left: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        -webkit-transform: translateX(25px);
+        transform: translateX(25px);
+    }
+    to {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+    to {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
 }

@@ -12,7 +12,7 @@ katex: true
 
 ### Illustrating LeNet-5 Implementation
 
-![lenet-5](/img/lenet.svg)
+![lenet-5](../../../img/lenet.svg)
 
 | Layer   | Activation Shape         | Activation Size | # Parameters |
 | ------- | ------------------------ | --------------- | ------------ |

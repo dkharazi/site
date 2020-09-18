@@ -15,7 +15,7 @@ katex: true
 
 - Suppose we have the following functions and inputs:
 
-![derivativecomputation](/img/derivative.svg)
+![derivativecomputation](../../../img/derivative.svg)
 
 - Let's focus on the parameter $a$ for now
 - Sometimes, we'll want to increase or decrease $a$

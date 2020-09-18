@@ -16,7 +16,7 @@ katex: true
 	- Unmounting methods
 	- Error handling methods
 
-![ReactLifecycle](/img/reactlifecycle.svg)
+![ReactLifecycle](../../../img/reactlifecycle.svg)
 
 ### Introducing Mounting Lifecycle Methods
 - Mounting lifecycle methods are called when an instance of a component is created

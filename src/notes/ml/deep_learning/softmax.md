@@ -39,7 +39,7 @@ $$ z^{[l]} = W^{[l]} a^{[l-1]} + b^{[l]} $$
 
 $$ a^{[l]} = \frac{e^{z_{i}^{[l]}}}{\sum_{i=1}^{n}e^{z_{i}^{[l]}}} = \frac{e^{z_{i}^{[l]}}}{\sum_{i=1}^{4}e^{z_{i}^{[l]}}} $$
 
-![softmaxnetwork](/img/softmax_network.svg)
+![softmaxnetwork](../../../img/softmax_network.svg)
 
 ### Example of using a Softmax Activation Function
 - Let's keep using our example network listed above

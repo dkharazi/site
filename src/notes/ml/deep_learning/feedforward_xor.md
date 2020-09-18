@@ -16,7 +16,7 @@ katex: true
 - In these situations, there are typically two distinct classes of data points that can't be linearly separated initially
 - For example, we may have the following data:
 
-![xordata](/img/xordata.svg)
+![xordata](../../../img/xordata.svg)
 
 - We can model our data using an XOR gate
 - A linear model applied directly to the original input cannot implement the XOR function
@@ -63,7 +63,7 @@ $$ b_{1} = \begin{bmatrix} 0 \cr -1 \end{bmatrix}; b_{2} = [-2] $$
 
 - Since we only have four data points, our network, inputs, and output looks like the following:
 
-![xornetwork](/img/xormodel.svg)
+![xornetwork](../../../img/xormodel.svg)
 
 | $x_{1}$ | $x_{2}$ | $h_{1}$ | $h_{2}$ | $y$ |
 | ------- | ------- | ------- | ------- | --- |

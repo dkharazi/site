@@ -15,7 +15,7 @@ katex: true
 	- They are less prone to overfitting (i.e. accuracy benefit)
 	- They don't require parameter learning (i.e. speed benefit)
 
-![downsampling](/img/pool.jpeg)
+![downsampling](../../../img/pool.jpeg)
 
 ### Introducing Common Pooling Methods
 - There are two forms of pooling:
@@ -43,7 +43,7 @@ $$ n_{h}^{[l]} \times n_{w}^{[l]} \times n_{c}^{[l]} $$
 $$ \lfloor \frac{n_{h}^{[l]}-f}{s} + 1 \rfloor \times \lfloor \frac{n_{w}^{[l]}-f}{s} + 1 \rfloor \times n_{c}^{[l]} $$
 - The follow is an example of max pooling:
 
-![maxpool](/img/maxpool.svg)
+![maxpool](../../../img/maxpool.svg)
 
 ---
 

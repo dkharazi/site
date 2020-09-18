@@ -20,7 +20,7 @@ Graph databases store two types of objects:nodes and relationships. These nodes 
 
 Graph databases were designed to handle data with many relatonships. Roughly, relational data involving many different joins may be better suited in a graph database, since relationships are stored more efficiently. Graph databases intuitively manage relationships better than relational databases, since relationships are stored as objects themselves. As a result, lookups between tables for person ID and department ID don't need to be performed constantly, in order to find which person connects to which department. In other words, the relationships don't need to be inferred anymore.
 
-![GraphJoin](/img/graphjoin.jpg)
+![GraphJoin](../img/graphjoin.jpeg)
 
 This ability to pre-materialize relationships into the database structure allows Neo4j to provide performance of several orders of magnitude above others, especially for join-heavy queries, allowing users to leverage a minutes to milliseconds advantage.
 

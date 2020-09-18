@@ -52,7 +52,7 @@ $$ v_{t} = \beta v_{t-1} + (1-\beta) \theta_{t} $$
 - In other words, a large $\beta$ indicates we're adapting slowly to changes in our data
 - This is because large $\beta$ values are giving more weight to previous values rather than more recent (or current) values
 
-![weightedaverages](/img/weighted_averages.svg)
+![weightedaverages](../../../img/weighted_averages.svg)
 
 ### What is Exponential about the Weighted Averages?
 - The data points further away from our current value become exponentially less important
@@ -65,7 +65,7 @@ $$ v_{n} = 0.1\theta_{n} + 0.9(0.1\theta_{n-1} + 0.9(0.1\theta_{n-2} + 0.9v_{n-2
 $$ v_{n} = 0.1\theta_{n} + 0.9(0.1\theta_{n-1} + 0.9(0.1\theta_{n-2} + 0.9(0.1\theta_{n-3} + 0.9v_{n-3}))) $$
 $$ v_{n} = \underbrace{0.1\theta_{n}}_{g_{t=1}} + \underbrace{0.1 \times 0.9 \theta_{n-1}}_{g_{t=2}} + 0.1 \times 0.9^{2} \theta_{n-2} + 0.1 \times 0.9^{3}v_{n-3} $$
 
-![exponentialdecay](/img/exponential_decay.svg)
+![exponentialdecay](../../../img/exponential_decay.svg)
 
 - As previously stated, we roughly look at the previous $10$ units of time when $\beta = 0.9$
 - Here, we can see $g$ roughly becomes equal to $0$ when $t=10$
@@ -82,7 +82,7 @@ $$ v_{n} = \underbrace{0.1\theta_{n}}_{g_{t=1}} + \underbrace{0.1 \times 0.9 \th
 ### Describing Bias Correction
 - By setting $v_{0}=0$, we add some degree of bias to our model
 
-![biascorrection](/img/weighted_averages_bias.svg)
+![biascorrection](../../../img/weighted_averages_bias.svg)
 
 - Since $v_{1}, v_{2},...,v_{n}$ are all based on $v_{0}$, then the earlier values of $v$ will be slightly smaller than expected
 - As $v$ increases, this bias will become negligible

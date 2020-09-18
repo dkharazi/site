@@ -19,7 +19,7 @@ katex: true
 		- It also takes care of putting together all the components of the `Language` subclass
 		- E.g. `English` or `German`
 
-![LanguageData](/img/language_data.svg)
+![LanguageData](../../../img/language_data.svg)
 
 ### Components of a Pipeline
 - `Stop Words:` List of most common words of a language that are often useful to filter our

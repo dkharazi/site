@@ -22,7 +22,7 @@ $$ x_{2} : 1, ..., 1000 $$
 
 - The contour could look like the following after gradient descent:
 
-![unnormalizedcontour](/img/unnormalized_contour.svg)
+![unnormalizedcontour](../../../img/unnormalized_contour.svg)
 
 - Where the darker colors represents a smaller $J$ value
 
@@ -34,7 +34,7 @@ $$ x_{2} : 0, ..., 3.5 $$
 
 - The contour could look like the following after gradient descent:
 
-![normalizedcontour](/img/normalized_contour.svg)
+![normalizedcontour](../../../img/normalized_contour.svg)
 
 - Note that there isn't a great need for normalization if our input data is on the same relative scale
 - However, normalization is especially important if the scale of our input data varies across features dramatically

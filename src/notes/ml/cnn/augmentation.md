@@ -37,7 +37,7 @@ katex: true
 - By doing this, our learning algorithm becomes more robust to changes in colors of our images
 - Typically, we implement distortions during training
 
-![colorshifting](/img/colorshifting.svg)
+![colorshifting](../../../img/colorshifting.svg)
 
 ### Using PCA Color Augmentation
 - We can implement color shifting using principal component analysis

@@ -15,7 +15,7 @@ katex: true
 - More complex problems involve carefully designing features requiring large amounts of data
 - Simpler problems can use simpler network architectures with smaller amounts of data
 
-![computervisionstate](/img/computer_vision.svg)
+![computervisionstate](../../../img/computer_vision.svg)
 
 ### Introducing Image Classification and Detection
 - Localization refers to determining where in the picture is the object we've detected
@@ -59,7 +59,7 @@ $$ c_{i} = \begin{cases} 1 &\text{if pedestrian} \cr 2 &\text{if car} \cr 3 &\te
 
 $$ \hat{y} = \begin{bmatrix} p_{c} \cr b_{x} \cr b_{y} \cr b_{h} \cr b_{w} \cr c_{1} \cr c_{2} \cr c_{3} \end{bmatrix} = \begin{bmatrix} 1 \cr 0.5 \cr 0.6 \cr 0.2 \cr 0.1 \cr 0 \cr 1 \cr 0 \end{bmatrix} $$
 
-![classificationlocalization](/img/localization.svg)
+![classificationlocalization](../../../img/localization.svg)
 
 ### Introducing Landmark Detection
 - Previously, our network specified the bounding box of an object

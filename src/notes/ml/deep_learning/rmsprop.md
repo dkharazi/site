@@ -15,7 +15,7 @@ katex: true
 - Let's say we're performing standard gradient descent to optimize our parameters $w$ and $b$
 - After running many iterations, our contour could look like:
 
-![contourrmsprop](/img/unnormalized_contour.svg)
+![contourrmsprop](../../../img/unnormalized_contour.svg)
 
 - Note, the darkness of the contour represents a smaller cost $J$
 - Although we're able to find the optimal parameters by minimizing the cost function, we can imagine that gradient descent is slowed down due to the up and down oscillations

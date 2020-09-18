@@ -17,7 +17,7 @@ katex: true
 - A context provides a way to pass data through the component tree without passing props down manually at every level
 - The following is an example of this described component hierarchy:
 
-![ComponentHierarchy](/img/componenthierarchy.svg)
+![ComponentHierarchy](../../../img/componenthierarchy.svg)
 
 ### Illustrating Contexts using Class Components
 - This example uses contexts with class components

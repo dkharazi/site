@@ -32,7 +32,7 @@ I/O is optimized by focusing on projection pushdown and predicate pushdown. Here
 
 In parquet, predicate pushdown involves moving any filtering to an earlier phase of query execution. Then, it maintains statistics for groups of rows to improve the performance of predicate evaluation. In summary, predicate pushdown in Parquet provides significant performance improvements. For more details about predicate pushdown in Parquet, refer to [this article](https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/cdh_ig_predicate_pushdown_parquet.html#concept_pgs_plb_mgb).
 
-![parquetpushdown](/img/parquetpushdown.svg)
+![parquetpushdown](../img/parquetpushdown.svg)
 
 ## The Format of a Parquet File
 A Parquet file is organized into three general sections:
@@ -42,7 +42,7 @@ A Parquet file is organized into three general sections:
 
 Each Parquet file has one header, one or many data blocks, and one footer. Within these components, a Parquet file stores two different types of information: metadata and data. Specifically, the metadata is stored in the header and footer, whereas the data is stored in the data blocks.
 
-![parquetgenerallayout](/img/parquetlayout.svg)
+![parquetgenerallayout](../img/parquetlayout.svg)
 
 In particular, the header contains metadata in the form of a 4-byte magic number in the header, which represents its file is in Parquet format. Remaining metadata about the file is stored in the footer section. It contains metadata about:
 - Row groups
@@ -54,7 +54,7 @@ In a Parquet file, each data block is stored as a collection of row groups. Thes
 
 At a high-level, the graphic below illustrates sample data formatted as a Parquet file. For more details about the layout of a Parquet file, refer to the Apache Parquet [documentation](https://parquet.apache.org/documentation/latest/).
 
-![parquetformat](/img/parquetexample.svg)
+![parquetformat](../img/parquetexample.svg)
 
 ## Use of Parquet in Pandas
 As of June 2020, the pandas library provides wrapper functions that use a Parquet engine for reading and writing Parquet files. These two functions are `pandas.read_parquet` and `pandas.to_parquet`. As of June 2020, there are two choices of Parquet engines used for reading in Parquet files.

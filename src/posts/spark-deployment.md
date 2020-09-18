@@ -21,7 +21,7 @@ As stated previously, the deployment mode determines the location of the driver 
 5. The driver and executors communicate independently
 	- Doesn't involves the master or workers
 
-![standaloneclient](/img/standalone-client.svg)
+![standaloneclient](../img/standalone-client.svg)
 
 ## Cluster-Deploy Mode
 In cluster-deploy mode, the driver program runs on its own JVM process located inside the cluster. Indicating, the driver program doesn't run on the client's machine. Instead, it runs on a node within the cluster. Again, the driver program is started by a worker JVM, but runs in a separate JVM in cluster-deploy mode. Generally, applications deployed in cluster mode perform the following steps:
@@ -33,4 +33,4 @@ In cluster-deploy mode, the driver program runs on its own JVM process located i
 6. The driver and executors communicate independently
 	- Doesn't involves the master and workers
 
-![standalonecluster](/img/standalone-cluster.svg)
+![standalonecluster](../img/standalone-cluster.svg)

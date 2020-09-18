@@ -11,7 +11,7 @@ katex: true
 - Therefore, we may need to try other approaches in hopes of reducing the variance in our network
 - Adding regularization to our network will reduce overfitting
 
-![regularization](/img/regularization.svg)
+![regularization](../../../img/regularization.svg)
 
 ### Defining L2 Regularization
 - Up until now, we've defined our cost function as:

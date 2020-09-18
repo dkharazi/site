@@ -118,7 +118,7 @@ The number of jobs for an application equals the number of `RDD` actions. In our
 
 The number of additional stages equals the number of wide transformations in an application. In our example, we can see there are two stages in total, but only a single additional stage. This is because there is only one wide transformation, which is `reduceByKey`. Notice, the web UI in Spark provides a nice visualization of the `DAG`.
 
-![wordcounts](/img/pysparkwordcounts.svg)
+![wordcounts](../img/pysparkwordcounts.svg)
 
 Recall, the number of tasks within a stage equals the number of partitions in an `RDD`. By default, Spark assigns the number of paritions to be two. Meaning, the default number of tasks per stage is two. The number of partitions is assigned to an `RDD` when it is initialized. Thus, this parameter can be adjusted when calling `textFile(file, num_partitions)`. Therefore, our stage will have six tasks (instead of four) if we change this line of code:
 

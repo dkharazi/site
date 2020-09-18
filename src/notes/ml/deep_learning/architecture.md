@@ -31,7 +31,7 @@ katex: true
 - There can be one or more hidden layers
 - For example, the following four-layer neural network has two hidden layers:
 
-![Neural Network Architecture](/img/terminology.svg)
+![Neural Network Architecture](../../../img/terminology.svg)
 
 ### Example of Architecture
 - Let's say we want to determine whether a handwritten image depicts a $9$ or not
@@ -49,6 +49,7 @@ katex: true
 - An input neuron is a single input
 - A hidden neuron is a function
 - An output neuron is a function
+
 ---
 
 ### References

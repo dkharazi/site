@@ -29,7 +29,7 @@ $$ y = \begin{cases} 0 &\text{if } \sum_{j}w_{j}x_{j} \leq \text{ threshold} \cr
 	- The threshold evaluation function is our activation function
 	- $y$ is our output
 
-![perceptron](/img/perceptron.svg)
+![perceptron](../../../img/perceptron.svg)
 
 - We can see that the threshold evaluation function is the same as a step function that outputs 0 or 1 depending on the threshold
 - There are many different ways to illustrate a perceptron
@@ -42,7 +42,7 @@ $$ y = \begin{cases} 0 &\text{if } \sum_{j}w_{j}x_{j} \leq \text{ threshold} \cr
 	- The threshold evaluation function can be more generally respresented as $f$, which represents some activation function
 	- $y$ is our output
 
-![neuron](/img/neuron.svg)
+![neuron](../../../img/neuron.svg)
 
 ### Perceptron Analogy 
 - Let's say there is a wine festival coming up this weekend
@@ -77,7 +77,7 @@ $$ y = \begin{cases} 0 &\text{if } \sum_{j}w_{j}x_{j} \leq \text{ threshold} \cr
 - Multilayer perceptrons are referred to as neural networks
 - In other words, a neural network is a network of perceptrons
 
-![NeuralNetwork](/img/neuralnet.svg)
+![NeuralNetwork](../../../img/neuralnet.svg)
 
 - In this network, the first *layer* of perceptrons is making three decisions
 - These three decisions are made based on five inputs each
@@ -97,8 +97,7 @@ $$ y = \begin{cases} 0 &\text{if } \sum_{j}w_{j}x_{j} \leq \text{ threshold} \cr
 	- Where $w$ is the vector of weights
 	- Where $x$ is the vector of inputs
 2. Move the threshold to the other side of the inequality and replace it with what's known as the perceptron's *bias*
-	$$ \text{output} = \begin{cases} 0 &\text{if } w \cdot x + b \leq 0 \cr 1 &\text{if } w \cdot x + b > 0
-\end{cases} $$
+	$$ \text{output} = \begin{cases} 0 &\text{if } w \cdot x + b \leq 0 \cr 1 &\text{if } w \cdot x + b > 0 \end{cases} $$
 	- Where $b \equiv -\text{threshold}$
 - We can think of the bias as a shift or adjustment to our decision boundary
 - We can also think of the bias as a measure of how easy it is to get the perceptron to output a $1$

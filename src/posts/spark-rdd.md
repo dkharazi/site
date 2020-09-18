@@ -19,7 +19,7 @@ Most likely, we've all worked with pandas `DataFrames` before. They're in-memory
 
 Roughly, we can think of an `RDD` as a distributed version of a pandas `DataFrame`. I'm making this comparison because RDDs offer many pandas-like functions that are focused around data processing. These functions are called [Transformations](https://spark.apache.org/docs/latest/rdd-programming-guide.html#transformations) and [Actions](https://spark.apache.org/docs/latest/rdd-programming-guide.html#actions). Specifically, transformations create a new dataset from an existing one. Contrastingly, actions return non-dataset values, which generally relate to some aggregation.
 
-![diagram of rdd to transf to action](/img/sparkaction.svg)
+![diagram of rdd to transf to action](../img/sparkaction.svg)
 
 Transformations are *lazy*. Meaning, an `RDD` isn't computed until it receives an action. Actions always return values to the driver program. Spark receives a performance boost from any lazy evaluations. However, this could become a problem if users continuously recompute that same transformation. As a result, Spark allows us to persist an `RDD` to memory using the `persist` method. To summarize, transformations and actions have the following properties:
 - Transformations are lazy by default
@@ -45,7 +45,7 @@ Assuming nonsequential dependence, `Tasks` are executed in parallel on partition
 Now, let's return to our previous discussion about the `DAG` object. When an action is called, each `DAG` is submitted to a `DAGScheduler` object for execution. A `DAGScheduler` organizes operations into `Stages`, and a `Stage` is organized into `Tasks`. Each `Task` is scheduled separately. It represents a unit of work on a partition of an `RDD`, and is executed as a thread in an executor's JVM. The `DAGScheduler` returns a `TaskSet` object, which is passed to a `TaskScheduler`. The `TaskScheduler` launches tasks in the a cluster manager.
 
 
-![SparkTaskLifecycle](/img/sparktasks.svg)
+![SparkTaskLifecycle](../img/sparktasks.svg)
 
 Multiple tasks can be executed in parallel for any stage. Specifically, any two stages can be executed in parallel if they aren't sequentially dependent on each other. Implying, tasks from one stage can be executed in parallel with tasks from a separate stage, if they aren't sequentially dependent on each other. Refer to [this post](https://stackoverflow.com/a/41340858/12777044) for an illustration of how `Tasks` and stages run in parallel.
 
@@ -56,7 +56,7 @@ There are two types of transformations that can be applied to `RDDs`: narrow tra
 
 Shuffling is used for regrouping data between partitions. Shuffling is necessary for situations requiring information from each partition. Wider transformations are more expensive than narrow transformations in comparison. For example, the `map` transformation doesn't require shuffling, since it applies element-wise transformations to each partition. This technique is called pipelining. In other words, an element in one partition doesn't need any information from other partitions. On the other hand, the `groupByKey` wide transformation needs information from each partition. Specifically, a narrow transformation keeps its results in memory, whereas a wide transformation writes its results to disk. This [post](https://0x0fff.com/spark-architecture-shuffle/) defines optimized shuffling algorithms in detail.
 
-![SparkNarrowAndWideTransformation](/img/sparktransformation.svg)
+![SparkNarrowAndWideTransformation](../img/sparktransformation.svg)
 
 ## Lifecycle of a Spark Program 
 Now, we have a high-level level understanding of the core Spark data structures. This [lecture](https://www.youtube.com/watch?v=7ooZ4S7Ay6Y) defines the lifecycle of a Spark program in detail.  Generally, a common lifecycle of a spark program looks like the following:

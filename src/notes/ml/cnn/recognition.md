@@ -59,7 +59,7 @@ $$ d(img_{1}, img_{2}) > \tau \implies \text{different} $$
 - Formally, parameters of a siamese network define an encoding $f(x_{i})$
 - Formally, an input image $x_{i}$ will be encoded into a $128$-digit vector $f(x_{i})$
 
-![siamesenetwork](/img/siamese_network.jpg)
+![siamesenetwork](../../../img/siamese_network.jpg)
 
 ### Defining the Triplet Loss Function
 - A siamese network uses a triplet loss function

@@ -37,7 +37,7 @@ katex: true
 - An HTTP response has a response header
 - A typical request looks like the following:
 
-![httprequest](/img/httprequest.svg)
+![httprequest](../../../img/httprequest.svg)
 
 ### Defining HTTP Request Methods
 1. **GET** Method

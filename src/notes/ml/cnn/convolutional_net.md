@@ -14,7 +14,7 @@ katex: true
 
 ### A Single Layer of a Convolutional Network
 
-![convolutional_layer](/img/convolutional_layer.svg)
+![convolutional_layer](../../../img/convolutional_layer.svg)
 
 ### Benefit of Convolutional Networks
 - The number of learnable parameters depends on the following:
@@ -63,7 +63,7 @@ $$ 270 \text{ weights } + 10 \text{ biases } = 280 \text{ total parameters} $$
 
 ### Example of Network using Convolutional Layers
 
-![convolutionalnetwork](/img/convnet.svg)
+![convolutionalnetwork](../../../img/convnet.svg)
 
 ---
 

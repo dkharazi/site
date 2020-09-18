@@ -73,7 +73,7 @@ const NotesPageLayout = ({ title, children }) => {
                 <header ref={mastheadRef} className={notesPageStyles.masthead}>
                     <h1 className={`${notesPageStyles.title} notesContainer`}>{title}</h1>
                 </header>
-                <main className="notesContainer">
+                <main className={`${notesPageStyles.main} notesPageContainer`}>
                     {children}
                 </main>
             </div>

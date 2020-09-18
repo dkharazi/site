@@ -16,7 +16,7 @@ katex: true
 
 ### Illustrating AlexNet
 
-![alexnet](/img/alexnet.svg)
+![alexnet](../../../img/alexnet.svg)
 
 ### Footnotes about AlexNet
 - Similar architecture to LeNet-5
@@ -36,7 +36,7 @@ katex: true
 
 ### Illustrating VGG-16
 
-![vgg-16](/img/vgg.svg)
+![vgg-16](../../../img/vgg.svg)
 
 ### Footnotes about VGG-16
 - Simpler architecture compared to AlexNet

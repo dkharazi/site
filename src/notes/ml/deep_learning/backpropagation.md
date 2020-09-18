@@ -52,7 +52,7 @@ $$ z^{l} \equiv w^{l}a^{l-1} + b^{l} $$
 
 ### Illustrating Forward and Backward Propagation
 
-![backwardpropagation](/img/backpropagation.svg)
+![backwardpropagation](../../../img/backpropagation.svg)
 
 | Color                                                        | Representation                                      |
 | ------------------------------------------------------------ | --------------------------------------------------- |

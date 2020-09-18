@@ -24,7 +24,7 @@ katex: true
 - Specifically, we would still train a siamese network
 - However, we add an extra layer after the $f(x)$ embeddings
 
-![siamesesigmoid](/img/siamese_sigmoid.jpg)
+![siamesesigmoid](../../../img/siamese_sigmoid.jpg)
 
 - This extra layer contains a single sigmoid neuron
 - Specifically, this output layer outputs:

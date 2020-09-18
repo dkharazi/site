@@ -15,7 +15,7 @@ katex: true
 - A server on which a `NameNode` lives is called a **master server**
 - A server on which a `DataNode` lives is called a **region server**
 
-![hbaseregions](/img/hbase.png)
+![hbaseregions](../../../img/hbase.png)
 
 ### Defining the Components of HBase
 1. HMaster Nodes

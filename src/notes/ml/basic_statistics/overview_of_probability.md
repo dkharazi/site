@@ -40,7 +40,7 @@ $$ P(A+B) = P(A) + P(B) - P(AB) $$
 
 $$ P(AB) = P(A|B) \times P(B) $$
 
-![Venn Diagram](/img/venn.svg)
+![Venn Diagram](../../../img/venn.svg)
 
 ### Types of Probabilities
 Essentially, there are three types of probabilities:

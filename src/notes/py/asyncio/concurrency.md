@@ -101,7 +101,7 @@ katex: true
 
 - The execution diagram looks like this:
 
-![multithreadingschedule](/img/multithreading_schedule.png)
+![multithreadingschedule](../../../img/multithreading_schedule.png)
 
 ### Option 2: Asyncio for I/O
 - The benefits are the following:
@@ -141,7 +141,7 @@ katex: true
 
 - The execution diagram looks like this:
 
-![asyncioschedule](/img/asyncio_schedule.png)
+![asyncioschedule](../../../img/asyncio_schedule.png)
 
 ### Option 3: Multiprocessing for CPU
 - The benefits are the following:
@@ -172,7 +172,7 @@ katex: true
 
 - The execution diagram looks like this:
 
-![multiprocessschedule](/img/multiprocess_schedule.png)
+![multiprocessschedule](../../../img/multiprocess_schedule.png)
 
 ### References
 - [The GIL Affecting Concurrency](https://wiki.python.org/moin/GlobalInterpreterLock)

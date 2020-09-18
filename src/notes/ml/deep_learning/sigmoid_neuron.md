@@ -51,7 +51,7 @@ $$ \sigma(z) \equiv \frac{1}{1+e^{-z}} $$
 	- Where the output of this function is $\sigma(z) = \frac{1}{1+e^{-z}}$
 	- Where $y$ is the output
 
-![Sigmoid](/img/sigmoid.svg)
+![Sigmoid](../../../img/sigmoid.svg)
 
 - Then, we can further simplify some of the notation:
 	- Where $w_{i}$ is a weight
@@ -59,7 +59,7 @@ $$ \sigma(z) \equiv \frac{1}{1+e^{-z}} $$
 	- Where the output of the weighted sum function $\sum$ is the input of the sigmoid function $\sigma$
 	- Where $y$ is the output
 
-![SigmoidNeuron](/img/sigmoid_neuron.svg)
+![SigmoidNeuron](../../../img/sigmoid_neuron.svg)
 
 ### The Behavior of Sigmoid Neurons
 - The activation function of a perceptron is a step function
@@ -72,7 +72,7 @@ $$ \sigma(z) \equiv \frac{1}{1+e^{-z}} $$
 - It's only when $w \cdot x + b$ is of modest size that there's much deviation from the perceptron model
 - This behavior is reflected in the shape of both functions:
 
-![SigmoidShape](/img/sigmoid_shape.svg)
+![SigmoidShape](../../../img/sigmoid_shape.svg)
 
 ### Use-Cases of Sigmoid Neurons
 - We can use a sigmoid neuron to represent the average intensity of the pixels of an image

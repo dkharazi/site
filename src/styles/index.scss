@@ -322,7 +322,7 @@ img {
 
 /* Tables */
 table {
-  margin-bottom: 1rem;
+  margin: 2rem 0;
   width: 100%;
   border: 1px solid #e5e5e5;
   border-collapse: collapse;
@@ -338,6 +338,10 @@ tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
+/* Remove blue border on elements with tabindex */
+[tabindex] {
+  outline: none;
+}
 
 /*
  * Wrapper
@@ -368,6 +372,15 @@ tbody tr:nth-child(odd) th {
 
 .notesContainer {
   display: flex;
+  max-width: 32rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+
+.notesPageContainer {
+  display: flex;
+  flex-direction: column;
   max-width: 32rem;
   padding-left:  1rem;
   padding-right: 1rem;
@@ -584,11 +597,11 @@ footer a {
   margin-left: -1rem;
 }
 
-.notesContainer .gatsby-highlight:before {
-  width: calc(100% - 3.25rem);
+.notesPageContainer .gatsby-highlight:before {
+  width: calc(100% - 3rem);
 }
 
-.notesContainer .gatsby-highlight {
+.notesPageContainer .gatsby-highlight {
   padding-top: 1.5rem;
 }
 
@@ -672,6 +685,10 @@ pre[class*="language-"] {
  }
 
  /* Line numbers */
+ .line-numbers {
+    padding-left: 2.5rem !important;
+ }
+
 .line-numbers-rows {
   margin-top: 1rem;
   overflow: initial;

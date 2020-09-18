@@ -1,11 +1,16 @@
-.subcategory a {
-    font-size: 0.8rem;
-    display: block;
-}
-
 .subcategory {
     box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.3);
     border-radius: 20px 20px 20px 20px;
+}
+
+.subcategory a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: block;
+}
+
+.subcategory a:hover {
+    color: #64aee3;
 }
 
 .title {

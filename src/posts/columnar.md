@@ -28,19 +28,19 @@ In other words, database records are stored on a data block in any arbitrary ord
 - A section for the data
 - A pointer to the location of the next block
 
-![DiskBlock](/img/diskblock.svg)
+![DiskBlock](../img/diskblock.svg)
 
 Notice, each block can be scattered anywhere on the disk. Also, each block contains a pointer to the block containing the next records. The disk comes equipped with a starting and stopping index for the file as well. Refer to this [post](https://stackoverflow.com/a/1130/12777044) for a more detailed explanation about how database indexing works internally.
 
 ## Comparing Disk I/O
 As stated previously, a row-oriented database stores data row-by-row. Meaning, individual rows are stored on a block, rather than individual columns. Storing data in this manner is performant when users are querying individual rows, rather than columns, which can be seen in the following illustration:
 
-![rowblock](/img/rowblock.svg)
+![rowblock](../img/rowblock.svg)
 
 A column-oriented database stores data column-by-column. Meaning, individual columns are store
 d on a block, rather than individual rows. Storing data in this manner is performant when users are querying individual columns, rather than rows, which can be seen in the following illustration:
 
-![colblock](/img/colblock.svg)
+![colblock](../img/colblock.svg)
 
 Querying an individual record from a row-oriented database is performant, since each row is stored in a block in its entirety. Meaning, the disk only needs to read from or write to the record in one place. On the other hand, querying an individual record from a column-oriented database will not be as performant. This is because it takes $O(n)$ to read from or write to each block for a piece of the row.
 

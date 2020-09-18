@@ -11,7 +11,7 @@ katex: true
 - To train a model, we first need training data
 - This could be a part-of-speech tag, a named entity, or any other information
 
-![Training](/img/training.svg)
+![Training](../../../img/training.svg)
 
 ### Training with Annotations
 - The `GoldParse` object is a collection of specified annotations for some given training examples

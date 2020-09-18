@@ -35,7 +35,7 @@ katex: true
 
 $$ \text{leakyrelu}(x) = \begin{cases} 0.01x &\text{if } x \le 0 \cr x &\text{if } x > 0 \end{cases} $$
 
-![leakyrelu](/img/leakyrelu.svg)
+![leakyrelu](../../../img/leakyrelu.svg)
 
 - Unfortunately, the leaky relu doesn't perform as well as the relu
 - Also, there isn't much of an accuracy boost in most circumstances

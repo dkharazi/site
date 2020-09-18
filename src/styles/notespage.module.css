@@ -4,13 +4,20 @@
 }
 
 .notes {
-    margin-top: 1rem;
+    width: 100%;
+    animation: fadeIn 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-delay: 0.25s;
+}
+
+.main {
+    margin-top: 0 !important;
 }
 
 .title {
     padding-top: 5rem;
     padding-bottom: 1rem;
     color: #fafafa;
+    animation: fadeDown 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .notes h1,
@@ -19,10 +26,29 @@
 .notes h4,
 .notes h5,
 .notes h6 {
-    margin-bottom: 1.5rem;
+    margin-top: 3rem !important;
+    margin-bottom: 1rem;
 }
 
+.notes h2,
+.notes h3 {
+    color: #268bd2;
+}
+
+.notes a:hover {
+    color: #64aee3;
+}
+
+.notes img {
+    margin: 2rem auto;
+}
+
+ol ul,
+ul ol,
+ul ul,
+ol ol,
 p {
+    margin-top: 0;
     margin-bottom: 0;
 }
 
@@ -104,4 +130,93 @@ p {
 .menu .menuItem:hover {
     color: #333;
     transition: color .1s ease-in-out;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    animation: fadeIn 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-delay: 0.25s;
+}
+
+.pagination a:hover {
+    color: #64aee3;
+}
+
+.desc {
+    display: inline-flex;
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.prevDesc {
+    padding-left: 0.7rem;
+}
+
+.nextDesc {
+    padding-right: 0.7rem;
+    margin-left: auto;
+}
+
+.nextPrevPages {
+    display: flex;
+    flex-direction: row;
+}
+
+.previous {
+    display: inline-flex;
+    align-items: center;
+    width: 48%;
+    margin-left: -2em;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.next {
+    display: inline-flex;
+    align-items: center;
+    width: 48%;
+    margin-left: auto;
+    margin-right: -2em;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.next a {
+    margin-left: auto;
+}
+
+.next span,
+.previous span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.previous svg { padding-right: 1rem; }
+.next svg { padding-left: 1rem; }
+.previous p { text-align: left; }
+.next p { text-align: right; }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+    to {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
 }

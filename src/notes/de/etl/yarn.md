@@ -70,9 +70,9 @@ katex: true
 
 ### Illustrating the YARN Workflow
 
-![yarnworkflow](/img/yarn.gif)
+![yarnworkflow](../../../img/yarn.gif)
 
-![hdfsyarn](/img/hdfsyarn.jpg)
+![hdfsyarn](../../../img/hdfsyarn.jpg)
 
 ### Defining the YARN Workflow
 1. Client submits an application

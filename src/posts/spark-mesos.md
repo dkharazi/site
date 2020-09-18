@@ -156,4 +156,4 @@ Mesos provides a web UI for each initialized daemon. By default, Spark creates a
 8. The Mesos executors launch Spark executors consisting of Tasks
 9. The Spark executors communicate with the Spark driver
 
-![MesosClient](/img/mesos-client.svg)
+![MesosClient](../img/mesos-client.svg)

@@ -37,7 +37,7 @@ const NotesPage = () => {
                     return (
                         <Link key={cat} to={`/notes/${cat}`} state={{ colorIdx: idx }}>
                             <animated.div
-                                className={ `${notesStyles.notesItem} n${idx%4} h` }
+                                className={`${notesStyles.notesItem} n${idx%4} h`}
                                 style={{ transform: radians.interpolate(interp(idx)) }}
                             >
                                 <p>{cat}</p>

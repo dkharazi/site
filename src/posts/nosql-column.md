@@ -64,7 +64,7 @@ Cassandra uses most of these features, but uses a storage engined based on LSM i
 
 Cassandra partitions (creates shards) data across nodes using consistent hashing. In naive data hashing, keys are allocatd to buckets by hashing the key modulo the number of buckets. Cassandra takes a different approach by first hashing each node to one or more values on a continuous hash ring. These hash values representing each node are referred to as *tokens* in Cassandra. Once tokens are created, Cassandra then is able to map data points to tokens on that same hash ring. Specifically, Cassandra will receive rows, hash the primary keys of each row, and map those hash values to the hash ring. Lastly, Cassandra will map those data points to nodes by rounding their mapped hash values to the nearest token in a clockwise motion on the ring.
 
-![CassandraHashRing](/img/cassandrahash.svg)
+![CassandraHashRing](../img/cassandrahash.svg)
 
 The use of consistent hashing for partitioning makes Cassandra a **scalable** and **available** column-family store. There are other features included in the hashing algorithm to improve potential issues with consistency, such as virtual nodes, quorums, and [compaction](https://cassandra.apache.org/doc/latest/operating/compaction/index.html). For more details about the architecture of Cassandra and its more specific hashing features, refer to [the docs](https://cassandra.apache.org/doc/latest/architecture/dynamo.html).
 

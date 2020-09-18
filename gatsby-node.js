@@ -78,12 +78,20 @@ module.exports.createPages = async ({ graphql, actions }) => {
     // query fields for any markdown files
     const mdRes = await graphql(`
         query {
-            allMarkdownRemark {
+            allMarkdownRemark (
+                sort: { fields: [fields___category, fields___subCategory, frontmatter___weight], order: ASC }
+            ) {
                 edges {
                     node {
                         fields {
                             slug
                             reference
+                            category
+                            subCategory
+                        }
+                        frontmatter {
+                            title
+                            weight
                         }
                     }
                 }
@@ -105,13 +113,43 @@ module.exports.createPages = async ({ graphql, actions }) => {
     `)
 
     // create page from markdown files
-    mdRes.data.allMarkdownRemark.edges.forEach((edge) => {
+    const edges = mdRes.data.allMarkdownRemark.edges;
+    edges.forEach((edge, idx) => {
         if (edge.node.fields.reference == 'notes') {  // is a notes md
+            let currWt = edge.node.frontmatter.weight;
+            let nextWt = edges[idx+1] == null ? null : edges[idx+1].node.frontmatter.weight;
+            let prevSlug = null;
+            let prevTitle = null;
+            let nextSlug = null;
+            let nextTitle = null;
+
+            if (nextWt < currWt) {
+                // no next, prev
+                prevSlug = edges[idx-1].node.fields.slug;
+                prevTitle = edges[idx-1].node.frontmatter.title;
+            } else if ((currWt === 1 && nextWt > currWt) || (currWt > 1 && nextWt == null)) {
+                // next, no prev
+                nextSlug = edges[idx+1].node.fields.slug;
+                nextTitle = edges[idx+1].node.frontmatter.title;
+            } else if ((currWt === 1 && nextWt === 1) || (currWt === 1 && nextWt == null)) {
+                // no next, no prev
+            } else if (nextWt > currWt) {
+                // next, prev
+                prevSlug = edges[idx-1].node.fields.slug;
+                prevTitle = edges[idx-1].node.frontmatter.title;
+                nextSlug = edges[idx+1].node.fields.slug;
+                nextTitle = edges[idx+1].node.frontmatter.title;
+            }
+
             createPage({
                 component: notesTemplate,
                 path: `/notes/${edge.node.fields.slug}`,
                 context: {
-                    slug: edge.node.fields.slug
+                    slug: edge.node.fields.slug,
+                    previousSlug: prevSlug,
+                    nextSlug: nextSlug,
+                    previousTitle: prevTitle,
+                    nextTitle: nextTitle
                 }
             })
         } else {  // is a blog md

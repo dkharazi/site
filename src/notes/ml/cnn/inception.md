@@ -25,7 +25,7 @@ katex: true
 - Adding additional filters to a convolutional layer is similar to adding additional neurons to the hidden filter
 
 
-![1by1](/img/1by1convolution.svg)
+![1by1](../../../img/1by1convolution.svg)
 
 ### Illustrating Network in Network
 - As we go deeper in a network, sometimes the number of channels grows too much
@@ -35,7 +35,7 @@ katex: true
 	- $n_{c}$ decreases
 - In this case, we would want to convolve an image with a $1 \times 1$ filter
 
-![networkinnetwork](/img/networkinnetwork.svg)
+![networkinnetwork](../../../img/networkinnetwork.svg)
 
 ### Motivating the Inception Network
 - When designing a layer for a convolution network, we'll need to choose which filter to use
@@ -59,7 +59,7 @@ katex: true
 - Generally, if this hyperparameter is too small, then we could possibly lose information by overfitting a particular filter
 - On the other hand, if this hyperparameter is too large, then we could also lose information by underfitting a particular filter
 
-![inceptionlayer](/img/inception.svg)
+![inceptionlayer](../../../img/inception.svg)
 
 ### Handling the Computational Cost
 - Computing the inception layer from above would lead to $120$ million multiplications
@@ -69,7 +69,7 @@ katex: true
 - Including a bottleneck layer will reduce the dimensionality of the input image
 - As a result, computing the inception layer would lead to only $12.4$ million multiplications
 
-![inceptioncomputation](/img/inception_computation.svg)
+![inceptioncomputation](../../../img/inception_computation.svg)
 
 ### Inception Network
 - An inception network contains many repeated inception modules
@@ -80,9 +80,9 @@ katex: true
 - These side branches make predictions to help prevent overfitting
 - Specifically, this has a regularization effect on the network
 
-![inceptionnetwork](/img/inception_network.png)
+![inceptionnetwork](../../../img/inception_network.png)
 
-![inceptionmodule](/img/inception_module.svg)
+![inceptionmodule](../../../img/inception_module.svg)
 
 ---
 

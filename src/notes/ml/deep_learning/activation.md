@@ -23,7 +23,7 @@ katex: true
 - We refer to these nonlinear functions as *activation functions*
 - After applying nonlinear functions to our data, our hope is that our transformed data points become linearly separable
 
-![decisionboundary](/img/decision_boundary.svg)
+![decisionboundary](../../../img/decision_boundary.svg)
 
 ### Brief Overview of Activation Functions
 - Essentially, activation functions help introduce non-linearity in neural networks
@@ -48,7 +48,7 @@ katex: true
 - In other words, we should only use a linear activation function for output layers, and the linear output layer should only be used for regression problems
 - Even if we're interested in regression, we'll sometimes want to use the relu activation function instead of a linear activation function if we want to return real-valued, non-negative data $\hat{y}$
 
-![linearactivation](/img/linear_activation.svg)
+![linearactivation](../../../img/linear_activation.svg)
 
 ### Defining Activation Functions
 - In a feedforward network, each neuron is computed the same:
@@ -68,7 +68,7 @@ katex: true
 
 $$ g(x) = \frac{1}{1+e^{-x}} $$
 
-![sigmoidfunction](/img/sigmoid_function.svg)
+![sigmoidfunction](../../../img/sigmoid_function.svg)
 
 - The range of the output is the following:
 
@@ -85,7 +85,7 @@ $$ (0,1) $$
 
 $$ g(x) = \frac{e^{x}-e^{-x}}{e^{x}+e^{-x}} $$
 
-![tanh](/img/tanh.svg)
+![tanh](../../../img/tanh.svg)
 
 - The range of the output is the following:
 
@@ -114,7 +114,7 @@ $$ (-1,1) $$
 
 $$ g(x) = \begin{cases} 0 &\text{if } x \le 0 \cr x &\text{if } x > 0 \end{cases} $$
 
-![relu](/img/relu.svg)
+![relu](../../../img/relu.svg)
 
 - The range of the output is the following:
 
@@ -127,7 +127,7 @@ $$ [0, \infty] $$
 - Even though half of the input space is $0$ for the relu activation function, we usually don't have to worry about the vanishing gradient because $a>0$ for most cases
 - Meaning, the relu function is computationally faster than the sigmoid and tanh functions
 
-![reluderivative](/img/derivative_relu.svg)
+![reluderivative](../../../img/derivative_relu.svg)
 
 - The relu function enforces constant derivative values equal to $1$ if $a>0$ and $0$ if $a \le 0$
 - This property also makes it faster to learn

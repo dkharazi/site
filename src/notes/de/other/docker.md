@@ -22,7 +22,7 @@ katex: true
 	- A container is the cake
 - Containers and virtual machines can be used together:
 
-![containerlayer](/img/docker.svg)
+![containerlayer](../../../img/docker.svg)
 
 ### Use Cases of Docker Containers
 1. Containers can perform a task **independent of the host's OS**

@@ -41,7 +41,7 @@ katex: true
 
 ### Illustrating MapReduce by Counting Words
 
-![mapreduce](/img/mapreduce.png)
+![mapreduce](../../../img/mapreduce.png)
 
 ### Describing Components of MapReduce Implementation
 - A MapReduce application consists of two main services:

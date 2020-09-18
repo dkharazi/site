@@ -44,7 +44,7 @@ katex: true
 - This is because grid search only works fine with a small set of hyperparameters
 - Visually, the difference in hyperparameters looks like the following:
 
-![tuning_hyperparameters](/img/tuning.svg) 
+![tuning_hyperparameters](../../../img/tuning.svg) 
 
 - Here, we notice that only $5$ possible values are tested for each hyperparameter in scenario 1
 - Specifically, training $25$ models only gives us information about $5$ possible values for each hyperparameter
@@ -57,7 +57,7 @@ katex: true
 - Therefore, we'll usually focus on that region and sample more densely a second time (or more)
 - In other words, we'll keep focusing on a smaller range of hyperparameters after training
 
-![zoomtuning](/img/zoomtuning.svg)
+![zoomtuning](../../../img/zoomtuning.svg)
 
 - In the above image, the the data points represents combinations of hyperparameters
 - A darker data point represents a set of hyperparameters that correspond to a very small cost
@@ -74,12 +74,12 @@ katex: true
 - For example, we may decide to randomly sample $\beta_{v}$ uniformly on a linear scale
 - In this scenario, we would be only using $90$% of resources to search for the values of a hyperparameter $\beta_{v}$ between $0.1$ and $1$
 
-![linearscale](/img/linear_tuning.svg)
+![linearscale](../../../img/linear_tuning.svg)
 
 - However, we may want to use more resources to search for the values between $0$ and $0.1$
 - Therefore, we may want to randomly sample $\beta_{v}$ uniformly on a logarithmic scale
 
-![logscale](/img/log_tuning.svg)
+![logscale](../../../img/log_tuning.svg)
 
 ### Re-evaluating Hyperparameters Occasionally
 - Our data is always changing

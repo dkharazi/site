@@ -233,7 +233,7 @@ Spark provides a web UI for each initialized daemon. By default, Spark creates a
 8. The driver and executors communicate independently
 	- Doesn't involves the master or workers
 
-![ClientModeYARN](/img/yarn-client.svg)
+![ClientModeYARN](../img/yarn-client.svg)
 
 ## Launching Applications in Cluster Mode
 1. Client's JVM process submits a driver to the resource manager
@@ -251,4 +251,4 @@ Spark provides a web UI for each initialized daemon. By default, Spark creates a
 7. The driver and executors communicate independently
 	- Doesn't involves the master or workers
 
-![ClusterModeYARN](/img/yarn-cluster.svg)
+![ClusterModeYARN](../img/yarn-cluster.svg)

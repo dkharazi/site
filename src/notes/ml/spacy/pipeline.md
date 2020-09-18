@@ -12,7 +12,7 @@ katex: true
 - The pipeline typically consists of a pos tagger, parser, and entity recognizer
 - Each pipeline component returns the processed `Doc`, which is then passed on to the next component
 
-![Pipeline](/img/pipeline.svg)
+![Pipeline](../../../img/pipeline.svg)
 
 ### Describing the Pipeline
 - The `Tokenizer` component separates raw text into tokens

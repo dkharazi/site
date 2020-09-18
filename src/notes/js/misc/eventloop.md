@@ -14,7 +14,7 @@ katex: true
 	- The event loop
 	- Any WebAPIs
 
-![EventLoop](/img/eventloop.png)
+![EventLoop](../../../img/eventloop.png)
 
 ### Describing the Heap
 - The heap is memory set aside for dynamic allocation

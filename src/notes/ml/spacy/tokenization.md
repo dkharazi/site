@@ -21,7 +21,7 @@ katex: true
 7. Otherwise, try consuming infixes (e.g. hyphens) and split the substring into tokens on all infixes.
 8. Once we get to this step without any consumption or discovered rule, then handle the substring as a single token.
 
-![Tokenization](/img/tokenization.svg)
+![Tokenization](../../../img/tokenization.svg)
 
 ### Spacy Pseudocode for Tokenization
 ```python

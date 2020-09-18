@@ -27,7 +27,7 @@ At a high level, there are a few categories that a database can fall under. Firs
 
 Additionally, there are the non-relational databases, which offer increased flexibility by embracing schemaless data. Unlike relational databass, there are many different flavors of non-relational databases, such as key-value, document, column-family, and graph databases. As stated previously, each of these databases are schemaless, and the graph database is the only one ensuring ACID transactions.
 
-![SqlvsNoSQLDatabases](/img/sqlnosql.svg)
+![SqlvsNoSQLDatabases](../img/sqlnosql.svg)
 
 After introducing a few modern-day database options, we now should think about how to evaluate databases that are best suited for our organization's needs. To do this, we'll consider the CAP thorem, which assesses the tradeoffs between three metrics:
 - **C**onsistency
@@ -38,7 +38,7 @@ At a high level, the CAP theorem states we can't choose two of the above metrics
 
 By observing the image below, we'll notice relational databases maintain both availablity and consistency. On the other hand, NoSQL databases can maintain either consistency and partition-tolerance, or they can maintain availability and partition-tolerance. If we're certain that our organization only ever will need one server, then we won't need to worry about partition-tolerance, and we can prioritize both availability and consistency. On the other hand, if we're certain our database will require more than a single server, then we may need to choose between consistency and availability.
 
-![CAPTheorem](/img/captheorem.svg)
+![CAPTheorem](../img/captheorem.svg)
 
 The CAP theorem has become controvertible over the years. In practice, these tradeoffs have become more loose for some of these databases. Using Cassandra as an example, the inclusion of a quorum almost allows the amount of consistency to be configurable. Over time, the lines separating the databases from each other are becoming blurred. Many of these databases can be made to work in any situation, but we should choose a database that is built for our requirements. A more detailed explanation about other considerations can be found [here](https://www.youtube.com/watch?v=v5e_PasMdXc).
 
@@ -116,7 +116,7 @@ When choosing one NoSQL database over the other, a developer needs to recognize 
 
 Lastly, most NoSQL database offer some form of **materialized views**, which are supported in relational databases as *virtual tables*. They aren't handled the same way as views in relational databases, but they essentially achieve the same goal. In NoSQL databases, materialized views refer to precomputed and cached queries. These queries are typically assembled using a Map-Reduce or Spark job, since many of these NoSQL databases don't support a querying langauge.
 
-![NoSQLProperties](/img/nosqlproperties.svg)
+![NoSQLProperties](../img/nosqlproperties.svg)
 
 ## Introducing Data Models in Databases
 Regardless of whether a database is relational or non-relational, each database supports a *data model*. A data model refers to the low-level structure of data being stored in a database. The structure of a data model impacts how we interact with the data in a database.
@@ -133,7 +133,7 @@ Alternatively, *aggregates* support nesting, meaning they can store lists of val
 
 Aggregate-oriented databases have their obvious consequences. In general, aggregate-oriented databases don’t have ACID transactions across multiple aggregates. Instead, each aggregate is manipulated individually. Meaning, atomic manipulation of multiple aggregates must be handled in the actual application code.
 
-![RelationAggregate](/img/relationaggregate.svg)
+![RelationAggregate](../img/relationaggregate.svg)
 
 ## Types of Aggregate Data Models
 After introducing the overlapping properties of NoSQL databases, we'll now explore the specifics of certain types of NoSQL databases. Various forms of NoSQL databases were briefly mentioned in the earlier segments of this post, which include key-value, document, column-family, and graph databases.

@@ -22,7 +22,7 @@ In this example, we'll consider a single pizza parlor as a cluster, whereas a si
 
 In a distributed system, our goal is to increase the throughput of incoming requests by optimizing resources and running processes. One way of achieving this in our pizza shop analogy is through vertical scaling, or expanding the limits of a chef so they can handle more work. This improvement to the system is analogous to the change to the pizza shop illustrated below.
 
-![VerticalScaling](/img/pizza1.svg)
+![VerticalScaling](../img/pizza1.svg)
 
 ## Preparing Pizzas in Advance
 In most cases, the peak hours of a pizza shop is during the day. In order to ease the workload on our chef during these peak hours, he or she can prepare pizzas during the night. The chef would prefer preparing pizzas after hours to avoid preparing pizzas during the day, when he or she has many orders to handle.
@@ -37,7 +37,7 @@ Clearly, only employing a single chef at our pizza shop becomes a greater proble
 
 In a distributed system, this concept translates to purchasing additional servers to handle more requests. This improvement to the system is analogous to the change to the pizza shop illustrated below.
 
-![HorizontalScaling](/img/pizza2.svg)
+![HorizontalScaling](../img/pizza2.svg)
 
 Vertical scaling and horizontal scaling typically are used together in a system. When systems observe a problem requiring either horizontal scaling and vertical scaling, we can make the appropriate changes based on the properties of the problem. In particular, we can use the more general use cases provided below to determine which type of scaling should be applied.
 
@@ -56,14 +56,14 @@ By building additional shops, we still can handle orders in case a single shop e
 
 Adding additional shops is analogous to creating new servers or even clusters in a distributed system. Similarly, these servers need to be able to communicate with each other. Creating new servers or clusters leads to a more fault-tolerant and responsive distributed system. For example, AWS will include multiple servers from different datacenters within their clusters, which leads to faster response times.
 
-![DistributedPizzaStores](/img/pizza3.svg)
+![DistributedPizzaStores](../img/pizza3.svg)
 
 ## Efficiently Managing Pizza Orders
 Ideally, customers would submit an order for delivery to an entry point for our delivery services, which could be a site, app, or specific number. Then, a manager would determine a store that efficiently prepares the pizza and delivers it in the fastest possible time frame. The image below illustrates a load balancer as a central office for our delivery services. 
 
 In a distributed system, the component responsible for managing the load and forwarding of a request is known as a *load balancer*. Specifically, a load balancer is responsible for dispatching requests based on statistics saved by it or some other external agent. In other words, a load balancer will receive a request and determine the optimal node that should process the request.
 
-![LoadBalancer](/img/pizza4.svg)
+![LoadBalancer](../img/pizza4.svg)
 
 ## Monitoring the Performance of our Shops
 As we build even more shops and hire additional chefs to handle the demand for our delicious pizza, monitoring the performance, decisions, and actions of our employees and shops becomes difficult. As a result, logging the decisions and calculating metrics on these components becomes critical. Automating behavior based on these logs becomes even more critical if we want to build a truly scalable pizza shop.

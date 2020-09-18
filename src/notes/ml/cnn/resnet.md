@@ -26,7 +26,7 @@ $$ \text{where } a^{[l+2]} = relu(z^{[l+2]} + a^{[l]}) $$
 
 $$ a^{[l]} \to \overbrace{z^{[l+1]}}^{W^{[l+1]}a^{[l]} + b^{[l+1]}} \to \overbrace{a^{[l+1]}}^{relu(z^{[l+1]})} \to \overbrace{z^{[l+2]}}^{W^{[l+2]}a^{[l+1]} + b^{[l+2]}} \to \overbrace{a^{[l+2]}}^{relu(z^{[l+2]}+a^{[l]})} $$
 
-![residualblock](/img/resblock.svg)
+![residualblock](../../../img/resblock.svg)
 
 ### Benefit of ResNet
 - Theoretically, the training error should continue to decrease as we increase the number of layers to a plain network
@@ -35,7 +35,7 @@ $$ a^{[l]} \to \overbrace{z^{[l+1]}}^{W^{[l+1]}a^{[l]} + b^{[l+1]}} \to \overbra
 - Resnet is able avoid this problem
 - Specifically, resnet is able to increase accuracy as the number of layers increases
 
-![resneterror](/img/resnet_error.svg)
+![resneterror](../../../img/resnet_error.svg)
 
 ### Why ResNets Work?
 - Suppose we begin to observe the vanishing gradient problem during training

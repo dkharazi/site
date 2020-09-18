@@ -28,15 +28,15 @@ katex: true
 - As a result, the vanishing gradient problem can occur throughout the learning process
 - We can use a contour plot to visualize the behavior of our cost function:
 
-![contourgradient](/img/contour_gradient.svg)
+![contourgradient](../../../img/contour_gradient.svg)
 
 - Roughly speaking, if we see points where the cost function becomes elongated or plateaued, then we will experience the vanishing gradient problem:
 
-![plateaucost](/img/cost_plateau.svg)
+![plateaucost](../../../img/cost_plateau.svg)
 
 - In comparison, a more optimal shape looks like the following:
 
-![optimalcost](/img/cost_optimal.svg)
+![optimalcost](../../../img/cost_optimal.svg)
 
 - In both situations, the gradients become smaller near the minimum
 - Meaning, the learning speed becomes slower near the minimum
@@ -62,7 +62,7 @@ katex: true
 - This is because the gradient of the earlier layer becomes so small for a deep network
 - We can see this in the following example:
 
-![plateausimulation](/img/plateau_simulation.svg)
+![plateausimulation](../../../img/plateau_simulation.svg)
 
 - Visually, we can interpret an exploding gradient as approaching gradient cliffs, which launches parameters into space
 - In summary, the vanishing gradient problem refers to getting stuck at these plateaus, where it's difficult to many any progress because learning of earlier layers is so slow (but not theoretically impossible)
@@ -82,7 +82,7 @@ katex: true
 - Therefore, these types of activation functions suffer from the vanishing gradient problem
 - For example, the distribution of derivatives looks like the following:
 
-![derivativedistribution](/img/sigmoid_derivatives.svg)
+![derivativedistribution](../../../img/sigmoid_derivatives.svg)
 
 - We can see the maximum point of the function is $0.25$, which is very small
 - In other words, the output of the derivative of the cost function is always between $0$ and $0.25$
@@ -147,6 +147,7 @@ $$ \frac{\partial relu(x)}{\partial x} = \begin{cases} 0 &\text{if } x \le 0 \cr
 - Therefore, both the activation function and deepness of our network influence the vanishing gradient problem
 - In other words, the vanishing gradient problem is a consequence of the deepness of our network, which can be observed mathematically using the chain rule in backward propagation
 - The vanishing gradient problem is also a consequence of the activation function, which can be observed by swapping to another activation function (such as ReLU)
+
 ---
 
 ### References

@@ -21,7 +21,7 @@ const Blog = ({data}) => {
             <div className={blogStyles.post}>
               <h1>{data.markdownRemark.frontmatter.title}</h1>
               <div className={blogStyles.date}>Written on {data.markdownRemark.frontmatter.date}</div>
-              <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
+              <div className={blogStyles.blogHtml} dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
             </div>
         </Layout>
     )

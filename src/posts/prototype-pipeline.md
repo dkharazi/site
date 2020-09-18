@@ -22,7 +22,7 @@ Furthermore, these stages don't usually occur in perfectly successive steps. Rat
 ## Motivating a Data Science Pipeline
 The DevOps lifecycle delineates the journey of project development. At a high level, it determines a philosophy that enforces agility and collaboration between software development and IT operations. There are 8 phases included in the DevOps lifecycle, but this post won't be going into these specifics. For details about individual phases within the DevOps lifecycle, refer to [these articles](https://realpython.com/tutorials/devops/), which introduce DevOps solutions in Python.
 
-![pydevops](/img/pydevops.svg)
+![pydevops](../img/pydevops.svg)
 
 To motivate the use of a prototyping pipeline, we'll focus on the *plan* and *code* phase for most of this post. As stated previously, there are many moving parts in a data science pipeline. Generally, any prototyping pipeline will include the following steps:
 - Understanding a business problem
@@ -41,7 +41,7 @@ Furthermore, a WSGI server can be used as an application server. It handles requ
 
 Similarly, there are many HTTP web servers available, but Nginx is [highly suggested](https://docs.gunicorn.org/en/stable/deploy.html) when working with Gunicorn. Again, Nginx is our web server, which accepts the client requests and handles any HTTP connections. These HTTP requests are passed on to the Gunicorn WSGI servers. When combining these components together, our pipeline begins to take the following shape:
 
-![prototypepipeline](/img/prototype.svg)
+![prototypepipeline](../img/prototype.svg)
 
 Although Nginx sits inside the same server as the Flask web application in this example, it can be served on its own server. Also, the web server can run in a docker container that is located within or outside of the container running our web application. In a productionized environment, we may think about running the Nginx web server to help balance the load.
 

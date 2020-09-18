@@ -17,7 +17,7 @@ katex: true
 	- White terms represent concepts
 	- Green terms represent implementations of those concepts
 
-![asyncio](/img/asyncio.png)
+![asyncio](../../../img/asyncio.png)
 
 ### Illustrating Async Code with a Chess Analogy
 - Asyncio may seem counterintuitive

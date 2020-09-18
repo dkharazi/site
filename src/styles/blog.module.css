@@ -12,6 +12,24 @@
     font-weight: 500;
     text-decoration: underline;
 }
+
+.post ul,
+.post ol {
+    margin: 1rem 0;
+}
+
+.post ol ul,
+.post ul ol {
+    margin: 0 !important;
+}
+
+.post p {
+    margin: 1rem 0;
+}
+
+.blogHtml img {
+    margin: 2rem auto;
+}
   
 @keyframes fadeIn {
     0% {

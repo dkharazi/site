@@ -15,7 +15,7 @@ katex: true
 - For example, no matter if *love* is used as a verb or a noun in some context, its spelling and whether it consists of alphabetic characters won't ever change
 - Its hash value will always be the same
 
-![Vocab](/img/vocab.svg)
+![Vocab](../../../img/vocab.svg)
 
 ### Summarizing the Spacy Architecture
 - The `Doc` objects owns the data
@@ -26,7 +26,7 @@ katex: true
 - Specifically, it takes raw text and sends it through the pipeline, returning an annotated document
 - It also orchestrates training and serialization
 
-![SpacyArchitecture](/img/architecture.svg)
+![SpacyArchitecture](../../../img/architecture.svg)
 
 ### References
 - [Spacy Architecture](https://spacy.io/usage/spacy-101#architecture)

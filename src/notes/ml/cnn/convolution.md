@@ -116,13 +116,13 @@ $$ d = \lfloor \frac{n+2p-f}{s} + 1 \rfloor $$
 - For example, we can convolve over a $6 \times 6$ RGB image
 - In this case, we would create a $6 \times 6 \times 3$ volume, where each of the $3$ layers represents a red, green, or blue channel
 
-![convolution_volume](/img/convolution_volume.svg)
+![convolution_volume](../../../img/convolution_volume.svg)
 
 - Notice, the number of channels in our image must match the number of channels in our filter
 - We can apply multiple filters to a single volume
 - This will lead to our output image having multiple channels:
 
-![convolution_volumes](/img/convolution_volumes.svg)
+![convolution_volumes](../../../img/convolution_volumes.svg)
 
 - In theory, we can have a filter that only looks at certain channels
 - In other words, we can have a filter that only looks at the red channel, blue channel, or green channel
@@ -136,14 +136,14 @@ $$ \overbrace{\def \arraystretch{1.5} \begin{array}{c|c|c} 1 & 0 & -1 \cr \hline
 
 ### Example of Convolution over Volumes
 
-![convolutionexample](/img/convolution_example.svg)
+![convolutionexample](../../../img/convolution_example.svg)
 
 ### Alternative Visualization of Volumes
 - We can also visualize images and filters as cubes
 - Each pixel can be represented as a small block
 - The following is an example of our stack represented using cubes:
 
-![convolutioncube](/img/convolution_cube.svg)
+![convolutioncube](../../../img/convolution_cube.svg)
 
 ---
 

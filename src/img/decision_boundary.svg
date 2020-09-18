@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg39"
+   version="1.1"
+   viewBox="0 0 300 120"
+   height="120mm"
+   width="300mm"
+   sodipodi:docname="decision_boundary.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1327"
+     inkscape:window-height="711"
+     id="namedview137"
+     showgrid="false"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="501.82968"
+     inkscape:cy="202.41175"
+     inkscape:window-x="32"
+     inkscape:window-y="49"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g972" />
+  <defs
+     id="defs33">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path995"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata36">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-177)"
+     id="layer1">
+    <g
+       transform="translate(-8.9958336,1.0076858)"
+       id="g3686">
+      <g
+         transform="translate(5.9531286)"
+         id="g3851">
+        <g
+           id="g972">
+          <g
+             id="g1075"
+             transform="translate(-65.087478,-0.01141789)">
+            <g
+               id="g1037"
+               transform="translate(18.736135)">
+              <path
+                 inkscape:connector-curvature="0"
+                 id="path1031"
+                 d="M 92.827224,273.5817 V 190.35842"
+                 style="fill:none;stroke:#000000;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+              <path
+                 style="fill:none;stroke:#000000;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="M 176.0505,273.64684 H 92.827224"
+                 id="path1033"
+                 inkscape:connector-curvature="0" />
+            </g>
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               x="191.90826"
+               y="281.77615"
+               id="text1041"><tspan
+                 sodipodi:role="line"
+                 id="tspan1039"
+                 x="191.90826"
+                 y="281.77615"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">1</tspan></text>
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               x="109.88129"
+               y="281.77356"
+               id="text1045"><tspan
+                 sodipodi:role="line"
+                 id="tspan1043"
+                 x="109.88129"
+                 y="281.77356"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">0</tspan></text>
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               x="104.11839"
+               y="273.83649"
+               id="text1049"><tspan
+                 sodipodi:role="line"
+                 id="tspan1047"
+                 x="104.11839"
+                 y="273.83649"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">0</tspan></text>
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               x="104.07059"
+               y="194.21606"
+               id="text1053"><tspan
+                 sodipodi:role="line"
+                 id="tspan1051"
+                 x="104.07059"
+                 y="194.21606"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">1</tspan></text>
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="path1076"
+               cx="171.18541"
+               cy="192.67252"
+               r="2.5065789" />
+            <circle
+               r="2.5135417"
+               cy="192.67252"
+               cx="124.08958"
+               id="circle1100"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5065789"
+               cy="192.67252"
+               cx="182.82692"
+               id="circle1112"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5135417"
+               cy="198.49327"
+               cx="118.26875"
+               id="circle1120"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5135417"
+               cy="198.49327"
+               cx="131.49783"
+               id="circle1126"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5135417"
+               cy="195.31831"
+               cx="139.43523"
+               id="circle1128"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1136"
+               cx="129.91035"
+               cy="204.31403"
+               r="2.5135417" />
+            <circle
+               r="2.5135417"
+               cy="206.43066"
+               cx="141.55186"
+               id="circle1140"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1142"
+               cx="147.37262"
+               cy="201.13907"
+               r="2.5135417" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1144"
+               cx="118.26875"
+               cy="210.13478"
+               r="2.5135417" />
+            <circle
+               r="2.5135417"
+               cy="203.78487"
+               cx="123.03124"
+               id="circle1146"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1150"
+               cx="135.73111"
+               cy="207.48898"
+               r="2.5135417" />
+            <circle
+               r="2.5135417"
+               cy="212.25142"
+               cx="145.78514"
+               id="circle1154"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5135417"
+               cy="215.95554"
+               cx="124.08958"
+               id="circle1158"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5135417"
+               cy="212.78058"
+               cx="129.91035"
+               id="circle1160"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1164"
+               cx="138.37691"
+               cy="215.95554"
+               r="2.5135417" />
+            <circle
+               r="2.5135417"
+               cy="219.65965"
+               cx="144.19766"
+               id="circle1166"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1172"
+               cx="129.3812"
+               cy="219.65965"
+               r="2.5135417" />
+            <circle
+               r="2.5135417"
+               cy="221.77629"
+               cx="135.73111"
+               id="circle1174"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5065789"
+               cy="199.02243"
+               cx="189.70599"
+               id="circle1186"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5065789"
+               cy="198.49327"
+               cx="165.36465"
+               id="circle1190"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5065789"
+               cy="204.31403"
+               cx="171.18541"
+               id="circle1192"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1196"
+               cx="180.18112"
+               cy="201.66823"
+               r="2.5065789" />
+            <circle
+               r="2.5065789"
+               cy="205.9015"
+               cx="159.5439"
+               id="circle1212"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1214"
+               cx="166.95213"
+               cy="210.13478"
+               r="2.5065789" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1216"
+               cx="175.41869"
+               cy="213.30974"
+               r="2.5065789" />
+            <circle
+               r="2.5065789"
+               cy="213.30974"
+               cx="184.4144"
+               id="circle1220"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5065789"
+               cy="217.01385"
+               cx="161.13138"
+               id="circle1224"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1226"
+               cx="167.48129"
+               cy="216.4847"
+               r="2.5065789" />
+            <circle
+               r="2.5065789"
+               cy="221.77629"
+               cx="173.30205"
+               id="circle1228"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1232"
+               cx="181.23944"
+               cy="220.71797"
+               r="2.5065789" />
+            <circle
+               r="2.5065789"
+               cy="219.65965"
+               cx="190.23515"
+               id="circle1234"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5065789"
+               cy="236.06393"
+               cx="129.91096"
+               id="circle1240"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1242"
+               cx="138.37752"
+               cy="237.12225"
+               r="2.5065789" />
+            <circle
+               r="2.5065789"
+               cy="236.06393"
+               cx="121.44434"
+               id="circle1250"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1252"
+               cx="133.08592"
+               cy="242.41385"
+               r="2.5065789" />
+            <circle
+               r="2.5065789"
+               cy="246.64713"
+               cx="139.965"
+               id="circle1254"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5065789"
+               cy="239.76805"
+               cx="145.25659"
+               id="circle1256"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5065789"
+               cy="245.58881"
+               cx="118.26934"
+               id="circle1260"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1262"
+               cx="124.61932"
+               cy="241.88469"
+               r="2.5065789" />
+            <circle
+               r="2.5065789"
+               cy="248.76376"
+               cx="133.61508"
+               id="circle1266"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1270"
+               cx="147.37323"
+               cy="247.70544"
+               r="2.5065789" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1274"
+               cx="125.14849"
+               cy="247.70544"
+               r="2.5065789" />
+            <circle
+               r="2.5065789"
+               cy="256.172"
+               cx="131.49844"
+               id="circle1276"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1280"
+               cx="141.55247"
+               cy="253.5262"
+               r="2.5065789" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1284"
+               cx="118.26934"
+               cy="253.5262"
+               r="2.5065789" />
+            <circle
+               r="2.5065789"
+               cy="253.5262"
+               cx="125.14849"
+               id="circle1286"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5065789"
+               cy="259.34705"
+               cx="147.37323"
+               id="circle1294"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1296"
+               cx="121.97349"
+               cy="259.34705"
+               r="2.5065789" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1300"
+               cx="129.91096"
+               cy="265.16788"
+               r="2.5065789" />
+            <circle
+               r="2.5065789"
+               cy="262.522"
+               cx="135.73172"
+               id="circle1302"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5065789"
+               cy="264.10953"
+               cx="141.55247"
+               id="circle1304"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5135417"
+               cy="240.29723"
+               cx="171.18529"
+               id="circle1328"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1330"
+               cx="177.00604"
+               cy="239.76807"
+               r="2.5135417" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1332"
+               cx="182.8268"
+               cy="240.82639"
+               r="2.5135417" />
+            <circle
+               r="2.5135417"
+               cy="242.94302"
+               cx="188.64755"
+               id="circle1334"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5135417"
+               cy="242.94302"
+               cx="165.36452"
+               id="circle1338"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5135417"
+               cy="247.70546"
+               cx="171.18529"
+               id="circle1340"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1344"
+               cx="179.65184"
+               cy="247.70546"
+               r="2.5135417" />
+            <circle
+               r="2.5135417"
+               cy="250.88042"
+               cx="188.64755"
+               id="circle1346"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1350"
+               cx="165.36452"
+               cy="253.52621"
+               r="2.5135417" />
+            <circle
+               r="2.5135417"
+               cy="253.52621"
+               cx="177.00604"
+               id="circle1354"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5135417"
+               cy="255.64285"
+               cx="182.8268"
+               id="circle1356"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               r="2.5135417"
+               cy="259.34698"
+               cx="160.60205"
+               id="circle1360"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1370"
+               cx="188.64755"
+               cy="259.34698"
+               r="2.5135417" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1372"
+               cx="164.30617"
+               cy="264.63858"
+               r="2.5135417" />
+            <circle
+               r="2.5135417"
+               cy="262.52188"
+               cx="170.65613"
+               id="circle1376"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1378"
+               cx="179.65184"
+               cy="261.99271"
+               r="2.5135417" />
+            <circle
+               r="2.5065789"
+               cy="201.66823"
+               cx="180.18112"
+               id="circle1077"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1173"
+               cx="160.60205"
+               cy="259.34698"
+               r="2.5135417" />
+          </g>
+          <g
+             id="g1296"
+             transform="translate(-32.808359,-0.1111405)">
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1079"
+               cx="325.69543"
+               cy="192.67252"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="192.67252"
+               cx="337.33694"
+               id="circle1081"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="199.02243"
+               cx="344.216"
+               id="circle1083"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="198.49327"
+               cx="319.87469"
+               id="circle1085"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="204.31403"
+               cx="325.69543"
+               id="circle1087"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1089"
+               cx="334.69116"
+               cy="201.66823"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="205.9015"
+               cx="314.05392"
+               id="circle1091"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1093"
+               cx="321.46216"
+               cy="210.13478"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1095"
+               cx="329.92871"
+               cy="213.30974"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="203.78474"
+               cx="305.05777"
+               id="circle1097"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="217.01385"
+               cx="315.64142"
+               id="circle1099"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1101"
+               cx="321.99133"
+               cy="216.4847"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="212.2513"
+               cx="310.87875"
+               id="circle1103"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1105"
+               cx="300.82449"
+               cy="194.7888"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="195.84715"
+               cx="311.40768"
+               id="circle1107"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="201.66823"
+               cx="334.69116"
+               id="circle1109"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="230.24318"
+               cx="297.64877"
+               id="circle1111"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1113"
+               cx="306.11533"
+               cy="231.3015"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="230.24318"
+               cx="289.18225"
+               id="circle1115"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1117"
+               cx="284.94873"
+               cy="221.24725"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="240.82637"
+               cx="307.70279"
+               id="circle1119"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="233.9473"
+               cx="312.99438"
+               id="circle1121"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="239.76805"
+               cx="286.00726"
+               id="circle1123"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1125"
+               cx="293.4155"
+               cy="208.0181"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="214.89717"
+               cx="304.52786"
+               id="circle1127"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1129"
+               cx="302.41101"
+               cy="223.36386"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1131"
+               cx="293.94467"
+               cy="240.29721"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="250.35124"
+               cx="299.23624"
+               id="circle1133"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1135"
+               cx="283.36111"
+               cy="232.88878"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1137"
+               cx="286.00726"
+               cy="247.70544"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="247.70544"
+               cx="292.88632"
+               id="circle1139"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="217.0137"
+               cx="296.59018"
+               id="circle1141"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1143"
+               cx="289.71136"
+               cy="253.5262"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1145"
+               cx="300.82376"
+               cy="210.66362"
+               r="2.5065789"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="236.59276"
+               cx="301.88202"
+               id="circle1147"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5065789"
+               cy="254.05527"
+               cx="283.36111"
+               id="circle1149"
+               style="opacity:1;fill:#ff7675;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5135417"
+               cy="262.52222"
+               cx="314.58951"
+               id="circle1151"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1153"
+               cx="338.93112"
+               cy="235.53473"
+               r="2.5135417"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1155"
+               cx="345.2811"
+               cy="237.65143"
+               r="2.5135417"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5135417"
+               cy="244.00134"
+               cx="346.86847"
+               id="circle1157"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5135417"
+               cy="256.17218"
+               cx="320.41043"
+               id="circle1159"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5135417"
+               cy="244.53046"
+               cx="330.99368"
+               id="circle1161"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1163"
+               cx="339.46024"
+               cy="246.64713"
+               r="2.5135417"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5135417"
+               cy="250.88042"
+               cx="346.86847"
+               id="circle1165"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1167"
+               cx="327.81876"
+               cy="253.52621"
+               r="2.5135417"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5135417"
+               cy="253.52621"
+               cx="335.22696"
+               id="circle1169"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5135417"
+               cy="255.64285"
+               cx="341.0477"
+               id="circle1171"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1175"
+               cx="346.86847"
+               cy="259.34698"
+               r="2.5135417"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1177"
+               cx="322.52707"
+               cy="264.63858"
+               r="2.5135417"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               r="2.5135417"
+               cy="262.52188"
+               cx="328.87704"
+               id="circle1179"
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               transform="translate(-65.616667,3.1750006)" />
+            <circle
+               style="opacity:1;fill:#74b9ff;fill-opacity:1;stroke:#000000;stroke-width:0.00000003;stroke-miterlimit:4.69999981;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="circle1181"
+               cx="337.87274"
+               cy="261.99271"
+               r="2.5135417"
+               transform="translate(-65.616667,3.1750006)" />
+            <g
+               transform="translate(117.1612)"
+               id="g978">
+              <path
+                 style="fill:none;stroke:#000000;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="M 92.827224,273.5817 V 190.35842"
+                 id="path974"
+                 inkscape:connector-curvature="0" />
+              <path
+                 inkscape:connector-curvature="0"
+                 id="path976"
+                 d="M 176.0505,273.64684 H 92.827224"
+                 style="fill:none;stroke:#000000;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+            </g>
+            <text
+               id="text982"
+               y="281.77615"
+               x="290.33316"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               xml:space="preserve"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+                 y="281.77615"
+                 x="290.33316"
+                 id="tspan980"
+                 sodipodi:role="line">1</tspan></text>
+            <text
+               id="text986"
+               y="281.77356"
+               x="208.30605"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               xml:space="preserve"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+                 y="281.77356"
+                 x="208.30605"
+                 id="tspan984"
+                 sodipodi:role="line">0</tspan></text>
+            <text
+               id="text990"
+               y="273.83649"
+               x="202.54317"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               xml:space="preserve"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+                 y="273.83649"
+                 x="202.54317"
+                 id="tspan988"
+                 sodipodi:role="line">0</tspan></text>
+            <text
+               id="text994"
+               y="194.21606"
+               x="202.49536"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               xml:space="preserve"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+                 y="194.21606"
+                 x="202.49536"
+                 id="tspan992"
+                 sodipodi:role="line">1</tspan></text>
+          </g>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;font-size:7.58306265px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18957657"
+             x="187.42607"
+             y="290.62955"
+             id="text1304"><tspan
+               sodipodi:role="line"
+               id="tspan1302"
+               x="187.42607"
+               y="290.62955"
+               style="stroke-width:0.18957657">Transformed space</tspan></text>
+          <text
+             id="text1308"
+             y="290.62955"
+             x="59.191547"
+             style="font-style:normal;font-weight:normal;font-size:7.58306265px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18957657"
+             xml:space="preserve"><tspan
+               style="stroke-width:0.18957657"
+               y="290.62955"
+               x="59.191547"
+               id="tspan1306"
+               sodipodi:role="line">Original x space</tspan></text>
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.52916667;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+             d="m 141.8625,235.99231 h 18.70886"
+             id="path966"
+             inkscape:connector-curvature="0" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.21881042;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:0.87524169,0.43762084;stroke-dashoffset:0"
+             d="m 195.87189,268.75772 58.96525,-58.96526"
+             id="path973"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

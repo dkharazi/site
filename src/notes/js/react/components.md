@@ -15,7 +15,7 @@ katex: true
 	- A root component
 - The root component is usually named `App.js`
 
-![ReactComponent](/img/reactcomponent.svg)
+![ReactComponent](../../../img/reactcomponent.svg)
 
 ### Properties of Components
 - Components are reusable

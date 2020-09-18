@@ -17,7 +17,7 @@ katex: true
 - On the other hand, we may never converge to the minimum if we start with a somewhat small learning rate
 - Slowly reducing the learning rate overtime can help improve the performance of an optimization algorithm
 
-![learningdecay](/img/learning_decay.svg)
+![learningdecay](../../../img/learning_decay.svg)
 
 ### Defining Standard Learning Rate Decay
 1. Compute $\alpha_{i}$ for the current epoch $i$

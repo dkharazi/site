@@ -18,7 +18,7 @@ katex: true
 	2. Perform sliding windows detection on live video or new images
 	3. Output a list of bounding boxes around any cars if they exist
 
-![convolutiondetection](/img/convolution_detection.svg)
+![convolutiondetection](../../../img/convolution_detection.svg)
 
 ### Algorithm for Sliding Windows Detection
 1. Initialize a window size
@@ -39,7 +39,7 @@ al network
 	- Then, input the image region into the convolutional network while shifting the window to a slightly different region of the image afterwards
 	- We should keep increasing the window size 2-3 times
 
-![slidingwindow](/img/slidingwindow.gif)
+![slidingwindow](../../../img/slidingwindow.gif)
 
 ### Describing Sliding Window Detection
 - Sliding window detection involves sliding a window across an entire image
@@ -63,14 +63,14 @@ al network
 - Each of the $400$ filters is made up of weights $w$
 - So, convolving the filters with the image is essentially performing $g(wa^{[l-1]})$ where $g$ is a linear activation function
 
-![convolitionalfclayers](/img/convolutionalfc.svg)
+![convolitionalfclayers](../../../img/convolutionalfc.svg)
 
 ### Implementing Sliding Window Convolutionally
 - Let's return to our sliding window problem
 - Rather than iteratively inputting each sliding window region into our network, we can convolutionally perform the predictions all at once
 - We can do this by using $1 \times 1$ convolutional layers in place of fully-connected layer
 
-![convslidingwindow](/img/convslidingwindow.svg)
+![convslidingwindow](../../../img/convslidingwindow.svg)
 
 ---
 
