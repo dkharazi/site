@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SubCategory from '../components/subcategory'
@@ -58,6 +58,12 @@ const Category = ({ location, data, pageContext }) => {
         return edge.node.fields.subCategory === '_index';
     })
 
+    // Assign location.state to state for gatsby build
+    const [color, setColor] = useState(null);
+    useEffect(() => {
+        setColor(location.state.colorIdx)
+    }, [location])
+
     return (
         <Layout>
             <div className={catStyles.category}>
@@ -75,7 +81,7 @@ const Category = ({ location, data, pageContext }) => {
                                 subCategory={subCat}
                                 subCategoryNickname={catData[0].node.frontmatter.names[idx]}
                                 pageData={data}
-                                colorIdx={location.state.colorIdx}
+                                colorIdx={color}
                             />
                         )
                     })}
