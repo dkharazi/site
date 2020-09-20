@@ -12,6 +12,7 @@ In this post, we walk through the steps of running a site on GitHub created by a
 	- We'll refer to this directory as `./mysite`
 	- This directory will contain the files on the hugo site
 	- The directory should look like this:
+
 ```
 mysite/
 ├── archetypes/
@@ -23,8 +24,8 @@ mysite/
 ├── resources/
 ├── static/
 └── themes/
-
 ```
+
 2. Create a new repository in GitHub
 	- Call this repository `<username>.github.io`
 	- Where `<username>` is a github username
@@ -32,6 +33,7 @@ mysite/
 3. Call `hugo` to create a public directory
 	- This command build the site to the public directory
 4. In the new `public` directory, initialize the git repo
+
 ```
 $ cd public
 $ git init
