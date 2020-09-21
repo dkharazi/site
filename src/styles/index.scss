@@ -394,6 +394,12 @@ tbody tr:nth-child(odd) th {
   }
 }
 
+@media (max-width: 30rem) {
+  .container {
+      max-width: 20rem;
+  }
+}
+
 
 /*
  * Masthead
