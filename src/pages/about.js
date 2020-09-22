@@ -29,111 +29,99 @@ const AboutPage = () => {
             <h3 className={`${aboutStyles.subject} t1`}>Experience</h3>
             <ResumeItem
                 company="Abercrombie"
-                role="Backend Developer"
-                startDate="Jan 2016"
-                endDate="May 2017"
-                tech="JavaScript"
+                role="Machine Learning Engineer"
+                startDate="Jan 2019"
+                endDate="Present"
+                tech="Python, R"
                 color="1"
             >
                 <ul className={aboutStyles.description}>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
                 </ul>
             </ResumeItem>
             <ResumeItem
                 company="MCPc"
                 role="Data Science Consultant"
-                startDate="Oct 2015"
-                endDate="March 2016"
-                tech="Python"
+                startDate="Nov 2017"
+                endDate="Jan 2019"
+                tech="Python, R"
                 color="1"
             >
                 <ul className={aboutStyles.description}>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
+                    <li>Built a frontent prototype for performance evaluation of employees using Dash in Python</li>
+                    <li>Built web service for predicting workplace safety using Flask for REST API calls</li>
+                    <li>Trained SVM classifiers for web service using scikit-learn in Python</li>
+                    <li>Performed data profiling and data design using an ETL methodology with SQL, Python, and R</li>
                 </ul>
             </ResumeItem>
             <ResumeItem
                 company="XLHost"
                 role="Data Engineer"
-                startDate="Sept 2013"
-                endDate="June 2014"
-                tech="Java"
+                startDate="May 2015"
+                endDate="Aug 2017"
+                tech="JavaScript, Python"
                 color="1"
             >
                 <ul className={aboutStyles.description}>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
+                    <li>Built Flask applications for REST API calls using Python</li>
+                    <li>Used HBase as backend for web apps</li>
+                    <li>Experience in programming with RDDs using PySpark in Python</li>
+                    <li>Developed Spark jobs for batch processing</li>
+                    <li>Built features for website using ReactJS</li>
                 </ul>
             </ResumeItem>
 
             <h3 className={`${aboutStyles.subject} t2`}>Education</h3>
             <ResumeItem
                 company="Ohio State University"
-                role="Backend Developer"
-                startDate="Jan 2016"
-                endDate="May 2017"
-                tech="JavaScript"
+                startDate="August 2014"
+                endDate="May 2018"
                 color="2"
             >
                 <ul className={aboutStyles.description}>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
+                    <li>Co-founder of BlanketBooks</li>
+                    <li>Advisor for Data Analytics Academic Path Peers</li>
+                    <li>Researcher in Data Mining for Fisher College of Business</li>
+                    <li>Teaching Assistant for CSE 2321 - Discrete Structures</li>
                 </ul>
             </ResumeItem>
 
             <h3 className={`${aboutStyles.subject} t3`}>Community</h3>
             <ResumeItem
-                company="Advisor"
-                role="Backend Developer"
-                startDate="Jan 2016"
-                endDate="May 2017"
-                tech="JavaScript"
-                color="3"
-            >
-                <ul className={aboutStyles.description}>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
-                </ul>
-            </ResumeItem>
-            <ResumeItem
                 company="Organizer"
-                role="Backend Developer"
-                startDate="Jan 2016"
-                endDate="May 2017"
-                tech="JavaScript"
+                startDate="Aug 2016"
+                endDate="Present"
                 color="3"
             >
                 <ul className={aboutStyles.description}>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
+                    <li>Coordinated Python and Hadoop workshops for 30+ students</li>
+                    <li>Developed and documented study groups used for sharing various coding frameworks and practices</li>
+                    <li>Hosted and ran 10 workshops about best-practices for git, databases, etc.</li>
                 </ul>
             </ResumeItem>
             <ResumeItem
-                company="Public Speaking"
-                role="Backend Developer"
-                startDate="Jan 2016"
-                endDate="May 2017"
-                tech="JavaScript"
+                company="Consultant"
+                startDate="Aug 2016"
+                endDate="Present"
                 color="3"
             >
                 <ul className={aboutStyles.description}>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
-                    <li>Built the front end for features such as </li>
-                    <li>Developed a prototype iPhone application to transfer data async</li>
+                    <li>Created and configured databases for a small startup and open-source project</li>
+                    <li>Designed recommendation algorithms for a web-hosting company and open-source project</li>
+                    <li>Consulted for a large mid-western utility company using Python</li>
+                    <li>Consulted for a large mid-western retailer using Python and R</li>
+                </ul>
+            </ResumeItem>
+            <ResumeItem
+                company="Advisor"
+                startDate="Aug 2014"
+                endDate="May 2018"
+                color="3"
+            >
+                <ul className={aboutStyles.description}>
+                    <li>Introduced Git to a non-technical audience in a small startup</li>
+                    <li>Motivated the benefits of version control and containerization to IT professionals in Columbus</li>
+                    <li>Mentored 40+ engineering students about the search process for internships and a healthy work/study/life balance</li>
+                    <li>Became the primary point of contact for engineering students interested in data analytics at the Ohio State University</li>
                 </ul>
             </ResumeItem>
         </Layout>
