@@ -8,7 +8,7 @@ import { width, height, projection, colorScale } from '../../constants/trips/map
 import { circleToPath, starToPath } from '../../constants/trips/geo';
 import statesJson from '../../data/trips/states.json';
 
-const Map = ({ mapDOM, tooltipDOM, titleDOM, containerDOM, visitedFocus, willvisitFocus, shiftStar, changeStar, setLoadMap }) => {
+const Map = ({ mapDOM, tooltipDOM, titleDOM, containerDOM, mastDOM, visitedFocus, willvisitFocus, shiftStar, changeStar, setLoadMap }) => {
 
   let data = useStaticQuery(graphql`
     query {
@@ -29,9 +29,9 @@ const Map = ({ mapDOM, tooltipDOM, titleDOM, containerDOM, visitedFocus, willvis
   data = data.allCitiesData.edges;
 
   useEffect(() => {
-    buildMap(data, mapDOM, tooltipDOM, titleDOM, containerDOM)
+    buildMap(data, mapDOM, tooltipDOM, titleDOM, containerDOM, mastDOM)
     setLoadMap('loaded')
-  }, [data, mapDOM, tooltipDOM, titleDOM, containerDOM, setLoadMap])
+  }, [data, mapDOM, tooltipDOM, titleDOM, containerDOM, mastDOM, setLoadMap])
 
   useEffect(() => {
     focusPoints(mapDOM, visitedFocus, willvisitFocus)
@@ -62,7 +62,7 @@ const Map = ({ mapDOM, tooltipDOM, titleDOM, containerDOM, visitedFocus, willvis
     })
   }
 
-  const buildMap = (data, mapDOM, tooltipDOM, titleDOM, containerDOM) => {
+  const buildMap = (data, mapDOM, tooltipDOM, titleDOM, containerDOM, mastDOM) => {
 
     // Define path generator
     const path = geoPath()                    // path generator that will convert GeoJSON to SVG paths
@@ -118,8 +118,11 @@ const Map = ({ mapDOM, tooltipDOM, titleDOM, containerDOM, visitedFocus, willvis
         .style("stroke-width", 2)
         .style("opacity", 0.85)
         .on("mouseover", function(event, d) {
-          const height = titleDOM.current.offsetHeight;
-          const left = containerDOM.current.offsetLeft;
+          const titleHeight = titleDOM.current.offsetHeight;
+          console.log(`titleHeight: ${titleHeight}`)
+          const mastHeight = mastDOM.current.offsetHeight;
+          console.log(`mastHeight: ${mastHeight}`)
+          const containerLeft = containerDOM.current.getBoundingClientRect().left;
           const x = event.pageX;
           const y = event.pageY;
           select(this)
@@ -136,8 +139,8 @@ const Map = ({ mapDOM, tooltipDOM, titleDOM, containerDOM, visitedFocus, willvis
               .style("opacity", .9);
           tooltip
               .text(d.node.place)
-              .style("top", `${y-height+10}px`)  // d3.select(this).attr("cy")
-              .style("left", `${x-left-35}px`);  // d3.select(this).attr("cx")
+              .style("top", `${y-titleHeight-mastHeight-35}px`)  // d3.select(this).attr("cy")
+              .style("left", `${x-containerLeft-50}px`);  // d3.select(this).attr("cx")
         })
         .on("mouseout", function(d) {
             select(this)

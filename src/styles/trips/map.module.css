@@ -8,6 +8,7 @@ svg {
 }
 
 .map {
+  position: relative;
   overflow: visible;
 }
 
@@ -24,6 +25,7 @@ svg {
   border-radius: 8px;
   pointer-events: none;
   opacity: 0;
+  z-index: 10;
 }
 
 .tooltip::after {

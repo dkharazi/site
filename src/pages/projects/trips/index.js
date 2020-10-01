@@ -2,7 +2,7 @@ import React, {useRef, useState} from 'react';
 import Header from '../../../components/trips/header';
 import Graphic from '../../../components/trips/graphic';
 import Metrics from '../../../components/trips/metrics';
-import Layout from "../../../components/layout"
+import TripsLayout from "../../../components/trips/tripsLayout"
 import legendStyles from '../../../styles/trips/legend.module.css';
 
 const TripsPage = () => {
@@ -18,9 +18,10 @@ const TripsPage = () => {
   const tooltip = useRef(null);
   const title = useRef(null);
   const container = useRef(null);
+  const mast = useRef(null);
 
   return (
-    <Layout>
+    <TripsLayout mast={mast}>
       <Header
         title={title}
       />
@@ -29,6 +30,7 @@ const TripsPage = () => {
         tooltip={tooltip}
         title={title}
         container={container}
+        mast={mast}
         visitedFocus={visitedFocus}
         setVisitedFocus={setVisitedFocus}
         willvisitFocus={willvisitFocus}
@@ -44,7 +46,7 @@ const TripsPage = () => {
         setShiftStar={setShiftStar}
         setChangeStar={setChangeStar}
       />
-    </Layout>
+    </TripsLayout>
   );
 }
 

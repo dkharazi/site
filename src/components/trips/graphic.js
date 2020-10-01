@@ -3,8 +3,7 @@ import graphicStyles from '../../styles/trips/graphic.module.css';
 import Map from './map';
 import Legend from './legend';
 
-const Graphic = ({ map, tooltip, title, container, visitedFocus, setVisitedFocus, willvisitFocus, setWillvisitFocus, shiftStar, changeStar, loadMap, setLoadMap }) => {
-  console.log(loadMap)
+const Graphic = ({ map, tooltip, title, container, mast, visitedFocus, setVisitedFocus, willvisitFocus, setWillvisitFocus, shiftStar, changeStar, loadMap, setLoadMap }) => {
   return (
     <main className={`${graphicStyles.graphic} ${graphicStyles.container}`} ref={container}>
       <Map
@@ -12,6 +11,7 @@ const Graphic = ({ map, tooltip, title, container, visitedFocus, setVisitedFocus
         tooltipDOM={tooltip}
         titleDOM={title}
         containerDOM={container}
+        mastDOM={mast}
         visitedFocus={visitedFocus}
         willvisitFocus={willvisitFocus}
         shiftStar={shiftStar}
