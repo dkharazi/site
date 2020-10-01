@@ -46,14 +46,12 @@ const ProjectsPage = () => {
         }
     `)
 
-    console.log(data)
-
     return (
         <Layout>
             <div className={`${projectsStyles.gallery}`}>
                 <div className={projectsStyles.column}>
                     <div className={projectsStyles.item}>
-                        <Link to={`/construction`}>
+                        <Link to={`/projects/trips`}>
                             <Img fluid={data.mountains.childImageSharp.fluid} alt="trips" />
                             <div className={projectsStyles.description}>
                                 favorite trips
