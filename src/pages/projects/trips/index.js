@@ -2,6 +2,7 @@ import React, {useRef, useState} from 'react';
 import Header from '../../../components/trips/header';
 import Graphic from '../../../components/trips/graphic';
 import Metrics from '../../../components/trips/metrics';
+import Layout from "../../../components/layout"
 import legendStyles from '../../../styles/trips/legend.module.css';
 
 const TripsPage = () => {
@@ -18,7 +19,7 @@ const TripsPage = () => {
   const container = useRef(null);
 
   return (
-    <React.Fragment>
+    <Layout>
       <Header
         title={title}
       />
@@ -40,7 +41,7 @@ const TripsPage = () => {
         setShiftStar={setShiftStar}
         setChangeStar={setChangeStar}
       />
-    </React.Fragment>
+    </Layout>
   );
 }
 
