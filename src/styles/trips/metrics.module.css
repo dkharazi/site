@@ -7,6 +7,7 @@
   margin-left:  auto;
   margin-right: auto;
   color: #333;
+  animation: fadeIn 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @media (min-width: 76.5em) {
@@ -67,4 +68,13 @@
 .description {
   margin-left: 0.5rem;
   font-size: 0.7rem;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }

@@ -8,7 +8,7 @@ import { width, height, projection, colorScale } from '../../constants/trips/map
 import { circleToPath, starToPath } from '../../constants/trips/geo';
 import statesJson from '../../data/trips/states.json';
 
-const Map = ({ mapDOM, tooltipDOM, titleDOM, containerDOM, visitedFocus, willvisitFocus, shiftStar, changeStar }) => {
+const Map = ({ mapDOM, tooltipDOM, titleDOM, containerDOM, visitedFocus, willvisitFocus, shiftStar, changeStar, setLoadMap }) => {
 
   let data = useStaticQuery(graphql`
     query {
@@ -30,7 +30,8 @@ const Map = ({ mapDOM, tooltipDOM, titleDOM, containerDOM, visitedFocus, willvis
 
   useEffect(() => {
     buildMap(data, mapDOM, tooltipDOM, titleDOM, containerDOM)
-  }, [data, mapDOM, tooltipDOM, titleDOM, containerDOM])
+    setLoadMap('loaded')
+  }, [data, mapDOM, tooltipDOM, titleDOM, containerDOM, setLoadMap])
 
   useEffect(() => {
     focusPoints(mapDOM, visitedFocus, willvisitFocus)

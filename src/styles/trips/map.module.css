@@ -3,6 +3,10 @@ path:hover {
   fill-opacity: .7;
 }
 
+svg {
+  animation: fadeIn 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
 .map {
   overflow: visible;
 }
@@ -35,4 +39,13 @@ path:hover {
 
 .circle {
   transition: opacity 0.1s ease-in-out !important;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }

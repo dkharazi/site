@@ -6,6 +6,7 @@
   width: 5rem;
   color: #505050;
   font-size: 12px;
+  animation: fadeIn 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @media (max-width: 47.95em) {
@@ -80,3 +81,12 @@
 .visitedFocus { opacity: inherit; }
 .willvisitUnfocus { opacity: 0 !important; }
 .willvisitFocus { opacity: inherit; }
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

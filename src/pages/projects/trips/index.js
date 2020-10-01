@@ -12,6 +12,7 @@ const TripsPage = () => {
   const [willvisitFocus, setWillvisitFocus] = useState(legendStyles.willvisitFocus);
   const [shiftStar, setShiftStar] = useState(null);
   const [changeStar, setChangeStar] = useState(null);
+  const [loadMap, setLoadMap] = useState('loading');
 
   const map = useRef(null);
   const tooltip = useRef(null);
@@ -34,6 +35,8 @@ const TripsPage = () => {
         setWillvisitFocus={setWillvisitFocus}
         shiftStar={shiftStar}
         changeStar={changeStar}
+        loadMap={loadMap}
+        setLoadMap={setLoadMap}
       />
       <Metrics
         locs={locs}

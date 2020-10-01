@@ -34,8 +34,6 @@ const Legend = ({ visitedFocus, setVisitedFocus, willvisitFocus, setWillvisitFoc
             </div>
             {text.map(t => {
               let iconClass = `${title.key}${t.key}`;
-              console.log(iconClass)
-              console.log(legendStyles)
               let focusCities = (title.key === 'city' && t.key === 'visited') ? 
                 handleVisitedFocus :
                   ((title.key === 'city' && t.key === 'willvisit') ? 
