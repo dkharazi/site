@@ -5,22 +5,22 @@ import { titles, text } from '../../constants/trips/legend';
 const Legend = ({ visitedFocus, setVisitedFocus, willvisitFocus, setWillvisitFocus }) => {
 
   const handleVisitedFocus = () => {
-    willvisitFocus === 'willvisit-focus' ? setWillvisitFocus('willvisit-unfocus') : setWillvisitFocus('willvisit-focus');
+    willvisitFocus === legendStyles.willvisitFocus ? setWillvisitFocus(legendStyles.willvisitUnfocus) : setWillvisitFocus(legendStyles.willvisitFocus);
   }
 
   const handleWillVisitFocus = () => {
-    visitedFocus === 'visited-focus' ? setVisitedFocus('visited-unfocus') : setVisitedFocus('visited-focus');
+    visitedFocus === legendStyles.visitedFocus ? setVisitedFocus(legendStyles.visitedUnfocus) : setVisitedFocus(legendStyles.visitedFocus);
   }
 
   const handleVisitedFocusKey = (event) => {
     if (event.key === "Enter") {
-      willvisitFocus === 'willvisit-focus' ? setWillvisitFocus('willvisit-unfocus') : setWillvisitFocus('willvisit-focus');
+      willvisitFocus === legendStyles.willvisitFocus ? setWillvisitFocus(legendStyles.willvisitUnfocus) : setWillvisitFocus(legendStyles.willvisitFocus);
     }
   }
 
   const handleWillVisitFocusKey = (event) => {
     if (event.key === "Enter") {
-      visitedFocus === 'visited-focus' ? setVisitedFocus('visited-unfocus') : setVisitedFocus('visited-focus');
+      visitedFocus === legendStyles.visitedFocus ? setVisitedFocus(legendStyles.visitedUnfocus) : setVisitedFocus(legendStyles.visitedFocus);
     }
   }
 

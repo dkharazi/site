@@ -58,7 +58,7 @@ const Metrics = ({ locs, setLocs, setShiftStar, setChangeStar }) => {
 
   if (locs) {
     jsx = (
-      <div className={`${metricStyles.container} container`}>
+      <div className={metricStyles.container}>
         {
           locs.map(l => {
             return (

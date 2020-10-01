@@ -5,7 +5,7 @@ import Legend from './legend';
 
 const Graphic = ({ map, tooltip, title, container, visitedFocus, setVisitedFocus, willvisitFocus, setWillvisitFocus, shiftStar, changeStar }) => {
   return (
-    <main className={`${graphicStyles.graphic} container`} ref={container}>
+    <main className={`${graphicStyles.graphic} ${graphicStyles.container}`} ref={container}>
       <Map
         mapDOM={map}
         tooltipDOM={tooltip}
