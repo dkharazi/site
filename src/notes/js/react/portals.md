@@ -1,7 +1,7 @@
 ---
 title: "Portals"
 draft: false
-weight: 16
+weight: 17
 katex: true
 ---
 
@@ -12,7 +12,7 @@ katex: true
 
 ```js
 render() {
-  // React mounts a new div 
+  // React mounts a new div
   // and renders the children into it
   return (
     <div>

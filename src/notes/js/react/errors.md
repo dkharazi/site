@@ -1,7 +1,7 @@
 ---
 title: "Error Boundaries"
 draft: false
-weight: 17
+weight: 18
 katex: true
 ---
 

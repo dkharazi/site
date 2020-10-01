@@ -1,8 +1,8 @@
 import React from 'react'
 import Img from "gatsby-image"
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import Layout from "../components/layout"
-import projectsStyles from "../styles/projects.module.css"
+import Layout from "../../components/layout"
+import projectsStyles from "../../styles/projects.module.css"
 
 const ProjectsPage = () => {
 

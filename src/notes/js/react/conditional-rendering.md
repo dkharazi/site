@@ -1,7 +1,7 @@
 ---
 title: "Conditional Rendering with Hooks"
 draft: false
-weight: 25
+weight: 26
 katex: true
 ---
 
@@ -44,8 +44,8 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <input 
-          type="text" 
+        <input
+          type="text"
           value={this.state.name}
           onChange={changeName}
         />

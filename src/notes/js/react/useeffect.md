@@ -1,7 +1,7 @@
 ---
 title: "The useEffect Hook"
 draft: false
-weight: 24
+weight: 25
 katex: true
 ---
 
@@ -59,7 +59,7 @@ class Counter extends Component {
   }
 
   render() {
-    let 
+    let
     return (
       <div>
         <button onclick={addCount}>

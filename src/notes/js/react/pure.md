@@ -1,7 +1,7 @@
 ---
 title: "Pure Components"
 draft: false
-weight: 13
+weight: 14
 katex: true
 ---
 

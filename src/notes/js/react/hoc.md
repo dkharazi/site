@@ -1,7 +1,7 @@
 ---
 title: "Higher Order Components"
 draft: false
-weight: 19
+weight: 20
 katex: true
 ---
 
@@ -130,13 +130,13 @@ const withCounter = WrappedComponent => {
         count: 0
       }
     }
-    
+
     addCount = () => {
       this.setState(prevState => {
         return {count: prevState.count+1};
       }
     }
-    
+
     render() {
       return (
         <WrappedComponent

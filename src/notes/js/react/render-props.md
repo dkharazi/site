@@ -1,7 +1,7 @@
 ---
 title: "Render Props"
 draft: false
-weight: 20
+weight: 21
 katex: true
 ---
 

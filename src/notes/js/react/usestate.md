@@ -1,7 +1,7 @@
 ---
 title: "The useState Hook"
 draft: false
-weight: 23
+weight: 24
 katex: true
 ---
 
@@ -78,7 +78,7 @@ function Counter {
 ```js
 function Counter {
   const [count, setCount] = useState(0);
-  let addCount = () => 
+  let addCount = () =>
     setCount(prevCount => prevCount+1);
 
   return (
@@ -102,7 +102,7 @@ function Counter {
 function Namer {
   let nameObj = {'firstName': '', 'lastName': ''};
   const [name, setName] = useState(nameObj);
-  
+
   let changeFirstName = () =>
     setName({...name, firstName: 'Mike'});
 

@@ -12,6 +12,12 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
+    {
+      resolve: `gatsby-transformer-csv`,
+      options: {
+        typeName: ({ node }) => `${node.name}Data`
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,

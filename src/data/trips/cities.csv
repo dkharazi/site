@@ -1,0 +1,60 @@
+state,place,hasVisited,lat,lon
+New York,New York City,1,40.71455,-74.007124
+California,Sacramento,1,38.5816,-121.4944
+California,San Francisco,1,37.7749,-122.4194
+California,San Diego,1,32.7157,-117.1611
+California,Los Angeles,1,34.0522,-118.2437
+California,Death Valley,1,36.5323,-116.9325
+Ohio,Toledo,1,41.6528,-83.5379
+Ohio,Zanesville,1,39.9403,-82.0132
+Ohio,Mansfield,1,40.7584,-82.5154
+Ohio,Dayton,1,39.7589,-84.1916
+Ohio,Hocking County,1,39.4237,-82.5379
+Ohio,Cincinnati,1,39.1031,-84.5120
+Ohio,Columbus,1,39.9612,-82.9988
+Ohio,Cleveland,1,41.4993,-81.6944
+Michigan,Detroit,1,42.3314,-83.0458
+Michigan,Boyne Falls,1,45.1681,-84.9162
+Pennsylvania,Pittsburgh,1,40.4406,-79.9959
+Maryland,Cumberland,1,39.6529,-78.7625
+West Virginia,Harper's Ferry,1,39.3254,-77.7389
+Maryland,Washington DC,1,38.8903694,-77.0319595
+Virginia,Blacksburg,1,37.2296,-80.4139
+Pennsylvania,Seven Springs,1,40.0230,-79.2977
+North Carolina,Durham,1,35.7596,-79.0193
+North Carolina,Charlotte,1,35.2271,-80.8431
+South Carolina,Charleston,1,32.7765,-79.9311
+South Carolina,Abbeville,1,34.1782,-82.3790
+Tennessee,Nashville,1,36.1627,-86.7816
+Kentucky,Lake Cumberland,1,36.8888,-85.0493
+Illinois,Chicago,1,41.8781,-87.6298
+Massachusetts,Boston,1,42.3601,-71.0589
+Colorado,Vail,1,39.6403,-106.3742
+Colorado,Denver,1,39.7392,-104.9903
+Nevada,Las Vegas,1,36.1699,-115.1398
+Arizona,Phoenix,1,33.4484,-112.0740
+South Dakota,Pine Ridge,1,43.0255,-102.5563
+Florida,Miami,1,25.7617,-80.1918
+Florida,Orlando,1,28.5383,-81.3792
+Florida,Tampa,1,27.9506,-82.4572
+Hawaii,Honolulu,1,21.3069,-157.8583
+Hawaii,Maui,1,20.7984,-156.3319
+Arizona,Tucson,0,32.22155,-110.9697571
+Montana,Glacier Park,0,48.7596,-113.7870
+Wyoming,Yellowstone Park,0,44.4280,-110.5885
+North Dakota,Theodore Roosevelt Park,0,46.9790,-103.5387
+North Dakota,Peace Garden,0,48.9993,-100.0595
+Idaho,Shoshone Falls,0,42.5937,-114.4010
+Idaho,Craters of the Moon,0,43.2058,-113.5002
+Oregon,Crater Lake,0,42.9446,-122.1090
+Oregon,Portland,0,45.5051,-122.6750
+Oregon,Haystack Rock,0,45.8841,-123.9686
+Oregon,Bandon,0,43.1190,-124.4084
+Washington,Mount Rainier,0,46.8523,-121.7603
+Washington,Olympic Park,0,47.8021,-123.6044
+Washington,Seattle,0,47.6062,-122.3321
+Utah,Zion Park,0,37.2982,-113.0263
+New Mexico,White Sands Park,0,32.7872,-106.3257
+New Mexico,Carlsbad Caverns,0,32.1479,-104.5567
+New Mexico,Four Corners,0,36.9989,-109.0452
+Nebraska,Omaha,0,41.2565,-95.9345

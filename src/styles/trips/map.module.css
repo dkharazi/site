@@ -1,0 +1,33 @@
+.map {
+  overflow: visible;
+}
+
+/* Style for Custom Tooltip */
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 62px;
+  padding: 4px;
+  font: 12px sans-serif;
+  background-color: #333;
+  color: #fafafa;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.tooltip::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+.circle {
+  transition: opacity 0.1s ease-in-out !important;
+}

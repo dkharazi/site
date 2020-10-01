@@ -1,7 +1,7 @@
 ---
 title: "Lifting State"
 draft: false
-weight: 18
+weight: 19
 katex: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "The useContext Hook"
 draft: false
-weight: 26
+weight: 27
 katex: true
 ---
 
