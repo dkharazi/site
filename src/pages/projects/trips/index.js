@@ -1,7 +1,6 @@
 import React, {useRef, useState} from 'react';
 import Header from '../../../components/trips/header';
 import Graphic from '../../../components/trips/graphic';
-import Metrics from '../../../components/trips/metrics';
 import TripsLayout from "../../../components/trips/tripsLayout"
 import legendStyles from '../../../styles/trips/legend.module.css';
 
@@ -31,20 +30,18 @@ const TripsPage = () => {
         title={title}
         container={container}
         mast={mast}
+        locs={locs}
+        setLocs={setLocs}
         visitedFocus={visitedFocus}
         setVisitedFocus={setVisitedFocus}
         willvisitFocus={willvisitFocus}
         setWillvisitFocus={setWillvisitFocus}
         shiftStar={shiftStar}
+        setShiftStar={setShiftStar}
         changeStar={changeStar}
+        setChangeStar={setChangeStar}
         loadMap={loadMap}
         setLoadMap={setLoadMap}
-      />
-      <Metrics
-        locs={locs}
-        setLocs={setLocs}
-        setShiftStar={setShiftStar}
-        setChangeStar={setChangeStar}
       />
     </TripsLayout>
   );
