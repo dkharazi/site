@@ -1,7 +1,7 @@
 ---
 title: "CPU"
 draft: false
-weight: 4
+weight: 5
 katex: true
 ---
 

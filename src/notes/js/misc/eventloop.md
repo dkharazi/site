@@ -108,3 +108,4 @@ katex: true
 - [Defining the Event Loop in JavaScript](https://flaviocopes.com/javascript-event-loop/)
 - [Difference between the Stack and Heap](https://stackoverflow.com/a/80113/12777044)
 - [Defining the Event Loop in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
+- [Visualizing the Event Loop](https://felixgerschau.com/javascript-event-loop-call-stack/)
