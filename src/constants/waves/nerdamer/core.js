@@ -25,6 +25,9 @@ var nerdamer = (function (imports) {
     //import bigInt
     var bigInt = imports.bigInt;
     var bigDec = require('decimal.js');
+    if (typeof bigDec === 'object') {
+        bigDec = bigDec.default;
+    }
     //set the precision to js precision
     bigDec.set({
         precision: 250
