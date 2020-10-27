@@ -1,21 +1,27 @@
-p {
+.port p {
     margin: 1rem auto !important;
 }
 
-.math {
+.post a {
+    color: #195b8a;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.post .math {
     text-align: center;
     margin: 2rem auto;
 }
 
-.image {
+.post .image {
     transition: transform .25s ease-out !important;
 }
 
-.image:hover {
+.post .image:hover {
     transform: scale(1.02);
 }
 
-svg {
+.post svg {
     animation: fadeIn 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     transition: opacity .5s ease-in-out;
 }
