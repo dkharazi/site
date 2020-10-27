@@ -77,7 +77,7 @@ const ProjectsPage = () => {
                 </div>
                 <div className={projectsStyles.column}>
                     <div className={projectsStyles.item}>
-                        <Link to={`/construction`}>
+                        <Link to={`/projects/waves`}>
                             <Img fluid={data.wave.childImageSharp.fluid} alt="soundWave" />
                             <div className={projectsStyles.description}>
                                 sound waves

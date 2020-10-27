@@ -1,3 +1,5 @@
+/* eslint no-unused-vars: 0 */
+
 import React, {useEffect} from 'react';
 import { select } from 'd3-selection';
 import { transition, duration } from 'd3-transition';
