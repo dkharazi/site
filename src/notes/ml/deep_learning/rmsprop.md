@@ -68,6 +68,22 @@ $$
 - This is because we will get a *dampening-out* effect if $\sqrt{v_{t}}$ is large
 - On the other hand, we will quickly gravitate toward the optimal parameter values if $\sqrt{v_{t}}$ is small
 
+### Lower-Level Intuition behind RMSProp
+- If $dW$ is large:
+	- It is squared, giving us a larger denominator
+	- This makes the learning rate coefficient smaller
+	- Meaning, our update becomes smaller
+- If $dW$ is small:
+	- It is squared, giving us a smaller denominator
+	- This makes the learning rate coefficient larger
+	- Meaning, our update becomes larger
+
+### Intuition behind Momentum and RMSProp
+- Momentum adds *momentum* to hyperparameter updates by heavily weighting the average of previous (nearby) changes in loss
+- RMSProp adds *resistance* to hyperparameter updates by standardizing $dW$ with respect to the average of previous (nearby) changes in loss
+	- Where $dB$ represents the current update
+	- Where $\sqrt{v_{t}}$ is roughly the average of previous changes in loss
+
 ---
 
 ### tldr
@@ -79,5 +95,6 @@ $$
 ---
 
 ### References
+- [Intuition of RMSProp](https://napsterinblue.github.io/notes/machine_learning/neural_nets/adam_opt/)
 - [RMSProp](https://www.youtube.com/watch?v=_e-LFe_igno&list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc&index=21)
 - [RMSProp Lecture Slides](https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)

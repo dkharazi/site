@@ -19,6 +19,7 @@ $$
 - However, some special vectors do remain on their span after the transformation to the new vector space
 - These special vectors are called eigenvectors
 - Essentially, an eigenvector of a linear transformation is a vector, where the span of that vector (in the original vector space) is the same as the span of that vector after the transformation (in the new vector space)
+- Roughly, we can think of eigenvectors as uncorrelated features of our data
 
 ### Example of Eigenvectors
 - In this specific example, the original basis vector (i.e. i-hat) is an eigenvector
@@ -30,6 +31,7 @@ $$
 
 ### Properties of Eigenvalues
 - An eigenvalue is the factor by which it is stretched or squished during the transformation
+- Roughly, we can think of an eigenvalue as the amount of information retained by the features
 - Every eigenvector has an eigenvalue associated with it
 - The following are some properties associated with eigenvalues:
 	- When the eigenvalue is 0, then the vector disappears because there is no information about an axis after the transformation (i.e. linear dependence)

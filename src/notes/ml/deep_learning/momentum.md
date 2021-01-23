@@ -70,5 +70,6 @@ $$
 ---
 
 ### References
+- [Difference between Batch Gradient Descent and Momentum](https://ruder.io/optimizing-gradient-descent/)
 - [Gradient Descent with Momentum](https://www.youtube.com/watch?v=k8fTYJPd3_I&list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc&index=20)
 - [Intuition behind Momentum](https://distill.pub/2017/momentum/)

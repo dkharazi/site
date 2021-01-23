@@ -260,6 +260,7 @@ if __name__ == '__main__':
 ---
 
 ### References
+- [Step-By-Step Backpropagation with Identity Activations](https://hmkcode.com/ai/backpropagation-step-by-step/)
 - [How Backpropagation Works](http://neuralnetworksanddeeplearning.com/chap2.html)
 - [6.2 Gradient-Based Learning](http://www.deeplearningbook.org/contents/mlp.html#pf6)
 - [Forward and Backward Propagation](https://www.youtube.com/watch?v=qzPQ8cEsVK8&list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0&index=41)

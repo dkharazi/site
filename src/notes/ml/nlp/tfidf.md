@@ -1,7 +1,7 @@
 ---
 title: "TF-IDF"
 draft: false
-weight: 1
+weight: 15
 katex: true
 ---
 

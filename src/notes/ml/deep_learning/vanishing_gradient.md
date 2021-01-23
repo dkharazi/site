@@ -22,6 +22,7 @@ katex: true
 - In this case, the neurons in earlier layers learn much slower than neurons in later layers
 - This phenomenon is referred to as *the vanishing gradient problem*
 - In other words, the vanishing gradient problem refers to when neurons in earlier layers learn much slower than neurons in later layers as a consequence of gradients of the later layers being small
+- Said another way, it's a phenomenon where gradients of earlier layers tend to reach (or get stuck at) plateaus more easily than gradients of later layers
 
 ### Visual Interpretation of the Vanishing Gradient Problem
 - The cost function of a neural network is neither convex nor concave

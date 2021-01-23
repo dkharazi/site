@@ -1,5 +1,5 @@
 ---
-title: "Training Named Entity Recogizers"
+title: "Training NER"
 draft: false
 weight: 12
 katex: true
