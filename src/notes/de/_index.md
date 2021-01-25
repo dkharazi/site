@@ -1,5 +1,5 @@
 ---
 title: "Data Engineering"
-subcategories: ["architecture", "etl", "other"]
-names: ["Computer Architecture", "ETL", "Other"]
+subcategories: ["azure", "architecture", "etl", "other"]
+names: ["Azure", "Computer Architecture", "ETL", "Other"]
 ---

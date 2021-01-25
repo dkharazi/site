@@ -651,6 +651,10 @@ div[data-language*="apacheconf"]:before {
   content: 'Conf' !important;
 }
 
+div[data-language*="sql"]:before {
+  content: 'SQL' !important;
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
      color: #655a87;
