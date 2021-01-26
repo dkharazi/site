@@ -52,7 +52,7 @@ const NotesPage = () => {
                                 className={`${notesStyles.notesItem} n${idx%4} h`}
                                 style={{ transform: radians.interpolate(interp(idx)) }}
                             >
-                                <img src={imgMap[cat]} alt={cat} height="50" width="50" className={notesStyles.icon} />
+                                <img src={imgMap[cat]} alt={cat} className={notesStyles.icon} />
                             </animated.div>
                         </Link>
                     )
