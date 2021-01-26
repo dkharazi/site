@@ -35,3 +35,8 @@
 .notesItem p {
     margin: auto;
 }
+
+.icon {
+    display: block;
+    margin: auto;
+}

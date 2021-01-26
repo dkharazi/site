@@ -4,6 +4,11 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import NotesLayout from '../components/noteslayout'
 import notesStyles from '../styles/notes.module.css'
 
+import jsPng from '../img/js.png'
+import mlPng from '../img/ml.png'
+import pyPng from '../img/py.png'
+import dePng from '../img/de.png'
+
 const NotesPage = () => {
 
     const data = useStaticQuery(graphql`
@@ -18,6 +23,13 @@ const NotesPage = () => {
             }
         }
     `)
+
+    const imgMap = {
+        'de': dePng,
+        'js': jsPng,
+        'ml': mlPng,
+        'py': pyPng
+    }
 
     const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
 
@@ -40,7 +52,7 @@ const NotesPage = () => {
                                 className={`${notesStyles.notesItem} n${idx%4} h`}
                                 style={{ transform: radians.interpolate(interp(idx)) }}
                             >
-                                <p>{cat}</p>
+                                <img src={imgMap[cat]} alt={cat} height="50" width="50" className={notesStyles.icon} />
                             </animated.div>
                         </Link>
                     )
