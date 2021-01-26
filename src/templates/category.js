@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SubCategory from '../components/subcategory'
@@ -39,30 +39,28 @@ export const data = graphql`
 `
 
 
-const Category = ({ location, data, pageContext }) => {
+const Category = ({ data, pageContext }) => {
 
     // Assign correct image to its page of subcategories
-    let img;
+    let img, col;
     if (pageContext.cat.includes('js')) {
         img = jsPng;
+        col = 1;
     } else if (pageContext.cat.includes('ml')) {
         img = mlPng;
+        col = 2;
     } else if (pageContext.cat.includes('py')) {
         img = pyPng
+        col = 3;
     } else if (pageContext.cat.includes('de')) {
         img = dePng
+        col = 0;
     }
 
     // Retrieve files and their order for a category
     const catData = data.allMarkdownRemark.edges.filter((edge) => {
         return edge.node.fields.subCategory === '_index';
     })
-
-    // Assign location.state to state for gatsby build
-    const [color, setColor] = useState(null);
-    useEffect(() => {
-        setColor(location.state.colorIdx)
-    }, [location])
 
     return (
         <Layout>
@@ -81,7 +79,7 @@ const Category = ({ location, data, pageContext }) => {
                                 subCategory={subCat}
                                 subCategoryNickname={catData[0].node.frontmatter.names[idx]}
                                 pageData={data}
-                                colorIdx={color}
+                                colorIdx={col}
                             />
                         )
                     })}
