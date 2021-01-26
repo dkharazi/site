@@ -22,7 +22,7 @@ $$
 
 As stated previously, the Glicko system extends the Elo system by computing not only a rating, which can be thought of as a *best guess* of one’s playing strength, but also a *ratings deviation* $\text{RD}$. In statistical terminology, this $\text{RD}$ term represents a standard deviation, which measures the uncertainty of a rating. Thus, a high $\text{RD}$ corresponds to an unreliable rating, or that a player roughly has only competed in a small number of tournament games. Whereas, a low $\text{RD}$ indicates the player competes frequently.
 
-## Intuition behind Uncertainty of Rating
+## Intuition behind Uncertainty of Ranking
 
 In the Glicko system, a player's rating only changes based on their game outcomes, but players' $\text{RD}$ changes based on their game outcomes and their time not playing. Thus, there are two features in the Glicko system that don't exist in the Elo system. First, $\text{RD}$ increases as time passes without a player competing in many games. Second, if one player’s rating increases by $x$, the opponent’s rating does not usually decrease by $x$. In the Glicko system, the amount by which the opponent’s rating decreases is governed by both players’ $\text{RD}$ terms.
 
