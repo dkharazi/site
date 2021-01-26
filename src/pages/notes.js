@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import NotesLayout from '../components/noteslayout'
+import LayoutNotes from '../components/site/layouts/layoutnotes'
 import notesStyles from '../styles/notes.module.css'
 
 import jsPng from '../img/js.png'
@@ -43,7 +43,7 @@ const NotesPage = () => {
     })
 
     return (
-        <NotesLayout>
+        <LayoutNotes>
             <div className={notesStyles.notes}>
                 {data.allMarkdownRemark.distinct.map((cat, idx) => {
                     return (
@@ -58,7 +58,7 @@ const NotesPage = () => {
                     )
                 })}
             </div>
-        </NotesLayout>
+        </LayoutNotes>
     )
 }
 

@@ -72,7 +72,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const blogTemplate = path.resolve('./src/templates/blog.js')
-    const notesTemplate = path.resolve('./src/templates/notes.js')
+    const notesEntryTemplate = path.resolve('./src/templates/entry.js')
     const categoryTemplate = path.resolve('./src/templates/category.js')
 
     // query fields for any markdown files
@@ -142,7 +142,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
             }
 
             createPage({
-                component: notesTemplate,
+                component: notesEntryTemplate,
                 path: `/notes/${edge.node.fields.slug}`,
                 context: {
                     slug: edge.node.fields.slug,

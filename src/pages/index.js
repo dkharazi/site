@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/site/layouts/layout'
 import '../styles/index.scss'
 
 const IndexPage = () => {

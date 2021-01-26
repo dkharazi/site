@@ -1,8 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react'
 import { Link } from "gatsby"
-import notesPageStyles from "../styles/notespage.module.css"
+import { Helmet } from "react-helmet"
+import HeaderEntry from '../headers/headerentry'
+import entryStyles from "../../../styles/entry.module.css"
 
-const NotesPageLayout = ({ title, children }) => {
+const LayoutEntry = ({ title, children }) => {
 
     const mastheadRef = useRef(null);
     const [color, setColor] = useState("i0");
@@ -70,42 +72,48 @@ const NotesPageLayout = ({ title, children }) => {
     return (
         <React.Fragment>
             <div className="wrap">
-                <header ref={mastheadRef} className={notesPageStyles.masthead}>
-                    <h1 className={`${notesPageStyles.title} notesContainer`}>{title}</h1>
-                </header>
-                <main className={`${notesPageStyles.main} notesPageContainer`}>
+                <Helmet>
+                    <meta name="description" content="Personal Site" />
+                    <meta name="title" property="og:title" content="Data Science" />
+                    <meta property="og:type" content="Website" />
+                    <meta name="image" property="og:image" content="https://live.staticflickr.com/8601/15891138064_3a9f462786_k.jpg" />
+                    <meta name="description" property="og:description" content="Personal Site" />
+                    <meta name="author" content="Darius Kharazi" />
+                </Helmet>
+                <HeaderEntry title={title} mastheadRef={mastheadRef} />
+                <main className={`${entryStyles.main} ${entryStyles.container}`}>
                     {children}
                 </main>
             </div>
-            <div className={`${notesPageStyles.menu} ${menu}`}>
+            <div className={`${entryStyles.menu} ${menu}`}>
                 <div className="container">
-                    <Link className={notesPageStyles.menuItem} to="/">
+                    <Link className={entryStyles.menuItem} to="/">
                         Blog
                     </Link>
-                    <Link className={notesPageStyles.menuItem} to="/about">
+                    <Link className={entryStyles.menuItem} to="/about">
                         About Me
                     </Link>
-                    <Link className={notesPageStyles.menuItem} to="/projects">
+                    <Link className={entryStyles.menuItem} to="/projects">
                         Projects
                     </Link>
-                    <Link className={notesPageStyles.menuItem} to="/notes">
+                    <Link className={entryStyles.menuItem} to="/notes">
                         Notes
                     </Link>
                 </div>
             </div>
             <div 
-                className={notesPageStyles.toggle}
+                className={entryStyles.toggle}
                 role="button"
                 onClick={transitionIcon}
                 onKeyPress={transitionIconKey}
                 tabIndex={0}
             >
-                <span className={`${notesPageStyles.top} ${color} ${topBar}`} />
-                <span className={`${notesPageStyles.middle} ${color} ${midBar}`} />
-                <span className={`${notesPageStyles.bottom} ${color} ${botBar}`} />
+                <span className={`${entryStyles.top} ${color} ${topBar}`} />
+                <span className={`${entryStyles.middle} ${color} ${midBar}`} />
+                <span className={`${entryStyles.bottom} ${color} ${botBar}`} />
             </div>
         </React.Fragment>
     )
 }
 
-export default NotesPageLayout
+export default LayoutEntry

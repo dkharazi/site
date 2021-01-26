@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import SubCategory from '../components/subcategory'
+import LayoutCategory from '../components/site/layouts/layoutcategory'
+import SubCategory from '../components/site/subcategory'
 import catStyles from '../styles/category.module.css'
 
 import jsPng from '../img/js.png'
@@ -38,7 +38,6 @@ export const data = graphql`
   }
 `
 
-
 const Category = ({ data, pageContext }) => {
 
     // Assign correct image to its page of subcategories
@@ -63,29 +62,22 @@ const Category = ({ data, pageContext }) => {
     })
 
     return (
-        <Layout>
-            <div className={catStyles.category}>
-                <div className={`${catStyles.title} ${catStyles.colOne}`}>
-                    <img src={img} alt={pageContext.cat} height="100" width="100" />
-                    <h2>{pageContext.data.title}</h2>
-                </div>
-                <hr></hr>
-                <div className={`${catStyles.subCatSection} ${catStyles.colTwo}`}>
-                    {catData[0].node.frontmatter.subcategories.map((subCat, idx) => {
-                        return (
-                            <SubCategory
-                                key={subCat}
-                                category={pageContext.cat}
-                                subCategory={subCat}
-                                subCategoryNickname={catData[0].node.frontmatter.names[idx]}
-                                pageData={data}
-                                colorIdx={col}
-                            />
-                        )
-                    })}
-                </div>
+        <LayoutCategory icon={img} cat={pageContext.cat} title={pageContext.data.title}>
+            <div className={catStyles.subcategories}>
+                {catData[0].node.frontmatter.subcategories.map((subCat, idx) => {
+                    return (
+                        <SubCategory
+                            key={subCat}
+                            category={pageContext.cat}
+                            subCategory={subCat}
+                            subCategoryNickname={catData[0].node.frontmatter.names[idx]}
+                            pageData={data}
+                            colorIdx={col}
+                        />
+                    )
+                })}
             </div>
-        </Layout>
+        </LayoutCategory>
     )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import TripsHeader from './tripsHeader'
-import Footer from '../footer'
+import Footer from '../site/footer'
 
 const TripsLayout = ({ children, mast }) => {
     return (

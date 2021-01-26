@@ -1,6 +1,6 @@
 import React from 'react';
 import { BlockMath, InlineMath } from 'react-katex';
-import Layout from '../../../components/layout';
+import Layout from '../../../components/site/layouts/layout';
 import WaveRainbow from '../../../components/waves/introWave';
 import WaveForm from '../../../components/waves/waveForm';
 import hierarchy from '../../../img/hierarchy.png'

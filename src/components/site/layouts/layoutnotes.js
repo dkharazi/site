@@ -1,9 +1,10 @@
 import React from 'react'
-import Header from './header'
-import Footer from './footer'
 import { Helmet } from "react-helmet"
+import Header from '../headers/header'
+import Footer from '../footer'
+import notesStyles from '../../../styles/notes.module.css'
 
-const Layout = ({ children }) => {
+const LayoutNotes = ({ children }) => {
     return (
         <div className="wrap">
             <Helmet>
@@ -15,7 +16,7 @@ const Layout = ({ children }) => {
                 <meta name="author" content="Darius Kharazi" />
             </Helmet>
             <Header />
-            <main className="container">
+            <main className={notesStyles.container}>
                 {children}
             </main>
             <Footer />
@@ -23,4 +24,4 @@ const Layout = ({ children }) => {
     )
 }
 
-export default Layout
+export default LayoutNotes

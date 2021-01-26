@@ -1,5 +1,5 @@
 import React from 'react'
-import resumeStyles from "../styles/resume.module.css"
+import resumeStyles from "../../styles/resume.module.css"
 
 const ResumeItem = ({ company, role, startDate, endDate, tech, color, children }) => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import NotesPageLayout from '../components/notespagelayout'
-import notesStyles from "../styles/notespage.module.css"
+import LayoutEntry from '../components/site/layouts/layoutentry'
+import entryStyles from "../styles/entry.module.css"
 
 export const query = graphql`
   query($slug: String!) {
@@ -14,7 +14,7 @@ export const query = graphql`
   }
 `
 
-const Notes = ({ data, pageContext }) => {
+const NotesEntry = ({ data, pageContext }) => {
     let prev;
     let next;
     if (pageContext.previousSlug != null) {
@@ -46,26 +46,26 @@ const Notes = ({ data, pageContext }) => {
     let prevDesc = prev == null ? null : "Previous";
 
     return (
-        <NotesPageLayout title={data.markdownRemark.frontmatter.title}>
-            <div className={notesStyles.notes}>
+        <LayoutEntry title={data.markdownRemark.frontmatter.title}>
+            <div className={entryStyles.notes}>
               <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
             </div>
-            <div className={notesStyles.pagination}>
-                <div className={notesStyles.desc}>
-                    <div className={notesStyles.prevDesc}>{prevDesc}</div>
-                    <div className={notesStyles.nextDesc}>{nextDesc}</div>
+            <div className={entryStyles.pagination}>
+                <div className={entryStyles.desc}>
+                    <div className={entryStyles.prevDesc}>{prevDesc}</div>
+                    <div className={entryStyles.nextDesc}>{nextDesc}</div>
                 </div>
-                <div className={notesStyles.nextPrevPages}>
-                    <div className={notesStyles.previous}>
+                <div className={entryStyles.nextPrevPages}>
+                    <div className={entryStyles.previous}>
                         {prev}
                     </div>
-                    <div className={notesStyles.next}>
+                    <div className={entryStyles.next}>
                         {next}
                     </div>
                 </div>
             </div>
-        </NotesPageLayout>
+        </LayoutEntry>
     )
 }
 
-export default Notes
+export default NotesEntry

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/site/layouts/layout'
 import blogStyles from "../styles/blog.module.css"
 
 export const query = graphql`

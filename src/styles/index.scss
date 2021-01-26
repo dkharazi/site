@@ -371,23 +371,6 @@ tbody tr:nth-child(odd) th {
   margin: 0 auto;
 }
 
-.notesContainer {
-  display: flex;
-  max-width: 32rem;
-  padding-left:  1rem;
-  padding-right: 1rem;
-  margin: 0 auto;
-}
-
-.notesPageContainer {
-  display: flex;
-  flex-direction: column;
-  max-width: 32rem;
-  padding-left:  1rem;
-  padding-right: 1rem;
-  margin: 0 auto;
-}
-
 @media (min-width: 76.5em) {
   .container {
       max-width: 36rem;
@@ -407,7 +390,7 @@ tbody tr:nth-child(odd) th {
  * Super small header above the content for site name and short description.
  */
 
- header {
+header {
   padding-top: 0.8rem;
   font-size: 1rem;
   background-color: #268bd2;
@@ -604,14 +587,6 @@ footer a {
   padding-left: 1rem;
   margin-top: -2rem;
   margin-left: -1rem;
-}
-
-.notesPageContainer .gatsby-highlight:before {
-  width: calc(100% - 3rem);
-}
-
-.notesPageContainer .gatsby-highlight {
-  padding-top: 1.5rem;
 }
 
 p .language-text,
