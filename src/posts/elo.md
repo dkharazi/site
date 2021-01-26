@@ -10,6 +10,8 @@ In 2007, Microsoft released their [TrueSkill 1 paper](https://www.microsoft.com/
 
 Both Trueskill 1 and Trueskill 2 treat a player's ranking as a distribution, rather than a single summary statistic. To achieve this, both ranking systems use a principled Bayesian framework. As a result, the Trueskill algorithm considers the fact that all players play differently depending on their individual circumstances.
 
+## Comparing Elo with Glicko
+
 In 1960, the Elo system was invented and used as an improved chess-rating system. The Elo system is a method used for calculating the relative skill levels of players in zero-sum games, such as chess. At the time, the Elo system became very popular in a broad range of other sports, such as basketball and football. In 1995, the [Glicko](https://en.wikipedia.org/wiki/Glicko_rating_system) system was invented to improve the Elo system by introducing a *rate volatility* measure. Afterward, it became a popularly adopted rating system in most well-known sports. For a more detailed explanation of the Glicko system, refer to its [original paper](http://www.glicko.net/glicko/glicko.pdf).
 
 The Trueskill rating systems borrow many ideas from Glicko, but also includes a measure of match quality between a set of players. There are a few other mathematical differences within the paper, and a few differences between the Trueskill 1 and Trueskill 2 rating systems. However, they share more similarities than differences. For the remainder of this post, I'll be focused on illustrating the intuition behind the Glicko algorithm.
@@ -19,6 +21,8 @@ $$
 $$
 
 As stated previously, the Glicko system extends the Elo system by computing not only a rating, which can be thought of as a *best guess* of one’s playing strength, but also a *ratings deviation* $\text{RD}$. In statistical terminology, this $\text{RD}$ term represents a standard deviation, which measures the uncertainty of a rating. Thus, a high $\text{RD}$ corresponds to an unreliable rating, or that a player roughly has only competed in a small number of tournament games. Whereas, a low $\text{RD}$ indicates the player competes frequently.
+
+## Intuition behind Uncertainty of Rating
 
 In the Glicko system, a player's rating only changes based on their game outcomes, but players' $\text{RD}$ changes based on their game outcomes and their time not playing. Thus, there are two features in the Glicko system that don't exist in the Elo system. First, $\text{RD}$ increases as time passes without a player competing in many games. Second, if one player’s rating increases by $x$, the opponent’s rating does not usually decrease by $x$. In the Glicko system, the amount by which the opponent’s rating decreases is governed by both players’ $\text{RD}$ terms.
 
@@ -39,6 +43,8 @@ $$
 The $\text{RD}'$ term refers to the updated confidence in our own ranking after playing a bunch of players. Notice, it's basically the same as our previous $\text{RD}$, but adds a $d$ variable. Basically, the $d$ variable can be thought of as the change in uncertainty of $\text{RD}$, or how much more certain or less certain we are about our ranking. A really large $d$ (i.e. $d \to \infty$) will give us the same $\text{RD}'$, whereas a really small $d$ (i.e. $d \to 0$) will give us an $\text{RD}'$ of $0$.
 
 Essentially, the $d$ variable really starts to shrink when we play more players, which supports the fact that if we play more players, then we'll have a low $\text{RD}$ (and vice versa). So, that is how the uncertainty is updated.
+
+## Intuition behind Expected Ranking
 
 The new actual ranking $r'$ is dependent on the difference between the outcome of an opponent $s$ and the expected outcome $\text{E}(s|...)$ of playing that opponent. This expected outcome will be around $0$ if a player is expected to lose, and around $1$ if a player expected to win. This difference is what really determines the update to a player's ranking.
 
