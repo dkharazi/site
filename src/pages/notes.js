@@ -4,10 +4,10 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import LayoutNotes from '../components/site/layouts/layoutnotes'
 import notesStyles from '../styles/notes.module.css'
 
-import jsPng from '../img/js.png'
-import mlPng from '../img/ml.png'
-import pyPng from '../img/py.png'
-import dePng from '../img/de.png'
+import jsPng from '../img/jsIcon.png'
+import mlPng from '../img/mlIcon.png'
+import pyPng from '../img/pyIcon.png'
+import dePng from '../img/deIcon.png'
 
 const NotesPage = () => {
 
