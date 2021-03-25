@@ -1,5 +1,5 @@
 ---
 title: "JavaScript"
-subcategories: ["array", "promises", "operators", "this", "misc", "react"]
-names: ["Array", "Promises", "Operators", "this", "Miscellaneous", "React"]
+subcategories: ["array", "this", "promises", "operators", "misc", "react"]
+names: ["Array", "this", "Promises", "Operators", "Miscellaneous", "React"]
 ---

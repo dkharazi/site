@@ -12,6 +12,9 @@ const categoryData = {
     },
     'de': {
         'title': 'Data Engineering'
+    },
+    'fn': {
+        'title': 'Business and Finance'
     }
 }
 

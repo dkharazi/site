@@ -11,15 +11,15 @@ const AboutPage = () => {
                 <div className={aboutStyles.title}>
                     <h3>About Me</h3>
                 </div>
-                <p>I live in Columbus, Ohio and work on a data science team at Abercrombie.</p>
-                <p>Before Abercrombie, I worked as a consultant while studying statistics and computer science at Ohio State University (Class of 2018). During college and high school, I made iOS apps and got involved in programming competitions. I started programming in JavaScript and Java when I was 14, but now I usually write code in Python. Most of my experience in the last few years has been machine learning, data engineering, and backend development. I occasionally write code for fun in my spare time.</p>
+                <p>I live in Columbus, Ohio and work on a data science team at Abercrombie. Before Abercrombie, I worked as a consultant while studying statistics and computer science at Ohio State University (Class of 2018). During college and high school, I made iOS apps and got involved in <a href="https://data-analytics.osu.edu/datafest/previous-datafests-2018" target="_blank" rel="noreferrer">programming competitions</a>. I started programming in <a href="https://github.com/dkharazi/JavaScript-PigGame" target="_blank" rel="noreferrer">JavaScript</a> and Java when I was 14, but now I usually write code in Python. Most of my experience in the last few years has been machine learning, data engineering, and backend development. I occasionally write <a href="https://github.com/dkharazi" target="_blank" rel="noreferrer">code for fun</a> in my spare time.</p>
+                <br />
                 <p>What about stuff outside of technology?</p>
                 <ul>
-                    <li>My two passions in life: soccer and Indian food</li>
+                    <li>My passions in life are soccer and Indian food</li>
                     <li>On top of that, I enjoy skiing when I get the chance</li>
                     <li>I usually listen to either soft rock, indie pop, or lo-fi hip hop</li>
                     <li>I've done a triathlon and a few bike tours</li>
-                    <li>I'm halfway through visiting all 50 U.S. states</li>
+                    <li>I'm halfway through <a href="https://dkharazi.github.io/projects/trips" target="_blank" rel="noreferrer">visiting all 50 U.S. states</a></li>
                     <li>I played the piano actively for 10+ years</li>
                     <li>I want to stop eating meat one day</li>
                     <li>My favorite tv show is The Office</li>

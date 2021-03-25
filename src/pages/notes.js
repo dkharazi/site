@@ -8,6 +8,7 @@ import jsPng from '../img/jsIcon.png'
 import mlPng from '../img/mlIcon.png'
 import pyPng from '../img/pyIcon.png'
 import dePng from '../img/deIcon.png'
+import fnPng from '../img/fnIcon.png'
 
 const NotesPage = () => {
 
@@ -26,6 +27,7 @@ const NotesPage = () => {
 
     const imgMap = {
         'de': dePng,
+        'fn': fnPng,
         'js': jsPng,
         'ml': mlPng,
         'py': pyPng
@@ -49,7 +51,7 @@ const NotesPage = () => {
                     return (
                         <Link key={cat} to={`/notes/${cat}`} state={{ colorIdx: idx }}>
                             <animated.div
-                                className={`${notesStyles.notesItem} n${idx%4} h`}
+                                className={`${notesStyles.notesItem} n${idx%5} h`}
                                 style={{ transform: radians.interpolate(interp(idx)) }}
                             >
                                 <img src={imgMap[cat]} alt={cat} className={notesStyles.icon} />

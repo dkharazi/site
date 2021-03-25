@@ -3,6 +3,7 @@ module.exports = {
     title: `dfk`,
     description: `Python developer living and working in Columbus.`,
     author: `Darius Kharazi`,
+    siteUrl: 'https://dkharazi.github.io/'
   },
   plugins: [
     {
@@ -83,6 +84,67 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/img/icon.png`
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + '/' + edge.node.fields.subCategory + '/' + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + '/' + edge.node.fields.subCategory + '/' + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {draft: {eq: false}}, fileAbsolutePath: {regex: "/(posts)/"}, excerpt: {}}) {
+                  edges {
+                    node {
+                      html
+                      excerpt(pruneLength: 200)
+                      frontmatter {
+                        date
+                        title
+                        tags
+                      }
+                      fields {
+                        slug
+                        subCategory
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Darius Kharazi's Blog",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/blog/",
+            // optional configuration to specify external rss feed, such as feedburner
+            link: "https://feeds.feedburner.com/gatsby/blog",
+          },
+        ],
       },
     },
   ],

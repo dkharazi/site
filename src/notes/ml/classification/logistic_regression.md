@@ -1,7 +1,7 @@
 ---
 title: "Logistic Regression"
 draft: false
-weight: 6
+weight: 7
 katex: true
 ---
 

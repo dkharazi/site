@@ -42,6 +42,7 @@
 .n1 { background-color: #ffce5c; }
 .n2 { background-color: #06b284; }
 .n3 { background-color: #195b8a; }
+.n4 { background-color: #7582bd; }
 .h:hover { opacity: 0.8; }
 
 /* Notes masthead icon colors */
@@ -123,12 +124,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 h3 {
@@ -710,7 +711,7 @@ pre[class*="language-"] {
 .token.function {
   color: #f08d49;
 }
-
+#439A86
 .token.property,
 .token.class-name,
 .token.constant,
@@ -723,7 +724,7 @@ pre[class*="language-"] {
 .token.atrule,
 .token.keyword,
 .token.builtin {
-  color: #cc99cd;
+  color: #439a86;
 }
  
 .token.string,
@@ -731,13 +732,13 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.regex,
 .token.variable {
-  color: #7ec699;
+  color: #50ce8d;
 }
  
 .token.operator,
 .token.entity,
 .token.url {
-  color: #67cdcc;
+  color: #ccc;
 }
  
 .token.important,

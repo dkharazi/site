@@ -15,7 +15,7 @@ const LayoutEntry = ({ title, children }) => {
 
     useEffect(() => {
         const handleScroll = (event) => {
-            const headerHeight = mastheadRef.current.clientHeight - 33;
+            const headerHeight = mastheadRef.current.clientHeight - 133;
             if (document.body.scrollTop >= headerHeight  || document.documentElement.scrollTop >= headerHeight) {
                 menu === "rMenuClose" ? setColor("i1") : setColor("i0");
             } else {
@@ -37,7 +37,7 @@ const LayoutEntry = ({ title, children }) => {
             setMenu("rMenu")
             setColor("i0");
         } else {
-            const headerHeight = mastheadRef.current.clientHeight - 33;
+            const headerHeight = mastheadRef.current.clientHeight - 133;
             if (document.body.scrollTop >= headerHeight  || document.documentElement.scrollTop >= headerHeight) {
                 setColor("i1");
             }
@@ -57,7 +57,7 @@ const LayoutEntry = ({ title, children }) => {
                 setMenu("rMenu")
                 setColor("i0");
             } else {
-                const headerHeight = mastheadRef.current.clientHeight - 33;
+                const headerHeight = mastheadRef.current.clientHeight - 133;
                 if (document.body.scrollTop >= headerHeight  || document.documentElement.scrollTop >= headerHeight) {
                     setColor("i1");
                 }
