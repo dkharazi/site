@@ -4,6 +4,7 @@ import footerStyles from "../../styles/footer.module.css"
 import gitSvg from "../../img/github.svg"
 import liSvg from "../../img/linkedin.svg"
 import soSvg from "../../img/stackoverflow.svg"
+import rssSvg from "../../img/rss.svg"
 
 const Footer = () => {
     const data = useStaticQuery(graphql`
@@ -11,6 +12,7 @@ const Footer = () => {
             site {
                 siteMetadata {
                     author
+                    siteUrl
                 }
             }
         }
@@ -29,6 +31,9 @@ const Footer = () => {
                 </a>
                 <a href="https://stackoverflow.com/users/12777044/dkhara" target="_blank" rel="noreferrer">
                     <img src={soSvg} width="25" height="25" alt="stackoverflow" />
+                </a>
+                <a href={`${data.site.siteMetadata.siteUrl}/rss.xml`} target="_blank" rel="noreferrer">
+                    <img src={rssSvg} width="25" height="25" alt="rss" />
                 </a>
             </div>
         </footer>

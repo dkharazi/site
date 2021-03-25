@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `dfk`,
-    description: `Python developer living and working in Columbus.`,
+    description: `Data Scientist living and working in Columbus.`,
     author: `Darius Kharazi`,
     siteUrl: 'https://dkharazi.github.io/'
   },
@@ -142,7 +142,7 @@ module.exports = {
             // if not provided or `undefined`, all pages will have feed reference inserted
             match: "^/blog/",
             // optional configuration to specify external rss feed, such as feedburner
-            link: "https://feeds.feedburner.com/gatsby/blog",
+            link: "http://feeds.feedburner.com/DariusKharazisBlog",
           },
         ],
       },
