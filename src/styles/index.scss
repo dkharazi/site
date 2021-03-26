@@ -614,6 +614,12 @@ footer a {
   color: black;
 }
 
+.gatsby-highlight pre[class="language-xml"]::before {
+  content: 'XML' !important;
+  background: #ffb8de;
+  color: black;
+}
+
 .gatsby-highlight pre[class="language-ini"]::before {
   content: 'Ini' !important;
   background: #999;
