@@ -57,7 +57,6 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              showLineNumbers: true,
               languageExtensions: [
                 {
                   extend: 'bash',

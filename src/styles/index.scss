@@ -553,6 +553,7 @@ footer a {
   font-weight: 400;
 }
 
+
 /*
  * Code Highlighting
  *
@@ -564,76 +565,91 @@ footer a {
  */
 
 .gatsby-highlight {
-  background-color: #f4f3f7;
-  border-radius: 5px;
-  margin: 2rem 0;
-  padding-top: 2rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 0.5rem;
-  overflow: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
 }
 
-.gatsby-highlight:before {
-  content: '';
-  color: #655a87;
-  font-weight: 500;
-  font-size: 1rem;
-  border-radius: 5px 5px 0px 0px;
+.gatsby-highlight pre[class*="language-"] {
+  -webkit-overflow-scrolling: touch;
+}
+
+.gatsby-highlight pre[class*="language-"]::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
   position: absolute;
-  background-color: #e9e7ef;
-  height: 1.8rem;
-  width: calc(100% - 1rem);
-  padding-top: 0.5rem;
-  padding-left: 1rem;
-  margin-top: -2rem;
-  margin-left: -1rem;
+  right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
 }
 
-p .language-text,
-li .language-text {
-  color: #bf616a; /* color: #bf616a; */
-}
-
-div[data-language*="python"]:before {
+.gatsby-highlight pre[class="language-python"]::before {
   content: 'Python' !important;
+  background: #50ce8d;
+  color: black;
 }
 
-div[data-language*="js"]:before {
+.gatsby-highlight pre[class="language-html"]::before {
+  content: 'HTML' !important;
+  background: #439a86;
+  color: black;
+}
+
+.gatsby-highlight pre[class="language-css"]::before {
+  content: 'CSS' !important;
+  background: #f8c555;
+  color: black;
+}
+
+.gatsby-highlight pre[class="language-js"]::before {
   content: 'JavaScript' !important;
+  background: #f7df1e;
+  color: black;
 }
 
-div[data-language*="ini"]:before {
+.gatsby-highlight pre[class="language-ini"]::before {
   content: 'Ini' !important;
+  background: #999;
+  color: black;
 }
 
-div[data-language*="docker"]:before {
+.gatsby-highlight pre[class="language-docker"]::before {
   content: 'Docker' !important;
+  background: #70B3FF;
+  color: black;
 }
 
-div[data-language*="yml"]:before {
+.gatsby-highlight pre[class="language-yml"]::before {
   content: 'Yml' !important;
+  background: #999;
+  color: black;
 }
 
-div[data-language*="yml"]:before {
-  content: 'Yml' !important;
-}
-
-div[data-language*="bash"]:before {
+.gatsby-highlight pre[class="language-bash"]::before {
   content: 'Bash' !important;
+  background: #655a87;
+  color: black;
 }
 
-div[data-language*="apacheconf"]:before {
+.gatsby-highlight pre[class="language-apacheconf"]::before {
   content: 'Conf' !important;
+  background: #999;
+  color: black;
 }
 
-div[data-language*="sql"]:before {
+.gatsby-highlight pre[class="language-sql"]::before {
   content: 'SQL' !important;
+  background: #ccc;
+  color: black;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-     color: #655a87;
+     color: #515151; /* #655a87; */
      background: none;
      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
      font-size: 0.8rem;
@@ -652,7 +668,7 @@ pre[class*="language-"] {
      -ms-hyphens: none;
      hyphens: none;
  
- }
+}
  
 /* Code blocks */
 pre[class*="language-"] {
@@ -668,19 +684,10 @@ pre[class*="language-"] {
  
 /* Inline code */
 :not(pre) > code[class*="language-"] {
+  color: #655a87;
   padding: .1em;
   border-radius: .3em;
   white-space: normal;
-}
-
-/* Line numbers */
-.line-numbers {
-  padding-left: 2.5rem !important;
-}
-
-.line-numbers-rows {
-  margin-top: 1rem;
-  overflow: initial;
 }
  
 .token.comment,
@@ -688,11 +695,15 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #999;
+  color: #6a737d; /* #999; */
 }
  
 .token.punctuation {
-  color: #ccc;
+  color: #515151; /* #ccc; */
+}
+
+.token.decorator {
+  color: #6f42c1; /* #ccc; */
 }
  
 .token.tag,
@@ -709,14 +720,14 @@ pre[class*="language-"] {
 .token.boolean,
 .token.number,
 .token.function {
-  color: #f08d49;
+  color: #005cc5; /* #f08d49; */
 }
-#439A86
+
 .token.property,
 .token.class-name,
 .token.constant,
 .token.symbol {
-  color: #f8c555;
+  color: #E36209; /* #f8c555; */
 }
  
 .token.selector,
@@ -724,7 +735,7 @@ pre[class*="language-"] {
 .token.atrule,
 .token.keyword,
 .token.builtin {
-  color: #439a86;
+  color: #D73A49; /* #439a86; */
 }
  
 .token.string,
@@ -732,13 +743,13 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.regex,
 .token.variable {
-  color: #50ce8d;
+  color: #032f62; /* #50ce8d; */
 }
  
 .token.operator,
 .token.entity,
 .token.url {
-  color: #ccc;
+  color: #005cc5; /* #ccc; */
 }
  
 .token.important,
