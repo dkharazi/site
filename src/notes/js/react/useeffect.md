@@ -33,7 +33,7 @@ katex: true
 - Without using the `useEffect` hook, we must use class components to implement side effects
 - The following is an example of this:
 
-```js
+```jsx
 class Counter extends Component {
   contructor(props) {
     super(props);
@@ -77,7 +77,7 @@ class Counter extends Component {
 - This hook is placed inside the component in order to easily access the component's state and props without extra code
 - The following interprets the above example using the `useEffect` hook:
 
-```js
+```jsx
 function Counter() {
   const [count, setCount] = useState(0);
 

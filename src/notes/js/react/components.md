@@ -58,7 +58,7 @@ $$
 \overbrace{\text{Properties}}^{\text{Optional Input}} \to \overbrace{\boxed{\text{JavaScript Function}}}^{\text{Functional Component}} \to \overbrace{\text{HTML}}^{\text{Output}}
 $$
 
-```js
+```jsx
 function Greet(props) {
     return <h1>Hello, {props.name}</h1>;
 }
@@ -76,7 +76,7 @@ $$
 \overbrace{\text{Properties}}^{\text{Optional Input}} \to \overbrace{\boxed{\text{ES6 Class}}}^{\text{Class Component}} \to \overbrace{\text{HTML}}^{\text{Output}}
 $$
 
-```js
+```jsx
 class Greet extends React.Component {
     render() {
         return <h1>Hello, {props.name}</h1>;

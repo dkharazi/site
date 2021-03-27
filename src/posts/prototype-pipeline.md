@@ -91,7 +91,7 @@ def get_hit_count():
 @app.route('/')
 def hello():
   count = get_hit_count()
-  return 'I've been seen {} times.\n'.format(count)
+  return 'Ive been seen {} times.\n'.format(count)
 ```
 
 In this exmaple, `redis` is the hostname of the redis container located on the same network as this application. We use the default port for Redis, which is `6379`. This [article](https://realpython.com/flask-by-example-implementing-a-redis-task-queue/) illustrates a more detailed example using a redis task queue. For a deeper explanation about our simple Python web application, refer to the [getting-started docs](https://docs.docker.com/compose/gettingstarted/), which uses this example with Docker compose in greater detail.

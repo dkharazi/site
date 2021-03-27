@@ -12,7 +12,7 @@ katex: true
 - In the render method, we have a button element
 - For the button element, we add an event handler for any `onclick` event
 
-```js
+```jsx
 class Counter extends Component {
   constructor(props) {
     super(props);
@@ -67,7 +67,7 @@ class Counter extends Component {
 - This parameter is an array that only checks specified props/state
 - The following is an example of this:
 
-```js
+```jsx
 function Counter() {
   const [count, setCount] = useState(0);
   const [name, setName] = useState('');
@@ -106,7 +106,7 @@ function Counter() {
 - By specifying an empty array in the second parameter for `useEffect`, we can recreate the functionality for `componentDidMount`
 - The following is an example of this:
 
-```js
+```jsx
 function Mouse() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);

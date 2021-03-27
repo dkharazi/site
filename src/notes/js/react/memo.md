@@ -16,7 +16,7 @@ katex: true
 
 ### Illustrating a Parent Component
 
-```js
+```jsx
 class ParentComp extends Component {
   constructor(props) {
     super(props)
@@ -46,7 +46,7 @@ class ParentComp extends Component {
 
 ### Illustrating a Memo Component
 
-```js
+```jsx
 function MemoComp({name}) {
   console.log('Rendering MemoComponent')
   return (

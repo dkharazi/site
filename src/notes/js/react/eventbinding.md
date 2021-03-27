@@ -44,7 +44,7 @@ function hello() {
 - As a result, `this` will become `undefined` in the method
 - To illustrate this point, refer to the following example:
 
-```js
+```jsx
 class Greet extends Component {
   constructor() {
     this.state = {
@@ -85,7 +85,7 @@ class Greet extends Component {
 - Therefore, this solution shouldn't be used for larger apps
 - Also, this solution makes it difficult to pass parameter values
 
-```js
+```jsx
 class Greet extends Component {
   constructor() {
     this.state = {
@@ -124,7 +124,7 @@ class Greet extends Component {
 - Therefore, this solution shouldn't be used for larger apps
 - This solutions makes it simple to pass parameter values
 
-```js
+```jsx
 class Greet extends Component {
   constructor() {
     this.state = {
@@ -161,7 +161,7 @@ class Greet extends Component {
 - Any update to the state doesn't cause component rerendering
 - Therefore, a new event handler won't be created for each render
 
-```js
+```jsx
 class Greet extends Component {
   constructor() {
     this.state = {
@@ -202,7 +202,7 @@ class Greet extends Component {
 - Therefore, a new event handler won't be created for each render
 - This solutions makes it simple to pass parameter values
 
-```js
+```jsx
 class Greet extends Component {
   constructor() {
     this.state = {

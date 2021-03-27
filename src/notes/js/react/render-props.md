@@ -26,7 +26,7 @@ katex: true
 	- Handles the logic of the state and method
 - This provides us with flexibility when we go to render any `Counter` components
 
-```js
+```jsx
 // App.js
 class App extends Component {
   render() {
@@ -54,7 +54,7 @@ class App extends Component {
 }
 ```
 
-```js
+```jsx
 // Counter.js
 class Counter extends Component {
   constructor(props) {
@@ -79,7 +79,7 @@ class Counter extends Component {
 }
 ```
 
-```js
+```jsx
 // ClickCounter.js
 class ClickCounter extends Component {
   render() {
@@ -93,7 +93,7 @@ class ClickCounter extends Component {
 }
 ```
 
-```js
+```jsx
 // HoverCounter.js
 class HoverCounter extends Component {
   render() {

@@ -29,7 +29,7 @@ katex: true
 
 ### Example without Lifting State
 
-```js
+```jsx
 // App.js
 class App extends Component {
   render() {
@@ -43,7 +43,7 @@ class App extends Component {
 }
 ```
 
-```js
+```jsx
 // Counter.js
 class Counter extends Component {
   constructor(props) {
@@ -81,7 +81,7 @@ class Counter extends Component {
 
 ### Example with Lifting State
 
-```js
+```jsx
 // App.js
 class App extends Component {
   constructor(props) {
@@ -120,7 +120,7 @@ class App extends Component {
 }
 ```
 
-```js
+```jsx
 // Counter.js
 function Counter(props) {
   return (

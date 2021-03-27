@@ -6,7 +6,7 @@ katex: true
 ---
 
 ### Handling Events in Functional Components
-```js
+```jsx
 function functionClick() {
   function clickHandler() {
     console.log('Button clicked');
@@ -22,7 +22,7 @@ function functionClick() {
 ```
 
 ### Handling Events in Class Components
-```js
+```jsx
 class ClassClick extends Component {
   clickHandler() {
     console.log('Button clicked');

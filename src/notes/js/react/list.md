@@ -11,7 +11,7 @@ katex: true
 - However, this isn't efficient if our data structure is large
 - The following is an example of this manual approach, which we don't want to do:
 
-```js
+```jsx
 function NameList() {
   const names = ['Jack', 'Mike', 'Tim'];
   return (
@@ -30,7 +30,7 @@ function NameList() {
 - Then, we'll be able to render any list as a component
 - The following is an example of this:
 
-```js
+```jsx
 function NameList() {
   const names = ['Jack', 'Mike', 'Tim'];
   const nameList = names.map(n => <h2>{n}</h2>);
@@ -44,7 +44,7 @@ function NameList() {
 - Then, we'll want to map these components to html tags
 - If we have the following array of objects:
 
-```js
+```jsx
 const people = [
   {
     id: 1,
@@ -71,7 +71,7 @@ const people = [
 - Then, we can map the each object to a component
 - These components will then be rendered as a list component:
 
-```js
+```jsx
 function Person({person}) {
   return(
     <div>
@@ -97,7 +97,7 @@ function NameList({people}) {
 - The key property is not accessible via `props`
 - In our case, we can assign the key as the index:
 
-```js
+```jsx
 function Person({person, key}) {
   return(
     <div>
@@ -122,7 +122,7 @@ function NameList({people}) {
 - Specifically, if items are added, removed, or shuffled throughout a list, this approach should not be used
 - The following is an example of this:
 
-```js
+```jsx
 function NameList({people}) {
   const list = people.map((p, idx) => 
                  <Person key={idx} person={p} />);

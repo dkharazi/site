@@ -55,7 +55,7 @@ katex: true
 		- First, the previous state `prevState`
 		- Second, the properties `props`
 
-```js
+```jsx
 // 1a. Bad: never modify state directly
 increment() {
   this.state.count = this.state.count + 1;
@@ -84,7 +84,7 @@ this.setState((state, props) => ({
 ```
 
 ### Illustrating Functional Component with Properties
-```js
+```jsx
 const Greet = props => {
   return(
     <div>
@@ -98,7 +98,7 @@ const Greet = props => {
 ```
 
 ### Illustrating Class Component with State
-```js
+```jsx
 class Greet extends Component {
   constructor() {
     super()
@@ -128,7 +128,7 @@ class Greet extends Component {
 ```
 
 ### Illustrating Class Component with Properties and State
-```js
+```jsx
 class Greet extends Component {
   constructor(props) {
     super(props)

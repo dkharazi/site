@@ -11,7 +11,7 @@ katex: true
 - The simplest way of achieving this is with arrow functions
 
 ### Illustrating a Parent Component
-```js
+```jsx
 class Parent extends Component {
   constructor(props) {
     super(props)
@@ -41,7 +41,7 @@ class Parent extends Component {
 ```
 
 ### Illustrating a Child Component
-```js
+```jsx
 // retrieve parent method
 // from properties
 const ChildComponent = (props) => {
@@ -64,7 +64,7 @@ const ChildComponent = (props) => {
 - Specifically, a more *specific* component renders a more *generic* component and configures it with props
 - The following is an example of this:
 
-```js
+```jsx
 // Dialog.js
 function Dialog(props) {
   return (
@@ -74,7 +74,7 @@ function Dialog(props) {
 }
 ```
 
-```js
+```jsx
 // WelcomeDialog.js
 function WelcomeDialog() {
   return (

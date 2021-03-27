@@ -16,7 +16,7 @@ katex: true
 - A new object should be returned that reflects the new state
 
 ### Illustrating a Parent Component
-```js
+```jsx
 class ParentComp extends Component {
   constructor(props) {
     super(props)
@@ -47,7 +47,7 @@ class ParentComp extends Component {
 ```
 
 ### Illustrating a Regular Component
-```js
+```jsx
 class RegComp extends Component {
   render() {
     console.log('Regular Comp render')
@@ -61,7 +61,7 @@ class RegComp extends Component {
 ```
 
 ### Illustrating a Pure Component
-```js
+```jsx
 class PureComp extends PureComponent {
   render() {
     console.log('Pure Comp render')

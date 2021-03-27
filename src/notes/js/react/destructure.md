@@ -6,7 +6,7 @@ katex: true
 ---
 
 ### Sample `Greet.js` Component
-```js
+```jsx
 const Greet = props => {
   return (
     <div>
@@ -19,7 +19,7 @@ const Greet = props => {
 ```
 
 ### Destructuring Properties in Parameters
-```js
+```jsx
 const Greet = ({nickName, firstName}) => {
   return (
     <div>  
@@ -32,7 +32,7 @@ const Greet = ({nickName, firstName}) => {
 ```
 
 ### Destructuring Properties in the Function Body
-```js
+```jsx
 const Greet = props => {
   const {nickName, firstName} = props;
   return (

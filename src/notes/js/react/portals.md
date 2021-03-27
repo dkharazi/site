@@ -10,7 +10,7 @@ katex: true
 - Normally, child components are mounted into the DOM of the nearest parent component
 - The following illustrates this notion:
 
-```js
+```jsx
 render() {
   // React mounts a new div
   // and renders the children into it
@@ -28,7 +28,7 @@ render() {
 - Here, `domNode` is any valid DOM node
 - The following illustrates this notion:
 
-```js
+```jsx
 render() {
   return ReactDOM.createPortal(
     this.props.children,
@@ -56,7 +56,7 @@ render() {
 </html>
 ```
 
-```js
+```jsx
 // App.js
 class App extends Component {
   render() {
@@ -69,7 +69,7 @@ class App extends Component {
 }
 ```
 
-```js
+```jsx
 // PortalDemo.js
 function PortalDemon() {
   return ReactDOM.createPortal(

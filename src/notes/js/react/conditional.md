@@ -18,7 +18,7 @@ katex: true
 - Before illustrating the four different approaches in greater detail, we'll set up a `UserGreeting` class component
 - Each approach will be prefaced using this code:
 
-```js
+```jsz
 class UserGreeting extends Component {
   constructor(props) {
     super(props)
@@ -36,7 +36,7 @@ class UserGreeting extends Component {
 - Specifically, JSX is just syntactic sugar for function calls and object construction
 - Meaning, adding if statements inside these function calls wouldn't make sense and would throw errors
 
-```js
+```jsx
 render() {
   if (this.state.isLoggedIn) {
     return <div>Welcome User</div>;
@@ -51,7 +51,7 @@ render() {
 - By initializing a variable, we can conditionally assign a value to it
 - The benefit of this approach is it can be used within JSX
 
-```js
+```jsx
 render() {
   let message;
     if (this.state.isLoggedIn) {
@@ -68,7 +68,7 @@ render() {
 - The benefit of this approach is it can be used within JSX as well
 - Additionally, most users feel this approach is even more readable
 
-```js
+```jsx
 render() {
   return this.state.isLoggedIn ? (
     <div>Welcome User</div>
@@ -83,7 +83,7 @@ render() {
 - However, if we want to render either *something* or *nothing*, then we'll use the short circuit operator
 - The short circuit operator is just a specific case of the ternary operator
 
-```js
+```jsx
 render() {
   return this.state.isLoggedIn && 
     <div>Welcome User</div>;

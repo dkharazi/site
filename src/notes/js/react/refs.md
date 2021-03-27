@@ -22,7 +22,7 @@ katex: true
 
 ### Use Case 1: Focusing Text Field
 
-```js
+```jsx
 class RefsDemo extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +46,7 @@ class RefsDemo extends Component {
 
 ### Use Case 2: Fetching Input Value
 
-```js
+```jsx
 class RefsDemo extends Component {
   constructor(props) {
     super(props);
@@ -73,7 +73,7 @@ class RefsDemo extends Component {
 
 ### Use Case 3: Adding a Ref to DOM Elements
 
-```js
+```jsx
 class CustomTextInput extends Component {
   constructor(props) {
     super(props);
@@ -103,7 +103,7 @@ class CustomTextInput extends Component {
 
 ### Use Case 4: Adding a Ref to Class Components
 
-```js
+```jsx
 class AutoFocusTextInput extends Component {
   constructor(props) {
     super(props);

@@ -20,7 +20,7 @@ katex: true
 - Whenever the value is updated by a user, the new value is propagated to the `changeUser` callback
 - This callback then sets the `username` to the new value
 
-```js
+```jsx
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -54,7 +54,7 @@ class Form extends Component {
 
 ### Adding a Controlled Component for Submission
 
-```js
+```jsx
 class Form extends Component {
   ...
 

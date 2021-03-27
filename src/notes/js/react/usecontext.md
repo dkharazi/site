@@ -25,7 +25,7 @@ katex: true
 - However, as we use additional contexts, our code requires nesting of contexts which adds complexity
 - Although this example doesn't demonstrate this complex nesting, we can see how contexts are used with class components:
 
-```js
+```jsx
 // App.js
 export const UserContext = React.createContext();
 function App() {
@@ -39,7 +39,7 @@ function App() {
 }
 ```
 
-```js
+```jsx
 // F.js
 function F() {
   return (
@@ -60,7 +60,7 @@ function F() {
 - With `useContext`, notice we don't need to change `App.js`
 - Also, notice how much simpler the code becomes:
 
-```js
+```jsx
 // App.js
 export const UserContext = React.createContext();
 // We can see nothing changes here!
@@ -75,7 +75,7 @@ function App() {
 }
 ```
 
-```js
+```jsx
 // F.js
 function F() {
   const username = useContext(UserContext);

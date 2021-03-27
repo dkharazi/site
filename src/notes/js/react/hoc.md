@@ -31,7 +31,7 @@ const IronMan = withSuit(TonyStark);
 - Specifically, it refers to a standard function
 - The following function is an example of an HOC:
 
-```js
+```jsx
 // hoc.js
 const hoc = WrappedComponent => {
   class HOC extends Component {
@@ -57,7 +57,7 @@ export default hoc(SomeComponent)
 - The HOC listed above isn't very interesting, since it doesn't include any additional functionality
 - The following HOC has a prop tied to it:
 
-```js
+```jsx
 const HOC = OriginalComponent => {
   class NewComponent extends Component {
     render() {
@@ -81,7 +81,7 @@ const HOC = OriginalComponent => {
 - However, both the `ClickCounter` and `HoverCounter` components receive separate states
 - Meaning, incrementing the `ClickCounter` component will not affect the `HoverCounter` component, and vice versa
 
-```js
+```jsx
 // App.js
 class App extends Component {
   render() {
@@ -155,7 +155,7 @@ export default withCounter;
 - Properties passed to the `ClickCounter` component are passed to `WithCounter`, but not `WrappedComponent`
 - To fix this issue, the remaining props must be passed down to the `WrappedComponent` using the spread operator
 
-```js
+```jsx
 // App.js
 class App extends Component {
   render() {
@@ -202,7 +202,7 @@ class ClickCounter extends Component {
 - In our example, we may want to increment by a different value depending on the component that is passed to the HOC
 - The following is an example of this:
 
-```js
+```jsx
 // withCounter.js
 const withCounter = (WrappedComponent, incNum) => {
   ...

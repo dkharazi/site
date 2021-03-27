@@ -13,7 +13,7 @@ katex: true
 	2. Initialize a state variable
 	3. Create a method for setting this state value using `setState`
 
-```js
+```jsx
 // Step 1: Define class component
 class Counter extends Components {
   constructor(props) {
@@ -52,7 +52,7 @@ class Counter extends Components {
 	2. Initialize a state variable using `useState`
 	3. The `useState` function outputs a method for setting this state value
 
-```js
+```jsx
 // Step 1: Define functional component
 function Counter {
   // Step 2: Initialize state variable as 0
@@ -75,7 +75,7 @@ function Counter {
 - By using this parameter, we can implement a safer way of incrementing and decrementing our state value
 - The following is an example of this:
 
-```js
+```jsx
 function Counter {
   const [count, setCount] = useState(0);
   let addCount = () =>
@@ -98,7 +98,7 @@ function Counter {
 - Instead, it replaces any input values
 - The following is an example of this:
 
-```js
+```jsx
 function Namer {
   let nameObj = {'firstName': '', 'lastName': ''};
   const [name, setName] = useState(nameObj);

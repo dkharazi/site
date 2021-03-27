@@ -11,7 +11,7 @@ katex: true
 - In order to do this, we've needed to enclose these elements within a div element
 - The following is an example of this:
 
-```js
+```jsx
 function Demo() {
   return (
     <div>
@@ -27,7 +27,7 @@ function Demo() {
 - In React, Fragments allow a component to return multiple elements
 - The following is an example of this:
 
-```js
+```jsx
 function Demo() {
   return (
     <React.Fragment>
@@ -39,7 +39,7 @@ function Demo() {
 ```
 
 ### Use Case: Table and Column Components
-```js
+```jsx
 // Column.js
 function Column() {
   return (

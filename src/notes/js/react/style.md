@@ -28,7 +28,7 @@ katex: true
 - Lastly, we can specify the `className` to match elements based on the contents of their class attribute
 - The following is an example of this:
 
-```js
+```jsx
 import './myStyle.css'
 
 function Component() {
@@ -45,7 +45,7 @@ function Component() {
 - In React, inline styling if straightforward
 - We can apply style attributes using an object:
 
-```js
+```jsx
 const heading = {
   fontSize: '72px',
   color: 'blue'
@@ -76,7 +76,7 @@ function Component() {
 - Lastly, we can specify the `className` to import CSS classes from a CSS module
 - The following is an example of this:
 
-```js
+```jsx
 import styles from './myStyle.module.css'
 
 function Component() {

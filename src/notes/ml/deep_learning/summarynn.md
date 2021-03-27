@@ -39,6 +39,7 @@ katex: true
 ---
 
 ### References
+- [CS229 Cheatsheet Deep Learning](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-deep-learning)
 - [TensorFlow Walkthrough](https://www.youtube.com/watch?v=S9ElPZupUsE&list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc&index=34)
 - [TensorFlow API Guide](https://www.tensorflow.org/tutorials)
 - [TensorFlow Tutorials](https://www.tensorflow.org/tutorials)
