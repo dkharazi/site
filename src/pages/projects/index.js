@@ -62,7 +62,7 @@ const ProjectsPage = () => {
                         <Link to={`/projects/news`}>
                             <Img fluid={data.media.childImageSharp.fluid} alt="media" />
                             <div className={projectsStyles.description}>
-                                news topic
+                                media topics
                             </div>
                         </Link>
                     </div>
