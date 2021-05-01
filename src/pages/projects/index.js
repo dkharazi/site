@@ -59,10 +59,10 @@ const ProjectsPage = () => {
                         </Link>
                     </div>
                     <div className={projectsStyles.item}>
-                        <Link to={`/construction`}>
+                        <Link to={`/projects/news`}>
                             <Img fluid={data.media.childImageSharp.fluid} alt="media" />
                             <div className={projectsStyles.description}>
-                                media sentiment
+                                news topic
                             </div>
                         </Link>
                     </div>
