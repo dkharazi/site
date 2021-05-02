@@ -16,8 +16,6 @@ const Tooltip = ({ input, chartType }) => {
 
 	// Assign tooltip based on chart type
 	if (chartType === "cluster") {
-		console.log(colorName);
-		console.log(tooltipStyles[colorName]);
 		chartJsx = (
 			<div className={tooltipStyles.tooltip}>
 				<div className={tooltipStyles.text}>

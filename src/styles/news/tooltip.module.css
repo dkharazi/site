@@ -43,27 +43,27 @@
     line-height: 0.8rem;
 }
 
-.baseball {
+.baseball, .left, .breitbart {
     background: #FA0087 !important;
 }
 
-.basketball {
+.basketball, .right, .cnn {
     background: #F7E1A0 !important;
 }
 
-.brexit {
+.brexit, .npr {
     background: #B10DA1 !important;
 }
 
-.businessandfinance {
+.businessandfinance, .newyorkpost {
     background: #1CBE4F !important;
 }
 
-.crime {
+.crime, .newyorktimes {
     background: #2ED9FF !important;
 }
 
-.cuba-relations {
+.cubarelations, .washingtonpost {
     background: #C4451C !important;
 }
 

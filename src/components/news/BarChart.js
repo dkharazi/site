@@ -9,6 +9,7 @@ import topicsJson from '../../data/news/uniqueTopics.json';
 const BarChart = ({ data, chartType }) => {
 
     // Helper function for mapping clusters with topics
+    // console.log(data);
     const labeledData = data.map(t => {
         return ({
             label: topicsJson.labels[t.label],

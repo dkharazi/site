@@ -15,7 +15,7 @@ const Legend = ({ topic, handleChangeTopic }) => {
 
     // Helper function for building topic labels for legend
     const topicButtons = topicsJson.topics.map((t) => {
-        const colorName = t.toLowerCase().split('.').join('').split(' ').join('-');
+        const colorName = t.toLowerCase().split('.').join('').split(' ').join('');
         const customRadio = <Radio className={colorStyles[colorName]} />;
         return (
             <FormControlLabel
