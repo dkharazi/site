@@ -6,6 +6,7 @@
   "author": "Darius Kharazi  <dkharazif@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@nivo/bar": "^0.69.0",
@@ -36,6 +37,7 @@
     "gatsby-transformer-sharp": "^2.12.1",
     "katex": "^0.12.0",
     "node-sass": "^4.14.1",
+    "package.json": "^2.0.1",
     "prismjs": "^1.23.0",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",

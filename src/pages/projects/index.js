@@ -85,7 +85,7 @@ const ProjectsPage = () => {
                         </Link>
                     </div>
                     <div className={projectsStyles.item}>
-                        <Link to={`/construction`}>
+                        <Link to={`/projects/style-transfer`}>
                             <Img fluid={data.star.childImageSharp.fluid} alt="starryNight" />
                             <div className={projectsStyles.description}>
                                 style transfer

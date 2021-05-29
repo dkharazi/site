@@ -1,0 +1,33 @@
+.card {
+    max-width: 345;
+}
+
+.media {
+    height: 444px;
+}
+
+.formControl {
+    width: 100%;
+    margin: 10px;
+}
+
+.outputTitle {
+    margin-bottom: 5.9rem;
+}
+
+.outputDescription {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 45.625em) {
+    .infoText {
+        font-size: 10px !important;
+    }
+}
+
+@media (max-width: 38.8125em) {
+    .infoText {
+        font-size: 0.8125rem !important;
+    }
+}
