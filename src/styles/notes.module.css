@@ -37,6 +37,15 @@
     }
 }
 
+@media (max-width: 28em) {
+    .notesItem {
+        width: 2rem !important;
+        height: 2rem !important;
+        font-size: 0.8rem !important;
+        font-weight: 300 !important;
+    }
+}
+
 .notesItem a:last-child {
     margin-right: 0;
 }
@@ -63,5 +72,12 @@
     .icon {
         width: 30px;
         height: 30px;
+    }
+}
+
+@media (max-width: 28em) {
+    .icon {
+        width: 15px;
+        height: 15px;
     }
 }
