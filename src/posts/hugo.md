@@ -13,7 +13,7 @@ In this post, we walk through the steps of running a site on GitHub created by a
 	- This directory will contain the files on the hugo site
 	- The directory should look like this:
 
-```
+```text
 mysite/
 ├── archetypes/
 ├── config.toml
@@ -34,7 +34,7 @@ mysite/
 	- This command build the site to the public directory
 4. In the new `public` directory, initialize the git repo
 
-```
+```bash
 $ cd public
 $ git init
 $ git add .

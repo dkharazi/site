@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import LayoutCategory from '../components/site/layouts/layoutcategory'
 import SubCategory from '../components/site/subcategory'
-import catStyles from '../styles/category.module.css'
+import * as catStyles from '../styles/category.module.css'
 
 import jsPng from '../img/js.png'
 import mlPng from '../img/ml.png'

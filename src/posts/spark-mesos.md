@@ -124,6 +124,7 @@ $ ./bin/spark-submit \
     --master mesos://localhost:5050 \
     test.py
 ```
+
 5. Stop the daemons
 ```bash
 $ ./sbin/stop-master.sh

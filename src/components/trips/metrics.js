@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from "gatsby"
-import metricStyles from '../../styles/trips/metrics.module.css';
+import * as metricStyles from '../../styles/trips/metrics.module.css';
 import { starToPath } from '../../constants/trips/geo';
 
 const Metrics = ({ locs, setLocs, setShiftStar, setChangeStar }) => {
@@ -66,7 +66,7 @@ const Metrics = ({ locs, setLocs, setShiftStar, setChangeStar }) => {
                 <div className={metricStyles.title}>
                   {l.title}
                 </div>
-                <div className={metricStyles.rank}>
+                <div>
                   {
                     l.data.map(loc => {
                       const starPath = starToPath(0, 0);

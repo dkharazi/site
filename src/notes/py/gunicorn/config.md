@@ -40,7 +40,7 @@ katex: true
 - Not all Gunicorn settings are available to be set from the CLI
 - To see the full list of command line settings:
 
-```sh
+```bash
 $ gunicorn -h
 ```
 

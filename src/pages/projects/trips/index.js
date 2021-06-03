@@ -2,7 +2,7 @@ import React, {useRef, useState} from 'react';
 import Header from '../../../components/trips/header';
 import Graphic from '../../../components/trips/graphic';
 import TripsLayout from "../../../components/trips/tripsLayout"
-import legendStyles from '../../../styles/trips/legend.module.css';
+import * as legendStyles from '../../../styles/trips/legend.module.css';
 
 const TripsPage = () => {
 

@@ -32,7 +32,7 @@ katex: true
 - The `HUP` signal is used to reload Gunicorn configuration
 - An example looks like:
 
-```sh
+```text
 2013-06-29 [20682] [INFO] Handling signal: hup
 2013-06-29 [20682] [INFO] Hang up: Master
 2013-06-29 [20703] [INFO] Booting worker with pid: 20703

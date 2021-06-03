@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 import Header from '../headers/header'
 import Footer from '../footer'
-import notesStyles from '../../../styles/notes.module.css'
+import { container } from '../../../styles/notes.module.css'
 
 const LayoutNotes = ({ children }) => {
     return (
@@ -16,7 +16,7 @@ const LayoutNotes = ({ children }) => {
                 <meta name="author" content="Darius Kharazi" />
             </Helmet>
             <Header />
-            <main className={notesStyles.container}>
+            <main className={container}>
                 {children}
             </main>
             <Footer />

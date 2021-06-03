@@ -5,7 +5,7 @@ import NewsBar from '../../../components/news/NewsBar';
 import Topic from '../../../components/news/Topic';
 import Publication from '../../../components/news/Publication';
 import Classify from '../../../components/news/Classify';
-import layoutStyles from '../../../styles/news/layout.module.css';
+import * as layoutStyles from '../../../styles/news/layout.module.css';
 import sampleArticle from '../../../data/news/article.js';
 
 

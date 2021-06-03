@@ -81,7 +81,7 @@ class PureComp extends PureComponent {
 - For example, a shallow comparison will always return true if the strings are the same values
 - However, two objects return false if they don't have the same identity
 
-```
+```text
 Parent Comp render
 Reg Comp render
 Pure Comp render

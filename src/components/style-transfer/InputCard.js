@@ -3,7 +3,7 @@ import { Card, CardActionArea, CardMedia, CardContent, CardActions } from '@mate
 import { Typography, Button } from '@material-ui/core';
 import { FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
 import Modal from './Modal';
-import cardStyles from '../../styles/style-transfer/card.module.css';
+import * as cardStyles from '../../styles/style-transfer/card.module.css';
 import images from '../../data/style-transfer/images';
 
 

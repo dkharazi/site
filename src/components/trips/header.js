@@ -1,5 +1,5 @@
 import React from 'react';
-import headerStyles from '../../styles/trips/header.module.css';
+import * as headerStyles from '../../styles/trips/header.module.css';
 
 const Header = ({ title }) => {
   return (

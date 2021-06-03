@@ -222,7 +222,7 @@ katex: true
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 

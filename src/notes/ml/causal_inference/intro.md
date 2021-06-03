@@ -62,9 +62,17 @@ $$
     - Thus, it's impossible to be *certain* abound causal effects 
 - Due to this problem, we'll never know the individual treatment effect
     - Because, we only observe one of the potential outcomes
-- As a result, we can't estimate the individual treatement effect
+- As a result, we can't know individual treatement effects $\delta_{i}$
 - Instead, we estimate the treatment of the overall group as an average
 - Specifically, we calculate the average treatment effect:
+
+$$
+\begin{equation}
+\begin{split}
+ATE = E[\delta] = E[Y^{1} - Y^{0}] \approx \frac{y_{0}^{1} + y_{1}^{1} + ... + y_{n}^{1}}{n} - \frac{y_{0}^{0} + y_{1}^{0} + ... + y_{n}^{0}}{n}
+\end{split}
+\end{equation}
+$$
 
 - To draw conclusions about causality, we must verify there isn't any bias between the control and treatment groups
 - To do this, we must check that the following assumption is satisfied:

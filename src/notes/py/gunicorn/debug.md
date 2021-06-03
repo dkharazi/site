@@ -64,13 +64,13 @@ katex: true
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 
 - Or we can specify the `reload` setting using the CLI:
 
-```sh
+```bash
 $ gunicorn --reload ...
 ```
 
@@ -85,13 +85,13 @@ $ gunicorn --reload ...
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 
 - Or we can specify the `reload_engine` setting using the CLI:
 
-```sh
+```bash
 $ gunicorn --reload --reload-engine inotify ...
 ```
 
@@ -106,13 +106,13 @@ $ gunicorn --reload --reload-engine inotify ...
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 
 - Or we can specify the `reload_extra_files` setting using the CLI:
 
-```sh
+```bash
 $ gunicorn --reload --reload-extra-file config.py ...
 ```
 
@@ -126,13 +126,13 @@ $ gunicorn --reload --reload-extra-file config.py ...
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 
 - Or we can specify the `spew` setting using the CLI:
 
-```sh
+```bash
 $ gunicorn --spew ...
 ```
 
@@ -146,13 +146,13 @@ $ gunicorn --spew ...
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 
 - Or we can specify the `check_config` setting using the CLI:
 
-```sh
+```bash
 $ gunicorn -c config.py --check-config ...
 ```
 

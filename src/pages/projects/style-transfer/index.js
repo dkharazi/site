@@ -4,7 +4,7 @@ import StyleLayout from '../../../components/style-transfer/StyleLayout';
 import InputCard from '../../../components/style-transfer/InputCard';
 import OutputCard from '../../../components/style-transfer/OutputCard';
 import images from '../../../data/style-transfer/images';
-import layoutStyles from '../../../styles/style-transfer/layout.module.css';
+import * as layoutStyles from '../../../styles/style-transfer/layout.module.css';
 
 
 const StyleTransfer = () => {

@@ -5,7 +5,7 @@ import { select } from 'd3-selection';
 import { transition, duration } from 'd3-transition';
 import { graphql, useStaticQuery } from "gatsby"
 import { geoPath } from "d3-geo";
-import mapStyles from '../../styles/trips/map.module.css';
+import * as mapStyles from '../../styles/trips/map.module.css';
 import { width, height, projection, colorScale } from '../../constants/trips/map';
 import { circleToPath, starToPath } from '../../constants/trips/geo';
 import statesJson from '../../data/trips/states.json';

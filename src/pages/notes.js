@@ -2,7 +2,7 @@ import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import LayoutNotes from '../components/site/layouts/layoutnotes'
-import notesStyles from '../styles/notes.module.css'
+import * as notesStyles from '../styles/notes.module.css'
 
 import jsPng from '../img/jsIcon.png'
 import mlPng from '../img/mlIcon.png'

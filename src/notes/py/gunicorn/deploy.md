@@ -17,7 +17,7 @@ katex: true
 - These can be used to run applications normally
 - With `Virtualenv` installed, we can run:
 
-```sh
+```bash
 $ mkdir ~/venvs/
 $ virtualenv ~/venvs/webapp
 $ source ~/venvs/webapp/bin/activate
@@ -27,7 +27,7 @@ $ deactivate
 
 - To activate a virtual environment, we can run:
 
-```sh
+```bash
 $ source ~/venvs/webapp/bin/activate
 $ pip install -I gunicorn
 ```

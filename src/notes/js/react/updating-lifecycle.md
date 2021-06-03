@@ -54,7 +54,7 @@ katex: true
 - However, we first should compare the previous props and current props to decide whether to make the AJAX call or not
 
 ### Order of Execution for Two Updating Components
-```
+```text
 ParentComponent: getDerivedStateFromProps
 ParentComponent: shouldComponentUpdate
 ParentComponent: render

@@ -1,46 +1,36 @@
 import React from 'react'
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import Layout from "../../components/site/layouts/layout"
-import projectsStyles from "../../styles/projects.module.css"
+import * as projectsStyles from "../../styles/projects.module.css"
 
 const ProjectsPage = () => {
 
     const data = useStaticQuery(graphql`
         query {
-            mountains: file(relativePath: { eq: "img/mountains.png" }) {
+            mountains: file (relativePath: {eq: "img/mountains.png"}) {
                 childImageSharp {
-                    fluid(maxWidth: 700) {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData (layout: CONSTRAINED, width: 700, placeholder: BLURRED)
                 }
             }
             media: file(relativePath: { eq: "img/media.jpg" }) {
                 childImageSharp {
-                    fluid(maxWidth: 700) {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData (layout: CONSTRAINED, width: 700, placeholder: BLURRED)
                 }
             }
             music: file(relativePath: { eq: "img/music.jpg" }) {
                 childImageSharp {
-                    fluid(maxWidth: 700) {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData (layout: CONSTRAINED, width: 700, placeholder: BLURRED)
                 }
             }
             wave: file(relativePath: { eq: "img/wave.jpg" }) {
                 childImageSharp {
-                    fluid(maxWidth: 700) {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData (layout: CONSTRAINED, width: 700, placeholder: BLURRED)
                 }
             }
             star: file(relativePath: { eq: "img/starrynight.jpg" }) {
                 childImageSharp {
-                    fluid(maxWidth: 700) {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData (layout: CONSTRAINED, width: 700, placeholder: BLURRED)
                 }
             }
         }
@@ -52,7 +42,7 @@ const ProjectsPage = () => {
                 <div className={projectsStyles.column}>
                     <div className={projectsStyles.item}>
                         <Link to={`/projects/trips`}>
-                            <Img fluid={data.mountains.childImageSharp.fluid} alt="trips" />
+                            <GatsbyImage image={data.mountains.childImageSharp.gatsbyImageData} alt="trips" />
                             <div className={projectsStyles.description}>
                                 favorite trips
                             </div>
@@ -60,7 +50,7 @@ const ProjectsPage = () => {
                     </div>
                     <div className={projectsStyles.item}>
                         <Link to={`/projects/news`}>
-                            <Img fluid={data.media.childImageSharp.fluid} alt="media" />
+                            <GatsbyImage image={data.media.childImageSharp.gatsbyImageData} alt="media" />
                             <div className={projectsStyles.description}>
                                 media topics
                             </div>
@@ -68,7 +58,7 @@ const ProjectsPage = () => {
                     </div>
                     <div className={projectsStyles.item}>
                         <Link to={`/construction`}>
-                            <Img fluid={data.music.childImageSharp.fluid} alt="music" />
+                            <GatsbyImage image={data.music.childImageSharp.gatsbyImageData} alt="music" />
                             <div className={projectsStyles.description}>
                                 music visualizer
                             </div>
@@ -78,7 +68,7 @@ const ProjectsPage = () => {
                 <div className={projectsStyles.column}>
                     <div className={projectsStyles.item}>
                         <Link to={`/projects/waves`}>
-                            <Img fluid={data.wave.childImageSharp.fluid} alt="soundWave" />
+                            <GatsbyImage image={data.wave.childImageSharp.gatsbyImageData} alt="soundWave" />
                             <div className={projectsStyles.description}>
                                 sound waves
                             </div>
@@ -86,7 +76,7 @@ const ProjectsPage = () => {
                     </div>
                     <div className={projectsStyles.item}>
                         <Link to={`/projects/style-transfer`}>
-                            <Img fluid={data.star.childImageSharp.fluid} alt="starryNight" />
+                            <GatsbyImage image={data.star.childImageSharp.gatsbyImageData} alt="starryNight" />
                             <div className={projectsStyles.description}>
                                 style transfer
                             </div>

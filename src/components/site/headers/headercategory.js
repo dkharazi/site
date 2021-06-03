@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from "gatsby"
-import catStyles from '../../../styles/category.module.css'
+import * as catStyles from '../../../styles/category.module.css'
 
 const HeaderCategory = ({ icon, cat, title }) => {
 

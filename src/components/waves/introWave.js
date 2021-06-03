@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { line, curveNatural } from "d3-shape";
 import { timer } from "d3-timer";
 import { select } from 'd3-selection';
-import waveStyles from '../../styles/waves/waves.module.css';
+import * as waveStyles from '../../styles/waves/waves.module.css';
 
 function IntroWave() {
     const shift = 2 * Math.PI / 3;
@@ -24,6 +24,7 @@ function IntroWave() {
 
     const canvasRef = useRef(null);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
 
         const buildWave = (canvasRef) => {

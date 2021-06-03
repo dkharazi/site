@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, TextField, Button } from '@material-ui/core';
-import layoutStyles from '../../styles/news/layout.module.css';
+import { textFieldContainer } from '../../styles/news/layout.module.css';
 import sampleArticle from '../../data/news/article.js';
 
 
@@ -11,7 +11,7 @@ const ArticleInput = ({ article, setArticle, submitArticle }) => {
 
     return (
         <Grid item xs={8} container direction="column">
-            <Grid item className={layoutStyles.textFieldContainer}>
+            <Grid item className={textFieldContainer}>
                 <TextField
                     id="outlined-multiline-static"
                     label="Custom Article"

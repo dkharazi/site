@@ -73,7 +73,7 @@ if __name__ == 'main':
     b_t.start()
 ```
 
-```sh
+```bash
 $ python3 test.py
 a waiting
 a locked
@@ -119,7 +119,7 @@ if __name__ == '__main__':
     b_t.start()
 ```
 
-```sh
+```bash
 $ python3 test.py
 a waiting
 a locked

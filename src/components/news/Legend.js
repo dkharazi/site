@@ -6,8 +6,8 @@ import {
     FormControlLabel
 } from '@material-ui/core';
 import React from 'react';
-import colorStyles from '../../styles/news/color.module.css'
-import topicStyles from '../../styles/news/topic.module.css'
+import * as colorStyles from '../../styles/news/color.module.css';
+import { formLabel, radioGroup } from '../../styles/news/topic.module.css'
 import topicsJson from '../../data/news/uniqueTopics.json';
 
 
@@ -31,12 +31,12 @@ const Legend = ({ topic, handleChangeTopic }) => {
         <FormControl component="fieldset">
             <FormLabel 
                 component="legend"
-                className={`${topicStyles.formLabel}`}
+                className={formLabel}
             >
                 Topic
             </FormLabel>
             <RadioGroup 
-                className={topicStyles.radioGroup}
+                className={radioGroup}
                 aria-label="topic"
                 name="topic"
                 value={topic}

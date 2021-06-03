@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import LayoutEntry from '../components/site/layouts/layoutentry'
-import entryStyles from "../styles/entry.module.css"
+import * as entryStyles from "../styles/entry.module.css"
+
 
 export const query = graphql`
   query($slug: String!) {

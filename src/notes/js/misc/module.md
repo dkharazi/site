@@ -42,7 +42,7 @@ var notHoisted = function() {
 ### Sample Structure of Modules
 - Refer to [this project](https://github.com/mdn/js-examples/tree/master/modules/basic-modules) for more information
 
-```
+```text
 index.html
 main.js
 modules/

@@ -21,7 +21,7 @@ Compared to key-value and document databases, column-family stores impose more l
 
 At a high level point of view, a column-family database represents a map consisting of smaller maps, where the first map is a column family and the second map is a row. In the CQL API, column families are referred to as tables. To gain some additional intuition about the data model, let's look at how data is stored in Cassandra:
 
-```cql
+```sql
 -- create keyspace (database)
 CREATE KEYSPACE hotel WITH replication =
     {'class': 'SimpleStrategy',

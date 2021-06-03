@@ -66,7 +66,7 @@ katex: true
 	- Or performing any AJAX calls to load data
 
 ### Order of Execution for Two Mounting Components
-```
+```text
 ParentComponent: constructor
 ParentComponent: getDerivedStateFromProps
 ParentComponent: render

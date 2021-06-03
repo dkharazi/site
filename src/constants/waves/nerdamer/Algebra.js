@@ -6,13 +6,10 @@
 * Source : https://github.com/jiggzson/nerdamer
 */
 
-/* global module */
 /* eslint-disable */
 
-if((typeof module) !== 'undefined') {
-    var nerdamer = require('./core.js');
-    require('./Calculus.js');
-}
+var nerdamer = require('./core.js');
+require('./Calculus.js');
 
 (function() {
     "use strict";

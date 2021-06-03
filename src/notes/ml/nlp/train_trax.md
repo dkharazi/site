@@ -123,7 +123,7 @@ training_loop.run(2000)
     - How frequenty the metrics are reported to this file
 - The following is an example of the reporting streamed to this file:
 
-```
+```text
 Step      1: Ran 1 train steps in 0.78 secs
 Step      1: train WeightedCategoryCrossEntropy |  1.33800304
 Step      1: eval  WeightedCategoryCrossEntropy |  0.71843582

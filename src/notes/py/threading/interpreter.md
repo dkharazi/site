@@ -20,7 +20,7 @@ katex: true
 	- This program is typically machine code
 	- This language can be bytecode, other machine code, etc.
 	- This language can be high-level or low-level
-```
+```text
 source language, input --> | interpreter | --> output
 ```
 - A compiler is a program that translates a source language into a destination language
@@ -28,7 +28,7 @@ source language, input --> | interpreter | --> output
 	- This program can be written in many different languages
 	- This source language is usually some higher-level language
 	- This destination language is usually some lower-level equivalent
-```
+```text
 source language --> | compiler | --> destination language
 ```
 - Roughly, a compiler is nothing more than a language translator
@@ -56,16 +56,16 @@ source language --> | compiler | --> destination language
 - Unlike Python, Java is able to do this because Java is statically-typed
 - Therefore, type checking has already happened during compile-time
 - Returning to the illustration of an interpreter, the JVM interpreter looks like the following:
-```
+```text
 bytecode, input --> | JVM interpreter | --> output
 ```
 - Since the data types of input are known, a JIT compiler can be used at run-time
 - Therefore, the JVM compilation process looks like the following:
-```
+```text
 bytecode --> | JIT compiler | --> machine code
 ```
 - With the addition of the JIT compiler at run-time, the JVM interpreter now looks like this:
-```
+```text
 machine code, input --> | JVM interpreter | --> output
 ```
 - Bytecode is platform dependent

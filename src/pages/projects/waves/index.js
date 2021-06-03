@@ -6,13 +6,13 @@ import WaveForm from '../../../components/waves/waveForm';
 import hierarchy from '../../../img/hierarchy.png'
 import frequency from '../../../img/frequencyrange.png'
 import structure from '../../../img/wavestructure.png'
-import waveStyles from '../../../styles/waves/waves.module.css';
+import * as waveStyles from '../../../styles/waves/waves.module.css';
 
 function WavesPost() {
   return (
     <Layout>
       <div className={waveStyles.post}>
-        <h1 className={waveStyles.title}>
+        <h1>
           Sound Waves
         </h1>
         <WaveRainbow />

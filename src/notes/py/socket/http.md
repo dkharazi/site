@@ -76,7 +76,7 @@ katex: true
 ### Examples of HTTP Requests
 1. **GET** Method
 
-```
+```text
 GET /test.html HTTP/1.1
 Host: www.test101.com
 Accept: image/gif, image/jpeg, */*
@@ -90,7 +90,7 @@ bookId=12345&author=Mike+Lane
 
 2. **HEAD** Method
 
-```
+```text
 HEAD /test.html HTTP/1.1
 Host: www.test101.com
 Accept: image/gif, image/jpeg, */*
@@ -104,7 +104,7 @@ bookId=12345&author=Mike+Lane
 
 3. **POST** Method
 
-```
+```text
 POST /bin/login HTTP/1.1
 Host: www.test101.com
 Accept: image/gif, image/jpeg, */*
@@ -118,7 +118,7 @@ User=Peter+Lee&pw=123456&action=login
 
 4. **PUT** Method
 
-```
+```text
 PUT /new.html HTTP/1.1
 Host: www.test101.com
 Accept: image/gif, image/jpeg, */*
@@ -133,13 +133,13 @@ Content-type: text/html
 
 5. **DELETE** Method
 
-```
+```text
 DELETE /file.html HTTP/1.1
 ```
 
 6. **CONNECT** Method
 
-```
+```text
 CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=
@@ -147,7 +147,7 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 7. **OPTIONS** Method
 
-```
+```text
 OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.other
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -161,7 +161,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 ```
 8. **TRACE** Method
 
-```
+```text
 TRACE /index.html
 ```
 

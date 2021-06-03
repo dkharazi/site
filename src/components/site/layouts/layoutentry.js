@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react'
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import HeaderEntry from '../headers/headerentry'
-import entryStyles from "../../../styles/entry.module.css"
+import * as entryStyles from "../../../styles/entry.module.css"
 
 const LayoutEntry = ({ title, children }) => {
 

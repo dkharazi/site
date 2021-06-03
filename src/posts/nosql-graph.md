@@ -65,7 +65,7 @@ Graph databases are useful when searching throughout graph for a particular rela
 As an example, a graph database is useful when we're wondering *what people Jennifer knows*. On the other hand, a graph database may not be very useful when we're wondering *who Jennifer knows*. A good query for a graph database is:
 
 ```sql
-MATCH (n:Person {name: ‘Jennifer’})-[r:KNOWS]->(p:Person)
+MATCH (n:Person {name: 'Jennifer'})-[r:KNOWS]->(p:Person)
 RETURN p
 ```
 

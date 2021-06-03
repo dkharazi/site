@@ -154,13 +154,13 @@ katex: true
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 
 - Or we can specify the `accesslog` setting using the CLI:
 
-```sh
+```bash
 $ gunicorn --access-logfile myfile.log  ...
 ```
 
@@ -174,13 +174,13 @@ $ gunicorn --access-logfile myfile.log  ...
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 
 - Or we can specify the `access_log_format` setting using the CLI:
 
-```sh
+```bash
 $ gunicorn --access_log_format %(h)s  ...
 ```
 
@@ -194,13 +194,13 @@ $ gunicorn --access_log_format %(h)s  ...
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 
 - Or we can specify the `loglevel` setting using the CLI:
 
-```sh
+```bash
 $ gunicorn --error-logfile myerrors.log  ...
 ```
 
@@ -215,13 +215,13 @@ $ gunicorn --error-logfile myerrors.log  ...
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 
 - Or we can specify the `loglevel` setting using the CLI:
 
-```sh
+```bash
 $ gunicorn --log-level warning  ...
 ```
 

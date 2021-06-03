@@ -6,8 +6,8 @@ import {
     ListItemText
 } from '@material-ui/core';
 import React from 'react';
-import topicStyles from '../../styles/news/topic.module.css';
-import layoutStyles from '../../styles/news/layout.module.css';
+import { tfidf, subHead } from '../../styles/news/topic.module.css';
+import { topicContainer } from '../../styles/news/layout.module.css';
 import tfidfJson from '../../data/news/tfidf.json';
 
 
@@ -22,7 +22,7 @@ const TopicWords = ({ topic }) => {
         <Grid item xs={6}>
             <ListItemText primary={`${w.word.charAt(0).toUpperCase() + w.word.slice(1)}`} />
         </Grid>
-        <Grid item xs={3} className={`${topicStyles.tfidf}`}>
+        <Grid item xs={3} className={tfidf}>
             <ListItemText primary={`${w.tfidf.toFixed(3)}`} />
         </Grid>
         </ListItem>
@@ -33,7 +33,7 @@ const TopicWords = ({ topic }) => {
         <ListSubheader
             component="div"
             id="nested-list-subheader"
-            className={topicStyles.subheader}
+            className={subHead}
         >
             Top 20 Words
         </ListSubheader>
@@ -41,7 +41,7 @@ const TopicWords = ({ topic }) => {
 
     return (
         <List
-            className={layoutStyles.topicContainer}
+            className={topicContainer}
             subheader={subheader}
         >
             <Grid item xs={12} container direction="row">

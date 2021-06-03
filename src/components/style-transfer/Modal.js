@@ -3,7 +3,7 @@ import { Dialog, DialogTitle, Typography } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Description from './Description';
-import modalStyles from '../../styles/style-transfer/modal.module.css';
+import * as modalStyles from '../../styles/style-transfer/modal.module.css';
 
 
 const Modal = ({ card, openModal, setOpenModal }) => {

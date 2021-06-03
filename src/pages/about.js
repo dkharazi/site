@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from "../components/site/layouts/layout"
 import ResumeItem from "../components/site/resume"
-import aboutStyles from "../styles/about.module.css"
+import * as aboutStyles from "../styles/about.module.css"
 
 const AboutPage = () => {
 

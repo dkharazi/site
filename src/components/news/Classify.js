@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { Grid } from '@material-ui/core';
 import BarChart from './BarChart';
 import ArticleInput from './ArticleInput';
-import layoutStyles from '../../styles/news/layout.module.css';
+import { topicChartContainer } from '../../styles/news/layout.module.css';
 
 
 const Classify = ({ error, setError, items, setItems, article, setArticle, submittedArticle, submitArticle }) => {
@@ -39,7 +39,7 @@ const Classify = ({ error, setError, items, setItems, article, setArticle, submi
         return (
             <Grid container>
 				<ArticleInput article={article} setArticle={setArticle} submitArticle={submitArticle} />
-				<Grid item xs={4} className={layoutStyles.topicChartContainer}>
+				<Grid item xs={4} className={topicChartContainer}>
 					<BarChart data={items[0]} chartType="bar" />
 				</Grid>
 			</Grid>

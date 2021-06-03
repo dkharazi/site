@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardActionArea, CardMedia, CardContent } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
-import cardStyles from '../../styles/style-transfer/card.module.css';
+import * as cardStyles from '../../styles/style-transfer/card.module.css';
 
 
 const OutputCard = ({ title, card }) => {

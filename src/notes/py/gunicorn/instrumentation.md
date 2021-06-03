@@ -19,7 +19,7 @@ katex: true
 ### Usage of `statsD` in Gunicorn
 - An example of the `statsD` server is the following:
 
-```sh
+```bash
 $ gunicorn --statsd-host=localhost:8125 ...
 ```
 

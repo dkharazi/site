@@ -41,7 +41,7 @@ katex: true
 - Specifically, this tuple looks like `(host, port)`
 - The following are some examples:
 
-```
+```text
 ('www.python.org', 80)
 ('66.113.130.182', 25)
 ```

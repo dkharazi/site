@@ -12,7 +12,7 @@ katex: true
 - They can be specified using environment variable `GUNICORN_CMD_ARGS`
 - The following is an example including `--bind`:
 
-```sh
+```bash
 $ GUNICORN_CMD_ARGS="--bind=127.0.0.1" gunicorn app:app
 ```
 
@@ -39,13 +39,13 @@ $ GUNICORN_CMD_ARGS="--bind=127.0.0.1" gunicorn app:app
 
 - We can specify it using the `-c` flag:
 
-```sh
+```bash
 $ gunicorn -c config.py ...
 ```
 
 - Or we can specify the `timeout` setting using the CLI:
 
-```sh
+```bash
 $ gunicorn --timeout 120 ...
 ```
 

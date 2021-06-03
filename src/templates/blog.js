@@ -1,7 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/site/layouts/layout'
-import blogStyles from "../styles/blog.module.css"
+import * as blogStyles from "../styles/blog.module.css"
+
 
 export const query = graphql`
   query($slug: String!) {
@@ -15,7 +16,7 @@ export const query = graphql`
   }
 `
 
-const Blog = ({data}) => {
+const Blog = ({ data }) => {
     return (
         <Layout>
             <div className={blogStyles.post}>

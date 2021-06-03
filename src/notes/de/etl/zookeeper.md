@@ -73,7 +73,7 @@ katex: true
 	- Like its URL: `worker-567.foobar.com:2225`
 	- This helps us locate the node in the cluster
 
-```
+```text
 /
 ├── master-1/
 └── workers/

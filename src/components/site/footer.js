@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import footerStyles from "../../styles/footer.module.css"
+import { profiles } from "../../styles/footer.module.css"
 import gitSvg from "../../img/github.svg"
 import liSvg from "../../img/linkedin.svg"
 import soSvg from "../../img/stackoverflow.svg"
@@ -22,7 +22,7 @@ const Footer = () => {
         <footer>
             <p>Designed and developed by {data.site.siteMetadata.author} © 2020</p>
             <p>Built with <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">Gatsby</a></p>
-            <div className={footerStyles.profiles}>
+            <div className={profiles}>
                 <a href="https://www.github.com/dkharazi" target="_blank" rel="noreferrer">
                     <img src={gitSvg} width="25" height="25" alt="github" />
                 </a>

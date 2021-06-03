@@ -1,4 +1,3 @@
-/* global module */
 /* eslint-disable */
 
 /*
@@ -8,10 +7,8 @@
 * Source : https://github.com/jiggzson/nerdamer
 */
 
-if((typeof module) !== 'undefined' && typeof nerdamer === 'undefined') {
-    var nerdamer = require('./core.js');
-    require('./Algebra.js');
-}
+var nerdamer = require('./core.js');
+require('./Algebra.js');
 
 (function() {
     "use strict";

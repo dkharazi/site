@@ -65,7 +65,7 @@ $ gunicorn --workers=2 test:app
 
 - We can run the WSGI callable with the following command
 
-```sh
+```bash
 $ gunicorn --workers=2 'test:create_app()'
 ```
 
@@ -96,14 +96,14 @@ $ gunicorn --workers=2 'test:create_app()'
 - Gunicorn looks for a WSGI callable named `application` if unspecified
 - For a typical Django project, invoking Gunicorn looks like:
 
-```sh
+```bash
 $ gunicorn myproject.wsgi
 ```
 
 - The `-env` option is used to load options
 - An example of this is the following:
 
-```sh
+```bash
 $ gunicorn --env DJANGO_SETTINGS_MODULE=p.settings p.wsgi
 ```
 

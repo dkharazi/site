@@ -171,7 +171,7 @@ Docker recommends running one process per container for [these reasons](https://
 
 In this example, our Dockerfile builds a Python 3.7 image. We'll also define a compose file, which will reference two individual services: `web` and `redis`. Specifically, these will be outlined in the `docker-compose.yml` file. 
 
-```docker
+```dockerfile
 FROM python:3.7-alpine
 WORKDIR /myapp
 ENV FLASK_APP app.py

@@ -31,7 +31,7 @@ katex: true
 - First, flask looks for templates in the `templates` folder
 - If we're using a module:
 
-```
+```text
 FlaskApp/
 ├── application.py
 └── templates/
@@ -40,7 +40,7 @@ FlaskApp/
 
 - If we're using a package:
 
-```
+```text
 FlaskApp/
 └── application/
     ├── __init__.py

@@ -1,5 +1,5 @@
 import React from 'react';
-import tooltipStyles from '../../styles/news/tooltip.module.css'
+import * as tooltipStyles from '../../styles/news/tooltip.module.css'
 
 const Tooltip = ({ input, chartType }) => {
 
@@ -23,9 +23,9 @@ const Tooltip = ({ input, chartType }) => {
 						<div className={`${tooltipStyles.block} ${tooltipStyles[colorName]}`} />
 						<div className={tooltipStyles.topicText}>{input.node.data[chartType]}</div>
 					</div>
-					<div className={tooltipStyles.break} />
+					<div className={tooltipStyles.lnBreak} />
 					<div className={tooltipStyles.line}>Publication: {input.node.data.publication}</div>
-					<div className={tooltipStyles.break} />
+					<div className={tooltipStyles.lnBreak} />
 					<div className={tooltipStyles.line}>Party: {input.node.data.party}</div>
 				</div>
 			</div>
@@ -35,7 +35,7 @@ const Tooltip = ({ input, chartType }) => {
 			<div>
                 <div className={tooltipStyles.text}>
                 <div className={tooltipStyles.line}>Topic: {input.indexValue}</div>
-				<div className={tooltipStyles.break} />
+				<div className={tooltipStyles.lnBreak} />
                 <div className={tooltipStyles.line}>Score: {input.value.toFixed(2)}</div>
                 </div>
             </div>

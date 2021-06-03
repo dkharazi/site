@@ -65,6 +65,7 @@ $ ./bin/spark-submit \
     --master spark://localhost:7077 \
     test.py
 ```
+
 5. Stopping the daemons
 ```bash
 $ ./sbin/stop-master.sh
@@ -101,7 +102,7 @@ In a [previous post](), we defined the components associated with a driver progr
 
 Note, the timestamps and logged messages were slightly modified for clarification. However, the order and substance of each message still remains the same.
 
-```
+```text
 14:43:01 INFO
 SparkContext: Submitted application: Spark Pi
 
@@ -164,7 +165,7 @@ In a [previous post](), we defined the interaction between a driver program and 
 
 Note, the timestamps and logged messages were slightly modified for clarification. However, the order and substance of each message still remains the same.
 
-```
+```text
 14:43:01 INFO
 Master: Driver submitted
 

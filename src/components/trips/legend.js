@@ -1,5 +1,5 @@
 import React from 'react';
-import legendStyles from '../../styles/trips/legend.module.css';
+import * as legendStyles from '../../styles/trips/legend.module.css';
 import { titles, text } from '../../constants/trips/legend';
 
 const Legend = ({ visitedFocus, setVisitedFocus, willvisitFocus, setWillvisitFocus }) => {

@@ -13,7 +13,7 @@ katex: true
 	- Creating the file `__init__.py` in that directory
 - For example, a package might be organized as follows:
 
-```
+```text
 Graphics/
 ├── __init__.py
 ├── Primitive/

@@ -134,11 +134,11 @@ katex: true
 - Host directories are copied when building an image
 - Whereas, host directories are mounted when running a container
 - Mounting a host directory as a data volume:
-```
+```text
 -v [host_dir:container_dir]	
 ```
 - Copying a host directory to an image:
-```
+```dockerfile
 COPY [host_dir]
 ```
 

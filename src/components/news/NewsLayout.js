@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from '../site/headers/header'
 import Footer from '../site/footer'
-import layoutStyles from '../../styles/news/layout.module.css'
+import { newsContainer } from '../../styles/news/layout.module.css'
 
 const NewsLayout = ({ children }) => {
     return (
         <div className="wrap">
             <Header />
-            <main className={layoutStyles.newsContainer}>
+            <main className={newsContainer}>
                 {children}
             </main>
             <Footer />

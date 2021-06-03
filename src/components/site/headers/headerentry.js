@@ -1,5 +1,5 @@
 import React from 'react'
-import entryStyles from '../../../styles/entry.module.css'
+import * as entryStyles from '../../../styles/entry.module.css'
 
 const HeaderEntry = ({ title, mastheadRef }) => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import subcatStyles from "../../styles/subcategory.module.css"
+import * as subcatStyles from "../../styles/subcategory.module.css"
 
 const SubCategory = ({ category, subCategory, subCategoryNickname, pageData, colorIdx }) => {
 

@@ -18,7 +18,7 @@ katex: true
 - Before illustrating the four different approaches in greater detail, we'll set up a `UserGreeting` class component
 - Each approach will be prefaced using this code:
 
-```jsz
+```jsx
 class UserGreeting extends Component {
   constructor(props) {
     super(props)

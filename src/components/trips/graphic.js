@@ -1,5 +1,5 @@
 import React from 'react';
-import graphicStyles from '../../styles/trips/graphic.module.css';
+import * as graphicStyles from '../../styles/trips/graphic.module.css';
 import Metrics from './metrics';
 import Map from './map';
 import Legend from './legend';

@@ -85,7 +85,7 @@ $$
 	- `2n:` While one thread is doing I/O and waiting, and another thread is used for CPU
 - As an illustration, we can set the number of workers to be $2$:
 
-```sh
+```bash
 $ gunicorn --workers=2 'test:create_app()'
 ```
 
