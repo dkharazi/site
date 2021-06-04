@@ -5,7 +5,7 @@
 
 .container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     max-width: 32rem;
     padding-left:  1rem;
     padding-right: 1rem;
@@ -20,6 +20,8 @@
 }
 
 .notesItem {
+    position: absolute;
+    top: 35%;
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
@@ -30,6 +32,7 @@
 
 @media (max-width: 38em) {
     .notesItem {
+        top: 40% !important;
         width: 4rem !important;
         height: 4rem !important;
         font-size: 0.8rem !important;
@@ -39,6 +42,7 @@
 
 @media (max-width: 28em) {
     .notesItem {
+        top: 35% !important;
         width: 2.5rem !important;
         height: 2.5rem !important;
         font-size: 0.8rem !important;

@@ -705,6 +705,10 @@ pre[class*="language-"] {
   white-space: normal;
 }
 
+h3 > code[class*="language-"] {
+  font-size: 1em;
+}
+
 h2 > code[class*="language-"] {
   font-size: 1.2rem;
 }
