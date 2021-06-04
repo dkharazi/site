@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useMemo } from 'react';
 import { line, curveNatural } from "d3-shape";
 import { timer } from "d3-timer";
 import { select } from 'd3-selection';
@@ -12,10 +12,14 @@ function IntroWave() {
     const height = 250;
     const width = 800;
     const radius = Math.min(width, height) / 1.5 - amplitude * 2;
-    let idxPoints = [];
-    for (let i=2; i<104; i+=2) {
-        idxPoints.push(i);
-    }
+
+    const idxPoints = useMemo(() => {
+        const p = [];
+        for (let i=2; i<104; i+=2) {
+            p.push(i);
+        }
+        return p;
+    }, []);
 
     const curveFunc = line()
                 .curve(curveNatural)
@@ -24,7 +28,6 @@ function IntroWave() {
 
     const canvasRef = useRef(null);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
 
         const buildWave = (canvasRef) => {
