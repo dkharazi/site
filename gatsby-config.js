@@ -1,4 +1,10 @@
 module.exports = {
+  flags: {
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    PRESERVE_WEBPACK_CACHE: true,
+    PARALLEL_SOURCING: false,
+    FUNCTIONS: false
+  },
   siteMetadata: {
     title: `dfk`,
     description: `Data Scientist living and working in Columbus.`,
@@ -72,6 +78,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
