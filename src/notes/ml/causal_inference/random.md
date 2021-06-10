@@ -1,7 +1,7 @@
 ---
 title: "Randomized Experiments"
 draft: false
-weight: 2
+weight: 3
 katex: true
 ---
 

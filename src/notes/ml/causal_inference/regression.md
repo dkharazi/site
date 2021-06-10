@@ -1,7 +1,7 @@
 ---
 title: "Regression Discontinuity"
 draft: false
-weight: 5
+weight: 6
 katex: true
 ---
 

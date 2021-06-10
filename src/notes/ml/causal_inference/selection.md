@@ -1,7 +1,7 @@
 ---
 title: "Selection Bias"
 draft: false
-weight: 6
+weight: 7
 katex: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Difference-in-Differences"
 draft: false
-weight: 8
+weight: 9
 katex: true
 ---
 

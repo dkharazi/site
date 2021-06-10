@@ -1,7 +1,7 @@
 ---
 title: "Graphing Causal Models"
 draft: false
-weight: 3
+weight: 4
 katex: true
 ---
 
