@@ -81,7 +81,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
     // query fields for any markdown files
     const mdRes = await graphql(`
         query {
-            allMarkdownRemark {
+            allMarkdownRemark (
+                sort: { fields: [fields___category, fields___subCategory, frontmatter___weight], order: ASC }
+            ) {
                 edges {
                     node {
                         fields {
