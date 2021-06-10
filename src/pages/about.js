@@ -15,14 +15,14 @@ const AboutPage = () => {
                 <br />
                 <p>What about stuff outside of technology?</p>
                 <ul>
-                    <li>My passions in life are soccer and Indian food</li>
-                    <li>On top of that, I enjoy skiing when I get the chance</li>
-                    <li>I usually listen to either soft rock, indie pop, or lo-fi hip hop</li>
+                    <li>I love playing soccer and eating Indian food</li>
+                    <li>On top of that, I enjoy snowboarding when I get the chance</li>
+                    <li>I usually listen to either soft rock or hip-hop</li>
                     <li>I've done a triathlon and a few bike tours</li>
                     <li>I'm halfway through <a href="https://dkharazi.github.io/projects/trips" target="_blank" rel="noreferrer">visiting all 50 U.S. states</a></li>
                     <li>I played the piano actively for 10+ years</li>
-                    <li>I want to stop eating meat one day</li>
-                    <li>My favorite tv show is The Office</li>
+                    <li>I'm trying to stop eating meat and dairy</li>
+                    <li>My favorite TV show is The Office</li>
                 </ul>
             </div>
 
