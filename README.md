@@ -96,4 +96,15 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
+## Add to Site
+- **Develop:** `yarn develop`
+- **Clean:** `gatsby clean`
+- **Build:** `yarn build`
+- **Adding to git:**
+	- `cd public`
+	- `git init`
+	- `git add .`
+	- `git commit -m ""`
+	- `git push --force --set-upstream https://github.com/dkharazi/dkharazi.github.io.git master`
+
 <!-- AUTO-GENERATED-CONTENT:END -->
