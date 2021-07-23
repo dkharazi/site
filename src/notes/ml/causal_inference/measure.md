@@ -10,6 +10,10 @@ katex: true
     - $ATE$: Average treatment effect
     - $ATT$: Average treatment effect for the treatment group
     - $ATU$: Average treatment effect for the control group
+- The parameter $ATE$ is dependent on $ATT$ and $ATU$
+- If $ATE$ is positive and large, then the treatment has a large, positive effect on average (compared to the control group)
+- If $ATE$ is negative and large, then the treatment has a large, negative effect on average (compared to the control group)
+- If $ATE$ is small or $0$, then the treatment doesn't really have any effect on average (compared to the control group)
 
 ### Defining Average Treatment Effects
 - The formula for $ATE$ is defined as the following:
@@ -19,15 +23,74 @@ $$
 $$
 
 $$
-\approx \frac{y_{0}^{1} + y_{1}^{1} + ... + y_{n}^{1}}{n} - \frac{y_{0}^{0} + y_{1}^{0} + ... + y_{n}^{0}}{n}
+= \frac{y_{0}^{1} + y_{1}^{1} + ... + y_{n}^{1}}{n} - \frac{y_{0}^{0} + y_{1}^{0} + ... + y_{n}^{0}}{n}
 $$
+
+- Here, each $y_{i}$ represents one known observation or one unknown observation (either from the control or treatment group) 
+- We can use $SDO$ to estimate the population parameter $ATE$
+- And, $SDO$ represents the *simple difference in means*
+    - Again, $ATE$ is a theoretical, unknown population parameter
+    - Whereas, $SDO$ is an actual, known estimator or statistic
+- In practice, $SDO$ is a naive estimation of $ATE$
+    - There are more sophisticated methods for estimating $ATE$
+    - Such as, subclassification, matching, etc.
+
+### Estimating the Unknown $ATE$ Parameter
+- The following formula for $SDO$ is defined as the following:
+
+$$
+\hat{ATE} = SDO = E[Y_{i}^{1} | t_{i} = 1] - E[Y_{i}^{0} | t_{i} = 0]
+$$
+
+$$
+= \frac{y_{0}^{1} + y_{1}^{1} + ... + y_{j}^{1} + y_{m}^{1}}{m} - \frac{y_{0}^{0} + y_{1}^{0} + ... + y_{k}^{0} + y_{p}^{0}}{p}
+$$
+
+- Here, each $y_{j}$ represents a known observation from the treatment group of $m$ total observations
+- And, each $y_{k}$ represents a known observation from the control group of $p$ total observations
+- Notice, the unknown observations are excluded for each $y_{j}$ and $y_{k}$
+- So, we are making more assumptions by using this as an estimator
+
+### Motivating Existing Biases within $SDO$
+- Again, the $SDO$ estimator makes a few assumptions about $ATE$ and includes a few biases as a result
+- Specifically, it includes the following biases:
+    - Selection bias
+    - Heterogeneous treatment effect bias
+- Mathematically, these biases can be depicted in the formula:
+
+$$
+SDO = ATE
+$$
+
+$$
++ \underbrace{E[Y^{0} | t_{i} = 1] - E[Y^{0} | t_{i} = 0]}_{\text{Selection bias}}
+$$
+
+$$
++ \underbrace{(1-\gamma)(ATT-ATU)}_{\text{Heterogeneous bias}}
+$$
+
+- Here, the above notation represents the following:
+    - $\gamma$ is the number of observations in the treatment goup
+    - $(1-\gamma)$ is the number of observations in the control group
+
+### Describing the Biases within $ATE$
+- Selection bias is the inherent difference between the two groups if both received the treatment
+- The heterogenous treatment effect bias is another form of bias
+- Typically, we'll assume that treatment effects are constant
+- Which, will cause $ATU = ATT$
+- Thus, it will make $SDO = ATE + \text{selection bias}$
+- These biases can be mitigated through methods like:
+    - Subclassification
+    - Matching
+    - Etc.
 
 ### Defining Average Treatment Effects for Treatments
 - The formula for $ATT$ is defined as the following:
     - Here, $m$ is the number of observations in the treatment group
 
 $$
-\bold{ATT} = E[\delta | t_{i} = 1] = E[Y_{i}^{1} - Y_{i}^{0} | t_{i} = 1]
+\bold{ATT} = E[\delta | t_{i} = 1] = E[Y_{i}^{1} | t_{i} = 1] - E[Y_{i}^{0} | t_{i} = 1]
 $$
 
 $$
@@ -39,93 +102,66 @@ $$
     - Here, $p$ is the number of observations in the control group
 
 $$
-ATU = E[\delta | t_{i} = 0] = E[Y_{i}^{1} - Y_{i}^{0} | t_{i} = 0]
+\bold{ATU} = E[\delta | t_{i} = 0] = E[Y_{i}^{1} | t_{i} = 0] - E[Y_{i}^{0} | t_{i} = 0]
 $$
 
 $$
 \approx \frac{\delta_{0}^{0} + \delta_{1}^{0} + ... + \delta_{p}^{0}}{p}
 $$
 
-### Verifying the Assumption of No Bias
+### Verifying the Assumption of Independence
 - To draw conclusions about causality, we must verify there isn't any bias between the control and treatment groups
 - To do this, we must check that the following assumption is satisfied:
 
 $$
-E[Y^{0} | T=0] = E[Y^{0} | T=1]
+E[Y^{0} | t=0] = E[Y^{0} | t=1]
 $$
 
-- If this assumption is satisfied, we can determine if there are causal effects by checking the following:
+- Physical randomization can satisfy this assumption of independence (i.e. independent assignment of observations to groups)
+    - Physical randomization refers to assigning an observation to a treatment or control group
+    - The assignment is random if the groups are as balanced as if they were assigned by flipping a coin
+
+### Describing the Assumption of Independence
+- We can assume $SDO = ATE$ when a treatment $t$ is assigned to patients *independent* of their potential outcomes $Y^{0}$ or $Y^{1}$
+- In summary, independence implies that the observations in both the treatment and control groups have the same potential outcome on average in the population
+- Independence can be ensured using the following techniques:
+    - Physical randomization
+    - Conditional independence
+- In reality, achieving independence is difficult and usually unlikely
+    - Hence, we must use additional methods like subclassification, matching, etc.
+
+### Enforcing Independence with Physical Randomization
+- In other words, all biases are eliminated by *randomly* assigning observations to a treatment group and control group
+- So, randomization of the treatment assignment would eliminate both selection bias and heterogeneous treatment effect bias
+    - Thus, $SDO$ no longer suffers from selection bias
+- Mathematically, randomization of the treatment assignment ensures:
 
 $$
-ATT >> ATU \text{ or } ATT << ATU
+E[Y^{0} | t = 1] - E[Y^{0} | t = 0] = 0
 $$
 
-
-
-### Example of Determining Causality
-- As an example, let's say we want to know if customers will buy more or less ice cream if we start using non-dairy creamer
-    - The control group will include the dairy ice cream
-    - The treatment group will include the non-dairy ice cream
-- Each variable has the following notation:
-    - $i$ represents a given customer
-    - $t$ represents the group that customer $i$ falls into
-        - $t=0$ if the $i^{th}$ customer is only offered dairy ice cream
-        - $t=1$ if the $i^{th}$ customer is only offered non-dairy ice cream
-    - $Y$ represents the ice cream sales for customer $i$
-        - $Y^{0}$ are ice cream sales of customers in the control group
-        - $Y^{1}$ are ice cream sales of customers in the treatment group
-- In reality, customers can be in either the control or treatment group
-    - For example, Jane can't actually participate in both groups and purchase ice cream
-    - For Jane, $Y^{1}$ is a **counterfactual**
-    - For Tim, $Y^{0}$ is his **counterfactual**
-- As a result, our data looks like the following:
-
-| $i$  | $t$ | $Y$   | $Y^{0}$  | $Y^{1}$  | $\delta$ |
-| ---- | --- | ----- | -------- | -------- | -------- |
-| Jane | $0$ | $ \text{\textdollar} 3$ | $ \text{\textdollar} 3$    | **null** | **null** | 
-| Matt | $0$ | $ \text{\textdollar} 5$ | $ \text{\textdollar} 5$    | **null** | **null** | 
-| Tim  | $1$ | $ \text{\textdollar} 2$ | **null** | $ \text{\textdollar} 2$    | **null** | 
-| Sue  | $1$ | $ \text{\textdollar} 4$ | **null** | $ \text{\textdollar} 4$    | **null** | 
-
-### Motivating Bias in Causality
-- Bias is what separates association from causation
-    - If we calculate $ATE$ on the data so far, we get the following:
-    $$
-    ATE = \frac{2+4}{2} - \frac{3+5}{2} = 3 - 4 = -1
-    $$
-    - Notice, this says on average the treatment group would have a negative impact on sales, compared to the control group
-    - By mistake, we've assumed there isn't any bias
-- Theoretically, let's just imagine we're able to somehow capture sales data for each $i^{th}$ customer in both the treatment and control groups
-- Again, this is impossible, but our data would look like this:
-
-| $i$  | $t$ | $Y$   | $Y^{0}$ | $Y^{1}$ | $\delta$ |
-| ---- | --- | ----- | ------- | ------- | -------- |
-| Jane | $0$ | $\text{\textdollar} 3$ | $\text{\textdollar} 3$   | $\text{\textdollar}10$  | $\text{\textdollar}7$ |
-| Matt | $0$ | $\text{\textdollar}5$ | $\text{\textdollar} 5$   | $\text{\textdollar}12$  | $\text{\textdollar}7$ |
-| Tim  | $1$ | $\text{\textdollar}2$ | $\text{\textdollar}6$   | $\text{\textdollar}2$   | $-\text{\textdollar}4$ |
-| Sue  | $1$ | $\text{\textdollar}4$ | $\text{\textdollar}2$   | $\text{\textdollar}4$   | $\text{\textdollar}2$ |
-
-- Notice, the $ATE$ would be much different if we capture all of the information about each customer
-- Specifically, it would be the following:
+- Again, randomization of the treatment assignment also eliminates any heterogeneous treatment effect bias
+- Since, randomization of the treatment assignment also ensures:
 
 $$
-ATE = \frac{10+12+2+4}{4} - \frac{3+5+6+2}{4} = 7 - 4 = 3
+E[Y^{1} | t = 1] - E[Y^{1} | t = 0] = 0
 $$
 
-- Notice, this says on average the treatment group would have a positive impact on sales, compared to the control group
-- Then, we can see ATU and ATT are the following:
+### More Details about Association and Causation
+- Association refers to a statistical relationship between two variables
+- Causation refers to determing that an exposure of one variable produces an effect on a different variable
+- Association becomes causation if a variable $Y$ in the treatment group doesn't behave any differently in the control group
+- So, association becomes causation when the following is true:
 
 $$
-ATT = \frac{2-4}{2} = -1
+E[Y_{0} | T=0] = E[Y_{0} | T=1]
 $$
 
-$$
-ATU = \frac{7+7}{2} = 7
-$$
-
-- Notice, the $ATE$ is just a weighted average of $ATT$ and $ATU$
+- Here, $Y_{t}$ refers to a variable being measured within the study
+- And, $T$ refers to a binary variable representing whether the observation received treatment or not
 
 ### References
+- [Course on Measuring Causal Effects](https://www.youtube.com/watch?v=RGvI0uVMgtw&list=PLoazKTcS0Rzb6bb9L508cyJ1z-U9iWkA0&index=8)
 - [Causal Inference Textbook](https://mixtape.scunning.com/potential-outcomes.html#physical-randomization)
 - [Python Causality Handbook](https://matheusfacure.github.io/python-causality-handbook/01-Introduction-To-Causality.html)
 - [Comprehensive Causal Inference Textbook](https://cdn1.sph.harvard.edu/wp-content/uploads/sites/1268/2021/03/ciwhatif_hernanrobins_30mar21.pdf)

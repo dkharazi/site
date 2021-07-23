@@ -1,7 +1,7 @@
 ---
-title: "Selection Bias"
+title: "Instrumental Variables"
 draft: false
-weight: 7
+weight: 12
 katex: true
 ---
 

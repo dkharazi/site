@@ -11,7 +11,7 @@ katex: true
 - Causal inference attempts to observe the response of an effect variable when a cause of the effect variable is changed
 
 ### Correlation is not Causation
-- When the rooster crows, the sun rises soonly afterwards
+- When the rooster crows, the sun rises soon afterwards
 - We know the rooster didn’t cause the sun to rise
 - If the rooster had been eaten by a cat, the sun still would have risen
 - In other words, a rooster's crow is correlated with the sun rising
@@ -67,6 +67,7 @@ $$
 - Instead, we *estimate* the treatment of the overall group as an average
 
 ### References
+- [Course on Measuring Causal Effects](https://www.youtube.com/watch?v=RGvI0uVMgtw&list=PLoazKTcS0Rzb6bb9L508cyJ1z-U9iWkA0&index=8)
 - [Causal Inference Textbook](https://mixtape.scunning.com/introduction.html)
 - [Python Causality Handbook](https://matheusfacure.github.io/python-causality-handbook/01-Introduction-To-Causality.html)
 - [Comprehensive Causal Inference Textbook](https://cdn1.sph.harvard.edu/wp-content/uploads/sites/1268/2021/03/ciwhatif_hernanrobins_30mar21.pdf)
