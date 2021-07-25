@@ -1,7 +1,7 @@
 ---
-title: "Modeling Customer Segmentation"
+title: "Overview of Segmentation"
 draft: false
-weight: 6
+weight: 7
 katex: true
 ---
 

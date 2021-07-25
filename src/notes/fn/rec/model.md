@@ -1,7 +1,7 @@
 ---
-title: "Neighborhood-Based Collab Filtering"
+title: "Model-Based Collab Filtering"
 draft: false
-weight: 3
+weight: 4
 katex: true
 ---
 

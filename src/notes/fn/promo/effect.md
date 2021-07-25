@@ -1,7 +1,7 @@
 ---
 title: "Measuring Effectiveness"
 draft: false
-weight: 10
+weight: 6
 katex: true
 ---
 

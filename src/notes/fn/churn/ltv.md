@@ -1,7 +1,7 @@
 ---
-title: "Modeling Lifetime Value"
+title: "Customer Lifetime Value"
 draft: false
-weight: 5
+weight: 4
 katex: true
 ---
 

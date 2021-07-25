@@ -5,7 +5,7 @@ weight: 1
 katex: true
 ---
 
-### Hello world
+### 3.5.4 Propensity Modeling
 
 ### References
 - [Course about Predicting Customer Churn](https://www.datacamp.com/courses/marketing-analytics-predicting-customer-churn-in-python)

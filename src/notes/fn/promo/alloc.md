@@ -1,7 +1,7 @@
 ---
 title: "Resource Allocation"
 draft: false
-weight: 8
+weight: 4
 katex: true
 ---
 

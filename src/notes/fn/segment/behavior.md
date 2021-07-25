@@ -1,11 +1,11 @@
 ---
-title: "Cohort Analysis"
+title: "Behavioral Segmentation"
 draft: false
-weight: 1
+weight: 5
 katex: true
 ---
 
-### 3.5.1 Data Collection
+### 3.5.5 Segmentation and Persona-Based Modeling
 
 ### References
 - [Textbook about Algorithmic Marketing](https://algorithmicweb.files.wordpress.com/2018/07/algorithmic-marketing-ai-for-marketing-operations-r1-7g.pdf)

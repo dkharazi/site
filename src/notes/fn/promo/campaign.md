@@ -1,7 +1,7 @@
 ---
 title: "Running Campaigns"
 draft: false
-weight: 7
+weight: 3
 katex: true
 ---
 

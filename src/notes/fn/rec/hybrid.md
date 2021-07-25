@@ -1,17 +1,15 @@
 ---
 title: "Hybrid Filtering Methods"
 draft: false
-weight: 6
+weight: 5
 katex: true
 ---
 
-### Describing Hybrid Collaborative Filtering
+### 5.9.1 Switching
 
-### Switching between Filtering Methods
+### 5.9.2 Blending
 
-### Blending Filtering Methods
-
-### Augmenting Features for Filtering Methods
+### 5.9.3 Feature Augmentation
 
 ### References
 - [Textbook about Algorithmic Marketing](https://algorithmicweb.files.wordpress.com/2018/07/algorithmic-marketing-ai-for-marketing-operations-r1-7g.pdf)

@@ -1,7 +1,7 @@
 ---
 title: "Targeting Systems"
 draft: false
-weight: 11
+weight: 7
 katex: true
 ---
 

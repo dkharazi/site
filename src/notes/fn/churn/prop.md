@@ -1,7 +1,7 @@
 ---
-title: "Modeling Customer Propensity"
+title: "Customer Propensity"
 draft: false
-weight: 3
+weight: 2
 katex: true
 ---
 
