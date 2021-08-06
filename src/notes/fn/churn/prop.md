@@ -1,7 +1,7 @@
 ---
 title: "Customer Propensity"
 draft: false
-weight: 2
+weight: 1
 katex: true
 ---
 

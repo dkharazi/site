@@ -1,5 +1,5 @@
 ---
-title: "Model-Based Collab Filtering"
+title: "Neighborhood-Based Collab Filtering"
 draft: false
 weight: 4
 katex: true
@@ -128,83 +128,28 @@ movies for a given target movie
 - Thus, we'll perform a rating averaging formula over the movies
 - Lastly, we'll predict the missing ratings for movies of a user using KNN regression
 
+### Illustrating Differences in User- and Item-Based Filtering
+- To reiterate, the goal of user-based recommendations is to generate recommendations based on similar users, whereas the goal of item-based recommendations is to generate recommendations based on similar items
+    - As an example, suppose we have a Spotify rating matrix where users refer to listeners and items refer to songs
+    - In this example, suppose I'm receiving a recommendation when my favorite genres are country and jazz
+    - An item-based recommender would return recommended songs based on other similar songs
+        - As a result, I may be recommended a song that is similar to other country songs I like
+        - Or, I may be recommended a song that is similar to other jazz songs I like
+        - Thus, I'll eventually receive a mix of recommended jazz and country songs over time
+    - A user-based recommender would return recommended songs based on other similar listeners
+        - As a result, I may be recommended a song that other listeners liked who also enjoy country and jazz
+        - Thus, I'll eventually receive a mix of recommended jazz and country songs over time
+- Notice, user-based and item-based are structurally similar
+    - The only difference is the nature of their similarity measure
+    - As a result, we should expect the recommendations to be somewhat similar between the two
+    - To find the right one for our needs, we'll likely need to do some experimentation
+
 ### Comparing User-Based and Item-Based Filtering
 - Since the item-based similarity matrix is comparatively much smaller, item-based approaches are typially more scalable
 - User-based approaches capture certain relationships that might not be recognized by
 item-based methods
 - The ratio between the number of users and items is useful if we're wanting to use one over the other
 - However, some advanced recommendation methods combine item-based and user-based models to take advantage of both methods
-
-### Introducing Model-Based Collaborative Filtering
-- Often, a neighborhood-based algorithm does the following:
-    - Optionally, impute missing data (using neighborhood or model based methods)
-    - Computes the similarity between each user and item
-    - Optionally, group similar users beforehand using locality-sensitive hashing
-    - Predict the rating of a user and item by calculating the weighted average of the $k$ nearest neighbors
-- Often, a model-based algorithm does the following instead:
-    - Optionally, impute missing data (using neighborhood or model based methods)
-    - Compute latent factors by performing matrix factorization (using SVD or PCA)
-        - Naturally, this will act as a form of dimensionality reduction
-    - Predict the rating of a user and item wtih matrix multiplication of latent factors
-
-### Introducing Matrix Factorization
-- Matrix factorization (or latent factor models) are the most popular model-based method
-- The following are popular forms of matrix factorization:
-    - Unconstrained matrix factorization (or funk MF)
-        - Optimization using stochastic gradient descent (SGD)
-        - Optimization using alternating least squares (ALS)
-    - Singular value decomposition (SVD)
-    - Non-negative matrix factorization
-- Most matrix factorization methods follow these steps:
-    - Receive defined model of matrices
-    - Define the objective function
-    - Optimize with gradient descent
-
-### Advantages of Model-Based Collaborative Filtering
-- This approach offers the following advantages over neighborhood-based methods:
-    - **Accuracy**
-        - There are more accurate models compared to kNN
-    - **Stability**
-        - Offers dimensionality reduction methods
-        - Thus, sparse matrices can be transformed into more condensed representations
-        - This improves the stability of predictions
-    - **Scalability**
-        - Models can be trained offline
-        - Then, these models can be evaluated for online requests
-- Some model-based methods can provide all of these improvements
-    - Others can only provide some of them
-
-### Defining Singular Value Decomposition
-- Again, the rating matrix $R$ consists of:
-    - A $u$ number of rows representing individual users
-    - A $i$ number of columns representing individual items
-    - Each entry represents a rating
-- Latent factor models decompose the ratings matrix into:
-    - A $u \times k$ user matrix $U$
-    - A $k \times i$ item matrix $I$
-    - A $k \times k$ weight matrix $\Sigma$
-        - Essentially, this represents a matrix denoting which $k^{th}$ latent factor carriest most of the information
-        - Or, each value located in the diagonal of the matrix represents the strength of the $k^{th}$ latent factor
-- Here, $u$ is the number of users in our rating matrix
-- Here, $i$ is the number of items in our rating matrix
-- Here, $k$ is the number of latent factors
-    - Each latent factor represents some learned context
-    - Increasing the number of latent factors improves personalization
-    - Increasing the number of latent factors by too much harms performance and leads to overfitting
-    - Typically, a regularization term is introduced to avoid overfitting
-
-![svd](../../../img/svd.svg)
-
-### Illustrating Latent Factor Models
-- Suppose we have a ratings matrix $R$ consisting of customers and movies
-- For this example, we'll assign the number of latent factors $k$ to equal $2$
-- Thus, we'll learn two different types of *context* from our customers $U$ and movies $I$
-- Notice, our optimization algorithm will learn $2$ different contexts:
-    - The degree to which a movie is meant for children or a customer is a child
-    - The degree to which a movie is a blockbuster of a customer enjoys blockbuster movies
-- The following image illustrates the learned latent factors:
-
-![latentfactors](../../../img/latentfactors.svg)
 
 ### References
 - [Slides for Latent Factor Models](https://www.cs.cmu.edu/~mgormley/courses/10601-s17/slides/lecture25-mf.pdf)

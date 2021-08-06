@@ -1,7 +1,7 @@
 ---
 title: "Customer Lifetime Value"
 draft: false
-weight: 4
+weight: 8
 katex: true
 ---
 
@@ -23,6 +23,9 @@ katex: true
     - A customer churning
 - All three of these models can help determine the impact of this event
 
+### 8.6 Customer Lifetime Value
+
 ### References
+- [Textbook for Fighting Churn with Data](https://fightchurnwithdata.com/)
 - [Textbook about Algorithmic Marketing](https://algorithmicweb.files.wordpress.com/2018/07/algorithmic-marketing-ai-for-marketing-operations-r1-7g.pdf)
 - [Course about Predicting Customer Lifetime Value](https://www.datacamp.com/courses/machine-learning-for-marketing-in-python)

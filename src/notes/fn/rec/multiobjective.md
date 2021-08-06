@@ -1,7 +1,7 @@
 ---
 title: "Multi-Objective Methods"
 draft: false
-weight: 8
+weight: 9
 katex: true
 ---
 
