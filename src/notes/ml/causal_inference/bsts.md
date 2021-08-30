@@ -73,3 +73,4 @@ to flexibly choose appropriate components for the following terms:
 ### References
 - [Post about Bayesian Structural Time-Series](https://multithreaded.stitchfix.com/blog/2016/04/21/forget-arima/)
 - [Paper proposing Bayesian Structural Time-Series](https://arxiv.org/pdf/1506.00356.pdf)
+- [Presentation about Causal Impact by Google](https://www.youtube.com/watch?v=GTgZfCltMm8)

@@ -45,7 +45,6 @@ $$
 8. Repeat steps $3-7$, until we build $M$ different shallow trees
     - In practice, typically $M=100$
 
-
 ### Fitting an XGBoost Regression Tree
 - In XGBoost, a tree is fit (step $4$) using its own fitting method
 - Specifically, the XGBoost fitting method follows these steps:
@@ -84,6 +83,44 @@ $$
 
 - If the difference between the gain and $\gamma$ is negative, then we remove the branch
 
+### Improving the Accuracy of Classification Trees
+- If coverage of labels are imbalanced, then try different balancing methods such as the following:
+    - Oversampling
+    - Undersampling
+    - SMOTE
+- Compare model with most important features with model including all features:
+    - Typically, most important features include 20ish features
+    - Full model may include 100+ features
+    - However, XGBoost runs feature selection behind-the-scenes, so this most likely won't improve the accuracy
+- Try running dimensionality reduction before classification:
+    - Most likely, this won't improve the accuracy of the model
+    - Since, XGBoost does feature selection behind-the-scenes
+- Try removing outliers, imputing outliers, and imputing missing values
+    - XGBoost is sensitive to outliers, so this may improve the accuracy
+- Running hyper-parameter optimization methods, like:
+    - Grid search
+    - Random search
+    - Bayesian prior weighting
+- Apply a mix of feature engineering methods including:
+    - Creating meta-features, such as:
+        - Squaring or taking the log of other features
+        - Computing the standard deviation of other features
+        - Calculating the difference of multiple features
+    - Creating feature of clustering labels
+        - This feature could be the labels from running a k-means clustering of other features
+        - Then, we'd hope these labels could serve as a predictor
+        - Then, help in predicting the response in our classifier
+- Stacking and blending multiple classification models together
+
+### Motivating Improvements for Classification Models
+- Data-specific improvements (i.e. feature engineering and including more data) are usually better than model-specific improvements
+- Model-specific improvements (i.e. ensembeling and trying different models) are better than hyper-parameter tuning
+
 ### References
 - [Video about Mathematical Details of XGBoost](https://www.youtube.com/watch?v=ZVFeW798-2I&t=512s)
 - [Video about XGBoost for Classification](https://www.youtube.com/watch?v=8b1JEDvenQU&t=1238s)
+- [Ensembling Methods and Stacking with XGBoost](https://mlwave.com/kaggle-ensembling-guide/)
+- [Post about Creating Meta-Features for XGBoost](https://datascience.stackexchange.com/a/42644/93566)
+- [Illustrating Ensemble Stacking with XGBoost](https://www.kaggle.com/madanchi/ensemble-stacking-with-xgboost)
+- [Illustrating Bayesian Prior Weighting on Hyper-Parameters](https://nbviewer.jupyter.org/github/sdcastillo/Prior-Weights-with-XGboost/blob/master/xgb_with_prior.html)
+- [Illustrating Clusters as Meta-Features for XGBoost](https://towardsdatascience.com/applying-a-clustering-algorithm-to-feature-contribution-3c649ab0ca17)

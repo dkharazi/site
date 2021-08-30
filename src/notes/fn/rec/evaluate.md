@@ -109,3 +109,4 @@ $$
 ### References
 - [Textbook about Algorithmic Marketing](https://algorithmicweb.files.wordpress.com/2018/07/algorithmic-marketing-ai-for-marketing-operations-r1-7g.pdf)
 - [Intuition behind Normalized Discounted Cumulative Gain](http://ethen8181.github.io/machine-learning/recsys/2_implicit.html#NDCG)
+- [Intuition behind MAP@K](https://makarandtapaswi.wordpress.com/2012/07/02/intuition-behind-average-precision-and-map/)

@@ -101,6 +101,7 @@ katex: true
 		- This makes early cluster more tightly knit, allowing them to move around more easily without getting in each others way
 
 ### References
+- [When to use t-SNE?](https://stats.stackexchange.com/questions/263539/clustering-on-the-output-of-t-sne)
 - [t-SNE StatQuest Video](https://www.youtube.com/watch?v=NEaUSP4YerM)
 - [Visualizing t-SNE](https://mlexplained.com/2018/09/14/paper-dissected-visualizing-data-using-t-sne-explained/)
 - [Example of t-SNE Implementation](https://www.analyticsvidhya.com/blog/2017/01/t-sne-implementation-r-python/)

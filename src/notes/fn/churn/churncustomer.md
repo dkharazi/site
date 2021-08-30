@@ -1,21 +1,24 @@
 ---
-title: "Metrics for Measuring Customers"
+title: "Measuring Customers"
 draft: false
-weight: 5
+weight: 4
 katex: true
 ---
 
-### 3.1 From Events to Metrics
+### Aggregating at Different Time Periods
+- Typically, it is useful to measure features for different time periods
+- By doing this, we can integrate a measure of recency when clustering on features
+- For example, we can create features for the following:
+    - Number of clicks in L12M
+    - Number of clicks in L6M
+    - Average number of clicks per week
 
-### 3.3 Counting Events in One Time Period
-
-### 3.6 Measuring Totals and Averages of Event Properties
-
-### 3.9 Selecting the Measurement Period for Behavioral Measurements
-
-### 3.10 Measuring Account Revenue
-
-### 3.11 Measuring MRR
+### Measuring Aggregates of Event Properties
+- There are many different aggregates that can be used for clustering
+- The following are a few example:
+    - Counts
+    - Means
+    - Sums
 
 ### References
 - [Textbook for Fighting Churn with Data](https://fightchurnwithdata.com/)
