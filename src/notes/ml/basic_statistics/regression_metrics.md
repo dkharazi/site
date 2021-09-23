@@ -12,13 +12,13 @@ katex: true
 - We need some way to measure how good a guess is
 - Therefore, we use metrics to measure the accuracy of our guesses
 
-### Preliminary Notes about Regression Metrics
+### Using Regression Metrics
 - A metric is a quantitative standard of measurement
 - There isn't any Holy Grail of regression metrics
 - Solely using one regression metric for every case is a bad idea
 - Each metric has its own use-case, and should be used carefully and accordingly
 
-### General Terminology
+### Motivating General Terminology
 - Let's denote $Y$ as our observation and $m$ as our prediction
 - When finding our prediction $m$, we typically want to use an $m$ that minimizes our regression metric (i.e. MSE, MAE, etc.)
 - Therefore, we should really only focus on minimizing the bias, since the variance term is irrelevant when minimizing the MSE:
@@ -32,7 +32,7 @@ $$
 - This is because $\text{Var}[Y]$ is about the true distribution of $Y$, but $m$ is just our guess
 - Therefore, it shouldn't play any role in the minimization process
 
-### Basics of MSE
+### Defining Basics of MSE
 - The mean squared error (or MSE) is defined as the following:
 
 $$
@@ -55,7 +55,7 @@ $$
 MSE = mean((y_{i} - \hat{y}_{i})^{2}) = mean(error_{i}^{2})
 $$
 
-### Basics of RMSE
+### Defining Basics of RMSE
 - The root mean squared error (or RMSE) is defined as the following:
 
 $$
@@ -77,7 +77,7 @@ $$
 RMSE = \sqrt{mean((y_{i} - \hat{y}_{i})^{2})} = \sqrt{mean(error_{i}^{2})}
 $$
 
-### Basics of MAE
+### Defining Basics of MAE
 - The mean absolute error (or MAE) is defined as the following:
 
 $$
@@ -99,7 +99,7 @@ $$
 MAE = mean(|y_{i} - \hat{y}_{i}|) = mean(|error_{i}|)
 $$
 
-### Use-Cases for MAE, MSE, and RMSE
+### Describing Use-Cases for MAE, MSE, and RMSE
 - If we want to penalize our predictions as they are increasingly off from our actual observations, then we should use MSE and RMSE because the errors are squared
 - In other words, we should use the MSE or RMSE metrics if we want to penalize large errors
 - For example, if our prediction being off by 10 is twice as bad as being off by 5, then we should most likely use MAE
@@ -107,14 +107,14 @@ $$
 - If we want to use a regression metric that produces interpretable results, then MAE is clearly the winner, since it's difficult to interpret the square in the MSE or RMSE
 - From a mathematical standpoint, MSE is clearly the winner, since it's difficult to perform many mathematical calculations on formulas involving the absolute value
 
-### Notation for MAPE and MASE
+### Defining Notation for MAPE and MASE
 - Let $y_{t}$ denote the current observation at time $t$
 - Let $y_{t-1}$ denote the previous observation at time $t-1$
 - Let $f_{t}$ denote the forecast of $y_{t}$
 - Let $e_{t}$ denote the forecast error where $e_{t} = y_{t} - f_{t}$
 - Let $o_{t}$ denote the one-step naive error where $o_{t} = y_{t} - y_{t-1}$
 
-### Basics of MAPE
+### Defining Basics of MAPE
 - The mean absolute percentage error (or MAPE) is defined as the following:
 
 $$
@@ -128,7 +128,7 @@ $$
 - Naturally, we would like to avoid this asymmetry of the MAPE
 - The MASE can be used if we want a more symmetrical measure of the percentage error
 
-### Basics of MASE
+### Defining Basics of MASE
 - The mean absolute scaled error (or MASE) is arguably considered the best available measure of forecast accuracy
 - Before we define the MASE formula, we should define a one-step naive error
 - The one-step naive error $o_{t}$ refers to the error associated with guessing the previous data value as our current prediction:
@@ -173,7 +173,7 @@ $$
 	- A scaled error is less than one if our forecast is better than the average one-step naive forecast (i.e. using the previous data point)
 	- A scaled error is greater than one if our forecast is worse than the average one-step naive forecast (i.e. using the previous data point)
 
-### Perils of F-tests
+### Defining Perils of F-tests
 1. The F-test does not measure goodness-of-fit
 	- Specifically, the F-test does not measure if there is a linear fit, non-linear fit, etc.
         - For example, let's suppose that we reject the null, intercept-only hypothesis
@@ -188,7 +188,7 @@ $$
 		3. Or, the test doesn’t have enough power to detect departures from the null
 	- To expand on that last point, the power to detect a non-zero slope is going to increase with the sample size $n$, decrease with the noise level $\sigma^{2}$, and increase with the magnitude of the slope $|\beta|$
 
-### Perils of $R^{2}$
+### Defining Perils of $R^{2}$
 1. $R^{2}$ does not measure goodness-of-fit
 	- Specifically, $R^{2}$ does not measure if there is a linear fit, non-linear fit, etc.
         - $R^{2}$ can be low when the model follows a completely correct form (by making the variance of our random variable large)
