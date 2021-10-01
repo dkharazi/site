@@ -5,11 +5,19 @@ weight: 18
 katex: true
 ---
 
-### General Terminology
+### Introducing Basic Classification Metrics 
 - The true positives $TP$ refer to the number of observations correctly classified as positive
+        - In other words, $TP$ refers to the number of positives we guessed correctly
+        - Meaning, $TP$ refers to which actual positives we caught
 - The true negatives $TN$ refer to the number of observations correctly classified as negative
+        - In other words, $TN$ refers to the number of negatives we guessed correctly
+        - Meaning, $TN$ refers to which actual negatives we caught
 - The false positives $FP$ refer to the number of observations incorrectly classified as positive
+        - In other words, $FP$ refers to the number of negatives we guessed incorrectly
+        - Meaning, $FP$ refers to which actual negatives we didn't catch
 - The false negatives $FN$ refer to the number of observations incorrectly classified as negative
+        - In other words, $FN$ refers to the number of positives we guessed incorrectly
+        - Meaning, $FN$ refers to which actual positives we didn't catch
 - The positives $P$ refer to the number of observations classified as positive:
 
 $$
@@ -22,7 +30,7 @@ $$
 N = TN + FN
 $$
 
-### True Positive Rate
+### Defining True Positive Rate
 - The true positive rate is defined as the following:
 
 $$
@@ -33,7 +41,7 @@ $$
 - The true positive rate refers to the percentage of observations that are correctly predicted as positive
 - The true positive rate is also known as sensitivity, recall, or probability of detection
 
-### False Positive Rate
+### Defining False Positive Rate
 - The false positive rate is defined as the following:
 
 $$
@@ -44,7 +52,7 @@ $$
 - The false positive rate refers to the percentage of observations that are incorrectly predicted as positive
 - The false positive rate is also known as type I error or false alarms
 
-### True Negative Rate
+### Defining True Negative Rate
 - The true negative rate is defined as the following:
 
 $$
@@ -55,7 +63,7 @@ $$
 - The true negative rate refers to the percentage of observations that are correctly predicted as negative
 - The true negative rate is also known as specificity or correct rejection
 
-### False Negative Rate
+### Defining False Negative Rate
 - The false negative rate is defined as the following:
 
 $$
@@ -66,7 +74,7 @@ $$
 - The false negative rate refers to the percentage of observations that are incorrectly predicted as negative
 - The false negative rate is also known as type II error or miss rate
 
-### Standard Accuracy
+### Defining Standard Accuracy
 - The standard accuracy is defined as the following:
 
 $$
@@ -76,12 +84,31 @@ $$
 - The standard accuracy refers to the percentage of observations that are correctly predicted (out of all the observations)
 - A high accuracy indicates a greater predictability (given the model and threshold/parameter values)
 
-### AUC
+### Defining AUC
 - Before we introduce the AUC metric, we should first talk about the ROC curve:
 	- The receiver operating characteristic (or ROC) curve is a curve created by plotting the true positive rate $TPR$ against the false positive rate $FPR$ (with varying parameter values)
         - The ROC curve essentially illustrates the goodness of fit of a binary classifier as its associated parameter values are varied
 - The area under the curve (or AUC) metric refers to the area under the ROC curve
 - A high AUC indicates a better model fit (and not a greater predictability)
+
+### Defining Precision and Recall
+- At a high level, *precision* informs us if we're usually correct when we guess positive
+        - Precision covers our guess
+- At a high level, *recall* informs us if we're usually correct for all actual positives
+        - Recall covers the actuals
+- For example, precision will be low if we just predict positive for everyone, but recall will be high
+For example, precision will be high if just predict positive for one person correctly, but recall will be low
+- **Precision:** Of those we guessed as positive, how many did we guess correctly?
+- **Recall:** Of those that are actually positive, how many did we guess correctly?
+- These metrics are defined using the following formulas:
+
+$$
+\text{Precision} = \frac{TP}{\text{predicted positives}} = \frac{TP}{TP + FP}
+$$
+
+$$
+\text{Recall} = \frac{TP}{\text{actual positives}} = \frac{TP}{TP + FN}
+$$
 
 ### References
 - [Advantages of AUC vs Standard Accuracy](https://datascience.stackexchange.com/questions/806/advantages-of-auc-vs-standard-accuracy)
