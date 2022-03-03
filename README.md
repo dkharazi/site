@@ -104,7 +104,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 	- `cd public`
 	- `git init`
 	- `git add .`
-	- `git commit -m ""`
+	- `git commit -m "Update site"`
 	- `git push --force --set-upstream https://github.com/dkharazi/dkharazi.github.io.git master`
 
 <!-- AUTO-GENERATED-CONTENT:END -->
