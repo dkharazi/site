@@ -35,11 +35,12 @@ const IndexPage = () => {
         <Layout>
             {data.allMarkdownRemark.edges.map((edge) => {
                 const tags = edge.node.frontmatter.tags.map(tag => { return tag.replace(/ /g,"-") });
+                console.log(tags);
                 return (
                     <section key={edge.node.fields.slug}>
                         <Link to={`/blog/${edge.node.fields.slug}`}>
                             <time className="post-date">{edge.node.frontmatter.date}</time>
-                            <div className={`post-tags ${tags[0]}`}>{edge.node.frontmatter.tags}</div>
+                            <div className={`post-tags ${tags[0]}`}>{edge.node.frontmatter.tags[0]}</div>
                             <div className="post-title">{edge.node.frontmatter.title}</div>
                             <div className="post-excerpt">{edge.node.excerpt}</div>
                         </Link>
