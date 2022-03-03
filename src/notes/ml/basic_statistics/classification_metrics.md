@@ -92,14 +92,18 @@ $$
 - A high AUC indicates a better model fit (and not a greater predictability)
 
 ### Defining Precision and Recall
+- When we make predictions about a positive class, we tend to have two goals in mind:
+        1. We want to include as many actual positives in our predictions as possible
+        2. We want to exclude as many actual negatives from our predictions as possible
+- The above goals are not the same thing and should be differentiated:
+        - The first goal is the same thing as achieving a high recall
+        - The second goal is the same thing as achieving a high precision
 - At a high level, *precision* informs us if we're usually correct when we guess positive
-        - Precision covers our guess
-        - Roughly, precision can be thought of as a measure of quality
-- At a high level, *recall* informs us if we're usually correct for all actual positives
-        - Recall covers the actuals
-        - Roughly, recall can be thought of as a measure of quantity
+        - Precision represents the coverage of our guess
+- At a high level, *recall* informs us if all actual positives are guessed correctly
+        - Recall represents the coverage of the actuals
 - For example, precision will be low if we just predict positive for everyone, but recall will be high
-- For example, precision will be high if just predict positive for one person correctly, but recall will be low
+- On the other hand, precision will be high if we just predict positive for one person correctly, but recall will be low
 - **Precision:** Of those we guessed as positive, how many did we guess correctly?
 - **Recall:** Of those that are actually positive, how many did we guess correctly?
 - These metrics are defined using the following formulas:
@@ -111,6 +115,19 @@ $$
 $$
 \text{Recall} = \frac{TP}{\text{actual positives}} = \frac{TP}{TP + FN}
 $$
+
+### Illustrating Precision and Recall
+- As an example, imagine there are two types of fish in a pond: goldfish and minnows
+- Suppose we're wanting to throw a net in the pond and pull out all of the goldfish without pulling out any minnows
+- If we consider the goldfish to be our *positives*, then this is like trying predict all of one class and guessing them completely correct, without getting any wrong guesses
+- Having **low recall** but **high precision** is like throwing our net into the water and only capturing a few goldfish in the pond without capturing any minnows
+        - Not capturing any minnows is good, but we'd like to capture more goldfish too
+- Having **high recall** but **low precision** is like throwing our net into the water and capturing all of the goldfish in the pond, but also capturing a lot of minnows
+        - Capturing all of the golfish is great, but we'd like to capture fewer minnows
+- Having **low recall** and **low precision** is like throwing our net into the water and only capturing minnows without any goldfish
+        - There aren't any positives in this scenario
+- Having **high recall** and **high precision** is like throwing our net into the water and capturing all of the goldfish in the pond without capturing any minnows
+        - This is our ultimate goal but hard to achieve
 
 ### References
 - [Advantages of AUC vs Standard Accuracy](https://datascience.stackexchange.com/questions/806/advantages-of-auc-vs-standard-accuracy)
