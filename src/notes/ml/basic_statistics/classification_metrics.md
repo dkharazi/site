@@ -97,7 +97,7 @@ $$
         2. We want to exclude as many actual negatives from our predictions as possible
 - The above goals are not the same thing and should be differentiated:
         - The first goal is the same thing as achieving a high recall
-        - The second goal is the same thing as achieving a high precision
+        - The second goal is the same thing as achieving a high
 - At a high level, *precision* informs us if we're usually correct when we guess positive
         - Precision represents the coverage of our guess
 - At a high level, *recall* informs us if all actual positives are guessed correctly

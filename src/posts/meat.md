@@ -16,7 +16,7 @@ Animals are inefficient converters of food, but how inefficient are they? A comm
 
 Essentially, $800\%$ of what we're growing is thrown away. So, eating a plate of chicken can be thought of as simultaneously throwing out eight plates of pasta. For more information about the inefficiencies behind today's livestock farming practices, refer to [this blog post by Yale's Center for Business and the Environment](https://cbey.yale.edu/our-stories/disrupting-meat).
 
-## Health Effects of Livestock Farming
+## Health Effects from Livestock Farming
 
 In 2015, the WHO called antimicrobial resistance [an increasingly serious threat to global public health](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4638249/). More than 80% of all antibiotics sold in the United States are being fed to farm animals. Eventually, our increasingly frequent and routine consumption of meat will drive antibiotic resistance.
 
@@ -26,9 +26,13 @@ Relevant to the recent pandemic, many previous pandemics have been caused by ani
 
 For more basic nutritional value, there are healthier plant-based sources of protein, which include tofu, tempeh, lentils, and beans. [Some studies](https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2748453), have linked plant-based diets with a lower risk of cardiovascular disease, along with a greater source of fiber and prebiotics, which improve the health of your gut.
 
-## Climate Effects of Animal Agriculture
+## Climate and Deforestation Impact from Animal Agriculture
 
 Regarding climate change, raising livestock generates $14.5\%$ of global greenhouse gas emissions, where $92\%$ of the fresh water is used for farming purposes. For a more detailed overview of the effects of animal agriculture on climate, refer to [this paper](https://www.europarl.europa.eu/climatechange/doc/FAO%20report%20executive%20summary.pdf) published by the Livestock, Environment, and Development (LEAD) Initiative.
+
+By far, research suggests the expansion of pasture land for beef production is the biggest reason for deforestation in the Brazilian Amazon, which accounts for nearly half of forest loss in the Brazilian Amazon in $2013$. Commercial crops, such as soy, contributed roughly $7\%$ of forest loss in the Brazilian Amazon in $2013$.
+
+Additionally, research suggests the large majority of global soy production is used to feed animals that will feed us later on. In a study focused on the allocation of global soy production from $2017-2019$, around $77\%$ of all soy was used for animal feed, where nearly all of this animal feed is used in livestock farming. Only $7\%$ of global soy production is used in direct human foods like tofu, soy milk, and others. For more details about common drivers of soy consumptions, [this paper](https://ourworldindata.org/soy) published by researchers at Oxford University.
 
 ## Ethics of Livestock Farming
 
