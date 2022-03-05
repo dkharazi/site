@@ -1,6 +1,6 @@
 ---
 title: "Improving Health Care with 1% Steps"
-date: "2021-10-10"
+date: "2022-03-01"
 tags: ["other"]
 draft: false
 katex: true
