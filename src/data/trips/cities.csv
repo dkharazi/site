@@ -1,16 +1,18 @@
 state,place,hasVisited,lat,lon
-New York,New York City,1,40.71455,-74.007124
+New York,New York City,1,40.7145,-74.007124
 California,Sacramento,1,38.5816,-121.4944
 California,San Francisco,1,37.7749,-122.4194
 California,San Diego,1,32.7157,-117.1611
 California,Los Angeles,1,34.0522,-118.2437
 California,Death Valley,1,36.5323,-116.9325
+California,Golden Gate Bridge,1,37.8199,-122.4783
+California,Lake Tahoe,1,39.0968,-120.0324
 Ohio,Toledo,1,41.6528,-83.5379
 Ohio,Zanesville,1,39.9403,-82.0132
 Ohio,Mansfield,1,40.7584,-82.5154
 Ohio,Dayton,1,39.7589,-84.1916
 Ohio,Hocking County,1,39.4237,-82.5379
-Ohio,Cincinnati,1,39.1031,-84.5120
+Ohio,Cincinnati,1,39.1031,-84.512
 Ohio,Columbus,1,39.9612,-82.9988
 Ohio,Cleveland,1,41.4993,-81.6944
 Michigan,Detroit,1,42.3314,-83.0458
@@ -18,21 +20,22 @@ Michigan,Boyne Falls,1,45.1681,-84.9162
 Pennsylvania,Pittsburgh,1,40.4406,-79.9959
 Maryland,Cumberland,1,39.6529,-78.7625
 West Virginia,Harper's Ferry,1,39.3254,-77.7389
-Maryland,Washington DC,1,38.8903694,-77.0319595
+Maryland,Washington DC,1,38.8903,-77.0319595
 Virginia,Blacksburg,1,37.2296,-80.4139
-Pennsylvania,Seven Springs,1,40.0230,-79.2977
+Pennsylvania,Seven Springs,1,40.023,-79.2977
 North Carolina,Durham,1,35.7596,-79.0193
 North Carolina,Charlotte,1,35.2271,-80.8431
 South Carolina,Charleston,1,32.7765,-79.9311
-South Carolina,Abbeville,1,34.1782,-82.3790
+South Carolina,Abbeville,1,34.1782,-82.379
 Tennessee,Nashville,1,36.1627,-86.7816
 Kentucky,Lake Cumberland,1,36.8888,-85.0493
 Illinois,Chicago,1,41.8781,-87.6298
 Massachusetts,Boston,1,42.3601,-71.0589
 Colorado,Vail,1,39.6403,-106.3742
+Colorado,Beaver Creek,1,39.6043,-106.5167
 Colorado,Denver,1,39.7392,-104.9903
 Nevada,Las Vegas,1,36.1699,-115.1398
-Arizona,Phoenix,1,33.4484,-112.0740
+Arizona,Phoenix,1,33.4484,-112.074
 South Dakota,Pine Ridge,1,43.0255,-102.5563
 Florida,Miami,1,25.7617,-80.1918
 Florida,Orlando,1,28.5383,-81.3792
@@ -40,16 +43,16 @@ Florida,Tampa,1,27.9506,-82.4572
 Hawaii,Honolulu,1,21.3069,-157.8583
 Hawaii,Maui,1,20.7984,-156.3319
 Arizona,Tucson,0,32.22155,-110.9697571
-Montana,Glacier Park,0,48.7596,-113.7870
-Wyoming,Yellowstone Park,0,44.4280,-110.5885
-North Dakota,Theodore Roosevelt Park,0,46.9790,-103.5387
+Montana,Glacier Park,0,48.7596,-113.787
+Wyoming,Yellowstone Park,0,44.428,-110.5885
+North Dakota,Theodore Roosevelt Park,0,46.979,-103.5387
 North Dakota,Peace Garden,0,48.9993,-100.0595
-Idaho,Shoshone Falls,0,42.5937,-114.4010
+Idaho,Shoshone Falls,0,42.5937,-114.401
 Idaho,Craters of the Moon,0,43.2058,-113.5002
-Oregon,Crater Lake,0,42.9446,-122.1090
-Oregon,Portland,0,45.5051,-122.6750
+Oregon,Crater Lake,0,42.9446,-122.109
+Oregon,Portland,0,45.5051,-122.675
 Oregon,Haystack Rock,0,45.8841,-123.9686
-Oregon,Bandon,0,43.1190,-124.4084
+Oregon,Bandon,0,43.119,-124.4084
 Washington,Mount Rainier,0,46.8523,-121.7603
 Washington,Olympic Park,0,47.8021,-123.6044
 Washington,Seattle,0,47.6062,-122.3321
@@ -58,3 +61,44 @@ New Mexico,White Sands Park,0,32.7872,-106.3257
 New Mexico,Carlsbad Caverns,0,32.1479,-104.5567
 New Mexico,Four Corners,0,36.9989,-109.0452
 Nebraska,Omaha,0,41.2565,-95.9345
+Arizona,Antelope Canyon,0,36.8619,-111.3743
+Arizona,Havasu Falls,0,36.2552,-112.6979
+Arizona,Grand Canyon,0,36.1069,-112.1129
+Arizona,Horseshoe Bend Overlook,0,36.8791,-111.5104
+Nevada,Valley of Fire,0,36.5073,-114.5352
+Kansas,Rolling Hills Zoo,0,38.8526,-97.7642
+Kansas,The Keeper of the Plains,0,37.6913,-97.3497
+Kansas,Stratica,0,38.0434,-97.8678
+Kansas,Tallgrass Prairie National Preserve,0,38.4426,-96.5730
+Oklahoma,Wichita Mountains,0,34.7595,-98.6434
+Oklahoma,Salt Plains State Park,0,36.7430,-98.1329
+Texas,Big Bend National Park,0,29.2498,-103.2502
+Texas,The Dallas Arboretum and Botanical Garden,0,32.8214,-96.7171
+Texas,San Antonio River Walk,0,29.4229,-98.4847
+Texas,Fort Worth Botanic Garden,0,32.7410,-97.3629
+Minnesota,Voyageurs National Park,0,48.4733,-92.8268
+Minnesota,Itasca State Park,0,47.1944,-95.1653
+Minnesota,Minnehaha Falls,0,44.9153,-93.2110
+Iowa,Shrine of the Grotto of the Redemption,0,42.9639,-94.4457
+Iowa,Maquoketa Caves State Park,0,42.1202,-90.7659
+Missouri,Forest Park,0,38.6445,-90.2831
+Missouri,Meramec Caverns,0,38.2411,-91.0920
+Arkansas,Buffalo National River,0,35.9829,-92.7548
+Arkansas,Hot Springs National Park,0,34.5269,-93.0689
+Louisiana,New Orleans,0,29.9511,-90.0715
+Louisiana,Oak Alley Plantation,0,39.4986,-121.0369
+Louisiana,Avery Island,0,29.8968,-91.9050
+Wisconsin,The House on the Rock,0,43.0994,-90.1353
+Wisconsin,Taliesin,0,43.1410,-90.0705
+Wisconsin,Door County,0,44.8341,-87.3770
+Illinois,Starved Rock State Park,0,41.3192,-89.0060
+Illinois,Anderson Japanese Gardens,0,42.2901,-89.0578
+Illinois,Garden of the Gods,0,38.8784,-104.8698
+Indiana,Indiana Dunes National Park,0,41.6506,-87.0708
+Indiana,Brown County State Park,0,39.1464,-86.2318
+Mississippi,Davis Bayous Area Gulf Islands,0,30.3919,-88.7911
+Alabama,Gulf State Park,0,30.2684,-87.6342
+Alabama,Cheaha Mountain,0,33.4857,-85.8091
+Georgia,Atlanta Botanical Garden,0,33.7905,-84.3736
+Georgia,Callaway Resort & Gardens,0,32.8263,-84.8440
+Georgia,Okefenokee Swamp Park,0,31.0568,-82.2723
