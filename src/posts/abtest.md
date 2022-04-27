@@ -1,7 +1,7 @@
 ---
 title: "Outlining the A/B Testing Procedure"
 date: "2022-02-28"
-tags: ["other"]
+tags: ["machine learning"]
 draft: false
 katex: true
 ---

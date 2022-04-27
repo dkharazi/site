@@ -11,7 +11,7 @@ const ErrorPage = () => {
                     <p>Under Construction</p>
                 </div>
                 <div className="errorDesc">
-                    <p>Sorry, we're doing some work on this page.</p>
+                    <p>Sorry, I'm doing some work on this page.</p>
                 </div>
             </div>
         </Layout>

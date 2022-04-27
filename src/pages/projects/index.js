@@ -33,6 +33,11 @@ const ProjectsPage = () => {
                     gatsbyImageData (layout: CONSTRAINED, width: 700, placeholder: BLURRED)
                 }
             }
+            btyd: file(relativePath: { eq: "img/btyd.jpg" }) {
+                childImageSharp {
+                    gatsbyImageData (layout: CONSTRAINED, width: 700, placeholder: BLURRED)
+                }
+            }
         }
     `)
 
@@ -58,9 +63,9 @@ const ProjectsPage = () => {
                     </div>
                     <div className={projectsStyles.item}>
                         <Link to={`/construction`}>
-                            <GatsbyImage image={data.music.childImageSharp.gatsbyImageData} alt="music" />
+                            <GatsbyImage image={data.btyd.childImageSharp.gatsbyImageData} alt="btyd" />
                             <div className={projectsStyles.description}>
-                                music visualizer
+                                churn & clv
                             </div>
                         </Link>
                     </div>
@@ -79,6 +84,14 @@ const ProjectsPage = () => {
                             <GatsbyImage image={data.star.childImageSharp.gatsbyImageData} alt="starryNight" />
                             <div className={projectsStyles.description}>
                                 style transfer
+                            </div>
+                        </Link>
+                    </div>
+                    <div className={projectsStyles.item}>
+                        <Link to={`/construction`}>
+                            <GatsbyImage image={data.music.childImageSharp.gatsbyImageData} alt="music" />
+                            <div className={projectsStyles.description}>
+                                music visualizer
                             </div>
                         </Link>
                     </div>
