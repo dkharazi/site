@@ -1,7 +1,7 @@
 ---
 title: "Balance Sheet"
 draft: false
-weight: 1
+weight: 2
 katex: true
 ---
 
@@ -35,8 +35,15 @@ $$
         - Plant
         - Equipment
     - In other words, they're related to a company's fixed liabilities
+- **Operating assets** are assets producing revenue in the daily operations of a business
+    - Operating assets can include both current and fixed assets
+    - Operating assets can include allocated cash, allocated inventory, buildings in use, machinery in use, etc.
+    - Non-operating assets can include unallocated cash, unallocated inventory, vacant buildings, vacant land, unused machinery, etc.
 - **Capital** is sometimes used to mean cash roughly
-    - Sometimes, it can mean machinery and ideas too
+    - Sometimes, it can refer to machinery and ideas too
+- **Working capital** is a measure of a company’s liquidity and short-term financial health
+    - Working capital is the difference between a company’s current assets and current liabilities
+    - High working capital isn’t always a good thing, since it could indicate that the business has too much inventory or is not investing its excess cash
 
 ### Defining Terminology for Liabilities
 - **Current liabilities** are considered *short-term* liabilities

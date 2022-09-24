@@ -8,7 +8,7 @@ import jsPng from '../img/js.png'
 import mlPng from '../img/ml.png'
 import pyPng from '../img/py.png'
 import dePng from '../img/de.png'
-import fnPng from '../img/fn.png'
+import bsPng from '../img/fn.png'
 
 export const data = graphql`
   query($cat: String!) {
@@ -54,10 +54,10 @@ const Category = ({ data, pageContext }) => {
         col = 4;
     } else if (pageContext.cat.includes('de')) {
         img = dePng;
-        col = 0;
-    } else if (pageContext.cat.includes('fn')) {
-        img = fnPng;
         col = 1;
+    } else if (pageContext.cat.includes('bs')) {
+        img = bsPng;
+        col = 0;
     }
 
     // Retrieve files and their order for a category

@@ -7,7 +7,7 @@ import jsPng from '../img/jsIcon.png'
 import mlPng from '../img/mlIcon.png'
 import pyPng from '../img/pyIcon.png'
 import dePng from '../img/deIcon.png'
-import fnPng from '../img/fnIcon.png'
+import bsPng from '../img/fnIcon.png'
 
 const NotesPage = () => {
 
@@ -58,7 +58,7 @@ const NotesPage = () => {
     // Map slugs for notes to corresponding images
     const imgMap = {
         'de': dePng,
-        'fn': fnPng,
+        'bs': bsPng,
         'js': jsPng,
         'ml': mlPng,
         'py': pyPng
