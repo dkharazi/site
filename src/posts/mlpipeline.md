@@ -1,6 +1,6 @@
 ---
 title: "An Open-Source ML Pipeline"
-date: "2022-09-3"
+date: "2022-09-03"
 tags: ["machine learning"]
 draft: false
 katex: true
