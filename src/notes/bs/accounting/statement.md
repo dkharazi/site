@@ -1,5 +1,5 @@
 ---
-title: "Balance Sheet"
+title: "Describing a Balance Sheet"
 draft: false
 weight: 1
 katex: true

@@ -1,5 +1,5 @@
 ---
-title: "Balance Sheet"
+title: "Outlining Components on a Balance Sheet"
 draft: false
 weight: 2
 katex: true

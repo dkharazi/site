@@ -1,0 +1,15 @@
+---
+title: "Goodhart's Law"
+date: "2022-08-23"
+tags: ["other"]
+draft: false
+katex: true
+---
+
+I've recently become less reliant on measures like Yelp and Google reviews when selecting a restaurant. I've noticed many restaurants with many high Yelp reviews are sometimes not as good as restaurants with fewer Yelp reviews. On the flip side, many restaurants with lower ratings are sometimes better than those with higher ratings. To be clear, I stiil think these ratings are useful in general, but I've just become less reliant on them.
+
+Goodhart's Law says *when a measure becomes a target, then it ceases to be a good measure*. In other words, when we rely on a metric so consistently over a long period of time, then it inexorably ceases to function as that metric because people will start to game it. I feel Goodhart's Law holds up fairly well across many different situations in general, where it is truer in some cases more than in others, especially as the measure becomes more widely used. It is closely related to the [Cobra Effect](https://en.wikipedia.org/wiki/Perverse_incentive), which dates back to an old British policy enforced to control the population of cobras in India. At time time, there were too many cobras in India, so the British government placed a bounty on dead cobras. However, this caused the locals to breed cobras so they could make even more money off of the bounty
+
+A more recent example of Goodhart's Law is the increase in fake social media accounts, either rating restaurants well or following other users to boost their follower count. These negative externalities can even arise in A/B testing. For example, if teams are told to improve one metric (or even a few metrics) for growth, then teams can be incentivized to game that metric. A simple example of this is if a company wants to increase their views per visit, so the team paginates content into smaller pages. For more examples of how A/B testing can be gamed, refer to this [blog post](https://towardsdatascience.com/goodharts-law-and-the-dangers-of-metric-selection-with-a-b-testing-91b48d1c1bef). As a result, metrics need to be carefully considered and monitored to make sure they're not being gamed, especially in A/B tests.
+
+Another example of Goodhart's Law could be p-hacking. For many researchers, they need to submit scientific papers to stay in academia. Since very few esteemed journals publish negative results, then scientists can often feel pressured into producing positive results. Even without any malicious intent, they begin looking for postive results worth publishing due to this misalignment of incentives. Instead of following the scientific method by forming a hypothesis then testing it naturally, they could begin with testing many different hypotheses to see which ones might produce postive results. There becomes a chance you will find something positive (i.e. a test that satisifies the p < $0.05$) that is semi-similar to the original hypothesis, but isn't quite the same.
