@@ -1,11 +1,14 @@
 ---
-title: "Guide to System Design"
+title: "Indexing"
 draft: false
-weight: 1
+weight: 5
 katex: true
 ---
 
-### Requirement Clarification
+### Motivating Indexing
+- Without indexing, a growing database will eventually become too slow
+- Indexing improves the performance of read operations on a database
+- Indexes can be created on one or more columns of a table in a database
 
 ### References
 - [Grokking the System Design Interview](https://www.educative.io/courses/grokking-the-system-design-interview/B8nMkqBWONo)

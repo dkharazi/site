@@ -157,6 +157,7 @@ $$
 - Because the averaging stage smoothes over a lot of the distributional information, some people believe the CBOW model is can perform as well on a small dataset
 
 ### References
+- [Explanation of Word2Vec and its Different Architectures](https://www.hackdeploy.com/word2vec-explained-easily/)
 - [Learning Word Embedding Blog Post](https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html)
 - [Paper about Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)
 - [Difference between Weight Matrices in Word2Vec](https://datascience.stackexchange.com/a/29161/93566)

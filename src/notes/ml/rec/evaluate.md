@@ -91,6 +91,14 @@ $$
 NDCG = \frac{2+0+1.5+0.9}{5.3} = \frac{4.4}{5.3} = 0.83
 $$
 
+### Comparing $NDCG$ with $MAP$
+- The two most popular ranking metrics are $MAP@k$ and $NDCG@k$
+- $MAP$ assumes binary relevance (an item is either of interest or not)
+    - Measures precision of a binary variable for top-$k$ items
+- Whereas, $NDCG$ allows relevance scores in form of real numbers (continuous instead of binary)
+    - Measures ranking of top-$k$ items based on gain, which is a continuous variable
+- The relation is just like with classification and regression, where we use $MAP$ for *"classification problems"* and $NDCG$ for *"regression problems"*
+
 ### Additional Metrics for Evaluating Recommendations
 - `Novelty:` Refers to the level of awareness for a given user about a recommendation
     - This is difficult to measure
@@ -110,3 +118,4 @@ $$
 - [Textbook about Algorithmic Marketing](https://algorithmicweb.files.wordpress.com/2018/07/algorithmic-marketing-ai-for-marketing-operations-r1-7g.pdf)
 - [Intuition behind Normalized Discounted Cumulative Gain](http://ethen8181.github.io/machine-learning/recsys/2_implicit.html#NDCG)
 - [Intuition behind MAP@K](https://makarandtapaswi.wordpress.com/2012/07/02/intuition-behind-average-precision-and-map/)
+- [Comparing Metrics for LTR](http://fastml.com/evaluating-recommender-systems/)
